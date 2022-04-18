@@ -1,0 +1,363 @@
+/* 
+========================================
+CSS Reset
+========================================
+
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+========================================
+Layout
+========================================
+*/
+.main-menu {
+    /*border: 1px solid;*/
+    display: inline-block;
+    position: relative;
+    height: 120px;
+    margin: 20px 0px 50px 100px;    
+}
+
+.top-nav li {
+    /*border: 1px solid;*/
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    margin: 20px 20px 20px 20px;
+}
+
+#logo {
+    /*border: 1px solid;*/
+    position: relative;
+    top: 40px;
+    left: 50px;
+    float: left;
+}
+
+#title {
+    /*border: 1px solid;*/
+    clear: both;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#intro {
+    /*border: 1px solid;*/
+    margin: 10px 100px 50px 100px;
+}
+
+.teaching p {
+    /*border: 1px solid;*/
+    margin: 10px 100px 30px 100px;
+}
+
+.teaching h2 {
+    /*border: 1px solid;*/
+    margin: 30px 100px 10px 100px;
+}
+
+.teaching h3, p.secondary {
+    /*border: 1px solid;*/
+    margin: 30px 100px 10px 150px;
+}
+
+p.secondary {
+    margin: 10px 100px 40px 150px;
+}
+
+.teaching ul {
+    /*border: 1px solid;*/
+    margin: 10px 100px 30px 150px;
+}
+
+.teaching li {
+    line-height: 40px;
+}
+
+
+.home ul {
+    /*border: 1px solid;*/
+    margin: 10px 150px 50px 150px;
+}
+
+
+.home p {
+    /*border: 1px solid*/;
+    margin: 10px 100px 50px 100px;
+}
+
+.copyright {
+    /*border: 1px solid;*/
+    display: inline-block;
+    float: left;
+    margin: 50px 100px 50px 100px;
+}
+
+.bottom-nav li {
+    /*border: 1px solid;*/
+    display: inline-block;
+    padding: 10px;
+    margin: 40px 60px 30px;
+}
+
+.footer {
+    height: 120px;
+}
+
+.note, .preview {
+    border: 1px solid;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.top {
+    /*border: 1px solid;*/
+    display: inline-block;
+    width: 150px;
+}
+
+.chord {
+    padding-top: 12px;
+    padding-left: 75px;
+}
+
+
+.place-holder {
+    /*border: 1px solid;*/
+    display: inline-block;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+section:last-child {
+    margin-bottom: 100px;
+}
+
+section {
+    padding-left: 20px;
+}
+
+
+/* 
+========================================
+Typography
+========================================
+*/
+
+#logo, #title {
+    font-family: 'Playfair Display', serif;
+}
+
+#logo {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#title {
+    font-size: 56px;
+    font-weight: 600;
+}
+
+.top-nav li {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.teaching, p, ul{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+
+h2 {
+    font-family: 'Times', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Times', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.bullets {
+    list-style: inside url('../images/icons8-piano-20b.png');
+    line-height: 30px;
+    vertical-align: sub;
+}
+
+/*
+.copyright .bottom-nav ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}*/
+
+.copyright, .bottom-nav, .second-menu {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.copyright {
+    font-weight: 300;
+}
+
+.bottom-nav {
+    font-weight: 100;
+}
+
+.chord, .lyric {
+    /*border: 1px solid;*/
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.chord {
+    text-align: left;
+}
+
+.lyric {
+    text-align: center;
+}
+
+
+/* 
+========================================
+Colors
+========================================
+*/
+
+.header, .footer {
+    background: linear-gradient(to right, #225C98, #80E697);
+}
+
+#logo {
+    color: #CEE1F5;
+}
+
+.top-nav li {
+    color: #01310C;
+}
+
+h2 {
+    color: #225C98;
+}
+
+h3 {
+    color: #3BA190;
+}
+
+/* 
+========================================
+Navigation
+========================================
+*/
+#logo a {
+    color: #CEE1F5;
+    text-decoration: none;
+}
+
+
+/* 
+========================================
+Images
+========================================
+*/
+
+.box {
+    /*border: 1px solid;*/
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    height: 90px;
+    width: 140px;
+}
+
+.fingerings {
+    /*border: 1px solid;*/
+    display: inline-block;
+    padding: 0px;
+    height: 40px;
+    width: 20px;
+    float: left;
+}
+
+.short-arrow {
+    /*border: 1px solid;*/
+    height: 30px;
+    width: 140px;
+    padding: 55px 5px 75px 5px;
+}
+
+.snippet {
+    border: 1px solid;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+	height: 200;
+	width: 300;
+}
+
+
+
+
+
+
+
+
+
+

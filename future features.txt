@@ -1,0 +1,7 @@
+Future Features
+
+    1) Transpose Button:  changes all the keyboard diagram/note pix 
+    2) Make Minor Button: changes all occurances of "mi" to "me"
+    3) Chords Only Button: switch the melody notes for chord diagrams
+    
+    4) Create new song pages with Python program
