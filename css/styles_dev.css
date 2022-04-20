@@ -97,10 +97,12 @@ ul {
   overflow: hidden;
 }
 
+/*
 p {
-    /*border: 1px solid;*/
+    border: 1px solid;
     margin: 10px 100px 50px 100px;
-}
+}*/
+
 
 h2 {
     /*border: 1px solid;*/
@@ -112,13 +114,15 @@ h3 {
     margin: 10px 100px 10px 150px;
 }
 
+/*
 p, ul{
     font-family: 'Helvetica', sans-serif;
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 1.5px;
     line-height: 30px;
-}
+}*/
+
 
 img {
     display: inline-block;
@@ -168,10 +172,6 @@ li a, .dropbtn {
     display: inline-block;
 }
 
-.note p {
-    margin: 0px;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -216,39 +216,12 @@ li a, .dropbtn {
     text-align: center;
 }
 
-.short-arrow {
-    padding: 55px 5px 75px 5px;
-    /*border: 1px solid;*/
-    height: 30px;
-    width: 140px;
-}
-
-.note {
-    /*border: 1px solid;*/
-    display: inline-block;
-    margin: 10px;
-    margin-top: 50px;
-}
-
-.lg {
-    margin: 50px 30px 30px 50px;
-}
-
 .snippet {
     display: inline-block;
     padding: 5px 5px 5px 5px;
     /*border: 1px solid;*/
     height: 150px;
     width: 215px;
-}
-
-.fingerings {
-    /*border: 1px solid;*/
-    display: inline-block;
-    padding: 0px;
-    height: 40px;
-    width: 20px;
-    float: left;
 }
 
 .bottom-nav li {
@@ -341,22 +314,6 @@ li a:hover, .dropdown:hover .dropbtn {
 .current {
     background-color: #F4FED2;
     color: black;
-}
-
-.lyric {
-    /*border: 1px solid;*/
-    font-family: 'EB Garamond', sans-serif;
-    font-size: 28px;
-    text-align: center;
-    font-weight: 400;
-}
-
-.chord{
-    /*border: 1px solid;*/
-    font-family: 'EB Garamond', sans-serif;
-    font-size: 28px;
-    text-align: center;
-    font-weight: 400;
 }
 
 .preview:hover {
