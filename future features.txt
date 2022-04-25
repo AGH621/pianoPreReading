@@ -1,3 +1,16 @@
+
+TODO:
+    1) Finish converting song pages into new html 
+    2) Separate stylesheets into individual ones for each page/purpose:
+        a) Song (DONE)
+        b) Text
+        c) Navigation
+    3) Fix navigation layout
+    4) Complete thumbnails on unit pages
+    5) Edit text on unit pages
+    6) Tweak navigation styling
+    
+
 Future Features
 
     1) Transpose Button:  changes all the keyboard diagram/note pix 
@@ -5,3 +18,5 @@ Future Features
     3) Chords Only Button: switch the melody notes for chord diagrams
     
     4) Create new song pages with Python program
+    
+    5) Create diatonic and pentatonic song pages
