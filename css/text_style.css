@@ -87,10 +87,17 @@ Text Styles
     font-size: 24px;
 }
 
+.songs {
+    display: grid;
+    margin: 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-row-gap: 60px;
+}
+
 .preview {
     /*border: 1px solid;*/
     display: inline-block;
-    margin: 10px 50px 50px 150px;
+    margin: 10px 50px 20px 150px;
     text-align: center;
 }
 
