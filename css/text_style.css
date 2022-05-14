@@ -18,9 +18,13 @@ Text Styles
 .intro {
     /*border: 1px solid;*/
     margin: 10px 100px 30px 100px;
-    font-family: 'Helvetica', sans-serif;
     font-size: 24px;
     font-weight: 100;
+}
+    
+.intro, .alphabet {
+    /*border: 1px solid;*/
+    font-family: 'Helvetica', sans-serif;
     letter-spacing: 1.5px;
     line-height: 30px;
 }
@@ -107,6 +111,19 @@ Text Styles
     /*border: 1px solid;*/
     height: 150px;
     width: 215px;
+}
+
+.alphabet {
+    display: inline;
+    margin: 30px 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.alpha-list {
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 

@@ -97,11 +97,13 @@ li a, .dropbtn {
     font-size: 16px;
 }
 
+/*
 li a, .dropbtn {
     text-align: center;
     color: white;
     text-decoration: none;
-}
+}*/
+
 
 li a:hover, .dropdown:hover .dropbtn {
   background-color: #FFB892;
