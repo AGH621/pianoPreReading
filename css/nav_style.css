@@ -1,0 +1,155 @@
+/* 
+========================================
+Navigation Styles
+========================================
+*/
+
+nav {
+    background: linear-gradient(to right, #225C98, #80E697);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+li a, .dropbtn {
+    text-align: center;
+}
+
+.top-nav {
+    padding: 50px;
+}
+
+.top-nav li {
+    margin: 20px 20px 20px 20px;
+}
+
+.bottom-nav {
+    position: relative;
+    height: 120px;
+}
+
+.extras {
+    /*border: 1px solid;*/
+    display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 39%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 7px 8px;
+  display: block;
+  float: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bottom-nav li {
+    margin: 50px 0px 50px 100px;
+}
+
+#logo {
+    /*border: 1px solid;*/
+    position: relative;
+    float: left;
+    margin-right: 50px;
+    margin-top: -10px;
+}
+
+#copyright {
+    /*border: 1px solid;*/
+    position: relative;
+    float: left;
+    margin: 50px;
+}
+
+.extras {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+
+
+#logo {
+    font-size: 48px;
+    font-weight: 700;
+    color: #CEE1F5;
+    text-decoration: none;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+/*
+li a, .dropbtn {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}*/
+
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #FFB892;
+  color: black;
+}
+
+.dropdown-content {
+  background-color: #CEE1F5;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #FFB892;
+}
+
+.current {
+    background-color: #F4FED2;
+    color: black;
+}
+
+.preview:hover {
+    background-color: #FFB892;
+}
+
+
+.preview a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.preview a:link {
+    color: blue;
+}
+
+.preview a:visited {
+    color: black;
+}
+
+
+
+
+

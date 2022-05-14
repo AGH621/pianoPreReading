@@ -1,6 +1,5 @@
 
 TODO:
-    1) Finish converting song pages into new html 
     2) Separate stylesheets into individual ones for each page/purpose:
         a) Song (DONE)
         b) Text
@@ -9,14 +8,13 @@ TODO:
     4) Complete thumbnails on unit pages
     5) Edit text on unit pages
     6) Tweak navigation styling
+    7) Fix CSS to accommodate tablets & phones
     
 
 Future Features
-
     1) Transpose Button:  changes all the keyboard diagram/note pix 
     2) Make Minor Button: changes all occurances of "mi" to "me"
     3) Chords Only Button: switch the melody notes for chord diagrams
-    
     4) Create new song pages with Python program
-    
-    5) Create diatonic and pentatonic song pages
+    5) Create a login & payment system
+        a) Create pentatonic and diatonic songs
