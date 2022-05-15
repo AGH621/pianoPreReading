@@ -59,7 +59,7 @@ Navigation Styles
 
 .pg-link:hover {
     color: #000000;
-    background-color: #91EEF8;
+    background-color: #FFE5BE;
     /*padding: 4px;*/
 }
 
@@ -75,7 +75,7 @@ Navigation Styles
 
 .dp-link:hover {
     color: #000000;
-    background-color: #91EEF8;
+    background-color: #FFE5BE;
 }
 
 .logo {
@@ -102,18 +102,18 @@ Navigation Styles
 }
 
 .in-link {
-    color: #225C98;
-}
-
-.in-link:hover {
-    background-color: #91EEF8;
+    color: #EA9B25;
+    text-decoration: none;
 }
 
 .in-link:visited {
-    color: #225C98;
+    color: #EA9B25;
 }
 
-
+.current {
+    background-color: #CEE1F5;
+    color: #000000;
+}
 
 
 
