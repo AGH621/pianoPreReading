@@ -8,46 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../css/styles_dev.css">
+  <link rel="stylesheet" href="../../css/css_reset.css">
+  <link rel="stylesheet" href="../../css/nav_style.css">
+  <link rel="stylesheet" href="../../css/text_style.css">
   <link rel="stylesheet" href="../../css/note_style.css">
 
-  <title>Piano Pre-Reading - Johnny Works with One Hammer</title>
+  <title>Johnny Works with One Hammer</title>
 </head>
 
 <body>
-    <nav class="top-nav">
-        <h1><a id="logo" href="../../index.html">PreReading <br> Piano Book</a></h1>
+    <nav class="top">
+        <h1><a class="logo" href="../../index.html">PreReading <br> Piano Book</a></h1>
+            <div>
             <ul>
-                <li class="dropdown">
-                    <a href="../text/3_note.html">3 Note</a>
-                    <div class="dropdown-content">
-                        <a href="../text/song_list.html#3-note-duple">Duple Meter</a>
-                        <a href="../text/song_list.html#3-note-triple">Triple Meter</a>
-                        <a href="../text/song_list.html#3-note-black">Black Keys</a>
-                        <a href="../text/song_list.html#3-note-white">White Keys</a>
-                    </div>
-                    
-                </li>
-                <li class="dropdown">
-                    <a href="../text/4_note.html">4 Note</a>
-                    <div class="dropdown-content">
-                        <a href="../text/song_list.html#4-note-duple">Duple Meter</a>
-                        <a href="../text/song_list.html#4-note-triple">Triple Meter</a>
-                        <a href="../text/song_list.html#4-note-black">Black Keys</a>
-                        <a href="../text/song_list.html#4-note-white">White Keys</a>
-                    </div>
-                </li>
-                    
-                <li class="dropdown"><a href="../text/diatonic.html">Diatonic</a></li>
-                <li class="dropdown"><a href="../text/pentatonic.html">Pentatonic</a></li>
-                <li class="dropdown"><a href="../text/song_list.html">Song List</a></li>
-                <li class="dropdown"><a href="../text/usage.html">Usage</a></li>
-            </ul>    
+                <li class="top-nav"><a class="pg-link" href="../text/3_note.html">3 Note</a></li>
+                <li class="top-nav"><a class="pg-link current" href="../text/4_note.html">4 Note</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/diatonic.html">Diatonic</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/pentatonic.html">Pentatonic</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/song_list.html">Song List</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/usage.html">Usage</a></li>
+            </ul>
+            
+            <ul>
+            <li class="pg-nav second"><a class="dp-link" href="../text/4_note.html#4-note-duple">Duple Meter</a></li>
+            <li class="pg-nav second"><a class="dp-link current" href="../text/4_note.html#4-note-triple">Triple Meter</a></li>
+            </ul>
+            </div>
     </nav>
 
     <main>
         <header>
-            <h1 id="title">Johnny Works with One Hammer</h1>
+            <h1 class="title">Johnny Works with One Hammer</h1>
         </header>
         
         <section class="triple">
@@ -112,7 +103,7 @@
                 <img class="fingerings" src="../../images/pngs/R5-L1.png">
                 <span class="chord">V7</span>
                 <br>
-                <img src="../../images/pngs/single_c.png">
+                <img class="pitch" src="../../images/pngs/single_c.png">
                 <br>
                 one</p>
             </div>
@@ -192,7 +183,7 @@
                 <img class="fingerings" src="../../images/pngs/R5-L1.png">
                 <span class="chord">V7</span>
                 <br>
-                <img src="../../images/pngs/single_c.png">
+                <img class="pitch" src="../../images/pngs/single_c.png">
                 <br>
                 ham -</p>
             </div>
@@ -210,7 +201,7 @@
                 <img class="fingerings" src="../../images/pngs/R5-L1.png">
                 <span class="chord">V7</span>
                 <br>
-                <img src="../../images/pngs/single_c.png">
+                <img class="pitch" src="../../images/pngs/single_c.png">
                 <br>
                 mer</p>
             </div>
@@ -330,7 +321,7 @@
                 <img class="fingerings" src="../../images/pngs/R5-L1.png">
                 <span class="chord">V7</span>
                 <br>
-                <img src="../../images/pngs/single_c.png">
+                <img class="pitch" src="../../images/pngs/single_c.png">
                 <br>
                 one</p>
             </div>
@@ -488,11 +479,11 @@
     </main>
     
     <footer class="footer">
-        <nav class="bottom-nav">
-            <p id="copyright">Copyright MMXXII &#169; Anne G. Hamill</p>
+        <nav class="bottom">
+            <p class="copyright">Copyright MMXXII &#169; Anne G. Hamill</p>
             <ul>
-                <li class="extras"><a href="../html/text/about.html">About</a></li>
-                <li class="extras">Ta-ka-di-mi</li>
+                <li class="extras"><a class="pg-link" href="../text/about.html">About</a></li>
+                <li class="extras"><a class="pg-link" href="#">Ta-ka-di-mi</a></li>
             </ul>    
         </nav>
     </footer>    
