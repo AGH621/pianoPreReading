@@ -1,7 +1,7 @@
 # pianoPreReading
 ## Purpose
 This project serves two purposes.
-1. It is a portfolio project to demonstrate my web development skills and document what I've learned.  It will become more sophisticated as I acquire more skills and knowledge.
+1. It is a portfolio project to demonstrate my web development skills and document what I've learned.  It will become more sophisticated as I get better at this.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio.
 
 ## Progress
