@@ -9,6 +9,7 @@ This project serves two purposes.
 
 ## Progress
 May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
+
 April 2022 - Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
 ## License
