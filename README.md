@@ -8,7 +8,7 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
-June 2022 - Designing and implementing interactivity via JavaScript.  Intending to add buttons to: 
+June 2022 - Designing and implementing interactivity via JavaScript.
 1. Switch the notation between black and white keys
 2. Display the chord notation
 3. Generate new pages automatically from an XML or musicXML file
