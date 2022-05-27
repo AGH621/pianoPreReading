@@ -11,7 +11,7 @@ This project serves two purposes.
 June 2022 - Designing and implementing interactivity via JavaScript.  Intending to add buttons to: 
 1. Switch the notation between black and white keys
 2. Display the chord notation
-Also working on adding the ability to automatically generate new song pages.
+3. Generate new pages automatically from an XML or musicXML file
 
 May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
 
