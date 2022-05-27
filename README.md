@@ -1,6 +1,6 @@
 # pianoPreReading
 ## Deployment
-Currently I'm using GitHub Pages: <a target="blank" href="https://agh621.github.io/pianoPreReading/">Piano PreReading Book</a>
+Currently I'm using GitHub Pages: <a href="https://agh621.github.io/pianoPreReading/" target="_blank">Piano PreReading Book</a>
 
 ## Purpose
 This project serves two purposes.
