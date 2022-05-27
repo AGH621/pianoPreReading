@@ -8,6 +8,11 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
+June 2022 - Designing and implementing interactivity via JavaScript.  Intending to add buttons to: 
+1. Switch the notation between black and white keys
+2. Display the chord notation
+Also working on adding the ability to automatically generate new song pages.
+
 May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
 
 April 2022 - Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
