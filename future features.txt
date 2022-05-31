@@ -1,18 +1,19 @@
 
 TODO:
-    2) Separate stylesheets into individual ones for each page/purpose:
-        a) Song (DONE)
+    DONE) Separate stylesheets into individual ones for each page/purpose:
+        a) Song
         b) Text
         c) Navigation
-    3) Fix navigation layout
-    4) Complete thumbnails on unit pages
-    5) Edit text on unit pages
-    6) Tweak navigation styling
-    7) Fix CSS to accommodate tablets & phones
+    DONE) Fix navigation layout
+    DONE) Complete thumbnails on unit pages
+    DONE) Edit text on unit pages
+    DONE) Tweak navigation styling
+    1) Fix CSS to accommodate tablets & phones
+    2) CSS style for buttons
     
 
 Future Features
-    1) Transpose Button:  changes all the keyboard diagram/note pix 
+    DONE) Transpose Button:  changes all the keyboard diagram/note pix 
     2) Make Minor Button: changes all occurances of "mi" to "me"
     3) Chords Only Button: switch the melody notes for chord diagrams
     4) Create new song pages with Python program
