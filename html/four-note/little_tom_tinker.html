@@ -32,16 +32,22 @@
             <ul>
             <li class="pg-nav second"><a class="dp-link" href="../text/4_note.html#4-note-duple">Duple Meter</a></li>
             <li class="pg-nav second"><a class="dp-link current" href="../text/4_note.html#4-note-triple">Triple Meter</a></li>
-            <button class="dp-link" onclick="black_transpose()">Black Key Melody</button>
-            <button class="dp-link" onclick="white_transpose()">White Key Melody</button>
-        
-            <script src="../../js/transpose.js"></script>
             </ul>
             </div>
     </nav>
 
     <main>
         <header>
+            <div class="buttons">
+                <button class="transpose-button white" onclick="white_transpose()">White Key Melody</button>    
+                <button class="transpose-button black" onclick="black_transpose()">Black Key Melody</button>
+                <button class="chord-button white" onclick="white_chords()">White Key Chords</button>
+                <button class="chord-button black" onclick="black_chords()">Black Key Chords</button>
+            </div>
+        
+            <script src="../../js/transpose.js"></script>
+            <script src="../../js/chord_view.js"></script>
+            
             <h1 class="title">Little Tom Tinker</h1>
         </header>
         
