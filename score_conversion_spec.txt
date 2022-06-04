@@ -6,7 +6,7 @@ Converting Scores Automatically
         
     	b. range
     		i. min = Major 3rd
-    		ii. max = Perfect 5th*
+    		ii. max = Major 6th
                 1) reject all scores containing the note "fa" [will require translating the note names to solfege]
                 
     	c. time signature: top number must be divisible by 2 or 3
@@ -16,8 +16,7 @@ Converting Scores Automatically
     			1) piece contains ONLY: eighth, quarter, half notes
     			2) piece contains ONLY: quarter, half, whole notes
     		ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
-        
-        * only necessary for V.1.0
+
 
 2) If answer to #1 is "yes": Capture song data to enter into DB
 		a. title
