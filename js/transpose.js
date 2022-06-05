@@ -1,15 +1,15 @@
 console.log("Transponse is running");
 
-function black_transpose() {
-    let the_fs = document.getElementsByClassName("f")
-    let the_gs = document.getElementsByClassName("g")
-    let the_as = document.getElementsByClassName("a")
-    let the_cs = document.getElementsByClassName("c")
-    let the_fsharps = document.getElementsByClassName("fsharp")
-    let the_gsharps = document.getElementsByClassName("gsharp")
-    let the_asharps = document.getElementsByClassName("asharp")
-    let the_csharps = document.getElementsByClassName("csharp")
+let the_fs = document.getElementsByClassName("f")
+let the_gs = document.getElementsByClassName("g")
+let the_as = document.getElementsByClassName("a")
+let the_cs = document.getElementsByClassName("c")
+let the_fsharps = document.getElementsByClassName("fsharp")
+let the_gsharps = document.getElementsByClassName("gsharp")
+let the_asharps = document.getElementsByClassName("asharp")
+let the_csharps = document.getElementsByClassName("csharp")
 
+function black_transpose() {
     for (let i=0; i<the_fs.length; i++) {
         the_fs[i].src = "../../images/pngs/single_f_sharp.png"
     }
@@ -44,15 +44,6 @@ function black_transpose() {
 }
 
 function white_transpose() {
-    let the_fs = document.getElementsByClassName("f")
-    let the_gs = document.getElementsByClassName("g")
-    let the_as = document.getElementsByClassName("a")
-    let the_cs = document.getElementsByClassName("c")
-    let the_fsharps = document.getElementsByClassName("fsharp")
-    let the_gsharps = document.getElementsByClassName("gsharp")
-    let the_asharps = document.getElementsByClassName("asharp")
-    let the_csharps = document.getElementsByClassName("csharp")
-
     for (let i=0; i<the_fs.length; i++) {
         the_fs[i].src = "../../images/pngs/single_f.png"
     }

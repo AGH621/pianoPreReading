@@ -4,7 +4,7 @@
 </head>
 <body>
 <div class="note">
-    <p id="tonic">
+    <p class="tonic">
         I
         <br>
         <img class="pitch fsharp" src="images/pngs/single_f_sharp.png">
@@ -14,27 +14,40 @@
 </div>
 
 <div class="note">
-    <p id="dominant">
-        V7
+    <p class="tonic">
+        <img class="fingerings" src="images/pngs/R1-L5.png">
+        <span class="chord">
+            I
+        </span>
         <br>
-        <img class="pitch gsharp" src="images/pngs/single_g_sharp.png">
+        <img class="pitch f" src="images/pngs/single_f.png">
         <br>
-        fall -
+        Bells
     </p>
 </div>
 
+<div class="note">
+    <p class="dominant">
+    V7
+    <br>
+    <img class="pitch g" src="images/pngs/single_g.png">
+    <br>
+    ning</p>
+</div>
+
 <script>
-    let note = document.getElementById('tonic').innerHTML;
-    console.log(typeof note)
-    /*console.log(note)*/
+    //Find all the notes with tonic chords.
+    let chord_block = document.getElementsByClassName('tonic');
     
-    if (note.search('I')){
-            console.log(note);
-        }
-        else {
-            console.log("try again")
-        }
-    
+    //Iterate through each one. Locate the melody note image.
+    for (let x=0; x<chord_block.length; x++) {
+        i_img = chord_block[x].querySelectorAll('img.pitch');
+        
+        //Change it to the tonic chord image.
+        for (let y=0; y<i_img.length; y++) {
+            i_img[y].src = "images/pngs/simple_wht_tonic.png"    
+        }   
+    }
     
 </script>
     

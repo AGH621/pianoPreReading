@@ -4,7 +4,7 @@ Notation Styles
 ========================================
 */
 
-.chord-lyric {
+.tonic, .dominant, .arrow {
     /*border: 1px solid;*/
     font-size: 28px;
     text-align: center;
