@@ -36,6 +36,12 @@
 </div>
 
 <script>
+    //Make finger numbers disappear.
+    let finger_num = document.getElementsByClassName('fingerings');
+    for (let a=0; a<finger_num.length; a++) {
+        finger_num[a].style.display = "none";
+    }
+    
     //Find all the notes with tonic chords.
     let chord_block = document.getElementsByClassName('tonic');
     
