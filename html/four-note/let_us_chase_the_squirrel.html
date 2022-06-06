@@ -41,320 +41,392 @@
             <div class="buttons">
                 <button class="transpose-button white" onclick="white_transpose()">White Key Melody</button>    
                 <button class="transpose-button black" onclick="black_transpose()">Black Key Melody</button>
-                <button class="chord-button white" onclick="white_chords()">White Key Chords</button>
-                <button class="chord-button black" onclick="black_chords()">Black Key Chords</button>
+                <button class="chord-button white" onclick="white_3note_chords()">White Key Chords</button>
+                <button class="chord-button black" onclick="black_3note_chords()">Black Key Chords</button>
             </div>
-        
-            <script src="../../js/transpose.js"></script>
-            <script src="../../js/chord_view.js"></script>
             
             <h1 class="title">Let Us Chase the Squirrel</h1>
         </header>
         
         <section class="duple">
             <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                Let</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                us</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                chase</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                the</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R3-L3.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch a" src="../../images/pngs/single_a.png">
-                <br>
-                squir -</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    Let
                 </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R5-L1.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch c" src="../../images/pngs/single_c.png">
-                <br>
-                rel,</p>
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    us
+                </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    chase
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    the
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R3-L3.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <br>
+                    squir -
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R5-L1.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch c" src="../../images/pngs/single_c.png">
+                    <br>
+                    rel,
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
+                </p>
+            </div>
+
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    Up
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    the
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    hick -
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    &#39;ry,
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R3-L3.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <br>
+                    down
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R3-L3.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <br>
+                    the
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    hick -
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    &#39;ry,
                 </p>
             </div>
 
             <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                Up</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                the</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                hick -</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                &#39;ry,</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R3-L3.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch a" src="../../images/pngs/single_a.png">
-                <br>
-                down</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R3-L3.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch a" src="../../images/pngs/single_a.png">
-                <br>
-                the</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                hick -</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                &#39;ry,</p>
-            </div>
-
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                Let</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R1-L5.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch f" src="../../images/pngs/single_f.png">
-                <br>
-                us</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                chase</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R2-L4.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch g" src="../../images/pngs/single_g.png">
-                <br>
-                the</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R3-L3.png">
-                <span class="chord">I</span>
-                <br>
-                <img class="pitch a" src="../../images/pngs/single_a.png">
-                <br>
-                squir -</p>
-            </div>
-            
-            <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    Let
                 </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <img class="fingerings" src="../../images/pngs/R5-L1.png">
-                <span class="chord">V7</span>
-                <br>
-                <img class="pitch c" src="../../images/pngs/single_c.png">
-                <br>
-                rel,</p>
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <br>
+                    us
+                </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    chase
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <br>
+                    the
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="tonic">
+                    <img class="fingerings" src="../../images/pngs/R3-L3.png">
+                    <span class="chord">
+                        I
+                    </span>
+                    <br>
+                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <br>
+                    squir -
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="dominant">
+                    <img class="fingerings" src="../../images/pngs/R5-L1.png">
+                    <span class="chord">
+                        V7
+                    </span>
+                    <br>
+                    <img class="pitch c" src="../../images/pngs/single_c.png">
+                    <br>
+                    rel,
+                </p>
+            </div>
+            
+            <div class="note">
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
                 </p>
             </div>
 
            <div class="note">
-               <p class="chord-lyric">
-               <img class="fingerings" src="../../images/pngs/R1-L5.png">
-               <span class="chord">I</span>
-               <br>
-               <img class="pitch f" src="../../images/pngs/single_f.png">
-               <br>
-               Up</p>
+               <p class="tonic">
+                   <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                   <span class="chord">
+                       I
+                   </span>
+                   <br>
+                   <img class="pitch f" src="../../images/pngs/single_f.png">
+                   <br>
+                   Up
+               </p>
            </div>
            
            <div class="note">
-               <p class="chord-lyric">
-               <img class="fingerings" src="../../images/pngs/R1-L5.png">
-               <span class="chord">I</span>
-               <br>
-               <img class="pitch f" src="../../images/pngs/single_f.png">
-               <br>
-               the</p>
+               <p class="tonic">
+                   <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                   <span class="chord">
+                       I
+                   </span>
+                   <br>
+                   <img class="pitch f" src="../../images/pngs/single_f.png">
+                   <br>
+                   the
+               </p>
            </div>
            
            <div class="note">
-               <p class="chord-lyric">
-               <img class="fingerings" src="../../images/pngs/R2-L4.png">
-               <span class="chord">V7</span>
-               <br>
-               <img class="pitch g" src="../../images/pngs/single_g.png">
-               <br>
-               hick -</p>
+               <p class="dominant">
+                   <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                   <span class="chord">
+                       V7
+                   </span>
+                   <br>
+                   <img class="pitch g" src="../../images/pngs/single_g.png">
+                   <br>
+                   hick -
+               </p>
            </div>
            
            <div class="note">
-               <p class="chord-lyric">
-               <img class="fingerings" src="../../images/pngs/R2-L4.png">
-               <span class="chord">V7</span>
-               <br>
-               <img class="pitch g" src="../../images/pngs/single_g.png">
-               <br>
-               &#39;ry</p>
+               <p class="dominant">
+                   <img class="fingerings" src="../../images/pngs/R2-L4.png">
+                   <span class="chord">
+                       V7
+                   </span>
+                   <br>
+                   <img class="pitch g" src="../../images/pngs/single_g.png">
+                   <br>
+                   &#39;ry
+               </p>
            </div>
             
            <div class="note">
-               <p class="chord-lyric">
-               <img class="fingerings" src="../../images/pngs/R1-L5.png">
-               <span class="chord">I</span>
-               <br>
-               <img class="pitch f" src="../../images/pngs/single_f.png">
-               <br>
-               tree.</p>
+               <p class="tonic">
+                   <img class="fingerings" src="../../images/pngs/R1-L5.png">
+                   <span class="chord">
+                       I
+                   </span>
+                   <br>
+                   <img class="pitch f" src="../../images/pngs/single_f.png">
+                   <br>
+                   tree.
+               </p>
            </div>
            
             <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
                 </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
                 </p>
             </div>
             
             <div class="note">
-                <p class="chord-lyric">
-                <br>
-                <img class="lengthen" src="../../images/pngs/short_arrow.png">
-                <br>
+                <p class="arrow">
+                    <br>
+                    <img class="lengthen" src="../../images/pngs/short_arrow.png">
+                    <br>
                 </p>
             </div>
         </section>
@@ -369,6 +441,9 @@
             </ul>    
         </nav>
     </footer>   
+    
+    <script src="../../js/transpose.js"></script>
+    <script src="../../js/chord_view.js"></script>
     
 </body>
 </html>
