@@ -20,32 +20,32 @@ def is_convertable(this_meta_entry, result_table, verbose=True, show_score=False
     """
     Should this score be converted?
         Analyze the score with Music21 to answer the question.  Use these criteria:
-        	a. number of parts = 1 
-        
-        	b. range
-        		i. min = Major 3rd
-        		ii. max = Major 6th #Perfect 5th* 
+            a. number of parts = 1
 
-        	c. time signature: top number must be divisible by 2 or 3
-        
-        	d. rhythm
-        		i. if c = 2 but not 3: one or the other below must be true
-        			1) piece contains ONLY: eighth, quarter, half notes
-        			2) piece contains ONLY: quarter, half, whole notes
-        		ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
-        
+            b. range
+            i. min = Major 3rd
+                ii. max = Major 6th #Perfect 5th*
+
+                c. time signature: top number must be divisible by 2 or 3
+
+                d. rhythm
+                i. if c = 2 but not 3: one or the other below must be true
+                    1) piece contains ONLY: eighth, quarter, half notes
+                    2) piece contains ONLY: quarter, half, whole notes
+            ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
+
             * only necessary for V.1.0
-    
-    
+
+
     in test scores:
-    
-    Pass List:  
-    1) a cup of tea
-    2) a la ronda ronda
+
+    Pass List:
+        1) a cup of tea
+        2) a la ronda ronda
 
     """
     #debug = True
-    
+
     RHYTHM_C_2_1 =     ['Half Note', 'Quarter Note', 'Eighth Note']
     RHYTHM_C_2_2 =     ['Whole Note', 'Half Note', 'Quarter Note']
     RHYTHM_C_2_3 =     ['Quarter Note', 'Eighth Note', 'Sixteenth Note']

@@ -41,18 +41,18 @@ def reset_corpus():
 #-----------------------------------------------------------------------------------------------
 def define_corpus():
     """
-    Define the local corpus for our searches.  
+    Define the local corpus for our searches.
     Turn off logging print statements by changing verbose to False in corpora.py Line 190 & 193.
-    
+
     TODO: Turn ofF the automatic metadata caching.
     """
     our_corpus = corpus.corpora.LocalCorpus('scoreLibrary')
-    
+
     our_corpus.addPath(CORPUS_FILEPATH)
 
     our_corpus.save()
     print(corpus.manager.listLocalCorporaNames())
-    
+
     return our_corpus
 #
 #-----------------------------------------------------------------------------------------------
@@ -62,7 +62,7 @@ def build_metadata_cache():
         Delete file = rebuild metadata cache
         Add file = rebuild metadata cache
         [Not necessary to rebuild corpus]
-    
+
     Turn off logging print statements by changing verbose to False in corpora.py Line 190 & 193.
     """
     # This may be useful at some point.
@@ -86,12 +86,12 @@ def score_file_info():
     """
     Using Music21's metadata sourcePath, create a unique string for each file to be used as its key in the Score Dictionary.
     Add the full sourcePath to the dictionary.  Then look at the file itself and add the Content Created and Content Modified datetimes.
-    
+
     NOTE: Created and Modified times vary by system.  Will need to put a timestamp in the file itself should this program ever be shared by users on separate machines.
-    
+
     TODO:   1) Create and append Music21 streams to non-leadsheet scores?  [Not sure I want this.]
             2) Rethink created on and modified on.  Because musicxml's maybe re-created with each edit, rather than modified.
-        
+
     Tests:  1) What if file path does not exist?
             2) What if file is empty or corrupt?
             3) What if the file info is missing?  [Is this even possible?]
@@ -108,13 +108,12 @@ def score_file_info():
     for x in range(len(my_metadata)):
         score_path = my_metadata[x].metadata.sourcePath
         file_name = score_path.split('/')[-1].split('.')[0]
-        
-        
-        if ' - ' not in file_name: 
+
+        if ' - ' not in file_name:
             score_dictionary[file_name] = {'File Information': {}}
             score_dictionary[file_name]['File Information'].update({'Path': score_path})
             #score_dictionary[file_name]['File Information'].update({'Family': ['Lead Sheet']})
-        
+
         else:
             sc_family.append({file_name: score_path})
             #if 'Family' in score_dictionary[file_name]['File Information'].keys():
@@ -127,14 +126,14 @@ def score_file_info():
             if org_sc[0] in score_dictionary:
                 if 'Family' not in score_dictionary[org_sc[0]]['File Information'].keys():
                     score_dictionary[org_sc[0]]['File Information'].update({'Family': {org_sc[-1].title(): sc_family[x][key]}})
-                    
+
                 else:
                     score_dictionary[org_sc[0]]['File Information']['Family'].update({org_sc[-1].title(): sc_family[x][key]})
 
     # Step 5: Iterate through each file in the Score Dictionary.
     for next_score in score_dictionary:
         next_path = Path(score_dictionary[next_score]['File Information']['Path'])
-        
+
         # Retrieve the Create Time using st_birthtime (MacOS = ok, not sure about others), convert into human readable form, and add to Score Dictionary -> File Information.
         c_float_sec = next_path.stat().st_birthtime
         create_time = time.ctime(c_float_sec)
@@ -144,14 +143,14 @@ def score_file_info():
         m_float_sec = next_path.stat().st_mtime
         modify_time = time.ctime(m_float_sec)
         score_dictionary[next_score]['File Information'].update({'Modified On': modify_time})
-    
+
     # Step 6: Add the Music21 stream.
     for next_score in score_dictionary:
         parse_score = corpus.manager.parse(score_dictionary[next_score]['File Information']['Path'])
         score_dictionary[next_score]['File Information']['Stream'] = parse_score
-    
+
     pickle_it(score_dictionary, pickle_path=SCORE_DATAPATH, text_path=SCORE_LOGPATH)
-        
+
     return score_dictionary
 #
 #-----------------------------------------------------------------------------------------------
@@ -209,12 +208,11 @@ def update_metadata_cache():
     TODO: Need a more precise rebuild process. Instead of rebuilding the whole Score Dictionary, only add/delete/modify the entire Score Dictionary, 
           only change the entries that have been identified as different.
     """
-    # Check 1: Have files been added or deleted? 
+    # Check 1: Have files been added or deleted?
     # Step 1: Get the file paths from the xml directory and put them in a list.
     paths = Path(CORPUS_FILEPATH).glob('**/*.musicxml')
     files = [x for x in paths if x.is_file() and ' - ' not in str(x)]
-    
-    
+
     # Step 2: Extract the file paths from the Score Dictionary and put them in a list.
     score_dictionary = unpickle_it(pickle_path=SCORE_DATAPATH, be_verbose=False)
     score_list = []
@@ -228,15 +226,15 @@ def update_metadata_cache():
     files.sort()
     
     #print(f"Score List: {score_list}")
-    
+
     #for next_path in files:
         #if next_path not in score_list:
             #print(f"File Path: {next_path}")
-    
-    # Step 4: Compare the lists.  If they are the same then the corpus has not changed, proceed to Check 2.   
+
+    # Step 4: Compare the lists.  If they are the same then the corpus has not changed, proceed to Check 2.
     if score_list == files:
         print(">>>>> The score dictionary and the local corpus directory contain the same files. Proceeding to Step 2 of update analysis. <<<<<\n")
-        
+
         # Check 2: Have any of the files been modified?
         # Step A: Retreive the mtime from the xml directory, translate to the form in the Score Dictionary, put in a dictionary.
         file_mod_time = {}
@@ -244,7 +242,7 @@ def update_metadata_cache():
             m_float_sec = next_file.stat().st_mtime
             file_time = time.ctime(m_float_sec)
             file_mod_time.update({str(next_file): file_time})
-        
+
         #pprint(file_mod_time)
 
         # Step B: Retreive the "Modified On" time from the Score Dictionary, put in a dictionary.
@@ -252,45 +250,45 @@ def update_metadata_cache():
         for next_score in score_dictionary:
             score_time = score_dictionary[next_score]['File Information']['Modified On']
             score_mod_time.update({score_dictionary[next_score]['File Information']['Path']: score_time})
-        
+
         #pprint(score_mod_time)
 
         # Step C: Use the deepdiff library to compare the 2 dictionaries
         diff = DeepDiff(score_mod_time, file_mod_time)
-        
+
         #for next_entry in diff:
             #for x in range(len(diff[next_entry])):
                 #print(f"{diff[next_entry][x]}\n")
 
-        
+
         # Step D: If deepdiff returns a populated dictionary, then modifications have occurred.  Rebuild the metadata and Score Dictionary.
         if len(diff) > 0:
             print(">>>>> Files in the local corpus directory have been modified.  Rebuilding the music21 metadata cache and score dictionary. <<<<<")
-            
+
             # Before rebuilding, change the name of the current cache file in case we need to walk it back.
             current_cache = Path.joinpath(CACHE_FILEPATH, 'our_corpus_cache.json')
             current_cache.rename(Path.joinpath(CACHE_FILEPATH, 'old_cache.json'))
-            
+
             # Now rebuild
             build_metadata_cache()
             score_file_info()
-        
+
         # If deepdiff returns an empty dictionary, then everything is the same and we're finished.
         else:
             print(">>>>> The local corpus directory and score dictionary match.  No action required.  Analysis finished. <<<<<")
-            
+
     # The corpus has changed.  Rebuild the metadata and Score Dictionary.
     else:
         print(">>>>> The score dictionary and local corpus directory are different. Rebuilding the Music21 metadata cache and score dictionary. <<<<<\n")
-        
+
         #Before rebuilding, change the name of the current cache file in case we need to walk it back.
         current_cache = Path.joinpath(CACHE_FILEPATH, 'our_corpus_cache.json')
         current_cache.rename(Path.joinpath(CACHE_FILEPATH, 'old_cache.json'))
-        
+
         # Now rebuild
         build_metadata_cache()
         score_file_info()
-        
+
 #
 #----------------------------------------------------------------------------------------------- 
 def find_file(file_name, directory_name):
@@ -305,7 +303,7 @@ def find_file(file_name, directory_name):
 #                                           MAIN
 #-----------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    
+
     reset_corpus()
     define_corpus()
     build_metadata_cache()
@@ -315,4 +313,4 @@ if __name__ == '__main__':
 
     score_dictionary = unpickle_it(pickle_path=SCORE_DATAPATH, be_verbose=False)
     pprint(score_dictionary)
-    
+
