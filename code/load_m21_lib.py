@@ -20,7 +20,7 @@ def get_local_corpus(corpus_name=config["ppr_m21_defaults"]['local_corpus_name']
                      debug=False):
     """
     """
-    debug = True
+    #debug = True
 
     # Out of date local corpora? 
     # e.g.
