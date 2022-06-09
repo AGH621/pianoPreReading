@@ -12,7 +12,7 @@ from music21    import *
 from pprint     import pprint
 from pprint     import PrettyPrinter
 from pathlib    import Path
-from deepdiff   import DeepDiff 
+from deepdiff   import DeepDiff
 
 import os
 import time
