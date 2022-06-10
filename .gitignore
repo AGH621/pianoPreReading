@@ -1,0 +1,36 @@
+# direnv
+.envrc.*
+
+# Emacs
+*~
+
+# ESLint
+.eslintcache
+
+# macOS
+.DS_Store
+
+# Nix
+result
+result-*
+
+# npm
+node_modules/
+package-lock.json
+
+# Python
+*.pyc
+*.pyo
+
+# Testing
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vim
+*.swp
+*.swo
+
+# VS Code
+.vscode/
