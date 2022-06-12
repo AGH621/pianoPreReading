@@ -5,9 +5,9 @@ Converting Scores Automatically
     	a. number of parts = 1
         
     	b. range
-    		i. min = Major 3rd
+    		i. min = minor 3rd
     		ii. max = Major 6th
-                1) reject all scores containing the note "fa" [will require translating the note names to solfege]
+            NOTE: two-note songs (mi-sol) should not be converted
                 
     	c. time signature: top number must be divisible by 2 or 3
         
@@ -15,20 +15,82 @@ Converting Scores Automatically
     		i. if c = 2 but not 3: one or the other below must be true
     			1) piece contains ONLY: eighth, quarter, half notes
     			2) piece contains ONLY: quarter, half, whole notes
+                3) piece contains ONLY: sixteenth, eighth, quarter notes
     		ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
 
 
-2) If answer to #1 is "yes": Capture song data to enter into DB
-		a. title
-		b. meter
-			i. duple = top number of time signature divisible by 2 but not 3
-			ii. triple = top number of time signature divisible by 3 
-		c. range
-		d. note characteristics
-			i. pitch (in solfege)
-			ii. duration
-			iii. lyric syllable
+2) If a score is convertable, we need information about it:
+        a. Pedagogical type of score
+            We need to know this in order to use the correct HTML template in React & to update the site navigation
+            
+            i. 3 Note
+                1. do/re/mi      
+                2. mi/sol/la
+                     
+            ii. 4 Note
+                1. do/re/mi/sol
+            
+            iii. Pentatonic
+                1. do/re/mi/sol/la
+                
+            iv. Diatonic
+                1. do/re/mi/fa/sol
+                
+            v. Extended Diatonic
+                1. do/re/mi/fa/sol/la
+                2. ti/do/re/mi/fa/sol
+        
+        b. Necessary score data
+            Is required to render the song page. 
+            
+            i. title - should be obvious
+            
+            ii. meter - a different HTML template needs to be employed for different meters
+                1. duple = top number of time signature divisible by 2 but not 3
+                2. triple = top number of time signature divisible by 3
+                
+            iii. characteristics of each note - to map the note to the correct keyboard image, chord symbol, and (save for 3-note songs) finger number image
+                1. pitch - in solfege to avoid key signatures
+                2. duration
+                3. lyric syllable - to add the lyric to the symbolic notation
 
-		
+                
+3) Mapping score data to HTML                 
+    a. Page-level (template) mapping
+        i. 3-note duple song = duple_template.html
+        ii. 3-note triple song = triple_template.html
+        iii. 4-note duple song = duple_template_fingerings.html
+        iv. 4-note triple song = triple_template_fingerings.html
+        
+        Note: pentatonic, diatonic, and extended diatonic templates have not been designed yet
+    
+    b. Note-level mapping for 3-note and 4-note songs (pentatonic, diatonic, and extended diatonic notation system has not been designed yet)
+        i. Pitch
+            1. do
+                chord symbol     = I
+                keyboard diagram = single_f.png
+                
+            2. re
+                chord symbol     = V7
+                keyboard diagram = single_g.png
+            
+            3. mi
+                chord symbol     = I
+                keyboard diagram = single_a.png
+                
+            4. sol
+                chord symblol    = V7
+                keyboard diagram = single_c.png
 
+        ii. Duration
+            1. duple meter - this mapping is relative based on the shortest note duration
+                shortest duration = keyboard diagram (1 image total)
+                middle duration = keyboard diagram + 1 copy of short_arrow.png (2 images total)
+                longest duration = keyboard diagram + 3 copies of short_arrow.png (4 images total)
+                
+            2. triple meter 
+                eighth note = keyboard diagram (1 image total)
+                quarter note = keyboard diagram + 1 copy of short_arrow.png (2 images total)
+                dotted quarter note = keyboard diagram + 2 copies of short_arrow.png (3 images total)
+                dotted half note = keyboard diagram + 5 copies of short_arrow.png (6 images total)
 

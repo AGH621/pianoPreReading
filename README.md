@@ -1,4 +1,4 @@
-# pianoPreReading
+# Piano Pre-Reading Book
 ## Deployment
 Currently I'm using GitHub Pages: <a href="https://agh621.github.io/pianoPreReading/" target="_blank">Piano PreReading Book</a>
 
@@ -8,10 +8,11 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
-June 2022 - Designing and implementing interactivity via JavaScript.
+June 2022 - Designed and implemented some basic interactivity via JavaScript.
 1. Switch the notation between black and white keys
-2. Display the chord notation
-3. Generate new pages automatically from an XML or musicXML file
+2. Display chord notation instead of melody
+
+Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  I am learning React, which will be used to do the page rendering.
 
 May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
 

@@ -1,5 +1,10 @@
 
 TODO:
+    1) Auto-generate song pages with Python and React
+    2) Redo the finger numbers so that either RH, LH, or both hands can be displayed
+    
+    Necessary? Fix CSS to accommodate tablets & phones 
+    
     DONE) Separate stylesheets into individual ones for each page/purpose:
         a) Song
         b) Text
@@ -8,14 +13,14 @@ TODO:
     DONE) Complete thumbnails on unit pages
     DONE) Edit text on unit pages
     DONE) Tweak navigation styling
-    1) Fix CSS to accommodate tablets & phones
-    2) CSS style for buttons
+    DONE) CSS style for buttons
     
 
 Future Features
-    DONE) Transpose Button:  changes all the keyboard diagram/note pix 
+    1) Create pentatonic and diatonic songs
     2) Make Minor Button: changes all occurances of "mi" to "me"
-    3) Chords Only Button: switch the melody notes for chord diagrams
-    4) Create new song pages with Python program
-    5) Create a login & payment system
-        a) Create pentatonic and diatonic songs
+    3) Create a login & payment system
+    4) Allow users to create their own song pages
+    
+    DONE) Chords Only Button: switch the melody notes for chord diagrams
+    DONE) Transpose Button:  changes all the keyboard diagram/note pix 
