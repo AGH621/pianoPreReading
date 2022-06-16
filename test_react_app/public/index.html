@@ -24,9 +24,42 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css_reset.css">
+    <link rel="stylesheet" href="./nav_style.css">
+    <link rel="stylesheet" href="text_style.css">
+    <link rel="stylesheet" href="note_style.css"> 
+        
+    <title>Test React</title>
   </head>
   <body>
+    <nav class="top">
+        <h1><a class="logo" href="../../index.html">PreReading <br> Piano Book</a></h1>
+            <div>
+            <ul>
+                <li class="top-nav"><a class="pg-link current" href="../text/3_note.html">3 Note</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/4_note.html">4 Note</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/diatonic.html">Diatonic</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/pentatonic.html">Pentatonic</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/song_list.html">Song List</a></li>
+                <li class="top-nav"><a class="pg-link" href="../text/usage.html">Usage</a></li>
+            </ul>
+            
+            <ul>
+            <li class="pg-nav first"><a class="dp-link current" href="../text/3_note.html#3-note-duple">Duple Meter</a></li>
+            <li class="pg-nav first"><a class="dp-link" href="../text/3_note.html#3-note-triple">Triple Meter</a></li>
+            </ul>
+            </div>
+    </nav>
+
+    <main>
+        <header>
+              
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
