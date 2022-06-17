@@ -3,10 +3,6 @@ import './App.css';
 
 import './note_style.css';
 
-import an_f from './single_f.png';
-import a_g from './single_g.png';
-import an_a from './single_a.png';
-
 /*
 function App() {
   return (
@@ -39,7 +35,7 @@ function TestNote() {
             <div className="note">
                 <p className="tonic">I
                 <br />
-                <img className="pitch f" src={an_f} />
+                <img className="pitch f" src="/images/single_f.png" />
                 <br />
                 Do</p>
             </div>
@@ -47,7 +43,7 @@ function TestNote() {
             <div className="note">
                 <p className="dominant">V7
                 <br />
-                <img className="pitch g" src={a_g} />
+                <img className="pitch g" src="/images/single_g.png" />
                 <br />
                 Re</p>
             </div>
@@ -55,7 +51,7 @@ function TestNote() {
             <div className="note">
                 <p className="tonic">I
                 <br />
-                <img className="pitch a" src={an_a} />
+                <img className="pitch a" src="/images/single_a.png" />
                 <br />
                 Mi</p>
             </div>
