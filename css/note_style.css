@@ -4,6 +4,13 @@ Notation Styles
 ========================================
 */
 
+.finger {
+    font-size: 22px;
+    text-align: left;
+    font-weight: bold;
+    color: gold;
+}
+
 .tonic, .dominant, .arrow {
     /*border: 1px solid;*/
     font-size: 28px;
