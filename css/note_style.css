@@ -60,6 +60,14 @@ Notation Styles
     margin-top: 5px;
 }
 
+.right-finger, .left-finger{
+    display: none;
+}
+
+.holder-finger {
+    visibility: hidden;
+}
+
 .chord-fing {
     margin-right: 98px;
     margin-top: 5px;
