@@ -1,0 +1,142 @@
+/* 
+========================================
+Text Styles
+========================================
+*/
+
+.title {
+    clear: both;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    /*border: 1px solid;*/
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.intro {
+    /*border: 1px solid;*/
+    margin: 10px 100px 30px 100px;
+    font-size: 24px;
+    font-weight: 100;
+}
+    
+.intro, .alphabet {
+    /*border: 1px solid;*/
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+
+.home, .graph {
+    padding-left: 20px;
+}
+
+.home:last-child {
+    margin-bottom: 100px;
+}
+
+.one-indent, .two-indent, .three-indent {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+
+.one-indent {
+    /*border: 1px solid;*/
+    margin: 10px 100px 30px 150px;
+}
+
+.two-indent {
+    /*border: 1px solid;*/
+    margin: 10px 100px 50px 200px;
+}
+
+.three-indent {
+    /*border: 1px solid;*/
+    margin: 10px 100px 50px 250px;
+}
+
+.bullets {
+    list-style: inside url('../images/icons8-piano-20b.png');
+    line-height: 30px;
+    vertical-align: sub;
+}
+
+.graph-head {
+    /*border: 1px solid;*/
+    margin: 50px 100px 10px 100px;
+    color: #225C98;
+    font-family: 'Times', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.graph-subhead {
+    /*border: 1px solid;*/
+    color: #3BA190;
+    font-family: 'Times', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 100px 10px 150px;
+}
+
+.song-title {
+    text-align: center;
+    padding: 0px 5px 0px 5px;
+    /*margin-left: 15px;*/
+    font-family: 'Times', sans-serif;
+    font-size: 24px;
+}
+
+.songs, .chords {
+    display: grid;
+    margin: 20px 30px;
+}
+
+.songs {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 70px;
+}
+
+.chords {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-column-gap: 60px;
+}
+
+.preview {
+    /*border: 1px solid;*/
+    display: inline-block;
+    margin: 10px 50px 20px 150px;
+    text-align: center;
+}
+
+.snippet {
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    /*border: 1px solid;*/
+    height: 150px;
+    width: 215px;
+}
+
+.alphabet {
+    display: inline;
+    margin: 30px 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.alpha-list {
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+

@@ -4,6 +4,13 @@ Navigation Styles
 ========================================
 */
 
+
+/*
+@import url(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url(href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet");
+*/
+
+
 .top, .bottom {
     background: linear-gradient(to right, #225C98, #80E697);
     display: flex;
@@ -23,10 +30,6 @@ Navigation Styles
     position: relative;
     float: left;
     margin-right: 50px;
-    font-size: 48px;
-    font-weight: 700;
-    color: #CEE1F5;
-    text-decoration: none;
 }
 
 .top-nav {
@@ -84,6 +87,7 @@ Navigation Styles
 
 
 .logo {
+    font-family: 'Playfair Display';
     font-size: 48px;
     font-weight: 700;
     color: #CEE1F5;
