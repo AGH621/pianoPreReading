@@ -5,10 +5,7 @@ Date: 29 May 2022
 Description: Change the symbolic notation images from white key melody to black key and vice versa.
 TODO:
     1) Improve the two functions by figuring how to make the if/else if conditionals into switch statements.
-    2) Create a single generalized function which can iterate through different classes and replace different kinds of images.
 */
-
-
 
 console.log("Transponse is running");
 

@@ -48,23 +48,15 @@ Notation Styles
 }
 
 .fingerings, .chord-fing {
-    border: 1px solid;
-    /*display: none;*/
+    /*border: 1px solid;*/
     height: 20px;
     width: 20px;
     flex: 1; 
 }
 
 .fingerings{
-    margin-right: 15px;
     margin-top: 5px;
-}
-
-.right-finger, .left-finger{
-    display: none;
-}
-
-.holder-finger {
+    margin-right: 20px;
     visibility: hidden;
 }
 
@@ -75,9 +67,12 @@ Notation Styles
 
 .chord {
     /*border: 1px solid;*/
-    padding-right: 60px;
-    margin-left: 20px;
+    margin-right: 60px;
     flex: 1;
+}
+
+.i-space {
+    padding: 0px 15px;
 }
 
 .lengthen-triple {
