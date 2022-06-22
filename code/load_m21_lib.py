@@ -9,6 +9,7 @@ import music21 as m21_lib
 from ppr_globals import config
 
 
+local_corpus_name ='None'
 #
 # --------------------------------------------------------------
 #
@@ -22,10 +23,14 @@ def get_local_corpus(corpus_name=config["ppr_m21_defaults"]['local_corpus_name']
     """
     #debug = True
 
+    print(f'get_local_corpus: local corpus name = {local_corpus_name}')
+
     # Out of date local corpora? 
     # e.g.
     if not cache_meta:
         m21_lib.corpus.corpora.LocalCorpus(config["ppr_m21_defaults"]['local_corpus_name']).delete()
+        m21_lib.corpus.corpora.LocalCorpus('ppr_test_corpus').delete()
+        #m21_lib.corpus.corpora.LocalCorpus.rebuildMetadataCache(useMultiprocessing=True, verbose=True)
 
     # Create our local corpus
     #
@@ -44,7 +49,7 @@ def get_local_corpus(corpus_name=config["ppr_m21_defaults"]['local_corpus_name']
         print(f'pprLocalCorpus.existsInSettings: {pprLocalCorpus.existsInSettings}')
         print(f'pprLocalCorpus.metadataBundle  : {pprLocalCorpus.metadataBundle}')
 
-    return pprLocalCorpus
+    return pprLocalCorpus, corpus_name
 
 
 
