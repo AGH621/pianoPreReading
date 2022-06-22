@@ -76,7 +76,7 @@ DONE) Should this score be converted?
             3. mi
                 chord symbol     = I
                 keyboard diagram = images/single_a.png
-                
+    
             4. sol
                 chord symblol    = V7
                 keyboard diagram = images/single_c.png
@@ -92,4 +92,39 @@ DONE) Should this score be converted?
                 quarter note = keyboard diagram + 1 copy of images/short_arrow.png (2 images total)
                 dotted quarter note = keyboard diagram + 2 copies of images/short_arrow.png (3 images total)
                 dotted half note = keyboard diagram + 5 copies of images/short_arrow.png (6 images total)
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
+Proposed structure of the Python Dictionary (after conversion to JSON Object) acting as interface 
+between the Python backend and JavaScript frontend reflecting the specification above
+
+--------------------------------------------------------------------------------------------------------
+
+score_meta = {score_base_data: {
+                                 title_: None,
+                                 pedagogical_score_type: None,
+                                 meter : None,
+                                 html_page_map: None
+                               },
+ 
+              notes: { [{duration:{}}]
+                     }[note_id, duration, lyrics, chord, note_map_id],
+             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
