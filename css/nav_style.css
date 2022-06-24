@@ -85,7 +85,6 @@ Navigation Styles
     /*padding: 4px;*/
 }
 
-
 .logo {
     font-family: 'Playfair Display';
     font-size: 48px;
@@ -128,7 +127,7 @@ Navigation Styles
     padding-left: 300px;
 }
 
-.transpose-button, .chord-button {
+.transpose-button, .chord-button, .finger-button {
     display: inline-block;
     margin: 20px 20px 0px 20px;
     border: none;
@@ -143,13 +142,18 @@ Navigation Styles
 }
 
 .chord-button {
-    background-color: #008CBA;
-    border: 2px solid #008CBA; 
+    background-color: #C7F689;
+    border: 2px solid #C7F689; 
 }
 
 .transpose-button {
-    background-color: #80E697;
-    border: 2px solid #80E697;
+    background-color: #008CBA;
+    border: 2px solid #008CBA;
+}
+
+.finger-button {
+    background-color: #79D9C9;
+    border: 2x solid #79D9C9;
 }
 
 .white {
@@ -160,16 +164,22 @@ Navigation Styles
     color: #000000;
 }
 
-.chord-button:hover {
+.finger-button:hover {
+      background-color: white;
+      border: 2px solid #79D9C9; 
+      color: #79D9C9;
+}
+
+.transpose-button:hover {
       background-color: white;
       border: 2px solid #008CBA; 
       color: #008CBA;
 }
 
-.transpose-button:hover {
+.chord-button:hover {
       background-color: white;
-      border: 2px solid #80E697; 
-      color: #80E697;
+      border: 2px solid #C7F689; 
+      color: #C7F689;
 }
 
 

@@ -10,14 +10,42 @@ TODO:
 console.log("Chord view is running")
 
 
-function white_3note_chords(){
+function white_2note_chords() {
+    let white_tonic_block = document.getElementsByClassName('tonic');
+    let white_dominant_block = document.getElementsByClassName('dominant');
+    
+    //Iterate through each tonic block. Locate the melody note image.
+    for (let x=0; x<white_tonic_block.length; x++) {
+        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+    
+        //Change it to the tonic chord image.
+        for (let y=0; y<wi_img.length; y++) {
+            wi_img[y].src = "../../images/pngs/simple_wht_tonic.png"    
+        }   
+    }
+    
+    //Iterate through each dominant block. Locate the melody note image.
+    for (let x=0; x<white_dominant_block.length; x++) {
+        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+    
+        //Change it to the dominant chord image.
+        for (let y=0; y<wv_img.length; y++) {
+            wv_img[y].src = "../../images/pngs/simple_wht_dom.png"    
+        }   
+    }
+}
+
+
+
+
+function xxxwhite_3note_chords(){
     let white_tonic_block = document.getElementsByClassName('tonic');
     let white_dominant_block = document.getElementsByClassName('dominant');
     let finger_num = document.getElementsByClassName('fingerings');
     
     //Make finger numbers disappear.
     for (let a=0; a<finger_num.length; a++) {
-        finger_num[a].style.display = "none";
+        finger_num[a].style.visibility = "hidden";
     }
     
     //Iterate through each tonic block. Locate the melody note image.
@@ -42,14 +70,14 @@ function white_3note_chords(){
 }
 
 
-function black_3note_chords(){
+function xxxblack_3note_chords(){
     let black_tonic_block = document.getElementsByClassName('tonic');
     let black_dominant_block = document.getElementsByClassName('dominant');
     let finger_num = document.getElementsByClassName('fingerings');
     
     //Make finger numbers disappear.
     for (let a=0; a<finger_num.length; a++) {
-        finger_num[a].style.display = "none";
+        finger_num[a].style.visibility = "hidden";
     }
     
     //Iterate through each tonic block. Locate the melody note image.
@@ -74,7 +102,7 @@ function black_3note_chords(){
 }
 
 
-function white_2note_chords() {
+function xxxwhite_2note_chords() {
     let white_tonic_block = document.getElementsByClassName('tonic');
     let white_dominant_block = document.getElementsByClassName('dominant');
     let finger_num = document.getElementsByClassName('fingerings');
@@ -101,7 +129,7 @@ function white_2note_chords() {
     }
 }
 
-function black_2note_chords() {
+function xxxblack_2note_chords() {
     let white_tonic_block = document.getElementsByClassName('tonic');
     let white_dominant_block = document.getElementsByClassName('dominant');
     let finger_num = document.getElementsByClassName('fingerings');
