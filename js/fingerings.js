@@ -1,10 +1,14 @@
 /*
-Transpose
+Fingerings
 Created By: Anne Hamill
 Date: 18 June 2022
 Description: Hide and display finger numbers for each melody note
 TODO:
-    1) Improve the two functions by figuring how to make the if/else if conditionals into switch statements.
+    This module needs to be re-written. The finger numbers should be paired with a specific score view (white key melody, 2-note black key chords, etc).
+    1st button click = display the view
+    2nd button click = display fingerings that go with the view
+    3rd button click = hide the fingerings
+    (change the view by clicking a different button)
 */
 
 console.log("Fingerings is running");
