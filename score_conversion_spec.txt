@@ -3,20 +3,20 @@ Converting Scores Automatically
 DONE) Should this score be converted?
     Analyze the score with Music21 to answer the question.  Use these criteria:
     	a. number of parts = 1
-        
-    	b. range
-    		i. min = minor 3rd
-    		ii. max = Major 6th
+
+        b. range
+            i. min = minor 3rd
+            ii. max = Major 6th
             NOTE: two-note songs (mi-sol) should not be converted
                 
-    	c. time signature: top number must be divisible by 2 or 3
+        c. time signature: top number must be divisible by 2 or 3
         
-    	d. rhythm
-    		i. if c = 2 but not 3: one or the other below must be true
-    			1) piece contains ONLY: eighth, quarter, half notes
-    			2) piece contains ONLY: quarter, half, whole notes
+        d. rhythm
+            i. if c = 2 but not 3: one or the other below must be true
+                1) piece contains ONLY: eighth, quarter, half notes
+                2) piece contains ONLY: quarter, half, whole notes
                 3) piece contains ONLY: sixteenth, eighth, quarter notes
-    		ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
+            ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
 
 
 1) If a score is convertable, we need information about it:
@@ -26,57 +26,57 @@ DONE) Should this score be converted?
             i. 3 Note
                 1. do/re/mi      
                 2. mi/sol/la
-                     
+
             ii. 4 Note
                 1. do/re/mi/sol
-            
+
             iii. Pentatonic
                 1. do/re/mi/sol/la
-                
+
             iv. Diatonic
                 1. do/re/mi/fa/sol
-                
+
             v. Extended Diatonic
                 1. do/re/mi/fa/sol/la
                 2. ti/do/re/mi/fa/sol
-        
+
         b. Necessary score data
             Is required to render the song page. 
             i. title - should be obvious
-            
+
             ii. meter - a different HTML template needs to be employed for different meters
                 1. duple = top number of time signature divisible by 2 but not 3
                 2. triple = top number of time signature divisible by 3
-                
+
             iii. characteristics of each note - to map the note to the correct keyboard image, chord symbol, and (save for 3-note songs) finger number image
                 1. pitch - in solfege to avoid key signatures
                 2. duration
                 3. lyric syllable - to add the lyric to the symbolic notation
 
-                
-2) Mapping score data to HTML                 
+
+2) Mapping score data to HTML
     a. Page-level (template) mapping
         i. 3-note duple song = duple_template.html
         ii. 3-note triple song = triple_template.html
         iii. 4-note duple song = duple_template_fingerings.html
         iv. 4-note triple song = triple_template_fingerings.html
-        
+
         Note: pentatonic, diatonic, and extended diatonic templates have not been designed yet
-    
+
     b. Note-level mapping for 3-note and 4-note songs (pentatonic, diatonic, and extended diatonic notation system has not been designed yet)
         i. Pitch
             1. do
                 chord symbol     = I
                 keyboard diagram = images/single_f.png
-                
+
             2. re
                 chord symbol     = V7
                 keyboard diagram = images/single_g.png
-            
+
             3. mi
                 chord symbol     = I
                 keyboard diagram = images/single_a.png
-    
+
             4. sol
                 chord symblol    = V7
                 keyboard diagram = images/single_c.png
@@ -86,8 +86,8 @@ DONE) Should this score be converted?
                 shortest duration = keyboard diagram (1 image total)
                 middle duration = keyboard diagram + 1 copy of images/short_arrow.png (2 images total)
                 longest duration = keyboard diagram + 3 copies of images/short_arrow.png (4 images total)
-                
-            2. triple meter 
+
+            2. triple meter
                 eighth note = keyboard diagram (1 image total)
                 quarter note = keyboard diagram + 1 copy of images/short_arrow.png (2 images total)
                 dotted quarter note = keyboard diagram + 2 copies of images/short_arrow.png (3 images total)

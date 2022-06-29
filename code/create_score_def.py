@@ -12,16 +12,15 @@ Version 0.2
 
 import os
 import sys
+import music21 as m21_lib
  
 from time   import strftime, gmtime
 from pprint import pprint
 
-import music21 as m21_lib
-
 from tabulate     import tabulate
 
 from load_m21_lib import get_local_corpus
-
+from ScoreDef     import ScoreDef
 
 # --------------------------------------------------------------
 # User Exceptions
@@ -88,9 +87,8 @@ def right_notes(the_score, the_right_list, debug=False):
 #
 def get_keysignature(our_score, verbose=False, debug=False):
     """
-  
     """
-    
+
     # These are the methods used to get key signatures
     #
     keysig_method_list = [ list(our_score.recurse().getElementsByClass('KeySignature')),
@@ -114,14 +112,14 @@ def get_keysignature(our_score, verbose=False, debug=False):
     for keysig_options in keysig_method_list:
         # results are returned as string of the form "A major"
         # if a result list has more than one key signature, we just want the first one
+        #
         key_parts = keysig_options[0].name.split(' ', 1)
         key_list.append(key_parts[0])
         tonality_list.append(key_parts[1])
 
     if debug:
         print(f'\nkey_list = {key_list}, tonality_list = {tonality_list}\n')
-    
-    # key_list = ['G', 'A', 'E'], tonality_list = ['major', 'minor', 'minor']
+
     majority = 2
     if debug:
         print(f'majority = {majority}')
@@ -132,13 +130,11 @@ def get_keysignature(our_score, verbose=False, debug=False):
 
     # Now look to see if any option in the list is in the majority (2 out of three in our case)
     #
-    #key_set = set(key_list)
     for next_possibility in set(key_list):
         if key_list.count(next_possibility) >= majority:
             the_key = next_possibility
             break
-    
-    #tonality_set = set(tonality_list)
+
     for next_possibility in set(tonality_list):
         if tonality_list.count(next_possibility) >= majority:
             the_tonality = next_possibility
