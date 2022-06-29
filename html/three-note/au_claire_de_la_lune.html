@@ -42,11 +42,13 @@
                 <button class="transpose-button white" onclick="white_transpose()">White Key Melody</button>    
                 <button class="transpose-button black" onclick="black_transpose()">Black Key Melody</button>
                 <button class="chord-button white" onclick="white_2note_chords()">White Key Chords</button>
-                <!--<button class="chord-button black" onclick="black_2note_chords()">Black Key Chords</button>-->
+                <button class="chord-button black" onclick="black_2note_chords()">Black Key Chords</button>
                 
                 <button class="finger-button left" onclick="left_hand_numbers()">Left Hand Fingerings</button>
                 <button class="finger-button right" onclick="right_hand_numbers()">Right Hand Fingerings</button>
-                <!--<button class="finger-button chord" onclick="chord_finger_numbers()">Chord Fingerings</button>-->
+                <button class="finger-button chord" onclick="two_note_chord_left_fingers()">Left Hand Chord Fingerings</button>
+                <button class="finger-button chord" onclick="two_note_chord_right_fingers()">Right Hand Chord Fingerings</button>
+                <button class="finger-button chord" onclick="hide_finger_numbers()">Hide All Fingerings</button>
             </div>
             
             <h1 class="title">Au Claire de la Lune</h1>
@@ -60,7 +62,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     In
                 </p>
@@ -73,7 +75,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     the
                 </p>
@@ -86,7 +88,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     eve -
                 </p>
@@ -99,7 +101,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     ning
                 </p>
@@ -112,7 +114,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <img class="pitch mi" src="../../images/pngs/single_a.png">
                     <br>
                     moon -
                 </p>
@@ -133,7 +135,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     light,
                 </p>
@@ -154,7 +156,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     Stands
                 </p>
@@ -167,7 +169,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <img class="pitch mi" src="../../images/pngs/single_a.png">
                     <br>
                     Pier -
                 </p>
@@ -180,7 +182,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     rot
                 </p>
@@ -194,7 +196,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     to -
                 </p>
@@ -207,7 +209,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     night.
                 </p>
@@ -244,7 +246,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     Plead -
                 </p>
@@ -257,7 +259,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     ing
                 </p>
@@ -270,7 +272,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     for
                 </p>
@@ -283,7 +285,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     a
                 </p>
@@ -297,7 +299,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <img class="pitch mi" src="../../images/pngs/single_a.png">
                     <br>
                     pen -
                 </p>
@@ -318,7 +320,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     cil,
                 </p>
@@ -339,7 +341,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     So
                 </p>
@@ -352,7 +354,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch a" src="../../images/pngs/single_a.png">
+                    <img class="pitch mi" src="../../images/pngs/single_a.png">
                     <br>
                     that
                 </p>
@@ -365,7 +367,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     he
                 </p>
@@ -378,7 +380,7 @@
                         V7
                     </span>
                     <br>
-                    <img class="pitch g" src="../../images/pngs/single_g.png">
+                    <img class="pitch re" src="../../images/pngs/single_g.png">
                     <br>
                     may
                 </p>
@@ -391,7 +393,7 @@
                         I
                     </span>
                     <br>
-                    <img class="pitch f" src="../../images/pngs/single_f.png">
+                    <img class="pitch do" src="../../images/pngs/single_f.png">
                     <br>
                     write.
                 </p>

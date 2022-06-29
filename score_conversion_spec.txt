@@ -56,10 +56,8 @@ DONE) Should this score be converted?
                 
 2) Mapping score data to HTML                 
     a. Page-level (template) mapping
-        i. 3-note duple song = duple_template.html
-        ii. 3-note triple song = triple_template.html
-        iii. 4-note duple song = duple_template_fingerings.html
-        iv. 4-note triple song = triple_template_fingerings.html
+        i. duple song = duple_template_fingerings.html
+        ii. triple song = triple_template_fingerings.html
         
         Note: pentatonic, diatonic, and extended diatonic templates have not been designed yet
     

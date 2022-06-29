@@ -35,6 +35,31 @@ function white_2note_chords() {
     }
 }
 
+function black_2note_chords() {
+    let white_tonic_block = document.getElementsByClassName('tonic');
+    let white_dominant_block = document.getElementsByClassName('dominant');
+
+    //Iterate through each tonic block. Locate the melody note image.
+    for (let x=0; x<white_tonic_block.length; x++) {
+        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+    
+        //Change it to the tonic chord image.
+        for (let y=0; y<wi_img.length; y++) {
+            wi_img[y].src = "../../images/pngs/simple_blk_tonic.png"    
+        }   
+    }
+    
+    //Iterate through each dominant block. Locate the melody note image.
+    for (let x=0; x<white_dominant_block.length; x++) {
+        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+    
+        //Change it to the dominant chord image.
+        for (let y=0; y<wv_img.length; y++) {
+            wv_img[y].src = "../../images/pngs/simple_blk_dom.png"    
+        }   
+    }
+}
+
 
 
 
