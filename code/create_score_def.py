@@ -58,6 +58,33 @@ def save_files(pass_list=None, fail_list=None, debug=False):
 #
 # --------------------------------------------------------------
 #
+def solfege_of(the_pitch, the_key, the_tonality, debug=False):
+    """
+    Scale Degree	Solfege Syllable	C Major	B-flat Major	D Major
+        1	            do	                C	    B-flat	        D
+        2	            re	                D	    C	            E
+        3	            mi	                E	    D	            F-sharp
+        4	            fa	                F	    E-flat	        G
+        5	            sol	                G	    F	            A
+        6	            la	                A	    G	            B
+        7	            ti	                B	    A	            C-sharp
+        8	            do	                C	    B-flat	        D
+
+    """
+
+    # Note, within Music21, lower case for a key id indicates it's minor. Major is Uppercase
+    #
+    our_key = m21_lib.key.Key(the_key.upper() if the_tonality.lower() =='major' else the_key.lower())
+    our_solfege_syllable  = our_key.solfeg(m21_lib.pitch.Pitch(the_pitch))
+    if debug:
+        print(f'solfege_of: our_key = {our_key}, pitch = {the_pitch}, solfege = {our_solfege_syllable}')
+
+    return our_solfege_syllable
+
+
+#
+# --------------------------------------------------------------
+#
 def right_notes(the_score, the_right_list, debug=False):
     """
     """
@@ -390,7 +417,10 @@ def convert_score_list_to_score_defs(score_list, show_score=False, verbose=True,
 if __name__ == '__main__':
     """
     """
-
+    
+    for key in ['C','B-', 'D']:
+        syllable = solfege_of('A', key, 'major', debug=True)
+        
     print(f'\npianoPreReading: Python  Version: {sys.version.split("(")[0]}')
     print(f'pianoPreReading: Music21 Version: {m21_lib.VERSION_STR}\n')
 
