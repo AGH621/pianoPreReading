@@ -26,6 +26,10 @@ from ScoreDef     import ScoreDef
 # User Exceptions
 # --------------------------------------------------------------
 
+# --------------------------------------------------------------
+# User Exceptions
+# --------------------------------------------------------------
+
 class UnknownNoteElementError(ValueError):
     def __init__(self, our_msg=None):
         self.our_msg = our_msg if our_msg else "???"
@@ -88,7 +92,7 @@ def right_notes(the_score, the_right_list, debug=False):
 def get_keysignature(our_score, verbose=False, debug=False):
     """
     """
-
+    
     # These are the methods used to get key signatures
     #
     keysig_method_list = [ list(our_score.recurse().getElementsByClass('KeySignature')),
@@ -141,7 +145,6 @@ def get_keysignature(our_score, verbose=False, debug=False):
             break
 
     return the_key, the_tonality
-
 
 #
 # --------------------------------------------------------------
