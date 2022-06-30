@@ -89,6 +89,12 @@ class ScoreDef():
     # ----------  Public methods  -----------------
     #
 
+    def get_score_title(self):
+        """
+        """
+        return self.score_def['score_data']['title']
+
+
     def add_note_def(self, note_id, duration, lyrics, chord, note_map_id):
         """
         """

@@ -346,12 +346,15 @@ def get_convertable_list(the_corpus, the_corpus_name, show_score=False, verbose=
 # --------------------------------------------------------------
 #
 
-def convert_score_to_html(the_score, show_score=False, verbose=True, debug=False):
+def convert_score_to_score_def(the_score, show_score=False, verbose=True, debug=False):
     """
     Convert each score in the score_list to the html of the corresponding keyboard
     """
 
-    converted_score = ''
+    print('\n Score')
+    pprint(the_score, indent=4)
+    converted_score = ScoreDef()
+    print('\n')
 
     # Do the conversions
     pass
@@ -363,19 +366,20 @@ def convert_score_to_html(the_score, show_score=False, verbose=True, debug=False
 # --------------------------------------------------------------
 #
 
-def convert_score_list_to_html(score_list, show_score=False, verbose=True, debug=False):
+def convert_score_list_to_score_defs(score_list, show_score=False, verbose=True, debug=False):
     """
     Convert each score in the score_list to the html of the corresponding keyboard
     """
 
-    converted_list = []
+    score_defs = {}
 
     if score_list:
         for next_score in score_list:
-            # Do the conversions
-            pass
+            # Do the conversion
+            next_def = convert_score_to_score_def(next_score, show_score=False, verbose=True, debug=False)
+            score_defs[next_def.get_score_title()] = next_def
 
-    return converted_list
+    return score_defs
 
 
 # --------------------------------------------------------------
@@ -405,6 +409,6 @@ if __name__ == '__main__':
 
     # And convert
     #
-    converted_list = convert_score_list_to_html(pass_list, show_score=False, verbose=True, debug=False)
+    converted_list = convert_score_list_to_score_defs(pass_list, show_score=False, verbose=True, debug=False)
 
 
