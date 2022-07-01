@@ -50,18 +50,18 @@ def save_score_defs(the_score_defs):
     dt_gmt = strftime("%Y-%m-%d_%H_%M", gmtime())
     
     SHAREPATH = '/Users/jimkaubisch/Projects/pianoPreReading/_share'
-    SCORE_DEF_FILE = f"score_def_{dt_gmt}.json"
+    SCORE_DEF_FILE = f"score_defs_{dt_gmt}.json"
 
     # Save to the score_defs dict to a json file in _share
     #
-    """try:
+    try:
         list_filepath = next_entry if not testing else next_entry.replace('.json', '_list.json', 1)
-        with open(list_filepath, "w") as json_list_file:
+        with open(os.path.join(SHAREPATH, SCORE_DEF_FILE), "w") as json_score_defs:
             if verbose:
                 print(f"... creating {list_filepath}")
-            json.dump(the_item_dict, json_list_file, sort_keys=True)
-            filepath_list.append(list_filepath)
-    except FileNotFoundError as why:"""
+            json.dump(the_item_dict, the_score_defs, sort_keys=True)
+    except FileNotFoundError as why:
+        raise
 
 #
 # --------------------------------------------------------------
