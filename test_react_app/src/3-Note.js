@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-  <link rel="stylesheet" href="../../css/css_reset.css">
-  <link rel="stylesheet" href="../../css/nav_style.css">
-  <link rel="stylesheet" href="../../css/text_style.css">
-  <link rel="stylesheet" href="../../css/note_style.css">
-
-  <title>3 Note Songs</title>
-</head>
-
-<body>
-    <nav class="top">
-        <h1><a class="logo" href="../../index.html">PreReading <br> Piano Book</a></h1>
-            <div>
-            <ul>
-                <li class="top-nav"><a class="pg-link current" href="3_note.html">3 Note</a></li>
-                <li class="top-nav"><a class="pg-link" href="4_note.html">4 Note</a></li>
-                <li class="top-nav"><a class="pg-link" href="diatonic.html">Diatonic</a></li>
-                <li class="top-nav"><a class="pg-link" href="pentatonic.html">Pentatonic</a></li>
-                <li class="top-nav"><a class="pg-link" href="song_list.html">Song List</a></li>
-                <li class="top-nav"><a class="pg-link" href="usage.html">Usage</a></li>
-            </ul>
-            
-            <ul>
-            <li class="pg-nav first"><a class="dp-link" href="#3-note-duple">Duple Meter</a></li>
-            <li class="pg-nav first"><a class="dp-link" href="#3-note-triple">Triple Meter</a></li>
-            </ul>
-            </div>
-    </nav>
-
+function ThreeNote() {
+    return (
     <main>
         <section class="home">
         <h1 class="title">3 Note Songs</h1>
@@ -51,73 +18,73 @@
         <section class="chords">
         <div class="note">
             <p class="chord-lyric">I
-            <br>
-            <img class="pitch" src="../../images/pngs/simple_wht_tonic.png">
-            <br>
+            <br />
+            <img class="pitch" src="../../images/pngs/simple_wht_tonic.png" />
+            <br />
             white key tonic
             </p>
         </div>
         
         <div class="note">
             <p class="chord-lyric">V7
-            <br>
-            <img class="pitch" src="../../images/pngs/simple_wht_dom.png">
-            <br>
+            <br />
+            <img class="pitch" src="../../images/pngs/simple_wht_dom.png" />
+            <br />
             white key dominant
             </p>
         </div>	
         
         <div class="note">
             <p class="chord-lyric">I
-            <br>
-            <img class="pitch" src="../../images/pngs/simple_blk_tonic.png">
-            <br>
+            <br />
+            <img class="pitch" src="../../images/pngs/simple_blk_tonic.png" />
+            <br />
             black key tonic
             </p>
         </div>
         
         <div class="note">
             <p class="chord-lyric">V7
-            <br>
-            <img class="pitch" src="../../images/pngs/simple_blk_dom.png">
-            <br>
+            <br />
+            <img class="pitch" src="../../images/pngs/simple_blk_dom.png" />
+            <br />
             black key dominant
             </p>
         </div>
         </section>
         
-        <br>
+        <br />
         
         <h2 class="graph-head home" name="3-note-duple" id="3-note-duple">Duple Meter Songs</h2>
         <section class="songs">
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/au_claire_de_la_lune.html">Au Claire de la Lune</a></h4>
-        <a href="../three-note/au_claire_de_la_lune.html"><img class="snippet" src="../../images/pngs/au_claire_de.png"></a>
+        <a href="../three-note/au_claire_de_la_lune.html"><img class="snippet" src="../../images/pngs/au_claire_de.png" /></a>
         </div>
         
         <div class="preview">
             <h4 class="song-title"><a class="in-link" href="../three-note/babylons_fallin.html">Babylon&#39;s Fallin&#39;</a></h4>
-            <a href="../three-note/babylons_fallin.html"><img class="snippet" src="../../images/pngs/babylons_fallin.png"></a>
+            <a href="../three-note/babylons_fallin.html"><img class="snippet" src="../../images/pngs/babylons_fallin.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/frog_in_the_meadow.html">Frog in the Meadow</a></h4>
-        <a href="../three-note/frog_in_the_meadow.html"><img class="snippet" src="../../images/pngs/frog_in_the.png"></a>
+        <a href="../three-note/frog_in_the_meadow.html"><img class="snippet" src="../../images/pngs/frog_in_the.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/hot_cross_buns.html">Hot Cross Buns</a></h4>
-        <a href="../three-note/hot_cross_buns.html"><img class="snippet" src="../../images/pngs/hot_cross_buns.png"></a>
+        <a href="../three-note/hot_cross_buns.html"><img class="snippet" src="../../images/pngs/hot_cross_buns.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/johnny_had_one_friend.html">Johnny Had One Friend</a></h4>
-        <a href="../three-note/johnny_had_one_friend.html"><img class="snippet" src="../../images/pngs/johnny_had_one.png"></a>
+        <a href="../three-note/johnny_had_one_friend.html"><img class="snippet" src="../../images/pngs/johnny_had_one.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/pitter_patter.html">Pitter Patter</a></h4>
-        <a href="../three-note/pitter_patter.html"><img class="snippet" src="../../images/pngs/pitter_patter.png"></a>
+        <a href="../three-note/pitter_patter.html"><img class="snippet" src="../../images/pngs/pitter_patter.png" /></a>
         </div>
         </section> 
         
@@ -125,47 +92,37 @@
         <section class="songs">
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/fais_do_do.html">Fais Do Do</a></h4>
-        <a href="../three-note/fais_do_do.html"><img class="snippet" src="../../images/pngs/fais_do_do.png"></a>
+        <a href="../three-note/fais_do_do.html"><img class="snippet" src="../../images/pngs/fais_do_do.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/im_a_little_dutch_girl.html">I&#39;m a Little Dutch Girl</a></h4>
-        <a href="../three-note/im_a_little_dutch_girl.html"><img class="snippet" src="../../images/pngs/little_dutch_girl.png"></a>
+        <a href="../three-note/im_a_little_dutch_girl.html"><img class="snippet" src="../../images/pngs/little_dutch_girl.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/mother_may_i_go_out.html">Mother May I Go Out</a></h4>
-        <a href="../three-note/mother_may_i_go_out.html"><img class="snippet" src="../../images/pngs/mother_may_i.png"></a>
+        <a href="../three-note/mother_may_i_go_out.html"><img class="snippet" src="../../images/pngs/mother_may_i.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/rock_a_bye.html">Rock-A-Bye</a></h4>
-        <a href="../three-note/rock_a_bye.html"><img class="snippet" src="../../images/pngs/rock_a_bye.png"></a>
+        <a href="../three-note/rock_a_bye.html"><img class="snippet" src="../../images/pngs/rock_a_bye.png" /></a>
         </div>
         
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/sailor_sailor.html">Sailor Sailor</a></h4>
-        <a href="../three-note/sailor_sailor.html"><img class="snippet" src="../../images/pngs/sailor_sailor.png"></a>
+        <a href="../three-note/sailor_sailor.html"><img class="snippet" src="../../images/pngs/sailor_sailor.png" /></a>
         </div>
 
         <div class="preview">
         <h4 class="song-title"><a class="in-link" href="../three-note/there_she_goes.html">There She Goes</a></h4>
-        <a href="../three-note/there_she_goes.html"><img class="snippet" src="../../images/pngs/there_she_goes.png"></a>
+        <a href="../three-note/there_she_goes.html"><img class="snippet" src="../../images/pngs/there_she_goes.png" /></a>
         </div> 	
         </section>
         
     </main>
-    
-    <footer class="footer">
-        <nav class="bottom">
-            <p class="copyright">Copyright MMXXII &#169; Anne G. Hamill</p>
-            <ul>
-                <li class="extras"><a class="pg-link" href="about.html">About</a></li>
-                <li class="extras"><a class="pg-link" href="#">Ta-ka-di-mi</a></li>
-            </ul>    
-        </nav>
-    </footer>    
+    );
+}
 
-</body>
-</html>
-        
+export default ThreeNote;
