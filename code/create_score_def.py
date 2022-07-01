@@ -13,6 +13,7 @@ Version 0.2
 import os
 import sys
 import music21 as m21_lib
+import json
  
 from time   import strftime, gmtime
 from pprint import pprint
@@ -22,9 +23,15 @@ from tabulate     import tabulate
 from load_m21_lib import get_local_corpus
 from ScoreDef     import ScoreDef
 
-# --------------------------------------------------------------
-# User Exceptions
-# --------------------------------------------------------------
+from time import strftime, gmtime
+dt_gmt = strftime("%Y-%m-%d_%H_%M", gmtime())
+
+# the success table has four columns. The third is the score_data dict 
+SCORE_DATA_POS = 3
+
+SHAREPATH = '/Users/jimkaubisch/Projects/pianoPreReading/_share'
+SCORE_DEF_FILE = f"score_defs_{dt_gmt}.json"
+
 
 # --------------------------------------------------------------
 # User Exceptions
@@ -42,26 +49,24 @@ class UnknownNoteElementError(ValueError):
 # Functions
 # --------------------------------------------------------------
 
-def save_score_defs(the_score_defs):
+def export_score_defs(the_score_defs, verbose=False):
     """
     """
-
-    from time import strftime, gmtime
-    dt_gmt = strftime("%Y-%m-%d_%H_%M", gmtime())
-    
-    SHAREPATH = '/Users/jimkaubisch/Projects/pianoPreReading/_share'
-    SCORE_DEF_FILE = f"score_defs_{dt_gmt}.json"
-
     # Save to the score_defs dict to a json file in _share
     #
     try:
-        list_filepath = next_entry if not testing else next_entry.replace('.json', '_list.json', 1)
-        with open(os.path.join(SHAREPATH, SCORE_DEF_FILE), "w") as json_score_defs:
+        defs_file_path = os.path.join(SHAREPATH, SCORE_DEF_FILE)
+        with open(defs_file_path, "w") as json_score_defs:
             if verbose:
-                print(f"... creating {list_filepath}")
-            json.dump(the_item_dict, the_score_defs, sort_keys=True)
-    except FileNotFoundError as why:
+                print(f"\n... creating {defs_file_path} ...", end="")
+            json.dump(the_score_defs, json_score_defs, sort_keys=True)
+        if verbose:
+            print(f"- success\n")
+    except Exception as why:
+        if verbose:
+            print(f"- failed with exception {why}\n")
         raise
+
 
 #
 # --------------------------------------------------------------
@@ -185,7 +190,7 @@ def get_keysignature(our_score, verbose=False, debug=False):
 # --------------------------------------------------------------
 #
 
-def is_score_convertible(this_meta_entry, result_list, show_score=False, log_results=False, verbose=True, debug=False):
+def is_score_convertible(this_meta_entry, result_list, show_score=False, log_results=False, verbose=False, debug=False):
     """
     Should this score be converted?
         Analyze the score with Music21 to answer the question.  Use these criteria:
@@ -242,16 +247,21 @@ def is_score_convertible(this_meta_entry, result_list, show_score=False, log_res
     if False: #show_score:
         this_meta_entry.show()
 
-    our_part_count     = our_metadata.numberOfParts
-    our_time_signature = our_metadata.timeSignatureFirst.split('/') if our_metadata.timeSignatureFirst else None
-    our_ts_numerator   = int(our_time_signature[0]) if our_time_signature else None
-    lowest_pitch       = our_metadata.pitchLowest
-    highest_pitch      = our_metadata.pitchHighest
-    max_interval       = m21_lib.interval.Interval(noteStart=m21_lib.note.Note(lowest_pitch), 
-                                                   noteEnd  =m21_lib.note.Note(highest_pitch))
-                                                   
+    # We need the data were using here for later in the case of scores that are convertable
+    #
+    score_data = {}
+    score_data['our_part_count']      = our_metadata.numberOfParts
+    score_data["our_time_signature"]  = our_metadata.timeSignatureFirst.split('/') if our_metadata.timeSignatureFirst else None
+    score_data["our_ts_numerator"]    = int(score_data["our_time_signature"][0]) if score_data["our_time_signature"] else None
+    score_data["lowest_pitch"]        = our_metadata.pitchLowest
+    score_data["highest_pitch"]       = our_metadata.pitchHighest
+    score_data["max_interval"]        = m21_lib.interval.Interval(noteStart=m21_lib.note.Note(score_data["lowest_pitch"]), 
+                                                                  noteEnd  =m21_lib.note.Note(score_data["highest_pitch"]))
+    score_data["keySignature"]        = our_metadata.keySignatures[0]
+    score_data["our_metadata_title"]  = our_metadata.title
+    score_data["metadata_entry_path"] = this_meta_entry.sourcePath
 
-    our_key, our_tonality = get_keysignature(our_score)
+    score_data["our_key"], score_data["our_tonality"] = get_keysignature(our_score)
 
     if debug:
         print(f'\tkeySignatures     = {our_metadata.all()}')
@@ -259,16 +269,16 @@ def is_score_convertible(this_meta_entry, result_list, show_score=False, log_res
 
     if verbose:
         print(f'is_convertable:')
-        print(f'\tmetadataEntry path = {this_meta_entry.sourcePath}')
-        print(f'\tour_metadata title = {our_metadata.title}')
-        print(f'\tour_key            = {our_key}')
-        print(f'\tour_tonality       = {our_tonality}')
-        print(f'\tpart_count         = {our_part_count:}')
-        print(f'\tkeySignature       = {our_metadata.keySignatures[0]}')
-        print(f'\tlowest_pitch       = {our_metadata.pitchLowest}')
-        print(f'\thighest_pitch      = {our_metadata.pitchHighest}')
-        print(f"\tmax_interval name  = {max_interval.name}")
-        print(f'\tts_numerator       = {our_ts_numerator}')
+        print(f'\tscore_data["metadata_entry_path"] = {score_data["metadata_entry_path"]}')
+        print(f'\tscore_data["our_metadata_title"]  = {score_data["our_metadata_title"]}')
+        print(f'\tscore_data["our_key"]             = {score_data["our_key"]}')
+        print(f'\tscore_data["our_tonality"]        = {score_data["our_tonality"]}')
+        print(f'\tscore_data["part_count"]          = {score_data["our_part_count"]}')
+        print(f'\tscore_data["keySignature"]        = {score_data["keySignature"]}')
+        print(f'\tscore_data["lowest_pitch"]        = {score_data["lowest_pitch"]}')
+        print(f'\tscore_data["highest_pitch"]       = {score_data["highest_pitch"]}')
+        print(f'\tscore_data["max_interval"] name   = {score_data["max_interval"].name}')
+        print(f'\tts_numerator                      = {score_data["our_ts_numerator"]}')
         print()
 
     if debug:
@@ -281,30 +291,30 @@ def is_score_convertible(this_meta_entry, result_list, show_score=False, log_res
     if len(our_score.parts) == 1:
         # and it needs to be in our permitted range 
         #
-        if max_interval.name in CHROMATIC_INTERVALS:
+        if score_data["max_interval"].name in CHROMATIC_INTERVALS:
             # A time signature must exists and its numerator must be divisable by 2 or 3
             #
-            if our_ts_numerator:
+            if score_data["our_ts_numerator"]:
                 try:
-                    if (our_ts_numerator % 3) == 0:
+                    if (score_data["our_ts_numerator"] % 3) == 0:
                         # Notes must all be from ONE of the lists
                         for next_possible in [RHYTHM_C_2_1, RHYTHM_C_2_2, RHYTHM_C_2_3]:
                             if right_notes(our_score, next_possible, debug=debug):
                                 # Passed all the tests, so a success
                                 convertable = True
                                 if log_results:
-                                        result_list.append(['Pass', f'{our_key} {our_tonality}', this_meta_entry.sourcePath])
+                                        result_list.append(['Pass', f'{score_data["our_key"]} {score_data["our_tonality"]}', this_meta_entry.sourcePath])
                                 return True, result_list
                             elif log_results:
-                                result_list.append(['Fail', 'unwanted note element {}', this_meta_entry.sourcePath])
-                    elif (our_ts_numerator % 2) == 0:
+                                result_list.append(['Fail', 'unwanted note element {}', this_meta_entry.sourcePath, score_data])
+                    elif (score_data["our_ts_numerator"] % 2) == 0:
                         # Notes must all be from the list
                         for next_possible in [RHYTHM_C_3_1]:
                             if right_notes(our_score, next_possible, debug=debug):
                                 # Passed all the tests, so a success
                                 convertable = True
                                 if log_results:
-                                        result_list.append(['Pass', f'{our_key} {our_tonality}', this_meta_entry.sourcePath])
+                                        result_list.append(['Pass', f'{score_data["our_key"]} {score_data["our_tonality"]}', this_meta_entry.sourcePath, score_data])
                                 return True, result_list
                     elif log_results:
                         result_list.append(['Fail', 'time signature numerator not 2 or 3', this_meta_entry.sourcePath])
@@ -315,7 +325,7 @@ def is_score_convertible(this_meta_entry, result_list, show_score=False, log_res
             elif log_results:
                 result_list.append(['Fail', 'No Time Signature', this_meta_entry.sourcePath])
         elif log_results:
-            result_list.append(['Fail', f'Interval out of Range ({max_interval.name})', this_meta_entry.sourcePath])
+            result_list.append(['Fail', f'Interval out of Range ({score_data["max_interval"].name})', this_meta_entry.sourcePath])
     elif log_results:
         result_list.append(['Fail', f'Part count = {len(our_score.parts)}', this_meta_entry.sourcePath])
 
@@ -351,10 +361,10 @@ def get_convertable_list(the_corpus, the_corpus_name, show_score=False, verbose=
 
     for metadata_item in the_metadata: #the_metadata: #range(len(localBundle)):
         extra_new_line = '\n' if verbose else ''
-        if completed_so_far % 50 == 0:
+        if the_metadata_len > 50 and completed_so_far % 50 == 0:
             print(f'{extra_new_line}get_convertable_list: Processed {completed_so_far:>4} of {the_metadata_len} scores{extra_new_line}')
 
-        is_score_convertible(metadata_item, result_list, verbose=True, show_score=show_score, log_results=True, debug=debug)
+        is_score_convertible(metadata_item, result_list, verbose=False, show_score=show_score, log_results=True, debug=debug)
 
         completed_so_far += 1
 
@@ -367,7 +377,7 @@ def get_convertable_list(the_corpus, the_corpus_name, show_score=False, verbose=
         for index, next_element in reversed(list(enumerate(result_list))):
             if next_element[0] == "Pass": # Move success entries to success list
                 # Append to the success list
-                pass_list.append([next_element[0], next_element[1], next_element[2]])
+                pass_list.append([next_element[0], next_element[1], next_element[2], next_element[3]])
 
                 # And delete from the result_list (which is becoming the failed list as a result)
                 del result_list[index]
@@ -386,13 +396,20 @@ def convert_score_to_score_def(the_score, show_score=False, verbose=True, debug=
     Convert each score in the score_list to the html of the corresponding keyboard
     """
 
-    print('\n Score')
-    pprint(the_score, indent=4)
-    converted_score = ScoreDef()
-    print('\n')
+    score_data = the_score[SCORE_DATA_POS]
+
+    if debug:
+        print(f'\n score_data: type of score_data = {type(score_data)}')
+        pprint(score_data, indent=4)
+        print('\n')
 
     # Do the conversions
     pass
+    converted_score = ScoreDef(title = score_data['our_metadata_title'])
+    if debug:
+        print('\n converted_score:')
+        pprint(converted_score.score_def, indent=4)
+        print('\n')
 
     return converted_score
 
@@ -401,18 +418,23 @@ def convert_score_to_score_def(the_score, show_score=False, verbose=True, debug=
 # --------------------------------------------------------------
 #
 
-def convert_score_list_to_score_defs(score_list, show_score=False, verbose=True, debug=False):
+def convert_pass_list_to_score_defs(pass_list, show_score=False, verbose=True, debug=False):
     """
-    Convert each score in the score_list to the html of the corresponding keyboard
+    Convert each score in the pass_list to the html of the corresponding keyboard
     """
 
     score_defs = {}
 
-    if score_list:
-        for next_score in score_list:
+    if len(pass_list)>1:
+        for next_score in pass_list[1:]:
             # Do the conversion
             next_def = convert_score_to_score_def(next_score, show_score=False, verbose=True, debug=False)
-            score_defs[next_def.get_score_title()] = next_def
+            if debug:
+                print(f"\nnext_def: ")#"{next_def.score_def['score_data']['title']}")
+                pprint(next_def.score_def)
+                print()
+
+            score_defs[next_def.score_def['score_data']['title']] = next_def.score_def
 
     return score_defs
 
@@ -425,7 +447,9 @@ def convert_score_list_to_score_defs(score_list, show_score=False, verbose=True,
 if __name__ == '__main__':
     """
     """
-    
+
+    debug = False
+
     for key in ['C','B-', 'D']:
         syllable = solfege_of('A', key, 'major', debug=True)
         
@@ -439,14 +463,25 @@ if __name__ == '__main__':
     # And get list to convert
     #
     pass_list, fail_list = get_convertable_list(local_corpus, corpus_name, show_score=True, verbose=True, debug=False)
+    print_pass = []
+    for next_row in pass_list:
+        print_pass.append(next_row[:3])
 
     print()
-    print(f"Successs ({len(pass_list)-1}):\n{tabulate(pass_list, headers='firstrow', tablefmt='fancy_grid', numalign=('decimal'), floatfmt='.2f')}")
+    print(f"Successs ({len(pass_list)-1}):\n{tabulate(print_pass, headers='firstrow', tablefmt='fancy_grid', numalign=('decimal'), floatfmt='.2f')}")
     print()
     print(f"Fail ({len(fail_list)-1}):\n{tabulate(fail_list, headers='firstrow', tablefmt='fancy_grid', numalign=('decimal'), floatfmt='.2f')}")
 
     # And convert
     #
-    converted_list = convert_score_list_to_score_defs(pass_list, show_score=False, verbose=True, debug=False)
+    score_defs = convert_pass_list_to_score_defs(pass_list, show_score=False, verbose=True, debug=False)
+    if debug:
+        print(f'\nscore_defs')
+        pprint(score_defs.keys())
+        print()
+
+    # And export to _share directory
+    #
+    #export_score_defs(score_defs, verbose=True)
 
 

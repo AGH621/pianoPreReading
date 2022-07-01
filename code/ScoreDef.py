@@ -58,10 +58,10 @@ class ScoreDef():
     #----------------------------------------------
     # ----------  Private methods  ----------------
     #
-    def __init__(self, title                 =None,
-                       pedagogical_score_type=None,
-                       meter                 =None,
-                       html_page_map         =None):
+    def __init__(self, title                 ='tbd',
+                       pedagogical_score_type='tbd',
+                       meter                 ='tbd',
+                       html_page_map         ='tbd'):
         """
         """
         
@@ -72,18 +72,18 @@ class ScoreDef():
         
         self.DEF_VERSION = 1.0
         self.score_def = {'score_data': {
-                                      'title'                 : title,
-                                      'pedagogical_score_type': pedagogical_score_type,
-                                      'meter'                 : meter,
-                                      'html_page_map'         : html_page_map,
-                                      'version'               : self.DEF_VERSION,
-                                      'timestamp'             : the_time
-                                     },
+                                          'title'                 : title,
+                                          'pedagogical_score_type': pedagogical_score_type,
+                                          'meter'                 : meter,
+                                          'html_page_map'         : html_page_map,
+                                          'score_def_version'     : self.DEF_VERSION,
+                                          'score_def_timestamp'   : the_time
+                                        },
 
-                          'notes':      [()]
+                          'notes'     : [()]
 
                          }
- 
+
 
     #----------------------------------------------
     # ----------  Public methods  -----------------
@@ -92,13 +92,13 @@ class ScoreDef():
     def get_score_title(self):
         """
         """
-        return self.score_def['score_data']['title']
+        pass#return self.score_def['score_data']['title']
 
 
     def add_note_def(self, note_id, duration, lyrics, chord, note_map_id):
         """
         """
-        self.score_def['notes'].append((note_id, duration, lyrics, chord, note_map_id))
+        pass#self.score_def['notes'].append((note_id, duration, lyrics, chord, note_map_id))
 
 
     def json_of_note_def(self):
@@ -125,7 +125,7 @@ if __name__ == '__main__':
     
     ThisScore = ScoreDef(title                 ='First Try',
                          pedagogical_score_type='Type 1',
-                         meter                 =None,
+                         meter                 ='',
                          html_page_map         ='pattern 1')
                          
     ThisScore.add_note_def('A_flat' , 'eigth'   , 'abc'   , 'I'    , 'whatever')
