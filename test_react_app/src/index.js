@@ -1,60 +1,36 @@
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
-import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
-import './index.css';
-
-import TopNavBar from './App';
-import Home from './Home';
-import About from './About';
-import ThreeNote from './3-Note';
-
-
 import reportWebVitals from './reportWebVitals';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import ReactDOM from "react-dom/client";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import App from "./App";
+import Expenses from "./routes/expenses";
+import Invoices from "./routes/invoices";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
+);
 root.render(
-    <Router>
-        <TopNavBar />
-        <Link to="/About">About</Link>
-        <Link to="/3-Note">Three-Note</Link>
-    
-        <Switch>
-          <Route path="/About">
-            <About />
+  <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<App />}>
+            <Route path="expenses" element={<Expenses />} />
+            <Route path="invoices" element={<Invoices />} />
           </Route>
-          <Route path="/3-Note">
-            <ThreeNote />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-    </Router>
+    </Routes>
+  </BrowserRouter>
 );
 
 
 
 
 
-/*
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <TopNavBar />
-    <Home />
-    <ThreeNote />
-    
-  </React.StrictMode>
-);*/
+
 
 
 

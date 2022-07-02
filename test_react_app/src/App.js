@@ -1,60 +1,30 @@
 import React from 'react';
-import './css/nav_style.css';
-import './css/text_style.css';
-import './images/icons8-piano-20b.png';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-/*
-import Home from './Home';
-import About from './About';
-import ThreeNote from './3-Note';
+import { Outlet, Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/About">About</Link>
-            </li>
-            <li>
-              <Link to="/3-Note">3-Note</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. }
-        <Switch>
-          <Route path="/About">
-            <About />
-          </Route>
-          <Route path="/3-Note">
-            <ThreeNote />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div>
+      <h1>Bookkeeper!</h1>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/invoices">Invoices</Link> |{" "}
+        <Link to="/expenses">Expenses</Link>
+      </nav>
+    <Outlet />        
+    </div>
   );
-}*/
+}
 
 
 
 
 
+
+/*
 function TopNavBar() {
     return (
         <nav className="top">
@@ -81,7 +51,8 @@ function TopNavBar() {
 }
 
 
-export default TopNavBar;
+export default TopNavBar;*/
+
 
 
 /*
