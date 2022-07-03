@@ -1,6 +1,5 @@
 import React from 'react';
-import {NavLink, Outlet, useSearchParams,
-} from "react-router-dom";
+import {NavLink, Outlet, useSearchParams,} from "react-router-dom";
 import { getInvoices } from "../data";
 
 export default function Invoices() {

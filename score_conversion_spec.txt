@@ -20,14 +20,14 @@ DONE) Should this score be converted?
 
 
 1) If a score is convertable, we need information about it:
-    How do we store this information?  JSON?  DB?  Other?
+    Store this information in a JSON file in shared directory which both front and back end can read.
         a. Pedagogical type of score
             We need to know this in order to use the correct HTML template in React & to update the site navigation
-            i. 3 Note
+            i. 3-Note
                 1. do/re/mi      
                 2. mi/sol/la
 
-            ii. 4 Note
+            ii. 4-Note
                 1. do/re/mi/sol
 
             iii. Pentatonic
