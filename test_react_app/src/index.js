@@ -8,9 +8,13 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import App from "./App";
 import ThreeNote from "./routes/three_note";
 import FourNote from "./routes/four_note";
-/*
-import Invoice from "./routes/invoice";
-*/
+import Home from "./routes/home";
+import Usage from "./routes/usage";
+import SongList from "./routes/song_list";
+import Pentatonic from "./routes/pentatonic";
+import Diatonic from "./routes/diatonic";
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,13 +22,18 @@ root.render(
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
             <Route path="three_note" element={<ThreeNote />} />
             <Route path="four_note" element={<FourNote />} />
+            <Route path="usage" element={<Usage />} />
+            <Route path="song_list" element={<SongList />} />
+            <Route path="pentatonic" element={<Pentatonic />} />
+            <Route path="diatonic" element={<Diatonic />} />
 
             <Route path="*"
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>404: Sorry, it ain&#39;t gonna work</p>
+                  <p>404: This ain&#39;t gonna work. Sorry &#39;bout that.</p>
                 </main>
               }
             />
