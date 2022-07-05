@@ -48,7 +48,7 @@ class UnknownNoteElementError(ValueError):
 # --------------------------------------------------------------
 # Functions
 # --------------------------------------------------------------
-
+#
 def export_score_defs(the_score_defs, verbose=False):
     """
     """
@@ -189,7 +189,6 @@ def get_keysignature(our_score, verbose=False, debug=False):
 #
 # --------------------------------------------------------------
 #
-
 def is_score_convertible(this_meta_entry, result_list, show_score=False, log_results=False, verbose=False, debug=False):
     """
     Should this score be converted?
@@ -364,7 +363,7 @@ def get_convertable_list(the_corpus, the_corpus_name, show_score=False, verbose=
         if the_metadata_len > 50 and completed_so_far % 50 == 0:
             print(f'{extra_new_line}get_convertable_list: Processed {completed_so_far:>4} of {the_metadata_len} scores{extra_new_line}')
 
-        is_score_convertible(metadata_item, result_list, verbose=False, show_score=show_score, log_results=True, debug=debug)
+        is_score_convertible(metadata_item, result_list, verbose=True, show_score=show_score, log_results=True, debug=debug)
 
         completed_so_far += 1
 
@@ -390,7 +389,6 @@ def get_convertable_list(the_corpus, the_corpus_name, show_score=False, verbose=
 #
 # --------------------------------------------------------------
 #
-
 def convert_score_to_score_def(the_score, show_score=False, verbose=True, debug=False):
     """
     Convert each score in the score_list to the html of the corresponding keyboard
@@ -417,7 +415,6 @@ def convert_score_to_score_def(the_score, show_score=False, verbose=True, debug=
 #
 # --------------------------------------------------------------
 #
-
 def convert_pass_list_to_score_defs(pass_list, show_score=False, verbose=True, debug=False):
     """
     Convert each score in the pass_list to the html of the corresponding keyboard
@@ -482,6 +479,6 @@ if __name__ == '__main__':
 
     # And export to _share directory
     #
-    #export_score_defs(score_defs, verbose=True)
+    export_score_defs(score_defs, verbose=True)
 
 
