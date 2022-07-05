@@ -1,18 +1,55 @@
 {
-    "do": {
-        "chord_symbol": "I",
-        "keyboard_diagram": "single_f.png"
-    }
-    "re": {
-        "chord_symbol": "V7",
-        "keyboard_diagram": "single_g.png"
-    }
-    "mi": {
-        "chord_symbol": "I",
-        "keyboard_diagram": "single_a.png"
-    }
-    "sol": {
-        "chord_symbol": "V7",
-        "keyboard_diagram": "single_c.png"
+    "pitch": { 
+        "do": {
+            "chord_symbol": "I",
+            "keyboard_diagram": "single_f.png"
+        },
+        "re": {
+            "chord_symbol": "V7",
+            "keyboard_diagram": "single_g.png"
+        },
+        "mi": {
+            "chord_symbol": "I",
+            "keyboard_diagram": "single_a.png"
+        },
+        "fa": {
+            "chord_symbol": "IV",
+            "keyboard_diagram": "single_a_sharp.png"
+        },
+        "sol": {
+            "chord_symbol": "V7",
+            "keyboard_diagram": "single_c.png"
+        },
+        "la": {
+            "chord_symbol": "IV",
+            "keyboard_diagram": "single_d.png"
+        }
+    },
+    "duration": {
+        "duple": {
+            "short": {
+                ["note": "keyboard_diagram"]
+            },
+            "medium": {
+                ["note": "keyboard_diagram", "length_1": "short_arrow.png"]
+            },
+            "long": {
+                ["note": "keyboard_diagram", "length_1": "short_arrow.png", "length_2": "short_arrow.png", "length_3": "short_arrow.png"]
+            },
+        },
+        "triple": {
+            "eighth": {
+                ["note": "keyboard_diagram"]
+            },
+            "quarter": {
+                ["note": "keyboard_diagram", "length_1": "short_arrow.png"]
+            },
+            "dotted-quarter": {
+                ["note": "keyboard_diagram", "length_1": "short_arrow.png", "length_2": "short_arrow.png"]
+            },
+            "dotted-half": {
+                ["note": "keyboard_diagram", "length_1": "short_arrow.png", "length_2": "short_arrow.png", "length_3": "short_arrow.png", "length_4": "short_arrow.png", "length_5": "short_arrow.png"]
+            }
+        }
     }
 }
