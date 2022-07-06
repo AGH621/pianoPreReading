@@ -1,0 +1,41 @@
+{
+    "duple": {
+        "html_page_map": "duple_template_fingerings.html",
+        "case_1": [
+            "short": "sixteenth",
+            "medium": "eighth",
+            "long": "quarter"
+        ],
+        "case_2": [
+            "short": "eighth",
+            "medium": "quarter",
+            "long": "half"
+        ],
+        "case_3": [
+            "short": "quarter",
+            "medium": "half",
+            "long": "whole"
+        ]
+    },
+    "triple": {
+        "html_page_map": "triple_template_fingerings.html"
+        "case_1": [
+            "tiny": "eighth",
+            "short": "quarter",
+            "medium": "dotted quarter",
+            "long": "dotted half"
+        ],
+        "case_2": [
+            "tiny": "sixteenth",
+            "short": "eighth",
+            "medium": "dotted eighth",
+            "long": "dotted quarter"
+        ],
+        "case_3": [
+            "tiny": "quarter",
+            "short": "half",
+            "medium": "dotted half",
+            "long": "dotted whole"
+        ]
+    }
+}
