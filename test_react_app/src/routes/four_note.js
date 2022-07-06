@@ -6,10 +6,37 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
+import { fourNoteTitles } from "../data/song_builder"
+
 
 export default function FourNote() {
+    let songs = fourNoteTitles();
+    
     return (
     <main>
+        <div style={{ display: "flex" }}>
+              <nav
+                style={{
+                  borderRight: "solid 1px",
+                  padding: "1rem",
+                }}
+              >
+                {songs.map((song) => (
+                  <Link
+                    style={{ display: "block", margin: "1rem 0" }}
+                    to={`/songs/${song}`}
+            
+                  >
+                    {song}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+        
+        
+        
+        
+        
         <section class="home">
         <h1 class="title">4 Note Songs</h1>
         <p class="intro">These songs add the fifth note of the major scale (sol) to those learned in the 3 note songs.</p>
