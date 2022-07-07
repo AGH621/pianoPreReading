@@ -30,7 +30,6 @@ let score_defs = {
             "title": "Au Claire de la Lune"
         }
     },
-    
     "I Have a Dog": {
         "notes": [
             {"pitch": "Mi", "duration": "Quarter", "lyric": "I"},
