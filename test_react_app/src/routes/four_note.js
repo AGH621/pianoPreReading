@@ -6,7 +6,7 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
-import { fourNoteTitles } from "./routes/song_builder";
+import { fourNoteTitles } from "../data/song_builder"
 
 
 export default function FourNote() {
@@ -21,15 +21,13 @@ export default function FourNote() {
                   padding: "1rem",
                 }}
               >
-                {songs.map((song) => (
                   <Link
                     style={{ display: "block", margin: "1rem 0" }}
-                    to={`/songs/${song}`}
+                    to={`/I Have a Dog`}
             
                   >
-                    {song}
+                    I Have a Dog
                   </Link>
-                ))}
               </nav>
             </div>
         

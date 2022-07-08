@@ -13,7 +13,7 @@ import Usage from "./routes/usage";
 import SongList from "./routes/song_list";
 import Pentatonic from "./routes/pentatonic";
 import Diatonic from "./routes/diatonic";
-import songPage from "./routes/song_builder";
+import SongPage from "./routes/song_page";
 
 
 
@@ -25,8 +25,9 @@ root.render(
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="three_note" element={<ThreeNote />} />
-                <Route path=":songTitle" element={<songPage />} />
+                <Route path=":songTitle" element={<SongPage />} />
             <Route path="four_note" element={<FourNote />} />
+                <Route path=":songTitle" element={<SongPage />} />
             <Route path="usage" element={<Usage />} />
             <Route path="song_list" element={<SongList />} />
             <Route path="pentatonic" element={<Pentatonic />} />

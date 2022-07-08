@@ -6,7 +6,7 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
-import { threeNoteTitles } from "./routes/song_builder";
+import { threeNoteTitles } from "../data/song_builder";
 
 
 export default function ThreeNote() {
@@ -24,12 +24,12 @@ export default function ThreeNote() {
                 {songs.map((song) => (
                   <Link
                     style={{ display: "block", margin: "1rem 0" }}
-                    to={`/three_note/${song}`}
-                    key={song}
+                    to={`/${song}`}
                   >
                     {song}
                   </Link>
                 ))}
+              <Outlet />      
               </nav>
               
             </div>
@@ -153,7 +153,8 @@ export default function ThreeNote() {
         <a href="../three-note/there_she_goes.html"><img class="snippet" src="../../images/pngs/there_she_goes.png" /></a>
         </div> 	
         </section>
-        <Outlet />
+        
     </main>
+              
     );
 }
