@@ -1,3 +1,6 @@
+import React from 'react';
+import { useParams } from "react-router-dom";
+
 let score_defs = {
     "Hot Cross Buns": {
         "notes": [
@@ -66,6 +69,34 @@ export function fourNoteTitles() {
         }
     }
     return title_list
+}
+
+export function getTitle(title) {
+    for (const next_song in score_defs) {
+        if (next_song === title) {
+            return score_defs[next_song].score_data.title
+        }
+    }
+}
+
+export function xxxgetTitle(title) {
+  return score_defs.find(
+    (song) => score_defs === title
+  );
+}
+
+
+
+export function songPage() {
+    let params = useParams()
+    let song = getTitle(params.songTitle);
+    
+    return (
+        <main style={{ padding: "1rem" }}>
+            <h2>{params.songTitle}</h2>
+            <p> how now brown cow</p>
+        </main>
+    );
 }
 
 

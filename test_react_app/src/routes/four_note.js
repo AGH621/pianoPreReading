@@ -6,7 +6,7 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
-import { fourNoteTitles } from "../data/song_builder"
+import { fourNoteTitles } from "./routes/song_builder";
 
 
 export default function FourNote() {

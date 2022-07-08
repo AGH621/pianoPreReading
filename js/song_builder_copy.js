@@ -32,15 +32,18 @@ let score_defs = {
     },
 }
 
-function getTitles() {
-    //for (const next_song in score_defs)
-        //console.log(score_defs[next_song].score_data)
-    
-    let title_list = []
-    for (const next_song in score_defs)
-        title_list.push(score_defs[next_song].score_data.title)
-    console.log(title_list)
-    return title_list
+function getTitles(title) {
+    for (const next_song in score_defs) {
+        if (next_song === title) {
+            console.log(score_defs[next_song])
+        }
+    }
 }
 
-getTitles()
+function xxxgetTitles(title) {
+  return score_defs.find(
+    (song) => score_defs === title
+  );
+}
+
+getTitles("Hot Cross Buns")
