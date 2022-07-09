@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 let score_defs = {
     "Hot Cross Buns": {
         "notes": [
-            {"pitch": "Mi", "duration": "Quarter", "lyric": "Hot"},
-            {"pitch": "Re", "duration": "Quarter", "lyric": "cross"},
-            {"pitch": "Do", "duration": "Half", "lyric": "buns"},
+            {"pitch": "Mi", "duration": "short", "lyric": "Hot"},
+            {"pitch": "Re", "duration": "short", "lyric": "cross"},
+            {"pitch": "Do", "duration": "medium", "lyric": "buns"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",
@@ -17,7 +17,7 @@ let score_defs = {
             "title": "Hot Cross Buns"
         }
     },
-    "au_claire_de_la_lune": {
+    "Au Claire de la Lune": {
         "notes": [
             {"pitch": "Do", "duration": "Quarter", "lyric": "In"},
             {"pitch": "Do", "duration": "Quarter", "lyric": "the"},
@@ -33,7 +33,7 @@ let score_defs = {
             "title": "Au Claire de la Lune"
         }
     },
-    "i_have_a_dog": {
+    "I Have a Dog": {
         "notes": [
             {"pitch": "Mi", "duration": "Quarter", "lyric": "I"},
             {"pitch": "Mi", "duration": "Eighth", "lyric": "have"},
