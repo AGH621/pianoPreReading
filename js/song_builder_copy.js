@@ -35,7 +35,7 @@ let score_defs = {
 function getTitles(title) {
     for (const next_song in score_defs) {
         if (next_song === title) {
-            console.log(score_defs[next_song])
+            return (score_defs[next_song])
         }
     }
 }
@@ -47,3 +47,12 @@ function xxxgetTitles(title) {
 }
 
 getTitles("Hot Cross Buns")
+
+function SongPage(title) {
+    let song = getTitles(title);
+    
+    console.log (song.score_data.meter);
+}
+
+SongPage("Hot Cross Buns")
+

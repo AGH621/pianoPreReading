@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 
 let score_defs = {
-    "hot_cross_buns": {
+    "Hot Cross Buns": {
         "notes": [
             {"pitch": "Mi", "duration": "Quarter", "lyric": "Hot"},
             {"pitch": "Re", "duration": "Quarter", "lyric": "cross"},
@@ -74,7 +74,7 @@ export function fourNoteTitles() {
 export function getTitle(title) {
     for (const next_song in score_defs) {
         if (next_song === title) {
-            return score_defs[next_song].score_data
+            return score_defs[title]
         }
     }
 }
@@ -87,7 +87,7 @@ export function xxxgetTitle(title) {
 
 
 
-export function songPage() {
+export function xxxsongPage() {
     let params = useParams()
     let song = getTitle(params.songTitle);
     
