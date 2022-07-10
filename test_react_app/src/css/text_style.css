@@ -61,7 +61,7 @@ Text Styles
 }
 
 .bullets {
-    list-style: inside url('../images/icons8-piano-20b.png');
+    list-style: inside url('icons8-piano-20b.png');
     line-height: 30px;
     vertical-align: sub;
 }
