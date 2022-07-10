@@ -19,10 +19,10 @@ let score_defs = {
     },
     "Au Claire de la Lune": {
         "notes": [
-            {"pitch": "Do", "duration": "Quarter", "lyric": "In"},
-            {"pitch": "Do", "duration": "Quarter", "lyric": "the"},
-            {"pitch": "Do", "duration": "Quarter", "lyric": "even-"},
-            {"pitch": "Re", "duration": "Quarter", "lyric": "ing"},
+            {"pitch": "Do", "duration": "short", "lyric": "In"},
+            {"pitch": "Do", "duration": "short", "lyric": "the"},
+            {"pitch": "Do", "duration": "short", "lyric": "even-"},
+            {"pitch": "Re", "duration": "short", "lyric": "ing"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",
@@ -35,10 +35,10 @@ let score_defs = {
     },
     "I Have a Dog": {
         "notes": [
-            {"pitch": "Mi", "duration": "Quarter", "lyric": "I"},
-            {"pitch": "Mi", "duration": "Eighth", "lyric": "have"},
-            {"pitch": "Re", "duration": "Eighth", "lyric": "a"},
-            {"pitch": "Do", "duration": "Quarter", "lyric": "dog"},
+            {"pitch": "Mi", "duration": "medium", "lyric": "I"},
+            {"pitch": "Mi", "duration": "short", "lyric": "have"},
+            {"pitch": "Re", "duration": "short", "lyric": "a"},
+            {"pitch": "Do", "duration": "medium", "lyric": "dog"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",
