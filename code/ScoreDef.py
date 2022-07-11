@@ -14,6 +14,7 @@ between the Python backend and JavaScript frontend reflecting the specification 
 
     
 """
+import os
 import pytz
 from datetime import datetime
 tz = pytz.timezone('US/Pacific')
@@ -31,7 +32,8 @@ score_def = {'score_data': {}, 'notes':  []}
 
 class ScoreDef():
     """
-    note_info = () # e.g. ('note_id', 'duration', 'lyrics', 'chord', 'note_map_id')
+    note_info_def = {"pitch": "tbd", "duration": "tbd", "lyric": "tbd"}
+
     score_def = {'score_data': {
                                   'title'                 : None,
                                   'pedagogical_score_type': None,
@@ -39,21 +41,17 @@ class ScoreDef():
                                   'html_page_map'         : None
                                  },
 
-                   'notes':      [note_info]
+                 'notes':      [note_info_def]
 
-                  }
+                }
 
     """
+
     #----------------------------------------------
     # ------    Class Constants/Variables    ------
     #
-    note_info_def = ('note_id', 'duration', 'lyrics', 'chord', 'note_map_id')
 
-    NOTE_ID_POS     = note_info_def.index('note_id'), 
-    DURATION_POS    = note_info_def.index('duration'), 
-    LYRICS_POS      = note_info_def.index('lyrics'), 
-    CHORD_POS       = note_info_def.index('chord'), 
-    NOTE_MAP_ID_POS = note_info_def.index('note_map_id')
+    note_info_def = {"pitch": "tbd", "duration": "tbd", "lyric": "tbd"}
 
     #----------------------------------------------
     # ----------  Private methods  ----------------
@@ -64,12 +62,12 @@ class ScoreDef():
                        html_page_map         ='tbd'):
         """
         """
-        
+
         #
         #-------------------------------------------------
         # ------    Per Instance Variables    ------------
         #
-        
+
         self.DEF_VERSION = 1.0
         self.score_def = {'score_data': {
                                           'title'                 : title,
@@ -80,7 +78,7 @@ class ScoreDef():
                                           'score_def_timestamp'   : the_time
                                         },
 
-                          'notes'     : [()]
+                          'notes'     : []
 
                          }
 
@@ -92,20 +90,13 @@ class ScoreDef():
     def get_score_title(self):
         """
         """
-        pass#return self.score_def['score_data']['title']
+        return self.score_def['score_data']['title']
 
 
-    def add_note_def(self, note_id, duration, lyrics, chord, note_map_id):
+    def add_note_def(self, note_info_def):
         """
         """
-        pass#self.score_def['notes'].append((note_id, duration, lyrics, chord, note_map_id))
-
-
-    def json_of_note_def(self):
-        """
-        """
-        json_object = json.dumps(self.score_def, indent = 4)
-        return json_object
+        self.score_def['notes'].append(note_info_def)
 
 
     def export_json_of_note_def(self):
@@ -118,19 +109,85 @@ class ScoreDef():
 #
 # --------------------------------------------------------------
 #
+SHAREPATH = '/Users/jimkaubisch/Projects/pianoPreReading/_share'
+SCORE_DEF_FILE = f"score_defs_test.json"
+
+def export_score_defs(the_score_defs, verbose=False):
+    """
+    """
+    # Save to the score_defs dict to a json file in _share
+    #
+    try:
+        defs_file_path = os.path.join(SHAREPATH, SCORE_DEF_FILE)
+        with open(defs_file_path, "w") as json_score_defs:
+            if verbose:
+                print(f"\n... creating {defs_file_path} ...", end="")
+            json.dump(the_score_defs, json_score_defs, sort_keys=True)
+        if verbose:
+            print(f"- success\n")
+        return defs_file_path
+    except Exception as why:
+        if verbose:
+            print(f"- failed with exception {why}\n")
+        raise
+
+def read_json_file(json_path):
+    with open(json_path, "rb") as tempfile:
+        try:
+            try:
+                # is it a string?
+                return json.load(tempfile)
+            except (JSONDecodeError, TypeError):
+                # No
+                pass
+        except Exception as why:
+            # We have no idea what went wrong
+            exception_print(why)
+            raise
 
 if __name__ == '__main__':
     """
     """
+
+    debug = True
     
-    ThisScore = ScoreDef(title                 ='First Try',
-                         pedagogical_score_type='Type 1',
-                         meter                 ='',
-                         html_page_map         ='pattern 1')
-                         
-    ThisScore.add_note_def('A_flat' , 'eigth'   , 'abc'   , 'I'    , 'whatever')
-    ThisScore.add_note_def('B_sharp', 'quarter' , 'cde'   , 'V7'   , 'whatever else')
+    # Empty score_defs dict
+    score_defs = {}
 
-    pprint(ThisScore.json_of_note_def())
+    # Create a sample ScoreDef
+    #
+    ThisScore = ScoreDef(title                 ="Hot Cross Buns",
+                         pedagogical_score_type="3 Note",
+                         meter                 ="duple",
+                         html_page_map         ="duple_template_fingerings.html"
+                        )
 
+    ThisScore.add_note_def({"pitch": "Mi", "duration": "Quarter", "lyric": "Hot"})
+    ThisScore.add_note_def({"pitch": "Re", "duration": "Quarter", "lyric": "cross"})
+    ThisScore.add_note_def({"pitch": "Do", "duration": "Half", "lyric": "buns"})
+
+    # Add its score_def to the score_defs dict with key == to the score title
+    #
+    score_defs[ThisScore.get_score_title()] = ThisScore.score_def
+
+    if debug:
+        print(f'\nThis is the python dict of the score_defs:')
+        pprint(score_defs)
+        print()
+
+    # Export it to where web side will pick it up (but really just a test file here)
+    #
+    json_path = export_score_defs(score_defs, verbose=False)
+    if debug:
+        print(f'json path: {json_path}')
+
+    # Read it back in to see if all is well
+    #
+    json_object = read_json_file(json_path)
+    
+    print(f'\nRead file at "{json_path}" back in - ok')
+    print(f" Here's the result)\n")
+    pprint(json_object, indent=4)
+
+    # All done
 
