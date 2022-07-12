@@ -6,6 +6,8 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
+import Usage from "./usage";
+
 export default function Home() {
     return (
         <main>
@@ -19,11 +21,12 @@ export default function Home() {
                 <li class="bullets">Learn to play songs with chordal accompaniment.</li>
             </ul>
         
-            <p class="intro">More information about how you can use these songs in your studio <a class="in-link" href="html/text/usage.html">can be found here</a></p>
+            <p class="intro">More information about how you can use these songs in your studio <Link className="in-link" to={`/Usage`}>can be found here</Link></p>
         
             <p class="intro">To get started, select a song from one of the menus at the top of the page.</p>  
         
             </section>
+            <Outlet />
         </main>
     );
 }    
