@@ -21,11 +21,11 @@ export default function FourNote() {
     <main className="columns">
         <nav className="songs">
             {songs.map((song) => (
-                <Link to={`/${song}`}>
-            {song}
-          </Link>
-        ))}
-        <Outlet />      
+                <Link className="song-title" to={`/${song}`} key={song}>
+                    {song}
+                </Link>
+            ))}
+            <Outlet />      
         </nav>
 
         <section class="home">

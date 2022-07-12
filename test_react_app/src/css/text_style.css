@@ -9,22 +9,10 @@ Text Styles
     grid-template-columns: 20% 80%;
 }
 
-.songs {
-    border-right: 1px solid;
-    padding: 20px;
-}
-
-.song-title {
-    display: block;
-    margin: 1rem 0;
-}
-
-
 .title {
     clear: both;
     margin-top: 50px;
     margin-bottom: 30px;
-    /*border: 1px solid;*/
     font-family: 'EB Garamond', serif;
     text-align: center;
     font-size: 60px;
@@ -32,14 +20,12 @@ Text Styles
 }
 
 .intro {
-    /*border: 1px solid;*/
     margin: 10px 50px 30px 50px;
     font-size: 24px;
     font-weight: 100;
 }
     
 .intro, .alphabet {
-    /*border: 1px solid;*/
     font-family: 'Helvetica', sans-serif;
     letter-spacing: 1.5px;
     line-height: 30px;
@@ -84,7 +70,6 @@ Text Styles
 }
 
 .graph-head {
-    /*border: 1px solid;*/
     margin: 50px 50px 10px 50px;
     color: #225C98;
     font-family: 'Times', sans-serif;
@@ -95,34 +80,35 @@ Text Styles
 .graph-subhead {
     /*border: 1px solid;*/
     color: #3BA190;
-    font-family: 'Times', sans-serif;
+    font-family: 'Times', serif;
     font-size: 28px;
     font-weight: bold;
     margin: 10px 100px 10px 150px;
 }
 
 .song-title {
-    text-align: center;
-    padding: 0px 5px 0px 5px;
-    /*margin-left: 15px;*/
-    font-family: 'Times', sans-serif;
+    display: block;
+    margin: 1rem 0;
+    text-align: left;
+    padding: 5px 10px 5px 5px;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     font-size: 24px;
-}
-
-.songs, .chords {
-    display: grid;
-    margin: 20px 30px;
+    text-decoration: none;
 }
 
 .songs {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 70px;
+    border-right: solid 1px; 
+    padding: 15px;
 }
 
 .chords {
+    display: grid;
+    margin: 20px 10px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-column-gap: 30px;
-    margin-left: 50px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
 }
 
 .preview {

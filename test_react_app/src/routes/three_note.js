@@ -16,17 +16,18 @@ import SimpleBlkV7 from "../images/simple_blk_dom.png";
 
 
 export default function ThreeNote() {
+    /*
+    Render the 3-Note Song page.  Use the songs returned by threeNoteTitles in the left hand navigation column.
+    TODO: The left-hand navigation styles do not render correctly when moved to a CSS style sheet.
+    */
+    
     let songs = threeNoteTitles();
     
     return (
     <main className="columns">
-        <nav style={{ borderRight: "solid 1px", padding: "1rem", }}>
+        <nav className="songs">
             {songs.map((song) => (
-                <Link
-                    style={{ display: "block", margin: "1rem 0" }}
-                    to={`/${song}`}
-                    key={song}
-                >
+                <Link className="song-title" to={`/${song}`} key={song}>
             {song}
           </Link>
         ))}
@@ -43,8 +44,8 @@ export default function ThreeNote() {
             <h2 class="graph-head">Harmonic Features</h2>
             <p class="intro">These songs use only the tonic (I) and dominant-seventh (V7) chords.  For young students with small hands and less fine             motor control, start by teaching, a stripped down, two-note version of each chord. I use a fifth (root + fifth) for the tonic                        chord, and a major second (seventh + root) for the dominant-seventh.</p>
             <sidebar class="chords">
-                <div class="tonic">
-                    <p class="chord">I
+                <div class="chords">
+                    <p>I
                     <br />
                     <img class="pitch" src={SimpleWhtI} />
                     <br />
@@ -52,8 +53,8 @@ export default function ThreeNote() {
                     </p>
                 </div>
         
-                <div class="dominant">
-                    <p class="chord">V7
+                <div class="chords">
+                    <p>V7
                     <br />
                     <img class="pitch" src={SimpleWhtV7} />
                     <br />
@@ -61,8 +62,8 @@ export default function ThreeNote() {
                     </p>
                 </div>	
         
-                <div class="tonic">
-                    <p class="chord">I
+                <div class="chords">
+                    <p>I
                     <br />
                     <img class="pitch" src={SimpleBlkI} />
                     <br />
@@ -70,8 +71,8 @@ export default function ThreeNote() {
                     </p>
                 </div>
         
-                <div class="dominant">
-                    <p class="chord">V7
+                <div class="chords">
+                    <p>V7
                     <br />
                     <img class="pitch" src={SimpleBlkV7} />
                     <br />

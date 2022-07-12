@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 
+
 let score_defs = {
     "Hot Cross Buns": {
         "notes": [
@@ -51,7 +52,19 @@ let score_defs = {
     },
 }
 
+/*
+TODO:
+    1) Alphabetize the returned lists
+    2) Integrate the live program data
+    3) Expand to include pentatonic and diatonic titles
+    4) Refactor to have one function doing all the filtering
+*/
+
 export function threeNoteTitles() {
+    /*
+    Filter the imported JSON object for songs using only three notes and alphabetize the resulting list.
+    These titles will be used for the left-hand navigation on the 3-Note page.
+    */
     let title_list = []
     for (const next_song in score_defs) {
         if (score_defs[next_song].score_data.pedagogical_score_type === '3 Note') {
@@ -62,6 +75,10 @@ export function threeNoteTitles() {
 }
 
 export function fourNoteTitles() {
+    /*
+    Filter the imported JSON object for songs using only four notes and alphabetize the resulting list.
+    These titles will be used for the left-hand navigation on the 4-Note page.
+    */
     let title_list = []
     for (const next_song in score_defs) {
         if (score_defs[next_song].score_data.pedagogical_score_type === '4 Note') {
@@ -77,26 +94,6 @@ export function getTitle(title) {
             return score_defs[title]
         }
     }
-}
-
-export function xxxgetTitle(title) {
-  return score_defs.find(
-    (song) => score_defs === title
-  );
-}
-
-
-
-export function xxxsongPage() {
-    let params = useParams()
-    let song = getTitle(params.songTitle);
-    
-    return (
-        <main style={{ padding: "1rem" }}>
-            <h2>{params.songTitle}</h2>
-            <p> how now brown cow</p>
-        </main>
-    );
 }
 
 
