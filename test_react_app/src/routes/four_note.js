@@ -20,16 +20,17 @@ export default function FourNote() {
     return (
     <main className="columns">
         <nav className="songs">
+            <h3 className="song-nav">Titles</h3>
             {songs.map((song) => (
                 <Link className="song-title" to={`/${song}`} key={song}>
-                    {song}
-                </Link>
-            ))}
-            <Outlet />      
+            {song}
+          </Link>
+        ))}
+        <Outlet />      
         </nav>
 
         <section class="home">
-            <h1 class="title">4 Note Songs</h1>
+            <h1 class="title">4-Note Songs</h1>
             <p class="intro">These songs add the fifth note of the major scale (sol) to those learned in the 3 note songs.</p>
         
             <h2 class="graph-head">Melodic Features</h2>

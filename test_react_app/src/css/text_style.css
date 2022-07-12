@@ -86,20 +86,7 @@ Text Styles
     margin: 10px 100px 10px 150px;
 }
 
-.song-title {
-    display: block;
-    margin: 1rem 0;
-    text-align: left;
-    padding: 5px 10px 5px 5px;
-    font-family: 'Inter', 'Helvetica', sans-serif;
-    font-size: 24px;
-    text-decoration: none;
-}
 
-.songs {
-    border-right: solid 1px; 
-    padding: 15px;
-}
 
 .chords {
     display: grid;
@@ -109,21 +96,6 @@ Text Styles
     font-size: 28px;
     text-align: center;
     font-weight: 400;
-}
-
-.preview {
-    /*border: 1px solid;*/
-    display: inline-block;
-    margin: 10px 50px 20px 150px;
-    text-align: center;
-}
-
-.snippet {
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    /*border: 1px solid;*/
-    height: 150px;
-    width: 215px;
 }
 
 .alphabet {

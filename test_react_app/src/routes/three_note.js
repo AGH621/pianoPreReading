@@ -26,6 +26,7 @@ export default function ThreeNote() {
     return (
     <main className="columns">
         <nav className="songs">
+            <h3 className="song-nav">Titles</h3>
             {songs.map((song) => (
                 <Link className="song-title" to={`/${song}`} key={song}>
             {song}
@@ -35,7 +36,7 @@ export default function ThreeNote() {
         </nav>
         
         <section class="home">
-            <h1 class="title">3 Note Songs</h1>
+            <h1 class="title">3-Note Songs</h1>
             <p class="intro">These songs use only the first 3 notes of the major scale (do, re and mi), which are much more common in United States folk         music than the mi-sol-la combination favored by music teachers trained in traditional Kodaly methods (which are based on Hungarian folk               music). I find that do-re-mi songs have a wider range of character than mi-sol-la songs which sound all the same.</p>
         
             <h2 class="graph-head">Melodic Features</h2>
