@@ -8,8 +8,10 @@ import "../css/nav_style.css";
 import "../css/note_style.css";
 
 import { getTitle } from "../data/song_builder";
+/*
 import { white_transpose, black_transpose } from "../js/transpose";
-/*import { white_2note_chords, black_2note_chords } from "../js/chord_view";*/
+import { white_2note_chords, black_2note_chords } from "../js/chord_view";
+*/
 
 
 import SingleA from "../images/single_a.png";
@@ -119,17 +121,17 @@ function writeSong(a_song) {
     return component_list
 }
 
+/*
 function makeButtons(){
     return (
         <div class="buttons">
-            <button class="transpose-button white" onclick="white_transpose()">White Key Melody</button>    
-            <button class="transpose-button black" onclick="black_transpose()">Black Key Melody</button>
-            <button class="chord-button white" onclick="white_2note_chords()">White Key Chords</button>
-            <button class="chord-button black" onclick="black_2note_chords()">Black Key Chords</button>
+            <button class="transpose-button white" onClick={white_transpose}>White Key Melody</button>    
+            <button class="transpose-button black" onClick={black_transpose}>Black Key Melody</button>
+            <button class="chord-button white" onClick={white_2note_chords}>White Key Chords</button>
+            <button class="chord-button black" onClick={black_2note_chords}>Black Key Chords</button>
         </div>
     )
-}
-
+}*/
 
 export default function SongPage() {
     let params = useParams();
@@ -138,7 +140,6 @@ export default function SongPage() {
     return (
         <main style={{ padding: "1rem" }}>
             <header>
-                {makeButtons()}
                 <h1 className = "title">{params.songTitle}</h1>
             </header>
             <section className={the_song.score_data.meter}>

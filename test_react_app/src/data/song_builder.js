@@ -69,6 +69,7 @@ export function threeNoteTitles() {
     for (const next_song in score_defs) {
         if (score_defs[next_song].score_data.pedagogical_score_type === '3 Note') {
             title_list.push(score_defs[next_song].score_data.title)
+            title_list.sort()
         }
     }
     return title_list
@@ -84,6 +85,14 @@ export function fourNoteTitles() {
         if (score_defs[next_song].score_data.pedagogical_score_type === '4 Note') {
             title_list.push(score_defs[next_song].score_data.title)
         }
+    }
+    return title_list
+}
+
+export function allTitles() {
+    let title_list = []
+    for (const next_song in score_defs) {
+        title_list.push(score_defs[next_song].score_data.title)
     }
     return title_list
 }

@@ -10,15 +10,15 @@ import "../css/note_style.css";
 export default function Pentatonic() {
     return (
         <main>
-            <section class="home">
-            <h1 class="title">Pentatonic</h1>
-            <p class="intro">This page is under construction. Come back soon!</p>
+            <section className="home">
+            <h1 className="title">Pentatonic</h1>
+            <p className="intro">This page is under construction. Come back soon!</p>
         
-            <h2 class="graph-head">Melodic Features</h2>
-            <p class="intro">[placeholder]</p>
+            <h2 className="graph-head">Melodic Features</h2>
+            <p className="intro">[placeholder]</p>
         
-            <h2 class="graph-head">Harmonic Features</h2>
-            <p class="intro">[placeholder]</p>
+            <h2 className="graph-head">Harmonic Features</h2>
+            <p className="intro">[placeholder]</p>
             </section>
         </main>
     );

@@ -55,12 +55,12 @@ Text Styles
 
 .two-indent {
     /*border: 1px solid;*/
-    margin: 10px 100px 50px 200px;
+    margin: 10px 100px 50px 100px;
 }
 
 .three-indent {
     /*border: 1px solid;*/
-    margin: 10px 100px 50px 250px;
+    margin: 10px 100px 50px 150px;
 }
 
 .bullets {
@@ -83,9 +83,8 @@ Text Styles
     font-family: 'Times', serif;
     font-size: 28px;
     font-weight: bold;
-    margin: 10px 100px 10px 150px;
+    margin: 10px 100px 10px 100px;
 }
-
 
 
 .chords {
@@ -98,12 +97,14 @@ Text Styles
     font-weight: 400;
 }
 
+
 .alphabet {
     display: inline;
     margin: 30px 10px;
     font-size: 32px;
     font-weight: 500;
 }
+
 
 .alpha-list {
     margin-left: 100px;

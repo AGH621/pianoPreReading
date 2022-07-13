@@ -179,6 +179,12 @@ Navigation Styles
       color: #C7F689;
 }
 
+.songs {
+    border-right: solid 1px; 
+    padding: 15px;
+    background-color: #F6FAFE;
+    color: #225C98;
+}
 
 .song-nav {
     margin: 20px 0px;
@@ -186,8 +192,6 @@ Navigation Styles
     font-weight: 600;
     font-family: 'Playfair Display', 'Times', serif;
     text-align: center;
-    
-    
 }
 
 
@@ -202,13 +206,7 @@ Navigation Styles
     color: #EA9B25;
 }
 
-.songs {
-    border-right: solid 1px; 
-    padding: 15px;
-    background-color: #F6FAFE;
-    color: #225C98;
-    
-}
+
 
 
 .song-title:visited {

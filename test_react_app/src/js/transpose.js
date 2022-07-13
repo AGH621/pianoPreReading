@@ -16,7 +16,7 @@ console.log("Transponse is running");
 
 //console.log(document.getElementsByClassName('pitch f'))
 
-function black_transpose() {
+export function black_transpose() {
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -37,7 +37,7 @@ function black_transpose() {
 }
 
 
-function white_transpose() {
+export function white_transpose() {
     let the_fsharps = document.getElementsByClassName('pitch do')
     let the_gsharps = document.getElementsByClassName('pitch re')
     let the_asharps = document.getElementsByClassName('pitch mi')

@@ -7,55 +7,60 @@ TODO:
     1) Create a single generalized function which can iterate through different classes and replace different kinds of images.
 */
 
-console.log("Chord view is running")
+import SimpleWhtI from "../images/simple_wht_tonic.png";
+import SimpleWhtV7 from "../images/simple_wht_dom.png";
+import SimpleBlkI from "../images/simple_blk_tonic.png";
+import SimpleBlkV7 from "../images/simple_blk_dom.png";
+
+console.log("Chord view is running");
 
 
-function white_2note_chords() {
+export function white_2note_chords() {
     let white_tonic_block = document.getElementsByClassName('tonic');
     let white_dominant_block = document.getElementsByClassName('dominant');
     
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<white_tonic_block.length; x++) {
-        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = "../../images/pngs/simple_wht_tonic.png"    
+            wi_img[y].src = {SimpleWhtI};  
         }   
     }
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<white_dominant_block.length; x++) {
-        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = "../../images/pngs/simple_wht_dom.png"    
+            wv_img[y].src = {SimpleWhtV7}; 
         }   
     }
 }
 
-function black_2note_chords() {
+export function black_2note_chords() {
     let white_tonic_block = document.getElementsByClassName('tonic');
     let white_dominant_block = document.getElementsByClassName('dominant');
 
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<white_tonic_block.length; x++) {
-        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = "../../images/pngs/simple_blk_tonic.png"    
+            wi_img[y].src = {SimpleBlkI}   
         }   
     }
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<white_dominant_block.length; x++) {
-        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = "../../images/pngs/simple_blk_dom.png"    
+            wv_img[y].src = {SimpleBlkV7}  
         }   
     }
 }
@@ -75,7 +80,7 @@ function xxxwhite_3note_chords(){
     
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<white_tonic_block.length; x++) {
-        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<wi_img.length; y++) {
@@ -85,7 +90,7 @@ function xxxwhite_3note_chords(){
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<white_dominant_block.length; x++) {
-        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<wv_img.length; y++) {
@@ -107,7 +112,7 @@ function xxxblack_3note_chords(){
     
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<black_tonic_block.length; x++) {
-        bi_img = black_tonic_block[x].querySelectorAll('img.pitch');
+        let bi_img = black_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<bi_img.length; y++) {
@@ -117,7 +122,7 @@ function xxxblack_3note_chords(){
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<black_dominant_block.length; x++) {
-        bv_img = black_dominant_block[x].querySelectorAll('img.pitch');
+        let bv_img = black_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<bv_img.length; y++) {
@@ -135,7 +140,7 @@ function xxxwhite_2note_chords() {
     
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<white_tonic_block.length; x++) {
-        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<wi_img.length; y++) {
@@ -145,7 +150,7 @@ function xxxwhite_2note_chords() {
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<white_dominant_block.length; x++) {
-        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<wv_img.length; y++) {
@@ -162,7 +167,7 @@ function xxxblack_2note_chords() {
     
     //Iterate through each tonic block. Locate the melody note image.
     for (let x=0; x<white_tonic_block.length; x++) {
-        wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
     
         //Change it to the tonic chord image.
         for (let y=0; y<wi_img.length; y++) {
@@ -172,7 +177,7 @@ function xxxblack_2note_chords() {
     
     //Iterate through each dominant block. Locate the melody note image.
     for (let x=0; x<white_dominant_block.length; x++) {
-        wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
+        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
     
         //Change it to the dominant chord image.
         for (let y=0; y<wv_img.length; y++) {
