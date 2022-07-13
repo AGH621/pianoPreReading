@@ -40,7 +40,7 @@ Text Styles
     margin-bottom: 100px;
 }
 
-.one-indent, .two-indent, .three-indent {
+.one-indent, .two-indent, .three-indent, .alpha-indent {
     font-family: 'Helvetica', sans-serif;
     font-size: 24px;
     font-weight: 100;
@@ -109,7 +109,23 @@ Text Styles
 .alpha-list {
     margin-left: 100px;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+
+.alpha-letter {
+    margin-left: 150px;
+    margin-top: 50px;
+    color: #3BA190;
+    font-family: 'Times', serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.alpha-indent {
+    /*border: 1px solid;*/
+    margin: 10px 50px 30px 150px;
 }
 
 

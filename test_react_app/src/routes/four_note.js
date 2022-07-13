@@ -6,7 +6,8 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
-import { fourNoteTitles } from "../data/song_builder"
+import { fourNoteTitles } from "../data/song_builder";
+import Footer from "./footer";
 
 import FullWhtI from "../images/full_wht_tonic.png";
 import FullWhtV7 from "../images/full_wht_dom.png";
@@ -18,7 +19,8 @@ export default function FourNote() {
     let songs = fourNoteTitles();
     
     return (
-    <main className="columns">
+    <main>
+        <div className="columns">
         <nav className="songs">
             <h3 className="song-nav">Titles</h3>
             {songs.map((song) => (
@@ -75,8 +77,11 @@ export default function FourNote() {
                     black key dominant
                     </p>
                 </div>
-            </sidebar>            
+            </sidebar>
         </section>
+        </div>
+        <Footer />
+ 
     </main>
     );
 }

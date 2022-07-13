@@ -7,6 +7,7 @@ import "../css/nav_style.css";
 import "../css/note_style.css";
 
 import Usage from "./usage";
+import Footer from "./footer";
 
 export default function Home() {
     return (
@@ -26,7 +27,9 @@ export default function Home() {
             <p class="intro">To get started, select a song from one of the menus at the top of the page.</p>  
         
             </section>
+            <Footer />
             <Outlet />
         </main>
+       
     );
 }    

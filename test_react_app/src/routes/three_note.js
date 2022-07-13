@@ -7,6 +7,7 @@ import "../css/nav_style.css";
 import "../css/note_style.css";
 
 import { threeNoteTitles } from "../data/song_builder";
+import Footer from "./footer";
 
 import SimpleWhtI from "../images/simple_wht_tonic.png";
 import SimpleWhtV7 from "../images/simple_wht_dom.png";
@@ -24,7 +25,8 @@ export default function ThreeNote() {
     let songs = threeNoteTitles();
     
     return (
-    <main className="columns">
+    <main>
+        <div className="columns">
         <nav className="songs">
             <h3 className="song-nav">Titles</h3>
             {songs.map((song) => (
@@ -82,6 +84,8 @@ export default function ThreeNote() {
                 </div>
             </sidebar>    
         </section>
+        </div>
+        <Footer />
     </main>
     );
 }

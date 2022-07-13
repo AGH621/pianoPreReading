@@ -14,6 +14,7 @@ import SongList from "./routes/song_list";
 import Pentatonic from "./routes/pentatonic";
 import Diatonic from "./routes/diatonic";
 import SongPage from "./routes/song_page";
+import Footer from "./routes/footer";
 
 
 

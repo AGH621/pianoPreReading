@@ -8,6 +8,7 @@ import "../css/nav_style.css";
 import "../css/note_style.css";
 
 import { getTitle } from "../data/song_builder";
+import Footer from "./footer";
 /*
 import { white_transpose, black_transpose } from "../js/transpose";
 import { white_2note_chords, black_2note_chords } from "../js/chord_view";
@@ -145,6 +146,7 @@ export default function SongPage() {
             <section className={the_song.score_data.meter}>
                 {writeSong(the_song)}
             </section>
+            <Footer />
         </main>
     );
 }

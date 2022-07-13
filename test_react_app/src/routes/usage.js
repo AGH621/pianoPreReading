@@ -6,6 +6,8 @@ import "../css/text_style.css";
 import "../css/nav_style.css";
 import "../css/note_style.css";
 
+import Footer from "./footer";
+
 
 export default function Usage() {
     return (
@@ -59,6 +61,7 @@ export default function Usage() {
                 <h3 className="graph-subhead">Subject Matter</h3>
                 <p className="one-indent">As folksongs from earlier times, there may be lyrics which do not fit some people&#39;s sensibilities and sensitivities. You are welcome to skip the songs which you do not like, that is your perogative. However, as a deep believer in                      diversity of thought, I will not remove songs from this site unless there is a verifiable copyright claim.</p>
             </section>
+            <Footer />
         </main>
     );
 }    
