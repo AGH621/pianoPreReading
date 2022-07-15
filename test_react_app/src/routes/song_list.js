@@ -25,9 +25,9 @@ export default function SongList() {
             <ul class="alpha-list">
                 <li class="alphabet"><a class="in-link" href="#A">A</a></li>
                 <li class="alphabet"><a class="in-link" href="#B">B</a></li>
-                <li class="alphabet">C</li>
-                <li class="alphabet">D</li>
-                <li class="alphabet">E</li>
+                <li class="alphabet"><a class="in-link" href="#C">C</a></li>
+                <li class="alphabet"><a class="in-link" href="#D">D</a></li>
+                <li class="alphabet"><a class="in-link" href="#E">E</a></li>
                 <li class="alphabet"><a class="in-link" href="#F">F</a></li>
                 <li class="alphabet"><a class="in-link" href="#G">G</a></li>
                 <li class="alphabet"><a class="in-link" href="#H">H</a></li>
@@ -36,19 +36,19 @@ export default function SongList() {
                 <li class="alphabet"><a class="in-link" href="#K">K</a></li>
                 <li class="alphabet"><a class="in-link" href="#L">L</a></li>
                 <li class="alphabet"><a class="in-link" href="#M">M</a></li>
-                <li class="alphabet">N</li>
+                <li class="alphabet"><a class="in-link" href="#N">N</a></li>
                 <li class="alphabet"><a class="in-link" href="#O">O</a></li>
                 <li class="alphabet"><a class="in-link" href="#P">P</a></li>
-                <li class="alphabet">Q</li>
+                <li class="alphabet"><a class="in-link" href="#Q">Q</a></li>
                 <li class="alphabet"><a class="in-link" href="#R">R</a></li>
                 <li class="alphabet"><a class="in-link" href="#S">S</a></li>
                 <li class="alphabet"><a class="in-link" href="#T">T</a></li>
-                <li class="alphabet">U</li>
-                <li class="alphabet">V</li>
+                <li class="alphabet"><a class="in-link" href="#U">U</a></li>
+                <li class="alphabet"><a class="in-link" href="#V">V</a></li>
                 <li class="alphabet"><a class="in-link" href="#W">W</a></li>
-                <li class="alphabet">X</li>
-                <li class="alphabet">Y</li>
-                <li class="alphabet">Z</li>
+                <li class="alphabet"><a class="in-link" href="#X">X</a></li>
+                <li class="alphabet"><a class="in-link" href="#Y">Y</a></li>
+                <li class="alphabet"><a class="in-link" href="#Z">Z</a></li>
             </ul>
         
             <hr />

@@ -13,8 +13,8 @@ export default function Footer() {
             <nav class="bottom">
                 <p class="copyright">Copyright MMXXII &#169; Anne G. Hamill</p>
                 <ul>
-                    <li class="extras"><a class="pg-link" href="html/text/about.html">About</a></li>
-                    <li class="extras"><a class="pg-link" href="#">Ta-ka-di-mi</a></li>
+                    <li class="extras"><Link className="pg-link" to="/about">About</Link></li>
+                    <li class="extras"><Link class="pg-link" to="#">Ta-ka-di-mi</Link></li>
                 </ul>    
             </nav>
         </footer>

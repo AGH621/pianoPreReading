@@ -1,7 +1,9 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 
+import scoreDefs from "../_share/score_defs_2022-07-12_18_33.json"
 
+/*
 let score_defs = {
     "Hot Cross Buns": {
         "notes": [
@@ -50,7 +52,8 @@ let score_defs = {
             "title": "I Have a Dog"
         }
     },
-}
+}*/
+
 
 /*
 TODO:
@@ -66,9 +69,9 @@ export function threeNoteTitles() {
     These titles will be used for the left-hand navigation on the 3-Note page.
     */
     let title_list = []
-    for (const next_song in score_defs) {
-        if (score_defs[next_song].score_data.pedagogical_score_type === '3 Note') {
-            title_list.push(score_defs[next_song].score_data.title)
+    for (const next_song in scoreDefs) {
+        if (scoreDefs[next_song].score_data.pedagogical_score_type === '3-Note') {
+            title_list.push(scoreDefs[next_song].score_data.title)
             title_list.sort()
         }
     }
@@ -81,9 +84,9 @@ export function fourNoteTitles() {
     These titles will be used for the left-hand navigation on the 4-Note page.
     */
     let title_list = []
-    for (const next_song in score_defs) {
-        if (score_defs[next_song].score_data.pedagogical_score_type === '4 Note') {
-            title_list.push(score_defs[next_song].score_data.title)
+    for (const next_song in scoreDefs) {
+        if (scoreDefs[next_song].score_data.pedagogical_score_type === '4-Note') {
+            title_list.push(scoreDefs[next_song].score_data.title)
         }
     }
     return title_list
@@ -91,16 +94,16 @@ export function fourNoteTitles() {
 
 export function allTitles() {
     let title_list = []
-    for (const next_song in score_defs) {
-        title_list.push(score_defs[next_song].score_data.title)
+    for (const next_song in scoreDefs) {
+        title_list.push(scoreDefs[next_song].score_data.title)
     }
     return title_list
 }
 
 export function getTitle(title) {
-    for (const next_song in score_defs) {
+    for (const next_song in scoreDefs) {
         if (next_song === title) {
-            return score_defs[title]
+            return scoreDefs[title]
         }
     }
 }

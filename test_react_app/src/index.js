@@ -15,6 +15,7 @@ import Pentatonic from "./routes/pentatonic";
 import Diatonic from "./routes/diatonic";
 import SongPage from "./routes/song_page";
 import Footer from "./routes/footer";
+import About from "./routes/about"
 
 
 
@@ -33,6 +34,7 @@ root.render(
             <Route path="song_list" element={<SongList />} />
             <Route path="pentatonic" element={<Pentatonic />} />
             <Route path="diatonic" element={<Diatonic />} />
+            <Route path="about" element={<About />} />
 
             <Route path="*"
               element={

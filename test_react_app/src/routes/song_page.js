@@ -18,6 +18,10 @@ import { white_2note_chords, black_2note_chords } from "../js/chord_view";
 import SingleA from "../images/single_a.png";
 import SingleG from "../images/single_g.png";
 import SingleF from "../images/single_f.png";
+import SingleC from "../images/single_c.png";
+import SingleD from "../images/single_d.png";
+import SingleBflat from "../images/single_a_sharp.png";
+
 import Arrow from "../images/short_arrow.png";
 
 import LfFour from "../images/L4.png";
@@ -29,23 +33,41 @@ import LfTwo from "../images/L2.png";
 function oneNote(a_note) {
     let the_pix = [];
 
-    if (a_note === 'Mi') {
+    if (a_note === 'mi') {
         the_pix.push(<img className="fingerings" src={LfTwo} />)
         the_pix.push(<span className="chord">I</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch mi" src={SingleA} />)
     }
-    else if (a_note === 'Re') {
+    else if (a_note === 're') {
         the_pix.push(<img className="fingerings" src={LfThree} />)
         the_pix.push(<span className="chord">V7</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch re" src={SingleG} />)
     }
-    else if (a_note === 'Do') {
+    else if (a_note === 'do') {
         the_pix.push(<img className="fingerings" src={LfFour} />)
         the_pix.push(<span className="chord">I</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch do" src={SingleF} />)
+    }
+    else if (a_note === 'sol') {
+        the_pix.push(<img className="fingerings" src={LfFour} />)
+        the_pix.push(<span className="chord">V7</span>)
+        the_pix.push(<br />)
+        the_pix.push(<img className="pitch sol" src={SingleC} />)
+    }
+    else if (a_note === 'la') {
+        the_pix.push(<img className="fingerings" src={LfFour} />)
+        the_pix.push(<span className="chord">IV</span>)
+        the_pix.push(<br />)
+        the_pix.push(<img className="pitch la" src={SingleD} />)
+    }
+    else if (a_note === 'fa') {
+        the_pix.push(<img className="fingerings" src={LfFour} />)
+        the_pix.push(<span className="chord">IV</span>)
+        the_pix.push(<br />)
+        the_pix.push(<img className="pitch fa" src={SingleBflat} />)
     }
     return the_pix
 }
@@ -54,7 +76,7 @@ function writeSong(a_song) {
     let component_list = []
     
     for (let n=0; n<a_song.notes.length; n++) {
-        if (a_song.notes[n].duration === 'short') {
+        if (a_song.notes[n].duration === 'eighth') {
             component_list.push(
                 <div class="note">
                 <p class="tonic">
@@ -64,7 +86,7 @@ function writeSong(a_song) {
                 </p>
                 </div>
             )}
-            else if (a_song.notes[n].duration === 'medium') {
+            else if (a_song.notes[n].duration === 'quarter') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -83,7 +105,7 @@ function writeSong(a_song) {
                         </p>
                     </div>)
             }
-            else if (a_song.notes[n].duration === 'long') {
+            else if (a_song.notes[n].duration === 'half') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
