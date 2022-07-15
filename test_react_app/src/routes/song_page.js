@@ -145,6 +145,26 @@ function writeSong(a_song) {
 }
 
 /*
+Button Views
+    1) Melody
+        a) transpose
+            i) which key? how?
+        b) finger numbers
+            i) right hand
+            ii) left hand
+        c) chord symbols
+
+    2) Chords
+        a) transpose
+            i) which key? how?
+        b) finger numbers
+            i) right hand
+            ii) left hand
+        c) melody notes (how?)
+*/
+
+
+/*
 function makeButtons(){
     return (
         <div class="buttons">
