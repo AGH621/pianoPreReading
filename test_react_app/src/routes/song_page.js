@@ -139,7 +139,7 @@ export default function SongPage() {
     let the_song = getTitle(params.songTitle);
     
     return (
-        <main style={{ padding: "1rem" }}>
+        <main>
             <header>
                 <h1 className = "title">{params.songTitle}</h1>
             </header>

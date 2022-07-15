@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import "./css/css_reset.css";
 import "./css/nav_style.css";
 import "./css/text_style.css";
+import "./css/note_style.css";
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
     );
 }
 
+/*
 export function Footer() {
     return (
         <footer>
@@ -39,5 +41,6 @@ export function Footer() {
             </nav>
         </footer>
     )
-}
+}*/
+
 

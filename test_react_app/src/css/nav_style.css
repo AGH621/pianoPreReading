@@ -21,6 +21,7 @@ Navigation Styles
     height: 120px;
 }
 
+
 .logo {
     /*border: 1px solid;*/
     position: relative;
@@ -205,8 +206,6 @@ Navigation Styles
     text-decoration: none;
     color: #EA9B25;
 }
-
-
 
 
 .song-title:visited {
