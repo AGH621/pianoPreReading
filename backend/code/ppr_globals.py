@@ -5,7 +5,7 @@ Created by Jim Kaubisch on 2022-06-02.
 
 import os
 
-PPR_INI_FILE_PATH = '~/Projects/pianoPreReading/code/ppr_config.ini'
+PPR_INI_FILE_PATH = '~/Projects/pianoPreReading/backend/code/ppr_config.ini'
 
 from pprint import pprint
 from configparser import ConfigParser
