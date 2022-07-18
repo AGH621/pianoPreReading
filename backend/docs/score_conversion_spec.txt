@@ -124,25 +124,25 @@ Duration Name		Quarter Length x 1000
 
 Sixteenth		250
 Eighth			500
-Dotted Eighth		750
+Dotted Eighth	750
 Quarter			1000
-Dotted Quarter		1500
+Dotted Quarter	1500
 Half			2000
 Dotted Half		3000
 Whole			4000
-Dotted Whole		6000
-Double Whole		8000
+Dotted Whole	6000
+Double Whole	8000
 
 Map #2:  Relative note duration names to numeric lengths in 3 different use cases
 --------------------------------------------------------------------------------------------------------
 Relative Name		Quarter Length x 1000 
 			Use Case 1		Use Case 2		Use Case 3
-Tiny			250			500			1000
+Tiny			250			500			    1000
 Short			500			1000			2000
 Kinda Short		750			1500			3000
-Medium			1000			2000			4000
-Kinda Long		1500			3000			6000
-Long			2000			4000			8000
+Medium			1000		2000			4000
+Kinda Long		1500		3000			6000
+Long			2000		4000			8000
 
 ** If the smallest number is >1000, raise an exception because there is no way to figure out the relative names **
 (We should discuss this)
