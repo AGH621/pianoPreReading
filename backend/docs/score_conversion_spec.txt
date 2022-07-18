@@ -21,7 +21,7 @@ DONE) Should this score be converted?
 
 1) If a score is convertable, we need information about it:
     Store this information in a JSON file in shared directory which both front and back end can read.
-        a. Pedagogical type of score
+        DONE. Pedagogical type of score
             We need to know this in order to use the correct HTML template in React & to update the site navigation
             i. 3-Note
                 1. do/re/mi      
@@ -42,16 +42,16 @@ DONE) Should this score be converted?
 
         b. Necessary score data
             Is required to render the song page. 
-            i. title - should be obvious
+            DONE. title - should be obvious
 
-            ii. meter - a different HTML template needs to be employed for different meters
+            DONE. meter - a different HTML template needs to be employed for different meters
                 1. duple = top number of time signature divisible by 2 but not 3
                 2. triple = top number of time signature divisible by 3
 
             iii. characteristics of each note - to map the note to the correct keyboard image, chord symbol, and (save for 3-note songs) finger number image
-                1. pitch - in solfege to avoid key signatures
+                DONE. pitch - in solfege to avoid key signatures
                 2. duration
-                3. lyric syllable - to add the lyric to the symbolic notation
+                DONE. lyric syllable - to add the lyric to the symbolic notation
 
 
 2) Mapping score data to HTML
@@ -113,14 +113,39 @@ score_meta = {score_base_data: {
 
 
 
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
+Duration Mapping
 
+Map #1:  Absolute note duration names to numeric lengths
+--------------------------------------------------------------------------------------------------------
+Duration Name		Quarter Length x 1000
 
+Sixteenth		250
+Eighth			500
+Dotted Eighth	750
+Quarter			1000
+Dotted Quarter	1500
+Half			2000
+Dotted Half		3000
+Whole			4000
+Dotted Whole	6000
+Double Whole	8000
 
+Map #2:  Relative note duration names to numeric lengths in 3 different use cases
+--------------------------------------------------------------------------------------------------------
+Relative Name		Quarter Length x 1000 
+			Use Case 1		Use Case 2		Use Case 3
+Tiny			250			500			    1000
+Short			500			1000			2000
+Kinda Short		750			1500			3000
+Medium			1000		2000			4000
+Kinda Long		1500		3000			6000
+Long			2000		4000			8000
 
-
-
-
+** If the smallest number is >1000, raise an exception because there is no way to figure out the relative names **
+(We should discuss this)
 
 
 

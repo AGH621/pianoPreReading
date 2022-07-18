@@ -26,6 +26,21 @@ from pprint import pprint
 
 score_def = {'score_data': {}, 'notes':  []}
 
+# Create a map from pitches in a score to a pedagogical_type
+#   For each pedagogical_type, list the solfege pitches which define the type
+#   The pitches are defined as a set of pitches, e.g. set(['do','re','mi'])
+#   The map is a list of duples consisting of note sets and names for the corresponding pedagogical_type
+#
+pedagogical_type_to_notes_map = []
+
+pedagogical_type_to_notes_map.append((set(['do','re','mi'])                 , '3-Note'))
+pedagogical_type_to_notes_map.append((set(['mi','sol','la'])                , '3-Note'))
+pedagogical_type_to_notes_map.append((set(['do','re','mi','sol'])           , '4-Note'))
+pedagogical_type_to_notes_map.append((set(['do','re','mi','sol','la'])      , 'Pentatonic'))
+pedagogical_type_to_notes_map.append((set(['do','re','mi','fa','sol'])      , 'Diatonic'))
+pedagogical_type_to_notes_map.append((set(['do','re','mi','fa','sol','la']) , 'Extended Diatonic'))
+pedagogical_type_to_notes_map.append((set(['do','re','mi','fa','sol','ti']) , 'Extended Diatonic'))
+
 #---------------------------------------------------------------
 # ------      ScoreDef  Class    ------------------------
 #---------------------------------------------------------------
@@ -37,8 +52,7 @@ class ScoreDef():
     score_def = {'score_data': {
                                   'title'                 : None,
                                   'pedagogical_score_type': None,
-                                  'meter'                 : None,
-                                  'html_page_map'         : None
+                                  'meter'                 : None
                                  },
 
                  'notes':      [note_info_def]
@@ -58,8 +72,7 @@ class ScoreDef():
     #
     def __init__(self, title                 ='tbd',
                        pedagogical_score_type='tbd',
-                       meter                 ='tbd',
-                       html_page_map         ='tbd'):
+                       meter                 ='tbd'):
         """
         """
 
@@ -73,7 +86,6 @@ class ScoreDef():
                                           'title'                 : title,
                                           'pedagogical_score_type': pedagogical_score_type,
                                           'meter'                 : meter,
-                                          'html_page_map'         : html_page_map,
                                           'score_def_version'     : self.DEF_VERSION,
                                           'score_def_timestamp'   : the_time
                                         },
@@ -92,18 +104,23 @@ class ScoreDef():
         """
         return self.score_def['score_data']['title']
 
-
+ # ------
     def add_note_def(self, note_info_def):
         """
         """
         self.score_def['notes'].append(note_info_def)
 
+ # ------
+    def add_pedagogical_score_type(self, score_type):
+        """
+        """
+        self.score_def['score_data']['pedagogical_score_type'] = score_type
 
-    def export_json_of_note_def(self):
+ # ------
+    def get_score_def(self):
         """
         """
-        json_object = json.dumps(self.score_def, indent = 4)
-        return json_object
+        return self.score_def
 
 
 #
@@ -158,8 +175,7 @@ if __name__ == '__main__':
     #
     ThisScore = ScoreDef(title                 ="Hot Cross Buns",
                          pedagogical_score_type="3 Note",
-                         meter                 ="duple",
-                         html_page_map         ="duple_template_fingerings.html"
+                         meter                 ="duple"
                         )
 
     ThisScore.add_note_def({"pitch": "Mi", "duration": "Quarter", "lyric": "Hot"})
