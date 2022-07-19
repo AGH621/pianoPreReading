@@ -9,10 +9,10 @@ import "../css/note_style.css";
 
 import { getTitle } from "../data/song_builder";
 import Footer from "./footer";
-/*
+
 import { white_transpose, black_transpose } from "../js/transpose";
 import { white_2note_chords, black_2note_chords } from "../js/chord_view";
-*/
+
 
 
 import SingleA from "../images/single_a.png";
@@ -309,6 +309,7 @@ Button Views
 */
 
 
+
 /*
 function makeButtons(){
     return (
@@ -321,19 +322,44 @@ function makeButtons(){
     )
 }*/
 
+
 export default function SongPage() {
     let params = useParams();
     let the_song = getTitle(params.songTitle);
     
     return (
         <main>
-            <header>
-                <h1 className = "title">{params.songTitle}</h1>
-            </header>
+            <div className="columns">
+            <nav className="songs">
+                <h3 className="song-nav">View Options</h3>
+                    <hr />
+
+                    <h4>Melody View</h4>    
+                    <button className="transpose-button black">Black Key Melody</button>
+                    <button>Show Finger Numbers</button>
+                    <button>Show Letter Names</button>
+
+                    <hr />
+            
+                    <h4>Chord View</h4>
+                    <button class="chord-button white">White Key Chords</button>
+                    <button class="chord-button black">Black Key Chords</button>
+                    <button> Hide Chord Symbols</button>
+
+                    <hr />
+        
+                    <h4>Other Views</h4>
+                    <button>Hide Lyrics</button>
+                    <button>Show Additional Verses</button>
+            </nav>
+            <div className="home">
+            <h1 className = "title">{params.songTitle}</h1>
             <section className={the_song.score_data.meter.toLowerCase()}>
                 {writeSong(the_song)}
             </section>
-            <Footer />
+            </div>    
+            </div>
+            <Footer />        
         </main>
     );
 }
