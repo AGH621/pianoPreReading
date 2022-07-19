@@ -289,39 +289,6 @@ function writeSong(a_song) {
     return component_list
 }
 
-/*
-Button Views
-    1) Melody
-        a) transpose
-            i) which key? how?
-        b) finger numbers
-            i) right hand
-            ii) left hand
-        c) chord symbols
-
-    2) Chords
-        a) transpose
-            i) which key? how?
-        b) finger numbers
-            i) right hand
-            ii) left hand
-        c) melody notes (how?)
-*/
-
-
-
-/*
-function makeButtons(){
-    return (
-        <div class="buttons">
-            <button class="transpose-button white" onClick={white_transpose}>White Key Melody</button>    
-            <button class="transpose-button black" onClick={black_transpose}>Black Key Melody</button>
-            <button class="chord-button white" onClick={white_2note_chords}>White Key Chords</button>
-            <button class="chord-button black" onClick={black_2note_chords}>Black Key Chords</button>
-        </div>
-    )
-}*/
-
 
 export default function SongPage() {
     let params = useParams();
@@ -332,29 +299,31 @@ export default function SongPage() {
             <div className="columns">
             <nav className="songs">
                 <h3 className="song-nav">View Options</h3>
-                    <hr />
+                    <hr className="test" />
 
                     <h4 className="nav-subhead">Melody View</h4>
-                    <button className="melody-button">White Key Melody</button>
-                    <button className="melody-button">Black Key Melody</button>
-                    <button className="melody-button">Show Letter Names</button>
-                    <button className="melody-button">Show Chord Symbol</button>
-                    <button className="melody-button">Show Finger Numbers</button>
+                    <button className="melody-button" onClick={white_transpose}>White Keys</button>
+                    <button className="melody-button" onClick={black_transpose}>Black Keys</button>
+                    <button className="melody-button">Letter Names</button>
+                    <button className="melody-button">Chord Symbols</button>
+                    <button className="melody-button">Finger Numbers</button>
 
-                    <hr />
+                    <hr className="test" />
             
                     <h4 className="nav-subhead">Chord View</h4>
-                    <button className="chord-button">White Key Chords</button>
-                    <button className="chord-button">Black Key Chords</button>
-                    <button className="chord-button"> Show Chord Symbols</button>
-                    <button className="chord-button">Show Letter Names</button>
-                    <button className="chord-button">Show Finger Numbers</button>
+                    <button className="chord-button">White Keys</button>
+                    <button className="chord-button">Black Keys</button>
+                    <button className="chord-button">2 Note Chords</button>
+                    <button className="chord-button">3 Note Chords</button>
+                    <button className="chord-button"> Chord Symbols</button>
+                    <button className="chord-button">Finger Numbers</button>
 
-                    <hr />
+                    <hr className="test" />
         
                     <h4 className="nav-subhead">Other Views</h4>
                     <button className="other-button">Hide Lyrics</button>
-                    <button className="other-button">Show Additional Verses</button>
+                    <button className="other-button">Additional Verses</button>
+                    <button className="other-button">Solfege Names</button>
             </nav>
             <div className="home">
             <h1 className = "title">{params.songTitle}</h1>

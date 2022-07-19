@@ -139,8 +139,8 @@ Navigation Styles
 }
 
 .chord-button {
-    background-color: #C7F689;
-    border: 2px solid #C7F689; 
+    background-color: #41C2C2;
+    border: 2px solid #41C2C2; 
 }
 
 .melody-button {
@@ -150,14 +150,14 @@ Navigation Styles
 
 
 .other-button {
-    background-color: #79D9C9;
-    border: 2x solid #79D9C9;
+    background-color: #80E697;
+    border: 2x solid #80E697;
 }
 
 .other-button:hover {
       background-color: white;
-      border: 2px solid #79D9C9; 
-      color: #79D9C9;
+      border: 2px solid #80E697; 
+      color: #80E697;
 }
 
 .melody-button:hover {
@@ -168,8 +168,8 @@ Navigation Styles
 
 .chord-button:hover {
       background-color: white;
-      border: 2px solid #C7F689; 
-      color: #C7F689;
+      border: 2px solid #41C2C2; 
+      color: #41C2C2;
 }
 
 .songs {
@@ -220,3 +220,10 @@ Navigation Styles
     text-align: center;
     margin: 20px 0px 10px 0px;
 }
+
+
+.test {
+    margin-top: 20px;
+}
+
+
