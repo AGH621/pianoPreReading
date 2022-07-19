@@ -105,7 +105,7 @@ function writeSong(a_song) {
                         </p>
                     </div>)
             }
-            else if (a_song.notes[n].duration === 'Kinda Short') {
+            else if (a_song.notes[n].duration === 'Kinda_Short') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -167,7 +167,7 @@ function writeSong(a_song) {
                         </p>
                     </div>)
             }
-            else if (a_song.notes[n].duration === 'Kinda Long') {
+            else if (a_song.notes[n].duration === 'Kinda_Long') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -177,6 +177,14 @@ function writeSong(a_song) {
                         </p>
                     </div>)
                     
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
                 component_list.push(
                     <div class="note">
                         <p class="arrow">
@@ -210,7 +218,7 @@ function writeSong(a_song) {
                         </p>
                     </div>)
             }
-            else if (a_song.notes[n].duration === 'Kinda Long') {
+            else if (a_song.notes[n].duration === 'Long') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -220,6 +228,22 @@ function writeSong(a_song) {
                         </p>
                     </div>)
                     
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
                 component_list.push(
                     <div class="note">
                         <p class="arrow">
@@ -306,7 +330,7 @@ export default function SongPage() {
             <header>
                 <h1 className = "title">{params.songTitle}</h1>
             </header>
-            <section className={the_song.score_data.meter}>
+            <section className={the_song.score_data.meter.toLowerCase()}>
                 {writeSong(the_song)}
             </section>
             <Footer />
