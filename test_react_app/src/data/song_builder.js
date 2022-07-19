@@ -2,15 +2,17 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 
 
-import scoreDefs from "../_share/score_defs_2022-07-12_18_33.json"
+
+
+import scoreDefs from "./score_defs.json"
 
 /*
 let score_defs = {
     "Hot Cross Buns": {
         "notes": [
-            {"pitch": "Mi", "duration": "short", "lyric": "Hot"},
-            {"pitch": "Re", "duration": "short", "lyric": "cross"},
-            {"pitch": "Do", "duration": "medium", "lyric": "buns"},
+            {"pitch": "Mi", "duration": "Short", "lyric": "Hot"},
+            {"pitch": "Re", "duration": "Short", "lyric": "cross"},
+            {"pitch": "Do", "duration": "Medium", "lyric": "buns"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",
@@ -23,10 +25,10 @@ let score_defs = {
     },
     "Au Claire de la Lune": {
         "notes": [
-            {"pitch": "Do", "duration": "short", "lyric": "In"},
-            {"pitch": "Do", "duration": "short", "lyric": "the"},
-            {"pitch": "Do", "duration": "short", "lyric": "even-"},
-            {"pitch": "Re", "duration": "short", "lyric": "ing"},
+            {"pitch": "Do", "duration": "Short", "lyric": "In"},
+            {"pitch": "Do", "duration": "Short", "lyric": "the"},
+            {"pitch": "Do", "duration": "Short", "lyric": "even-"},
+            {"pitch": "Re", "duration": "Short", "lyric": "ing"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",
@@ -39,10 +41,10 @@ let score_defs = {
     },
     "I Have a Dog": {
         "notes": [
-            {"pitch": "Mi", "duration": "medium", "lyric": "I"},
-            {"pitch": "Mi", "duration": "short", "lyric": "have"},
-            {"pitch": "Re", "duration": "short", "lyric": "a"},
-            {"pitch": "Do", "duration": "medium", "lyric": "dog"},
+            {"pitch": "Mi", "duration": "Medium", "lyric": "I"},
+            {"pitch": "Mi", "duration": "Short", "lyric": "have"},
+            {"pitch": "Re", "duration": "Short", "lyric": "a"},
+            {"pitch": "Do", "duration": "Medium", "lyric": "dog"},
         ],
         "score_data": {
             "html_page_map": "duple_template_fingerings.html",

@@ -76,7 +76,7 @@ function writeSong(a_song) {
     let component_list = []
     
     for (let n=0; n<a_song.notes.length; n++) {
-        if (a_song.notes[n].duration === 'eighth') {
+        if (a_song.notes[n].duration === 'Tiny') {
             component_list.push(
                 <div class="note">
                 <p class="tonic">
@@ -86,7 +86,7 @@ function writeSong(a_song) {
                 </p>
                 </div>
             )}
-            else if (a_song.notes[n].duration === 'quarter') {
+            else if (a_song.notes[n].duration === 'Short') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -105,7 +105,34 @@ function writeSong(a_song) {
                         </p>
                     </div>)
             }
-            else if (a_song.notes[n].duration === 'half') {
+            else if (a_song.notes[n].duration === 'Kinda Short') {
+                component_list.push(
+                    <div class="note">
+                        <p class="tonic">
+                            {oneNote(a_song.notes[n].pitch)}
+                            <br />
+                            {a_song.notes[n].lyric}
+                        </p>
+                    </div>)
+                    
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+            }
+            else if (a_song.notes[n].duration === 'Medium') {
                 component_list.push(
                     <div class="note">
                         <p class="tonic">
@@ -139,7 +166,101 @@ function writeSong(a_song) {
                             <br />
                         </p>
                     </div>)
-            } 
+            }
+            else if (a_song.notes[n].duration === 'Kinda Long') {
+                component_list.push(
+                    <div class="note">
+                        <p class="tonic">
+                            {oneNote(a_song.notes[n].pitch)}
+                            <br />
+                            {a_song.notes[n].lyric}
+                        </p>
+                    </div>)
+                    
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+            }
+            else if (a_song.notes[n].duration === 'Kinda Long') {
+                component_list.push(
+                    <div class="note">
+                        <p class="tonic">
+                            {oneNote(a_song.notes[n].pitch)}
+                            <br />
+                            {a_song.notes[n].lyric}
+                        </p>
+                    </div>)
+                    
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+                component_list.push(
+                    <div class="note">
+                        <p class="arrow">
+                            <br />
+                            <img class="lengthen" src={Arrow} />
+                            <br />
+                        </p>
+                    </div>)
+            }
     }
     return component_list
 }
