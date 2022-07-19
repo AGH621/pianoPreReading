@@ -69,6 +69,7 @@ Notation Styles
     /*border: 1px solid;*/
     margin-right: 60px;
     flex: 1;
+    visibility: hidden;
 }
 
 .i-space {

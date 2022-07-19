@@ -34,3 +34,7 @@ coverage/
 
 # VS Code
 .vscode/
+
+# Symbolic Link to data JSON
+/score_defs
+

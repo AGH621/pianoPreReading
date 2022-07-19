@@ -334,23 +334,27 @@ export default function SongPage() {
                 <h3 className="song-nav">View Options</h3>
                     <hr />
 
-                    <h4>Melody View</h4>    
-                    <button className="transpose-button black">Black Key Melody</button>
-                    <button>Show Finger Numbers</button>
-                    <button>Show Letter Names</button>
+                    <h4 className="nav-subhead">Melody View</h4>
+                    <button className="melody-button">White Key Melody</button>
+                    <button className="melody-button">Black Key Melody</button>
+                    <button className="melody-button">Show Letter Names</button>
+                    <button className="melody-button">Show Chord Symbol</button>
+                    <button className="melody-button">Show Finger Numbers</button>
 
                     <hr />
             
-                    <h4>Chord View</h4>
-                    <button class="chord-button white">White Key Chords</button>
-                    <button class="chord-button black">Black Key Chords</button>
-                    <button> Hide Chord Symbols</button>
+                    <h4 className="nav-subhead">Chord View</h4>
+                    <button className="chord-button">White Key Chords</button>
+                    <button className="chord-button">Black Key Chords</button>
+                    <button className="chord-button"> Show Chord Symbols</button>
+                    <button className="chord-button">Show Letter Names</button>
+                    <button className="chord-button">Show Finger Numbers</button>
 
                     <hr />
         
-                    <h4>Other Views</h4>
-                    <button>Hide Lyrics</button>
-                    <button>Show Additional Verses</button>
+                    <h4 className="nav-subhead">Other Views</h4>
+                    <button className="other-button">Hide Lyrics</button>
+                    <button className="other-button">Show Additional Verses</button>
             </nav>
             <div className="home">
             <h1 className = "title">{params.songTitle}</h1>
@@ -359,7 +363,7 @@ export default function SongPage() {
             </section>
             </div>    
             </div>
-            <Footer />        
+            <Footer />   
         </main>
     );
 }

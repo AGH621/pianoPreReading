@@ -125,9 +125,8 @@ Navigation Styles
     padding-left: 300px;
 }
 
-.transpose-button, .chord-button, .finger-button {
-    display: inline-block;
-    margin: 20px 20px 0px 20px;
+.melody-button, .chord-button, .other-button {
+    margin: 5px 15px;
     border: none;
     border-radius: 8px;
     padding: 10px;
@@ -144,31 +143,24 @@ Navigation Styles
     border: 2px solid #C7F689; 
 }
 
-.transpose-button {
+.melody-button {
     background-color: #008CBA;
     border: 2px solid #008CBA;
 }
 
-.finger-button {
+
+.other-button {
     background-color: #79D9C9;
     border: 2x solid #79D9C9;
 }
 
-.white {
-    color: #FFFFFF;
-}
-
-.black {
-    color: #000000;
-}
-
-.finger-button:hover {
+.other-button:hover {
       background-color: white;
       border: 2px solid #79D9C9; 
       color: #79D9C9;
 }
 
-.transpose-button:hover {
+.melody-button:hover {
       background-color: white;
       border: 2px solid #008CBA; 
       color: #008CBA;
@@ -219,4 +211,12 @@ Navigation Styles
 }
 
 
-
+.nav-subhead {
+    /*border: 1px solid;*/
+    color: #3BA190;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Playfair Display', 'Times', serif;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
