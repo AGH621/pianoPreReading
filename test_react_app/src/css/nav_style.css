@@ -78,7 +78,7 @@ Navigation Styles
 
 .pg-link:hover, .dp-link:hover {
     color: #000000;
-    background-color: #FFE5BE;
+    background-color: #FFE855;
     /*padding: 4px;*/
 }
 
@@ -121,56 +121,46 @@ Navigation Styles
     color: #000000;
 }
 
-.buttons {
-    padding-left: 300px;
+.melody-button, .chord-button, .other-button  {
+  display: block;
+  margin: 15px 15px;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2B3030;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #003141;
 }
 
-.melody-button, .chord-button, .other-button {
-    margin: 5px 15px;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    align: center;
-    
+
+.melody-button:hover, .chord-button:hover, .other-button:hover {
+    background-color: #FFE855;
+    color: #000000;
 }
+
+
+.melody-button:active, .chord-button:active, .other-button:active {
+  background-color: #FFE855;
+  box-shadow: 0 5px #AA7500;
+  transform: translateY(4px);
+  color: #000000;
+}
+
 
 .chord-button {
     background-color: #41C2C2;
-    border: 2px solid #41C2C2; 
 }
-
-.melody-button {
-    background-color: #008CBA;
-    border: 2px solid #008CBA;
-}
-
 
 .other-button {
     background-color: #80E697;
-    border: 2x solid #80E697;
 }
 
-.other-button:hover {
-      background-color: white;
-      border: 2px solid #80E697; 
-      color: #80E697;
-}
-
-.melody-button:hover {
-      background-color: white;
-      border: 2px solid #008CBA; 
-      color: #008CBA;
-}
-
-.chord-button:hover {
-      background-color: white;
-      border: 2px solid #41C2C2; 
-      color: #41C2C2;
-}
 
 .songs {
     border-right: solid 1px; 
@@ -180,6 +170,7 @@ Navigation Styles
 }
 
 .song-nav {
+    display: block;
     margin: 20px 0px;
     font-size: 32px;
     font-weight: 600;
@@ -205,9 +196,9 @@ Navigation Styles
 }
 
 
-.song-title:hover {
-    background-color: #CDF8D6;
-    color: #225C98;
+.song-title:hover, .in-link:hover {
+    background-color: #FFE855;
+    color: #000000;
 }
 
 
@@ -222,7 +213,7 @@ Navigation Styles
 }
 
 
-.test {
+.spacer {
     margin-top: 20px;
 }
 

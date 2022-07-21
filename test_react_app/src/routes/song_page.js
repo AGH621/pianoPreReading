@@ -299,7 +299,7 @@ export default function SongPage() {
             <div className="columns">
             <nav className="songs">
                 <h3 className="song-nav">View Options</h3>
-                    <hr className="test" />
+                    <hr />
 
                     <h4 className="nav-subhead">Melody View</h4>
                     <button className="melody-button" onClick={white_transpose}>White Keys</button>
@@ -308,7 +308,7 @@ export default function SongPage() {
                     <button className="melody-button">Chord Symbols</button>
                     <button className="melody-button">Finger Numbers</button>
 
-                    <hr className="test" />
+                    <hr className="spacer" />
             
                     <h4 className="nav-subhead">Chord View</h4>
                     <button className="chord-button">White Keys</button>
@@ -318,7 +318,7 @@ export default function SongPage() {
                     <button className="chord-button"> Chord Symbols</button>
                     <button className="chord-button">Finger Numbers</button>
 
-                    <hr className="test" />
+                    <hr className="spacer" />
         
                     <h4 className="nav-subhead">Other Views</h4>
                     <button className="other-button">Hide Lyrics</button>
