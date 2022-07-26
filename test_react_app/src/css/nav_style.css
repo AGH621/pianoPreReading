@@ -138,6 +138,40 @@ Navigation Styles
   box-shadow: 0 5px #003141;
 }
 
+.chord-button-active  {
+  display: block;
+  margin: 15px 15px;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2B3030;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #003141;
+}
+
+.chord-button-inactive  {
+  display: block;
+  margin: 15px 15px;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2B3030;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: #9FBBBB;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #1D2222;
+}
+
 
 .melody-button:hover, .chord-button:hover, .finger-button:hover {
     background-color: #FFE855;
