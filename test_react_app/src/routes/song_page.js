@@ -12,7 +12,7 @@ import Footer from "./footer";
 
 import { white_transpose, black_transpose } from "../js/transpose";
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
-import { chord_symbols } from "../js/symbols";
+import { chord_symbols, ChordButton} from "../js/symbols";
 
 
 
@@ -312,7 +312,8 @@ export default function SongPage() {
                     <h4 className="nav-subhead">Chord View</h4>
                     <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? white_2note_chords : white_3note_chords}>White Keys</button>
                     <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? black_2note_chords : black_3note_chords}>Black Keys</button>
-                    <button className="chord-button" onClick={chord_symbols}> Chord Symbols</button>
+                    <button className="chord-button" onClick={chord_symbols}> ORG Chord Symbols</button>
+                    <ChordButton />
         
                     <hr className="spacer" />
         
