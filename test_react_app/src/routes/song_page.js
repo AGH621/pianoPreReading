@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
 
 
@@ -12,7 +12,7 @@ import Footer from "./footer";
 
 import { white_transpose, black_transpose } from "../js/transpose";
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
-import { chord_symbols, ChordButton} from "../js/symbols";
+import { ChordSymbolButton } from "../js/symbols";
 
 
 
@@ -308,20 +308,17 @@ export default function SongPage() {
                     <button className="melody-button">Letter Names</button>
 
                     <hr className="spacer" />
-            
+
                     <h4 className="nav-subhead">Chord View</h4>
-                    <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? white_2note_chords : white_3note_chords}>White Keys</button>
-                    <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? black_2note_chords : black_3note_chords}>Black Keys</button>
-                    <button className="chord-button" onClick={chord_symbols}> ORG Chord Symbols</button>
-                    <ChordButton />
+                    <button className="chord-button-active" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? white_2note_chords : white_3note_chords}>White Keys</button>
+                    <button className="chord-button-active" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? black_2note_chords : black_3note_chords}>Black Keys</button>
+                    <ChordSymbolButton />
         
                     <hr className="spacer" />
         
                     <h4 className="nav-subhead">Finger Numbers</h4>
                     <button className="finger-button">Left Hand</button>
                     <button className="finger-button">Right Hand</button>
-                    
-
             </nav>
             <div className="home">
             <h1 className = "title">{params.songTitle}</h1>
