@@ -4,7 +4,7 @@ Notation Styles
 ========================================
 */
 
-.tonic, .dominant, .arrow {
+.chord, .arrow {
     /*border: 1px solid;*/
     font-size: 28px;
     text-align: center;
@@ -54,7 +54,7 @@ Notation Styles
     flex: 1; 
 }
 
-.fingerings{
+.fingerings {
     margin-top: 5px;
     margin-right: 20px;
     visibility: hidden;
@@ -65,7 +65,7 @@ Notation Styles
     margin-top: 5px;
 }
 
-.chord {
+.tonic, .dominant, .subdominant {
     /*border: 1px solid;*/
     margin-right: 60px;
     flex: 1;

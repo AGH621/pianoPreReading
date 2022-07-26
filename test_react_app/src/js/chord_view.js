@@ -9,182 +9,159 @@ TODO:
 
 import SimpleWhtI from "../images/simple_wht_tonic.png";
 import SimpleWhtV7 from "../images/simple_wht_dom.png";
+import SimpleWhtIV from "../images/simple_wht_subdom.png";
 import SimpleBlkI from "../images/simple_blk_tonic.png";
 import SimpleBlkV7 from "../images/simple_blk_dom.png";
+import SimpleBlkIV from "../images/simple_blk_subdom.png";
+
+
+import FullWhtI from "../images/full_wht_tonic.png";
+import FullWhtV7 from "../images/full_wht_dom.png";
+import FullWhtIV from "../images/full_wht_subdom.png";
+import FullBlkI from "../images/full_blk_tonic.png";
+import FullBlkV7 from "../images/full_blk_dom.png";
+import FullBlkIV from "../images/full_blk_subdom.png";
+
 
 console.log("Chord view is running");
 
 
 export function white_2note_chords() {
-    let white_tonic_block = document.getElementsByClassName('tonic');
-    let white_dominant_block = document.getElementsByClassName('dominant');
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
     
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<white_tonic_block.length; x++) {
-        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = SimpleWhtI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = SimpleWhtV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = SimpleWhtI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = SimpleWhtIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = SimpleWhtV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = SimpleWhtIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = SimpleWhtV7
+        }
     
-        //Change it to the tonic chord image.
-        for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = {SimpleWhtI};  
-        }   
-    }
-    
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<white_dominant_block.length; x++) {
-        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = {SimpleWhtV7}; 
-        }   
-    }
 }
 
 export function black_2note_chords() {
-    let white_tonic_block = document.getElementsByClassName('tonic');
-    let white_dominant_block = document.getElementsByClassName('dominant');
-
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<white_tonic_block.length; x++) {
-        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
     
-        //Change it to the tonic chord image.
-        for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = {SimpleBlkI}   
-        }   
-    }
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = SimpleBlkI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = SimpleBlkV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = SimpleBlkI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = SimpleBlkIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = SimpleBlkV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = SimpleBlkIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = SimpleBlkV7
+        }
     
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<white_dominant_block.length; x++) {
-        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = {SimpleBlkV7}  
-        }   
-    }
 }
 
 
 
+export function white_3note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
+    
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = FullWhtI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = FullWhtV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = FullWhtI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = FullWhtIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = FullWhtV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = FullWhtIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = FullWhtV7
+        }
+    
+}
 
-function xxxwhite_3note_chords(){
-    let white_tonic_block = document.getElementsByClassName('tonic');
-    let white_dominant_block = document.getElementsByClassName('dominant');
-    let finger_num = document.getElementsByClassName('fingerings');
+export function black_3note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
     
-    //Make finger numbers disappear.
-    for (let a=0; a<finger_num.length; a++) {
-        finger_num[a].style.visibility = "hidden";
-    }
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = FullBlkI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = FullBlkV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = FullBlkI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = FullBlkIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = FullBlkV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = FullBlkIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = FullBlkV7
+        }
     
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<white_tonic_block.length; x++) {
-        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the tonic chord image.
-        for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = "../../images/pngs/full_wht_tonic.png"    
-        }   
-    }
-    
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<white_dominant_block.length; x++) {
-        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = "../../images/pngs/full_wht_dom.png"    
-        }   
-    }
 }
 
 
-function xxxblack_3note_chords(){
-    let black_tonic_block = document.getElementsByClassName('tonic');
-    let black_dominant_block = document.getElementsByClassName('dominant');
-    let finger_num = document.getElementsByClassName('fingerings');
-    
-    //Make finger numbers disappear.
-    for (let a=0; a<finger_num.length; a++) {
-        finger_num[a].style.visibility = "hidden";
-    }
-    
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<black_tonic_block.length; x++) {
-        let bi_img = black_tonic_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the tonic chord image.
-        for (let y=0; y<bi_img.length; y++) {
-            bi_img[y].src = "../../images/pngs/full_blk_tonic.png"    
-        }   
-    }
-    
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<black_dominant_block.length; x++) {
-        let bv_img = black_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<bv_img.length; y++) {
-            bv_img[y].src = "../../images/pngs/full_blk_dom.png"    
-        }   
-    }
-}
 
-
-function xxxwhite_2note_chords() {
-    let white_tonic_block = document.getElementsByClassName('tonic');
-    let white_dominant_block = document.getElementsByClassName('dominant');
-    let finger_num = document.getElementsByClassName('fingerings');
-    
-    
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<white_tonic_block.length; x++) {
-        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the tonic chord image.
-        for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = "../../images/pngs/simple_wht_tonic.png"    
-        }   
-    }
-    
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<white_dominant_block.length; x++) {
-        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = "../../images/pngs/simple_wht_dom.png"    
-        }   
-    }
-}
-
-function xxxblack_2note_chords() {
-    let white_tonic_block = document.getElementsByClassName('tonic');
-    let white_dominant_block = document.getElementsByClassName('dominant');
-    let finger_num = document.getElementsByClassName('fingerings');
-    
-    
-    //Iterate through each tonic block. Locate the melody note image.
-    for (let x=0; x<white_tonic_block.length; x++) {
-        let wi_img = white_tonic_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the tonic chord image.
-        for (let y=0; y<wi_img.length; y++) {
-            wi_img[y].src = "../../images/pngs/simple_blk_tonic.png"    
-        }   
-    }
-    
-    //Iterate through each dominant block. Locate the melody note image.
-    for (let x=0; x<white_dominant_block.length; x++) {
-        let wv_img = white_dominant_block[x].querySelectorAll('img.pitch');
-    
-        //Change it to the dominant chord image.
-        for (let y=0; y<wv_img.length; y++) {
-            wv_img[y].src = "../../images/pngs/simple_blk_dom.png"    
-        }   
-    }
-}
 
 
 

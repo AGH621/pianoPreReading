@@ -11,7 +11,8 @@ import { getTitle } from "../data/song_builder";
 import Footer from "./footer";
 
 import { white_transpose, black_transpose } from "../js/transpose";
-import { white_2note_chords, black_2note_chords } from "../js/chord_view";
+import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
+import { chord_symbols } from "../js/symbols";
 
 
 
@@ -35,37 +36,37 @@ function oneNote(a_note) {
 
     if (a_note === 'mi') {
         the_pix.push(<img className="fingerings" src={LfTwo} />)
-        the_pix.push(<span className="chord">I</span>)
+        the_pix.push(<span className="tonic">I</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch mi" src={SingleA} />)
     }
     else if (a_note === 're') {
         the_pix.push(<img className="fingerings" src={LfThree} />)
-        the_pix.push(<span className="chord">V7</span>)
+        the_pix.push(<span className="dominant">V7</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch re" src={SingleG} />)
     }
     else if (a_note === 'do') {
         the_pix.push(<img className="fingerings" src={LfFour} />)
-        the_pix.push(<span className="chord">I</span>)
+        the_pix.push(<span className="tonic">I</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch do" src={SingleF} />)
     }
     else if (a_note === 'sol') {
         the_pix.push(<img className="fingerings" src={LfFour} />)
-        the_pix.push(<span className="chord">V7</span>)
+        the_pix.push(<span className="dominant">V7</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch sol" src={SingleC} />)
     }
     else if (a_note === 'la') {
         the_pix.push(<img className="fingerings" src={LfFour} />)
-        the_pix.push(<span className="chord">IV</span>)
+        the_pix.push(<span className="subdominant">IV</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch la" src={SingleD} />)
     }
     else if (a_note === 'fa') {
         the_pix.push(<img className="fingerings" src={LfFour} />)
-        the_pix.push(<span className="chord">IV</span>)
+        the_pix.push(<span className="subdominant">IV</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch fa" src={SingleBflat} />)
     }
@@ -79,20 +80,20 @@ function writeSong(a_song) {
         if (a_song.notes[n].duration === 'Tiny') {
             component_list.push(
                 <div class="note">
-                <p class="tonic">
+                <p class="chord">
                 {oneNote(a_song.notes[n].pitch)}
                 <br />
-                {a_song.notes[n].lyric}
+                {a_song.notes[n].lyric[0]}
                 </p>
                 </div>
             )}
             else if (a_song.notes[n].duration === 'Short') {
                 component_list.push(
                     <div class="note">
-                        <p class="tonic">
+                        <p class="chord">
                             {oneNote(a_song.notes[n].pitch)}
                             <br />
-                            {a_song.notes[n].lyric}
+                            {a_song.notes[n].lyric[0]}
                         </p>
                     </div>)
                     
@@ -108,10 +109,10 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Kinda_Short') {
                 component_list.push(
                     <div class="note">
-                        <p class="tonic">
+                        <p class="chord">
                             {oneNote(a_song.notes[n].pitch)}
                             <br />
-                            {a_song.notes[n].lyric}
+                            {a_song.notes[n].lyric[0]}
                         </p>
                     </div>)
                     
@@ -135,10 +136,10 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Medium') {
                 component_list.push(
                     <div class="note">
-                        <p class="tonic">
+                        <p class="chord">
                             {oneNote(a_song.notes[n].pitch)}
                             <br />
-                            {a_song.notes[n].lyric}
+                            {a_song.notes[n].lyric[0]}
                         </p>
                     </div>)
                     
@@ -170,10 +171,10 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Kinda_Long') {
                 component_list.push(
                     <div class="note">
-                        <p class="tonic">
+                        <p class="chord">
                             {oneNote(a_song.notes[n].pitch)}
                             <br />
-                            {a_song.notes[n].lyric}
+                            {a_song.notes[n].lyric[0]}
                         </p>
                     </div>)
                     
@@ -221,10 +222,10 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Long') {
                 component_list.push(
                     <div class="note">
-                        <p class="tonic">
+                        <p class="chord">
                             {oneNote(a_song.notes[n].pitch)}
                             <br />
-                            {a_song.notes[n].lyric}
+                            {a_song.notes[n].lyric[0]}
                         </p>
                     </div>)
                     
@@ -305,25 +306,21 @@ export default function SongPage() {
                     <button className="melody-button" onClick={white_transpose}>White Keys</button>
                     <button className="melody-button" onClick={black_transpose}>Black Keys</button>
                     <button className="melody-button">Letter Names</button>
-                    <button className="melody-button">Chord Symbols</button>
-                    <button className="melody-button">Finger Numbers</button>
 
                     <hr className="spacer" />
             
                     <h4 className="nav-subhead">Chord View</h4>
-                    <button className="chord-button">White Keys</button>
-                    <button className="chord-button">Black Keys</button>
-                    <button className="chord-button">2 Note Chords</button>
-                    <button className="chord-button">3 Note Chords</button>
-                    <button className="chord-button"> Chord Symbols</button>
-                    <button className="chord-button">Finger Numbers</button>
-
+                    <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? white_2note_chords : white_3note_chords}>White Keys</button>
+                    <button className="chord-button" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? black_2note_chords : black_3note_chords}>Black Keys</button>
+                    <button className="chord-button" onClick={chord_symbols}> Chord Symbols</button>
+        
                     <hr className="spacer" />
         
-                    <h4 className="nav-subhead">Other Views</h4>
-                    <button className="other-button">Hide Lyrics</button>
-                    <button className="other-button">Additional Verses</button>
-                    <button className="other-button">Solfege Names</button>
+                    <h4 className="nav-subhead">Finger Numbers</h4>
+                    <button className="finger-button">Left Hand</button>
+                    <button className="finger-button">Right Hand</button>
+                    
+
             </nav>
             <div className="home">
             <h1 className = "title">{params.songTitle}</h1>

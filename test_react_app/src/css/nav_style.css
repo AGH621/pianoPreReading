@@ -121,7 +121,7 @@ Navigation Styles
     color: #000000;
 }
 
-.melody-button, .chord-button, .other-button  {
+.melody-button, .chord-button, .finger-button  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -139,13 +139,13 @@ Navigation Styles
 }
 
 
-.melody-button:hover, .chord-button:hover, .other-button:hover {
+.melody-button:hover, .chord-button:hover, .finger-button:hover {
     background-color: #FFE855;
     color: #000000;
 }
 
 
-.melody-button:active, .chord-button:active, .other-button:active {
+.melody-button:active, .chord-button:active, .finger-button:active {
   background-color: #FFE855;
   box-shadow: 0 5px #AA7500;
   transform: translateY(4px);
@@ -157,7 +157,7 @@ Navigation Styles
     background-color: #41C2C2;
 }
 
-.other-button {
+.finger-button {
     background-color: #80E697;
 }
 
