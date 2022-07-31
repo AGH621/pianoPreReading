@@ -121,7 +121,7 @@ Navigation Styles
     color: #000000;
 }
 
-.melody-button, .chord-button-active, .finger-button  {
+.melody-button-active, .chord-button-active, .finger-button  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -132,13 +132,12 @@ Navigation Styles
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  background-color: #008CBA;
   border: none;
   border-radius: 8px;
   box-shadow: 0 5px #003141;
 }
 
-.chord-button-inactive  {
+.chord-button-inactive, .melody-button-inactive  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -156,17 +155,22 @@ Navigation Styles
 }
 
 
-.melody-button:hover, .chord-button-active:hover, .finger-button:hover, .chord-button-inactive:hover {
+.melody-button:hover, .chord-button-active:hover, .finger-button:hover, .chord-button-inactive:hover, .melody-button-inactive:hover {
     background-color: #FFE855;
     color: #000000;
 }
 
 
-.melody-button:active, .chord-button-active:active, .finger-button:active, .chord-button-inactive:active {
+.melody-button:active, .chord-button-active:active, .finger-button:active, .chord-button-inactive:active, .melody-button-inactive:active {
   background-color: #FFE855;
   box-shadow: 0 5px #AA7500;
   transform: translateY(4px);
   color: #000000;
+}
+
+
+.melody-button-active {
+    background-color: #008CBA;
 }
 
 

@@ -10,7 +10,7 @@ import "../css/note_style.css";
 import { getTitle } from "../data/song_builder";
 import Footer from "./footer";
 
-import { white_transpose, black_transpose } from "../js/transpose";
+import { WhiteKeyButton, BlackKeyButton } from "../js/transpose";
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
 import { ChordSymbolButton } from "../js/symbols";
 
@@ -295,6 +295,8 @@ export default function SongPage() {
     let params = useParams();
     let the_song = getTitle(params.songTitle);
     
+    let [melValue, melSetButton] = useState("melody-button-active");
+    
     return (
         <main>
             <div className="columns">
@@ -303,9 +305,9 @@ export default function SongPage() {
                     <hr />
 
                     <h4 className="nav-subhead">Melody View</h4>
-                    <button className="melody-button" onClick={white_transpose}>White Keys</button>
-                    <button className="melody-button" onClick={black_transpose}>Black Keys</button>
-                    <button className="melody-button">Letter Names</button>
+                    <WhiteKeyButton />
+                    <BlackKeyButton />
+                    <button className="melody-button-active">Letter Names</button>
 
                     <hr className="spacer" />
 
