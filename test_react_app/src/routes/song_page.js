@@ -23,6 +23,7 @@ import SingleG from "../images/single_g.png";
 import SingleF from "../images/single_f.png";
 import SingleC from "../images/single_c.png";
 import SingleD from "../images/single_d.png";
+import SingleE from "../images/single_e.png";
 import SingleBflat from "../images/single_a_sharp.png";
 
 import Arrow from "../images/short_arrow.png";
@@ -71,6 +72,12 @@ function oneNote(a_note) {
         the_pix.push(<span className="subdominant">IV</span>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch fa" src={SingleBflat} />)
+    }
+    else if (a_note === 'ti') {
+        the_pix.push(<img className="fingerings" src={LfFour} />)
+        the_pix.push(<span className="dominant">V7</span>)
+        the_pix.push(<br />)
+        the_pix.push(<img className="pitch ti" src={SingleE} />)
     }
     return the_pix
 }

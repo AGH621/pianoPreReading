@@ -109,8 +109,8 @@ export function allTitles() {
 export function getTitle(title) {
     
     for (const next_song in scoreDefs) {
-        if (next_song === title) {
-            return scoreDefs[title]
+        if (scoreDefs[next_song].score_data.title === title) {
+            return scoreDefs[next_song]
         }
     }
 }
