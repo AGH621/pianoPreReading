@@ -11,6 +11,8 @@ import { getTitle } from "../data/song_builder";
 import Footer from "./footer";
 
 import { WhiteKeyButton, BlackKeyButton } from "../js/transpose";
+/*import { ToggleButtons } from "../js/dev_trans_button";*/
+/*import { TransButton } from "../js/dev_trans_button";*/
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
 import { ChordSymbolButton } from "../js/symbols";
 
