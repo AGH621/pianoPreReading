@@ -187,7 +187,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "A la Ronda Ronda"
         }
@@ -534,9 +534,9 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
-            "title": "Ah Vous Diraisje Maman"
+            "title": "Ah! Vous Diraisje, Maman"
         }
     },
     "an die freude.musicxml": {
@@ -755,7 +755,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "An die Freude"
         }
@@ -948,7 +948,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Apple Tree"
         }
@@ -1323,7 +1323,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Basadeh"
         }
@@ -1516,7 +1516,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Bee Bee Bumblebee"
         }
@@ -1793,7 +1793,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Bjørnen Sover"
         }
@@ -1944,7 +1944,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Black Snake"
         }
@@ -2242,90 +2242,9 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Blues in D"
-        }
-    },
-    "bounce and catch it.musicxml": {
-        "notes": [
-            {
-                "duration": "Short",
-                "lyric": [
-                    "Bounce"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "high"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "bounce"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "low"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "bounce"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "the"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "ball"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "to"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "Shi-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "loh."
-                ],
-                "pitch": "mi"
-            }
-        ],
-        "score_data": {
-            "meter": "Duple",
-            "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
-            "score_def_version": 1.0,
-            "title": "Bounce High Bounce Low"
         }
     },
     "bounce high bounce low.musicxml": {
@@ -2404,286 +2323,9 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Bounce High Bounce Low"
-        }
-    },
-    "button you must wander d do.musicxml": {
-        "notes": [
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "But-"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "ton"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "you"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "must"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "wan-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "der"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "wan-"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "der"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "wan-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "der"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "but-"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "ton"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "you"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "must"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "wan-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "der"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "ev-"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "'ry-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Medium",
-                "lyric": [
-                    "where."
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "Bright"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "eyes"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "will"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "find"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "you,"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "Sharp"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "eyes"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "will"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "find"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "you,"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "But-"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "ton"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "you"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "must"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "wan-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "der"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "ev-"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "'ry-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Medium",
-                "lyric": [
-                    "where."
-                ],
-                "pitch": "do"
-            }
-        ],
-        "score_data": {
-            "meter": "Duple",
-            "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
-            "score_def_version": 1.0,
-            "title": "Button You Must Wander"
         }
     },
     "button you must wander.musicxml": {
@@ -2958,7 +2600,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Button You Must Wander"
         }
@@ -3165,7 +2807,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Cape Dorset"
         }
@@ -3267,7 +2909,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Caracol"
         }
@@ -3474,7 +3116,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Chabela"
         }
@@ -3681,7 +3323,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Champaigne Branle"
         }
@@ -3888,7 +3530,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Chini Mini"
         }
@@ -4081,7 +3723,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Closet Key"
         }
@@ -4244,7 +3886,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Cobbler Cobbler"
         }
@@ -4458,7 +4100,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Deta Deta"
         }
@@ -4709,7 +4351,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Diez Deditos"
         }
@@ -4888,7 +4530,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Doggie, Doggie"
         }
@@ -5172,7 +4814,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Elefanttimarssi"
         }
@@ -5414,7 +5056,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Engine Engine"
         }
@@ -5789,7 +5431,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": null,
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Father's Whiskers"
         }
@@ -5975,7 +5617,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Follow Me"
         }
@@ -6217,7 +5859,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "French Cathedrals"
         }
@@ -6354,7 +5996,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Frosty Weather"
         }
@@ -6533,7 +6175,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Fuzzy Wuzzy Was A Bear"
         }
@@ -6754,7 +6396,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Go to Sleep"
         }
@@ -7031,7 +6673,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Golya, Golye, Gilice"
         }
@@ -7399,7 +7041,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Grizzly Bear"
         }
@@ -7655,7 +7297,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Halinna Luua"
         }
@@ -7974,7 +7616,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Hang About"
         }
@@ -8377,7 +8019,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Hani Kouni"
         }
@@ -8647,7 +8289,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Here Comes a Bluebird"
         }
@@ -8784,7 +8426,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Here I Come"
         }
@@ -9003,7 +8645,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Ho Ho Watanay"
         }
@@ -9154,7 +8796,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Hort ihr die Drescher"
         }
@@ -9256,7 +8898,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "hot cross buns.musicxml"
         }
@@ -9477,7 +9119,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "It's Raining It's Pouring"
         }
@@ -9649,7 +9291,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Jelly in the Bowl"
         }
@@ -9856,7 +9498,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Juba"
         }
@@ -9965,7 +9607,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Listen Listen"
         }
@@ -10280,7 +9922,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Los Elefantes"
         }
@@ -10557,7 +10199,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Lost My Gold Ring"
         }
@@ -10764,7 +10406,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Lucy Locket"
         }
@@ -11037,7 +10679,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Luna Lunera"
         }
@@ -11272,7 +10914,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "March (from \"The Nutcracker\")"
         }
@@ -11437,7 +11079,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Mariquita Linda"
         }
@@ -11693,7 +11335,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Masa"
         }
@@ -11879,7 +11521,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Merrily We Roll Along"
         }
@@ -12310,7 +11952,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": null,
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Minka"
         }
@@ -12363,7 +12005,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "No More Pie"
         }
@@ -12556,7 +12198,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "No Robbers Out Today"
         }
@@ -12931,7 +12573,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vesper Hymn"
         }
@@ -13159,7 +12801,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Oats Peas Beans"
         }
@@ -13338,7 +12980,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Obwisana"
         }
@@ -13559,7 +13201,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Ode to Joy"
         }
@@ -13808,7 +13450,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "O How Lovely Is the Evening"
         }
@@ -14029,7 +13671,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Old Mother Brown"
         }
@@ -14243,7 +13885,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Oliver Twist"
         }
@@ -14478,7 +14120,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "One Elephant"
         }
@@ -14979,7 +14621,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Onnu Kudam Thanni"
         }
@@ -15326,7 +14968,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Over in the Meadow"
         }
@@ -15512,7 +15154,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": null,
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Polka"
         }
@@ -15620,7 +15262,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Rain, Rain"
         }
@@ -15995,7 +15637,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vesper Hymn"
         }
@@ -16209,7 +15851,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Sailor Sailor"
         }
@@ -16360,7 +16002,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Sea Shell"
         }
@@ -16539,7 +16181,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Shoheen Sho"
         }
@@ -16844,7 +16486,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": null,
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "shortin bread.musicxml"
         }
@@ -17247,7 +16889,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Skip to My Lou"
         }
@@ -17454,7 +17096,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "4-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Sleep Baby Sleep"
         }
@@ -17542,7 +17184,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Snail Snail"
         }
@@ -17714,7 +17356,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Star Light, Star Bright"
         }
@@ -17893,7 +17535,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": null,
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Suo Gan"
         }
@@ -18093,7 +17735,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vesper Hymn"
         }
@@ -18258,7 +17900,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "The King's Land"
         }
@@ -18941,7 +18583,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "The Mailman"
         }
@@ -19155,7 +18797,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Pentatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Tsuki"
         }
@@ -19460,359 +19102,12 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Twinkle Twinkle Little Bat"
         }
     },
     "twinkle twinkle little star.musicxml": {
-        "notes": [
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "Twin-",
-                    "Twin-"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "kle,",
-                    "kle,"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "twin-",
-                    "twin-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "kle",
-                    "kle"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "lit-",
-                    "lit-"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "tle",
-                    "tle"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "star,",
-                    "bat!"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "How",
-                    "How"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "I",
-                    "I"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "won-",
-                    "won-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "der",
-                    "der"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "what",
-                    "what"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "you",
-                    "you're"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "are!",
-                    "at!"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "Up",
-                    "Up"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "a-",
-                    "a-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "bove",
-                    "bove"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "the",
-                    "the"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "world",
-                    "world"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "so",
-                    "you"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "high,",
-                    "fly,"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "Like",
-                    "Like"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "a",
-                    "a"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "dia-",
-                    "tea"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "mond",
-                    "tray"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "in",
-                    "in"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "the",
-                    "the"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "sky.",
-                    "sky."
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "Twin-",
-                    "Twin-"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "kle,",
-                    "kle,"
-                ],
-                "pitch": "do"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "twin-",
-                    "twin-"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "kle",
-                    "kle"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "lit-",
-                    "lit-"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "tle",
-                    "tle"
-                ],
-                "pitch": "la"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "star,",
-                    "bat!"
-                ],
-                "pitch": "sol"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "How",
-                    "How"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "I",
-                    "I"
-                ],
-                "pitch": "fa"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "won-",
-                    "won-"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "der",
-                    "der"
-                ],
-                "pitch": "mi"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "what",
-                    "what"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Tiny",
-                "lyric": [
-                    "you",
-                    "you're"
-                ],
-                "pitch": "re"
-            },
-            {
-                "duration": "Short",
-                "lyric": [
-                    "are!",
-                    "at!"
-                ],
-                "pitch": "do"
-            }
-        ],
-        "score_data": {
-            "meter": "Duple",
-            "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
-            "score_def_version": 1.0,
-            "title": "Twinkle Twinkle Little Star"
-        }
-    },
-    "twinkle twinkle.musicxml": {
         "notes": [
             {
                 "duration": "Tiny",
@@ -20154,9 +19449,9 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
-            "title": "Ah! Vous Diraisje, Maman"
+            "title": "Twinkle Twinkle Little Star"
         }
     },
     "vesper hymn.musicxml": {
@@ -20375,7 +19670,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vesper Hymn"
         }
@@ -20568,7 +19863,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vesyoliye Gusi"
         }
@@ -20747,7 +20042,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Vihmakene Vellekene"
         }
@@ -21052,7 +20347,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Extended Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Wake Up You Lazy Bones"
         }
@@ -21207,7 +20502,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Wind Up the Apple Tree"
         }
@@ -21330,7 +20625,7 @@
         "score_data": {
             "meter": "Triple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Witch Witch"
         }
@@ -21516,7 +20811,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "3-Note",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Ya Esta Lloviendo"
         }
@@ -21709,7 +21004,7 @@
         "score_data": {
             "meter": "Duple",
             "pedagogical_score_type": "Diatonic",
-            "score_def_timestamp": "2022-08-02_14-49-15",
+            "score_def_timestamp": "2022-08-02_17-39-27",
             "score_def_version": 1.0,
             "title": "Yangtze Boatmen's Chanty"
         }
