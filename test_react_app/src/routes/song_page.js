@@ -308,7 +308,7 @@ export default function SongPage() {
     
     return (
         <main>
-            <div className="columns">
+            <div className="columns-button">
             <nav className="songs">
                 <h3 className="song-nav">View Options</h3>
                     <hr />

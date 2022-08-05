@@ -9,6 +9,11 @@ Text Styles
     grid-template-columns: 20% 80%;
 }
 
+.columns-button {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
 .title {
     clear: both;
     margin-top: 50px;
