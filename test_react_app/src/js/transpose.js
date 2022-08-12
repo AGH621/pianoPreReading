@@ -27,15 +27,63 @@ import SingleB from "../images/single_b.png";
 import SingleE from "../images/single_e.png";
 
 
-export function BlackKeyButton() {
+export function TransposeRadioButtons() {
 /*
-Creates a button which displays the melody as played on the piano's black keys.
-TODO: Send state to parent component? (What is the parent component?)
+Return a group of two radio buttons to change the melody from black keys to white keys.
+handleChange() controls each button's state and appearance.
+onClick() changes the notes appearing on the screen.
 */
-    //Set the button state.
-    let [value, setButton] = useState("melody-button-active");
+    //Set the buttons states.
+    let [keys, setKeys] = useState("");
     
-    //Get the pitches from the DOM.
+    //Function for handling changes in state and button appearance.
+    let handleChange=(e)=>{
+        
+        //Change the button's state when its pressed
+        setKeys(e.target.value)
+        
+        //When the black key button is pressed, deactivate the white key button make the black one active
+        if (e.target.value === 'black') {
+            
+            let inactive_button = document.getElementById('white')
+            inactive_button.className="melody-button-inactive"
+            
+            let active_button = document.getElementById('black')
+            active_button.className="melody-button-active"
+        }
+        
+        //Do the opposite when the white key button is pressed
+        else if (e.target.value === 'white') {
+
+            let inactive_button = document.getElementById('black')
+            inactive_button.className="melody-button-inactive"
+            
+            let active_button = document.getElementById('white')
+            active_button.className="melody-button-active"
+        }
+    }
+    
+    //React component to go export to the song page.
+    return (
+        <section>
+            <div className="container">
+                <label className="melody-button-active" id="white" for="white">
+                    <input type="radio" value="white" defaultChecked onChange={handleChange} onClick={white_transpose} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">White Keys</span>
+            </div>
+            <div className="container">
+                <label className="melody-button-inactive" id="black" for="black">
+                    <input type="radio" value="black" onChange={handleChange} onClick={black_transpose} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">Black Keys</span>
+            </div>
+        </section>
+    )
+}
+
+
+function black_transpose() {
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -44,7 +92,6 @@ TODO: Send state to parent component? (What is the parent component?)
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
-    //Transpose each pitch up a minor second (to a black key).
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = SingleFsharp
         }
@@ -65,23 +112,11 @@ TODO: Send state to parent component? (What is the parent component?)
         }
     for (let x=0; x<the_es.length; x++){
         the_es[x].src = SingleF
-        }
-    //Return the actual button. Change the button state and appearance when clicked.
-    return (
-        <button className={value} onClick={() => setButton(value === "melody-button-active" ? "melody-button-inactive" : "melody-button-active")}>Black Keys</button>
-    )
+        } 
 }
 
 
-export function WhiteKeyButton() {
-/*
-Creates a button which displays the melody as played on the piano's black keys.
-TODO: Send state to parent component? (What is the parent component?)
-*/
-    //Set the button state.
-    let [value, setButton] = useState("melody-button-inactive");
-    
-    //Get the pitches from the DOM.
+function white_transpose() {
     let the_fsharps = document.getElementsByClassName('pitch do')
     let the_gsharps = document.getElementsByClassName('pitch re')
     let the_asharps = document.getElementsByClassName('pitch mi')
@@ -90,7 +125,6 @@ TODO: Send state to parent component? (What is the parent component?)
     let the_dsharps = document.getElementsByClassName('pitch la')
     let the_fs      = document.getElementsByClassName('pitch ti')
     
-    //Transpose each pitch down a minor second (to a black key).
     for (let x=0; x<the_fsharps.length; x++){
         the_fsharps[x].src = SingleF
         }
@@ -112,11 +146,8 @@ TODO: Send state to parent component? (What is the parent component?)
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = SingleE
         }
-    //Return the actual button. Change the button state and appearance when clicked.
-    return (
-        <button className={value} onClick={() => setButton(value === "melody-button-inactive" ? "melody-button-active" : "melody-button-inactive")}>White Keys</button>
-    )    
-}    
+}
+    
 
 
 

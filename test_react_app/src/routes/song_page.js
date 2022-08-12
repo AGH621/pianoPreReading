@@ -10,12 +10,10 @@ import "../css/note_style.css";
 import { getTitle } from "../data/song_builder";
 import Footer from "./footer";
 
-import { WhiteKeyButton, BlackKeyButton } from "../js/transpose";
-/*import { ToggleButtons } from "../js/dev_trans_button";*/
-/*import { TransButton } from "../js/dev_trans_button";*/
+
+import { TransposeRadioButtons } from "../js/transpose";
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
 import { ChordSymbolButton } from "../js/symbols";
-
 
 
 import SingleA from "../images/single_a.png";
@@ -31,7 +29,6 @@ import Arrow from "../images/short_arrow.png";
 import LfFour from "../images/L4.png";
 import LfThree from "../images/L3.png";
 import LfTwo from "../images/L2.png";
-
 
 
 function oneNote(a_note) {
@@ -314,10 +311,9 @@ export default function SongPage() {
                     <hr />
 
                     <h4 className="nav-subhead">Melody View</h4>
-                    <WhiteKeyButton />
-                    <BlackKeyButton />
+                    <TransposeRadioButtons />
                     <button className="melody-button-active">Letter Names</button>
-
+                    
                     <hr className="spacer" />
 
                     <h4 className="nav-subhead">Chord View</h4>

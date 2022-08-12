@@ -4,7 +4,6 @@ Navigation Styles
 ========================================
 */
 
-
 .top, .bottom {
     background: linear-gradient(to right, #225C98, #80E697);
     display: flex;
@@ -121,7 +120,57 @@ Navigation Styles
     color: #000000;
 }
 
-.melody-button-active, .chord-button-active, .finger-button  {
+
+#overlay {
+    z-index: 9;
+    margin: 36px;
+    line-height: 57px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    opacity: 0.5
+}
+
+
+.container {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    margin: 30px;
+    
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.melody-button-active input,  .melody-button-inactive input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    
+    border-radius: 8px;
+    box-shadow: 0 5px #003141;
+}
+
+.melody-button-active input {
+    background-color: #008CBA;
+}
+
+.melody-button-inactive input{
+    background-color: #CED6D6;
+}
+
+
+.chord-button-active, .finger-button  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -135,9 +184,10 @@ Navigation Styles
   border: none;
   border-radius: 8px;
   box-shadow: 0 5px #003141;
+
 }
 
-.chord-button-inactive, .melody-button-inactive  {
+.chord-button-inactive  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -152,25 +202,21 @@ Navigation Styles
   border: none;
   border-radius: 8px;
   box-shadow: 0 5px #1D2222;
+
 }
 
 
-.melody-button:hover, .chord-button-active:hover, .finger-button:hover, .chord-button-inactive:hover, .melody-button-inactive:hover {
+.chord-button-active:hover, .finger-button:hover, .chord-button-inactive:hover, .melody-button-inactive:hover input, .melody-button-active:hover input {
     background-color: #FFE855;
     color: #000000;
 }
 
 
-.melody-button:active, .chord-button-active:active, .finger-button:active, .chord-button-inactive:active, .melody-button-inactive:active {
+.chord-button-active:active, .finger-button:active, .chord-button-inactive:active, .melody-button-inactive:active input, .melody-button-active:active input {
   background-color: #FFE855;
   box-shadow: 0 5px #AA7500;
   transform: translateY(4px);
   color: #000000;
-}
-
-
-.melody-button-active {
-    background-color: #008CBA;
 }
 
 
@@ -181,6 +227,8 @@ Navigation Styles
 .finger-button {
     background-color: #80E697;
 }
+
+
 
 
 .songs {
