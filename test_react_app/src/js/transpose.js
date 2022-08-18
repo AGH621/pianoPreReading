@@ -27,6 +27,24 @@ import SingleB from "../images/single_b.png";
 import SingleE from "../images/single_e.png";
 
 
+//Import 2-Note chords
+import SimpleWhtI from "../images/simple_wht_tonic.png";
+import SimpleWhtV7 from "../images/simple_wht_dom.png";
+import SimpleWhtIV from "../images/simple_wht_subdom.png";
+import SimpleBlkI from "../images/simple_blk_tonic.png";
+import SimpleBlkV7 from "../images/simple_blk_dom.png";
+import SimpleBlkIV from "../images/simple_blk_subdom.png";
+
+
+//Import 3-Note chords
+import FullWhtI from "../images/full_wht_tonic.png";
+import FullWhtV7 from "../images/full_wht_dom.png";
+import FullWhtIV from "../images/full_wht_subdom.png";
+import FullBlkI from "../images/full_blk_tonic.png";
+import FullBlkV7 from "../images/full_blk_dom.png";
+import FullBlkIV from "../images/full_blk_subdom.png";
+
+
 export function TransposeRadioButtons() {
 /*
 Return a group of two radio buttons to change the melody from black keys to white keys.
@@ -45,8 +63,20 @@ onClick() changes the notes appearing on the screen.
         //When the black key button is pressed, deactivate the white key button make the black one active
         if (e.target.value === 'black') {
             
-            let inactive_button = document.getElementById('white')
-            inactive_button.className="melody-button-inactive"
+            let inactive_button1 = document.getElementById('white')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white-2note')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('black-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-3note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-3note')
+            inactive_button5.className="button-inactive"
             
             let active_button = document.getElementById('black')
             active_button.className="melody-button-active"
@@ -55,10 +85,106 @@ onClick() changes the notes appearing on the screen.
         //Do the opposite when the white key button is pressed
         else if (e.target.value === 'white') {
 
-            let inactive_button = document.getElementById('black')
-            inactive_button.className="melody-button-inactive"
+            let inactive_button1 = document.getElementById('black')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white-2note')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('black-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-3note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-3note')
+            inactive_button5.className="button-inactive"
             
             let active_button = document.getElementById('white')
+            active_button.className="melody-button-active"
+        }
+        
+        else if (e.target.value === 'white-2note') {
+
+            let inactive_button1 = document.getElementById('black')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('black-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-3note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-3note')
+            inactive_button5.className="button-inactive"
+            
+            let active_button = document.getElementById('white-2note')
+            active_button.className="melody-button-active"
+        }
+        
+        else if (e.target.value === 'black-2note') {
+
+            let inactive_button1 = document.getElementById('black')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('white-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-3note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-3note')
+            inactive_button5.className="button-inactive"
+            
+            let active_button = document.getElementById('black-2note')
+            active_button.className="melody-button-active"
+        }
+        
+        else if (e.target.value === 'black-3note') {
+
+            let inactive_button1 = document.getElementById('black')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('white-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-3note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-2note')
+            inactive_button5.className="button-inactive"
+            
+            let active_button = document.getElementById('black-3note')
+            active_button.className="melody-button-active"
+        }
+        
+        else if (e.target.value === 'white-3note') {
+
+            let inactive_button1 = document.getElementById('black')
+            inactive_button1.className="button-inactive"
+            
+            let inactive_button2 = document.getElementById('white')
+            inactive_button2.className="button-inactive"
+            
+            let inactive_button3 = document.getElementById('white-2note')
+            inactive_button3.className="button-inactive"
+            
+            let inactive_button4 = document.getElementById('white-2note')
+            inactive_button4.className="button-inactive"
+            
+            let inactive_button5 = document.getElementById('black-2note')
+            inactive_button5.className="button-inactive"
+            
+            let active_button = document.getElementById('white-3note')
             active_button.className="melody-button-active"
         }
     }
@@ -70,13 +196,42 @@ onClick() changes the notes appearing on the screen.
                 <label className="melody-button-active" id="white" for="white">
                     <input type="radio" value="white" defaultChecked onChange={handleChange} onClick={white_transpose} name="keys" />
                 </label>
-                <span className="melody-button-inactive" id="overlay">White Keys</span>
+                <span className="melody-button-inactive" id="overlay">White Key Melody</span>
             </div>
+        
             <div className="container">
-                <label className="melody-button-inactive" id="black" for="black">
+                <label className="button-inactive" id="black" for="black">
                     <input type="radio" value="black" onChange={handleChange} onClick={black_transpose} name="keys" />
                 </label>
-                <span className="melody-button-inactive" id="overlay">Black Keys</span>
+                <span className="melody-button-inactive" id="overlay">Black Key Melody</span>
+            </div>
+        
+            <div className="container">
+                <label className="button-inactive" id="white-2note" for="white-2note">
+                    <input type="radio" value="white-2note" onChange={handleChange} onClick={white_2note_chords} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">White 2-Note Chords</span>
+            </div>
+        
+            <div className="container">
+                <label className="button-inactive" id="black-2note" for="black-2note">
+                    <input type="radio" value="black-2note" onChange={handleChange} onClick={black_2note_chords} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">Black 2-Note Chords</span>
+            </div>
+        
+            <div className="container">
+                <label className="button-inactive" id="white-3note" for="white-3note">
+                    <input type="radio" value="white-3note" onChange={handleChange} onClick={white_3note_chords} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">White 3-Note Chords</span>
+            </div>
+        
+            <div className="container">
+                <label className="button-inactive" id="black-3note" for="black-3note">
+                    <input type="radio" value="black-3note" onChange={handleChange} onClick={black_3note_chords} name="keys" />
+                </label>
+                <span className="melody-button-inactive" id="overlay">Black 3-Note Chords</span>
             </div>
         </section>
     )
@@ -147,7 +302,140 @@ function white_transpose() {
         the_fs[x].src = SingleE
         }
 }
+
+
+function white_2note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
     
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = SimpleWhtI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = SimpleWhtV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = SimpleWhtI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = SimpleWhtIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = SimpleWhtV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = SimpleWhtIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = SimpleWhtV7
+        }
+    
+}
 
 
+function black_2note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
+    
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = SimpleBlkI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = SimpleBlkV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = SimpleBlkI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = SimpleBlkIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = SimpleBlkV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = SimpleBlkIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = SimpleBlkV7
+        }
+    
+}
+
+
+function white_3note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
+    
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = FullWhtI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = FullWhtV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = FullWhtI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = FullWhtIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = FullWhtV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = FullWhtIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = FullWhtV7
+        }
+    
+}
+
+
+function black_3note_chords() {
+    let the_fs = document.getElementsByClassName('pitch do')
+    let the_gs = document.getElementsByClassName('pitch re')
+    let the_as = document.getElementsByClassName('pitch mi')
+    let the_bbs = document.getElementsByClassName('pitch fa')
+    let the_cs = document.getElementsByClassName('pitch sol')
+    let the_ds = document.getElementsByClassName('pitch la')
+    let the_es = document.getElementsByClassName('pitch ti')
+    
+    for (let x=0; x<the_fs.length; x++){
+        the_fs[x].src = FullBlkI
+        }
+    for (let x=0; x<the_gs.length; x++){
+        the_gs[x].src = FullBlkV7
+        }
+    for (let x=0; x<the_as.length; x++){
+        the_as[x].src = FullBlkI
+        }
+    for (let x=0; x<the_bbs.length; x++){
+            the_bbs[x].src = FullBlkIV
+            }
+    for (let x=0; x<the_cs.length; x++){
+        the_cs[x].src = FullBlkV7
+        }
+    for (let x=0; x<the_ds.length; x++){
+            the_ds[x].src = FullBlkIV
+            }
+    for (let x=0; x<the_es.length; x++){
+        the_es[x].src = FullBlkV7
+        }
+    
+}
 

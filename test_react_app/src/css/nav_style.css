@@ -123,7 +123,7 @@ Navigation Styles
 
 #overlay {
     z-index: 9;
-    margin: 36px;
+    margin: 25px;
     line-height: 57px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -135,16 +135,17 @@ Navigation Styles
 
 
 .container {
-    width: 150px;
+    width: 200px;
     height: 50px;
     position: relative;
-    margin: 30px;
-    
+    margin-left: 8px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     cursor: pointer;
     border-radius: 8px;
 }
 
-.melody-button-active input,  .melody-button-inactive input{
+.melody-button-active input,  .button-inactive input{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -156,7 +157,7 @@ Navigation Styles
     top: 0;
     left: 0;
     opacity: 0.75;
-    
+    cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 5px #003141;
 }
@@ -165,12 +166,12 @@ Navigation Styles
     background-color: #008CBA;
 }
 
-.melody-button-inactive input{
+.button-inactive input{
     background-color: #CED6D6;
 }
 
 
-.chord-button-active, .finger-button  {
+.finger-button  {
   display: block;
   margin: 15px 15px;
   padding: 10px;
@@ -184,45 +185,26 @@ Navigation Styles
   border: none;
   border-radius: 8px;
   box-shadow: 0 5px #003141;
-
-}
-
-.chord-button-inactive  {
-  display: block;
-  margin: 15px 15px;
-  padding: 10px;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #809696;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  background-color: #CED6D6;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 5px #1D2222;
+  width: 200px;
+  height: 50px;
+  
 
 }
 
 
-.chord-button-active:hover, .finger-button:hover, .chord-button-inactive:hover, .melody-button-inactive:hover input, .melody-button-active:hover input {
+.finger-button:hover, .button-inactive:hover input, .melody-button-active:hover input {
     background-color: #FFE855;
     color: #000000;
 }
 
 
-.chord-button-active:active, .finger-button:active, .chord-button-inactive:active, .melody-button-inactive:active input, .melody-button-active:active input {
+.finger-button:active, .button-inactive:active input, .melody-button-active:active input {
   background-color: #FFE855;
   box-shadow: 0 5px #AA7500;
   transform: translateY(4px);
   color: #000000;
 }
 
-
-.chord-button-active {
-    background-color: #41C2C2;
-}
 
 .finger-button {
     background-color: #80E697;
@@ -271,14 +253,27 @@ Navigation Styles
 }
 
 
-.nav-subhead {
-    /*border: 1px solid;*/
-    color: #3BA190;
+.nav-subhead-1, .nav-subhead-2, .nav-subhead-3 {
     font-size: 24px;
     font-weight: 600;
     font-family: 'Playfair Display', 'Times', serif;
     text-align: center;
     margin: 20px 0px 10px 0px;
+}
+
+
+.nav-subhead-1{
+    color: #008CBA;
+}
+
+
+.nav-subhead-2 {
+    color: #41C2C2;
+}
+
+
+.nav-subhead-3 {
+    color: #80E697;
 }
 
 

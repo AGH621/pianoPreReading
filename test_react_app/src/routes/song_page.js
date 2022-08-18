@@ -13,6 +13,7 @@ import Footer from "./footer";
 
 import { TransposeRadioButtons } from "../js/transpose";
 import { white_2note_chords, black_2note_chords, white_3note_chords, black_3note_chords } from "../js/chord_view";
+import { ChordRadioButtons } from "../js/chord_view";
 import { ChordSymbolButton } from "../js/symbols";
 
 
@@ -306,27 +307,13 @@ export default function SongPage() {
     return (
         <main>
             <div className="columns-button">
+        
             <nav className="songs">
                 <h3 className="song-nav">View Options</h3>
                     <hr />
-
-                    <h4 className="nav-subhead">Melody View</h4>
                     <TransposeRadioButtons />
-                    <button className="melody-button-active">Letter Names</button>
-                    
-                    <hr className="spacer" />
-
-                    <h4 className="nav-subhead">Chord View</h4>
-                    <button className="chord-button-active" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? white_2note_chords : white_3note_chords}>White Keys</button>
-                    <button className="chord-button-active" onClick={the_song.score_data.pedagogical_score_type === "3-Note" ? black_2note_chords : black_3note_chords}>Black Keys</button>
-                    <ChordSymbolButton />
-        
-                    <hr className="spacer" />
-        
-                    <h4 className="nav-subhead">Finger Numbers</h4>
-                    <button className="finger-button">Left Hand</button>
-                    <button className="finger-button">Right Hand</button>
             </nav>
+        
             <div className="home">
             <h1 className = "title">{params.songTitle}</h1>
             <section className={the_song.score_data.meter.toLowerCase()}>

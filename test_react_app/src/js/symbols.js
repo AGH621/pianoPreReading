@@ -15,7 +15,7 @@ Creates a button which either display or hides a note's chord symbol.
 TODO: Send state to parent component? (What is the parent component?)
 */
     //Set the button state.
-    let [value, setButton] = useState("chord-button-active");
+    let [value, setButton] = useState("finger-button");
 
     //Get the chord class for each note.
     let the_tonics = document.getElementsByClassName('tonic');
@@ -52,6 +52,10 @@ TODO: Send state to parent component? (What is the parent component?)
     
     //Return the actual button. Change the button state and appearance when clicked.
     return (
-        <button className={value} onClick={() => setButton(value === "chord-button-active" ? "chord-button-inactive" : "chord-button-active")}> Chord Symbols</button>
+        <div className="container">
+        <button className={value} onClick={() => setButton(value === "finger-button" ? "button-inactive" : "finger-button")}> 
+        <span id="overlay">Chord Symbols</span>
+        </button>
+        </div>
     )
 }
