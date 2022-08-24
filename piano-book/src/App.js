@@ -24,6 +24,8 @@ import MailIcon from '@mui/icons-material/Mail';
 
 import { Button, Tab, Grid, Tabs} from '@mui/material';
 
+import { Outlet, Link } from "react-router-dom";
+
 
 /*
 Lines 10-45 are the MaterialUI components for the top navigation bar
@@ -151,7 +153,8 @@ function App() {
                         Copyright 2022 - A.G. Hamill
                   </Typography>
                 </Toolbar>
-              </AppBar>                  
+              </AppBar>  
+              <Outlet />                      
         </div>
   );
 }

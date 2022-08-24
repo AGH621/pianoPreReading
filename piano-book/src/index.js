@@ -24,7 +24,7 @@ reportWebVitals();*/
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter as RrdBrowserRouter, Routes as RrdRoutes, Route as RrdRoute} from "react-router-dom";
 
 //Imports for our app
 import App from "./App";
@@ -32,22 +32,22 @@ import Home from "./routes/home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
+    <RrdBrowserRouter>
+        <RrdRoutes>
+          <RrdRoute path="/" element={<App />}>
+            <RrdRoute index element={<Home />} />
             
 
-            <Route path="*"
+            <RrdRoute path="*"
               element={
                 <main style={{ padding: "1rem" }}>
                   <p>404: This ain&#39;t gonna work. Sorry &#39;bout that.</p>
                 </main>
               }
             />
-          </Route>
-        </Routes>
-    </BrowserRouter>
+          </RrdRoute>
+        </RrdRoutes>
+    </RrdBrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
