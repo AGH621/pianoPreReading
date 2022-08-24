@@ -1,7 +1,7 @@
 import React from 'react';
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-import { Grid, Box, Tabs, Tab, Link } from '@mui/material';
+import { Grid, Box, Tabs, Tab } from '@mui/material';
 
 
 
