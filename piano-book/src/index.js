@@ -28,7 +28,7 @@ import { BrowserRouter as RrdBrowserRouter, Routes as RrdRoutes, Route as RrdRou
 
 //Imports for our app
 import App from "./App";
-import Home from "./routes/home";
+import Home from "./home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
