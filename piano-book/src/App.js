@@ -14,6 +14,7 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
+
 import Home from "./routes/home";
 import ThreeNote from "./routes/three_note";
 import FourNote from "./routes/four_note";
@@ -22,6 +23,8 @@ import Pentatonic from "./routes/pentatonic";
 import Diatonic from "./routes/diatonic";
 import Minor from "./routes/minor";
 import SongList from "./routes/song_list";
+import About from "./routes/about";
+import Takadimi from "./routes/ta_ka_di_mi";
 
 /*
 import SongPage from "./routes/song_page";
@@ -57,7 +60,7 @@ function useRouteMatch(patterns: readonly []) {
   return null;
 }
 
-function MyTabs() {
+function TopNav() {
   // You need to provide the routes in descendant order.
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
@@ -66,6 +69,7 @@ function MyTabs() {
   const currentTab = routeMatch?.pattern?.path;
 
   return (
+    <header>
     <AppBar>
     <Tabs value={currentTab}>
       <Tab label="Home" value="/home" to="/home" component={Link} />
@@ -78,22 +82,16 @@ function MyTabs() {
       <Tab label="Song List" value="/song_list" to="/song_list" component={Link} />
     </Tabs>
     </AppBar>
+    </header>
   );
 }
 
-
-function App() {
-  return (
-    <Home />
-  );
-}
 
 export default function TabsRouter() {
   return (
     <BrowserRouter>
-      <Box sx={{ width: "100%" }}>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/three_note" element={<ThreeNote />} />
           <Route path="/four_note" element={<FourNote />} />
@@ -102,6 +100,9 @@ export default function TabsRouter() {
           <Route path="/diatonic" element={<Diatonic />} />
           <Route path="/minor" element={<Minor />} />
           <Route path="/song_list" element={<SongList />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/ta_ka_di_mi" element={<Takadimi />} />
+      
             
           <Route path="*"
             element={
@@ -112,8 +113,7 @@ export default function TabsRouter() {
           />
         
         </Routes>
-        <MyTabs />
-      </Box>
+        <TopNav />
     </BrowserRouter>
   );
 }
