@@ -1,20 +1,30 @@
+/*
+Created by: Anne Hamill
+Created on: 24 August 2022
+Version: 0.2
+Description: Application component. Foundation for the front end. 
+
+TODO: Override MUI styles on all components.   
+*/
+
+//Imports from React, MUI, react-router
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
-import {
-  MemoryRouter,
-  Route,
-  Routes,
-  Link,
-  matchPath,
-  useLocation,
-  BrowserRouter
-} from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import { MemoryRouter,
+         Route,
+         Routes,
+         Link,
+         matchPath,
+         useLocation,
+         BrowserRouter } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
+//Our imports
 import Home from "./routes/home";
 import ThreeNote from "./routes/three_note";
 import FourNote from "./routes/four_note";
@@ -28,11 +38,10 @@ import Takadimi from "./routes/ta_ka_di_mi";
 
 /*
 import SongPage from "./routes/song_page";
-import Footer from "./routes/footer";
-import About from "./routes/about"
 */
 
 
+//These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {
   const { children } = props;
   if (typeof window === "undefined") {
@@ -60,6 +69,7 @@ function useRouteMatch(patterns: readonly []) {
   return null;
 }
 
+//This is the actual navbar with tabs.
 function TopNav() {
   // You need to provide the routes in descendant order.
   // This means that if you have nested routes like:
@@ -86,7 +96,7 @@ function TopNav() {
   );
 }
 
-
+//Routing for all the app links
 export default function TabsRouter() {
   return (
     <BrowserRouter>
@@ -102,8 +112,6 @@ export default function TabsRouter() {
           <Route path="/song_list" element={<SongList />} />
           <Route path="/about" element={<About />} />
           <Route path="/ta_ka_di_mi" element={<Takadimi />} />
-      
-            
           <Route path="*"
             element={
               <main style={{ padding: "10rem" }}>
@@ -111,20 +119,8 @@ export default function TabsRouter() {
               </main>
             }
           />
-        
         </Routes>
         <TopNav />
     </BrowserRouter>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
