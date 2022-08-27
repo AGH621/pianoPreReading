@@ -7,34 +7,9 @@ The drawer component uses react-router links to the 3-Note songs found in the Sc
 imported from the backend.
 
 TODO: 
-    1) Make the text into a React component.
+    1) Make the drawer and text into a React components.
     2) Override MUI styles on all components.   
 */
-
-/*
-//External imports
-import React from 'react';
-import { Outlet, Link } from "react-router-dom";
-import { Typography,
-         Grid,
-         Drawer} from '@mui/material';
-
-//Internal imports
-import Footer from '../components/footer';
-
-
-export default function ThreeNote() {
-    return (
-        <Grid position="relative">
-            <p style={{padding: "10rem" }}>The cow jumped over the moon</p>
-        
-            <Footer />
-            <Outlet />
-        </Grid>
-    );
-}*/
-
-
 
 
 import * as React from 'react';
@@ -44,21 +19,19 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import { Outlet, Link } from "react-router-dom";
 
 import Footer from '../components/footer';
+import appAccordian from '../components/app_accordian';
+import teacherText from '../data/home_page/home_teacher.txt';
+import studentText from '../data/home_page/home_student.txt';
 
 const drawerWidth = 240;
 
@@ -80,7 +53,6 @@ export default function ResponsiveDrawer(props: Props) {
 
   const drawer = (
     <div>
-      <Toolbar />
       <Typography variant="h3" style={{padding: "1rem" }}>
           Song List
       </Typography>
@@ -147,7 +119,7 @@ export default function ResponsiveDrawer(props: Props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: "3em" }}
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
       >
         <Toolbar />
         <Typography paragraph>
@@ -177,6 +149,7 @@ export default function ResponsiveDrawer(props: Props) {
           eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
           posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
+        {appAccordian(teacherText, studentText)}
       </Box>
       
     </Box> 

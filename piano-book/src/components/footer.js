@@ -69,7 +69,8 @@ export default function Footer() {
     <footer>
     <AppBar position="relative" 
       sx={{
-          zIndex:"1201"
+          zIndex:"1201",
+          marginTop: "7.5em"
       }}>
     
     <Tabs value={currentTab}>
