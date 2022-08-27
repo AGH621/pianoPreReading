@@ -67,7 +67,10 @@ export default function Footer() {
 
   return (
     <footer>
-    <AppBar position="relative">
+    <AppBar position="relative" 
+      sx={{
+          zIndex:"1201"
+      }}>
     
     <Tabs value={currentTab}>
       <Box>

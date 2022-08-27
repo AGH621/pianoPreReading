@@ -80,7 +80,7 @@ function TopNav() {
 
   return (
     <header>
-    <AppBar>
+    <AppBar position="fixed">
     <Tabs value={currentTab}>
       <Tab label="Home" value="/home" to="/home" component={Link} />
       <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} />

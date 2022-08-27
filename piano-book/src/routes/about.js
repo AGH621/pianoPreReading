@@ -1,13 +1,26 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 0.2
+Description: About page React component. 
+
+TODO: 
+    1) Make the text into a React component.
+    2) Override MUI styles on all components.   
+*/
+
+//External imports
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import { Typography, Grid } from '@mui/material';
 
-
+//Internal imports
 import Footer from '../components/footer';
 import projectHistory from '../data/about_page/project_history.txt';
 import technicalDetails from '../data/about_page/technical_details.txt';
 import {readText} from '../js/read_text';
 
+//Our About page
 export default function About() {
     return (
         <Grid>
