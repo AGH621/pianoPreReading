@@ -15,6 +15,7 @@ import { Typography,
 
 //Import our functions and files.
 import introText from '../data/home_page/home_intro.txt';
+import changeText from '../data/home_page/home_changes.txt';
 import teacherText from '../data/home_page/home_teacher.txt';
 import studentText from '../data/home_page/home_student.txt';
 import {readText} from '../js/read_text';
@@ -34,10 +35,15 @@ export default function Home() {
         
             <Typography variant="body1" gutterBottom style={{padding: "5rem" }}>
                 {readText(introText)}
+                <br />
+                <br />
+                {readText(changeText)}
             </Typography>
 
             {appAccordian(teacherText, studentText)}
+            
             <Footer />
+            
             <Outlet />
         </Grid>
         

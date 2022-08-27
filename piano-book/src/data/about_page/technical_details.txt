@@ -1,0 +1,5 @@
+
+
+All the pages here are hand-written HTML and CSS. All the design elements were created by me 
+with a white sheet of paper, hours of internet research, and even more experimentation. Currently, 
+I am reworking the CSS so it is more efficient and readable.

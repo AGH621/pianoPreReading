@@ -1,12 +1,14 @@
 import React from 'react';
-import { Outlet as RROutlet, Link as RRLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Footer from '../components/footer';
 
 
 export default function FourNote() {
     return (
         <div>
             <p style={{padding: "10rem" }}>Mary Mary quite contrary</p>
-            <RROutlet />
+            <Footer />
+            <Outlet />
         </div>
     );
 }
