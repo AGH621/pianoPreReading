@@ -1,20 +1,22 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
+import { Box,
+         Divider,
+         Drawer, 
+         List,
+         ListItem,
+         ListItemButton,
+         ListItemText,
+         Typography
+        } from '@mui/material';
 
+/*
 const drawerWidth = 240;
 
 interface Props {
-  /**
+  *
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
-   **/
+   *
   window?: () => Window;
 }
 
@@ -88,6 +90,33 @@ export default function appDrawer(props: Props) {
         </Drawer>
     </Box>
 );
-}          
+}*/
+        
+        
+export default function songList() {
+    return (
+      <div>
+        <Typography variant="h3" style={{padding: "1rem" }}>
+            Song List
+        </Typography>
+        <Divider />
+        <List>
+          {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton to={`/`} key={text}>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    );
+}       
+        
+        
+        
+        
+        
+          
           
           
