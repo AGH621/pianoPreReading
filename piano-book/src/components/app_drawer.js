@@ -96,7 +96,11 @@ export default function appDrawer(props: Props) {
 export default function songList() {
     return (
       <div>
-        <Typography variant="h3" style={{padding: "1rem" }}>
+        <Typography variant="body1" style={{padding: "1rem" }}>
+            Using Responsive Drawer
+        </Typography>
+        <Divider />
+        <Typography variant="h4" style={{padding: "1rem" }}>
             Song List
         </Typography>
         <Divider />

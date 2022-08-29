@@ -39,6 +39,8 @@ const drawerWidth = 240;
 
 
 export default function ThreeNote(props) {
+    //Note: "props" function argument and the line below are required for correct rendering. Do not understand the mechanism at work. Fails silently when 
+    //moved to a separate module and imported.
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
   

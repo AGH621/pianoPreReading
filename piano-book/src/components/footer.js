@@ -69,7 +69,7 @@ export default function Footer() {
     <footer>
     <AppBar position="relative" 
       sx={{
-          zIndex:"1201",
+          zIndex:"1601",
           marginTop: "7.5em"
       }}>
     
