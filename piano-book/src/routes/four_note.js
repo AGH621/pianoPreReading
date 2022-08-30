@@ -218,16 +218,16 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
+import appAccordian from '../components/app_accordian';
+import songList from '../components/app_drawer';
+import teacherText from '../data/home_page/home_teacher.txt';
+import studentText from '../data/home_page/home_student.txt';
 
 
 const drawerWidth = 240;
@@ -251,21 +251,25 @@ export default function FourNote() {
                component="nav"
                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                >
-               <Toolbar style={{marginTop: "5rem" }}>
+               <Toolbar style={{marginTop: "3rem" }}>
+               
                <IconButton color="inherit" onClick={handleDrawerOpen} edge="start">
                 <MenuIcon />
                </IconButton>
+               
                <Typography variant="h6" noWrap>
                 Song List
                </Typography>
+               
                </Toolbar>
+               <Divider />
      
       <Drawer 
           PaperProps={{
                  sx: {
                      marginTop: "3em",
                      width: "240px",
-                     height: "500px"
+                     height: "750px"
                  }
                }} 
           variant="persistent" anchor="left" open={open}
@@ -274,16 +278,23 @@ export default function FourNote() {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           >
+       <Toolbar>
+       <IconButton color="inherit" onClick={handleDrawerClose} edge="start">
+        <MenuIcon />
+       </IconButton>
+       <Typography variant="h6" noWrap>
+        Song List
+       </Typography>
+       </Toolbar>
+       <Divider />  
         <List>
-          <ListItem button key="home">
-            <ListItemIcon>
-              <MailIcon />
-            </ListItemIcon>
-            <ListItemText primary="home" />
-          </ListItem>
-          <ListItem button key="close" onClick={handleDrawerClose}>
-            <ListItemText primary="close" />
-          </ListItem>
+          {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton to={`/`} key={text}>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
         </List>
       </Drawer>
     </Box>           
@@ -327,7 +338,7 @@ export default function FourNote() {
             eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
             posuere sollicitudin aliquam ultrices sagittis orci a.
           </Typography>
-          
+          {appAccordian(teacherText, studentText)}
         </Box>               
       </Box>
     <Footer />
