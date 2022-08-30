@@ -1,13 +1,90 @@
-import React from 'react';
-import { Outlet } from "react-router-dom";
+
+import * as React from 'react';
+import { experimentalStyled as styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 
+/*
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.primary,
+}));*/
+
+
+const Alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+
+
 export default function SongList() {
-    return (
-        <div>
-            <p style={{padding: "10rem" }}>Jack and Jill went up the hill</p>
-            <Footer />
-            <Outlet />
-        </div>
-    );
+  return (
+    <Box>
+       <Typography variant="h1" id="top"
+      sx={{ marginTop: "1em",
+            marginLeft: "2em"}}>
+        Song List
+      </Typography>
+    <Box sx={{ flexGrow: 1,
+               margin: "5em",
+               height: "12em"}}>
+      <Grid container spacing={{ xs: 2, md: 2 }}>
+        {Alphabet.map((Alphabet) => (
+          <Grid item key={Alphabet}>
+            <Button variant="outlined" size="large" href={`#${Alphabet}`}><Typography variant="h6">{Alphabet}</Typography></Button>
+          </Grid>
+        ))}
+      </Grid>
+      <Divider 
+        sx={{
+            marginTop: "2em"
+        }}/>
+    </Box>
+            
+    <Box sx={{ paddingTop: "2em"}}>    
+       {Alphabet.map((Alphabet) => (<Typography variant="h3" id={`${Alphabet}`}
+      sx={{ margin: "1em",
+            paddingTop: "1em"}}>
+       {Alphabet}
+      <Divider sx={{
+            marginBottom: "1em"}}/> 
+      </Typography>
+        ))}
+       </Box>
+        <Fab href="#top" color="primary" aria-label="Return to top"
+        sx={{
+            margin: 0,
+            top: "auto",
+            right: 30,
+            bottom: 50,
+            left: "auto",
+            position: "fixed"
+        }}>
+           <KeyboardArrowUpIcon />
+        </Fab>
+       <Footer />
+       <Outlet />
+    </Box>
+  );
 }
+
+
+
+
+
+
+
+
+
+
+
