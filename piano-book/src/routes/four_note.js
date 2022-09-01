@@ -206,7 +206,6 @@ export default function PersistentDrawerLeft() {
 
 
 import React from "react";
-import { makeStyles, useTheme } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -218,6 +217,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from "@mui/material/ListItemText";
@@ -279,18 +279,18 @@ export default function FourNote() {
           }}
           >
        <Toolbar>
-       <IconButton color="inherit" onClick={handleDrawerClose} edge="start">
-        <MenuIcon />
-       </IconButton>
        <Typography variant="h6" noWrap>
         Song List
        </Typography>
+       <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
+        <CloseIcon />
+       </IconButton>
        </Toolbar>
        <Divider />  
         <List>
           {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton to={`/`} key={text}>
+              <ListItemButton to={`/song_page`} key={text}>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>

@@ -35,11 +35,7 @@ import Minor from "./routes/minor";
 import SongList from "./routes/song_list";
 import About from "./routes/about";
 import Takadimi from "./routes/ta_ka_di_mi";
-
-/*
 import SongPage from "./routes/song_page";
-*/
-
 
 //These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {
@@ -104,6 +100,7 @@ export default function TabsRouter() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/three_note" element={<ThreeNote />} />
+              <Route path="/song_page" element={<SongPage />} />
           <Route path="/four_note" element={<FourNote />} />
           <Route path="/five_finger" element={<FiveFinger />} />
           <Route path="/pentatonic" element={<Pentatonic />} />
