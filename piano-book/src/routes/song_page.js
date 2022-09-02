@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from "react";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -11,12 +11,15 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from "@mui/material/ListItemText";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
+import ImgMediaCard from '../components/app_cardgrid';
 
 
 const drawerWidth = 240;
@@ -47,7 +50,7 @@ export default function SongPage() {
                </IconButton>
                
                <Typography variant="h6" noWrap>
-                Song List
+                Views
                </Typography>
                
                </Toolbar>
@@ -69,7 +72,7 @@ export default function SongPage() {
           >
        <Toolbar>
        <Typography variant="h6" noWrap>
-        Song List
+        Views
        </Typography>
        <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
         <CloseIcon />
@@ -77,57 +80,47 @@ export default function SongPage() {
        </Toolbar>
        <Divider />  
         <List>
-          {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton to={`/`} key={text}>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+         
         </List>
+        <FormControl sx={{
+            marginLeft: "3em"
+        }}>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                name="radio-buttons-group"
+              >
+                  {['View 1', 'View 2', 'View 3', 'View 4'].map((text, index) => (
+                    <FormControlLabel value={text} control={<Radio />} label={text} />
+            
+                  ))}
+              </RadioGroup>
+            </FormControl>
       </Drawer>
-    </Box>           
-      {/*
-      <main style={{ marginLeft: 300 }}>
-              <Typography paragraph>Lorem ipsum dolor sit amet</Typography>
-              <Typography paragraph>
-                Consequat mauris nunc congue nisi vitae suscipit
-              </Typography>
-            </main>*/}
+    </Box>
         <Box
           component="main"
           sx= {{flexGrow: 1, p: 3,
                 width: { sm: `calc(100% - ${drawerWidth}px)` }}}
         >
           <Toolbar />
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-            enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-            imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-            Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-            Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-            adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-            nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-            leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-            feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-            sapien faucibus et molestie ac.
+          <Typography variant="h1">
+            Song Title
           </Typography>
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-            eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-            neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-            tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-            sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-            tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-            et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-            tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-            eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-            posuere sollicitudin aliquam ultrices sagittis orci a.
-          </Typography>
-          {appAccordian(teacherText, studentText)}
+                <Grid sx={{ flexGrow: 1,
+                            marginTop: "1em"}} container spacing={2}>
+                  <Grid container>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32].map((value) => (
+                        <Box
+                        sx={{margin: "1em"}}>
+                        {ImgMediaCard()}
+                        </Box>
+                    ))}
+                  </Grid>
+                  </Grid>
+                
+                
+                
+          
         </Box>               
       </Box>
     <Footer />
