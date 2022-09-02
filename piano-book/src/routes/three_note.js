@@ -34,6 +34,8 @@ import songList from '../components/app_drawer';
 import teacherText from '../data/home_page/home_teacher.txt';
 import studentText from '../data/home_page/home_student.txt';
 
+import { threeNoteTitles } from "../js/sort_ped_type";
+
 const drawerWidth = 240;
 
 
@@ -48,7 +50,10 @@ export default function ThreeNote(props) {
       setMobileOpen(!mobileOpen);
     };
   
-    const drawer = songList();
+    const song_data = threeNoteTitles();
+    const drawer = songList(song_data);
+    
+    
   
     /*
     const drawer = (

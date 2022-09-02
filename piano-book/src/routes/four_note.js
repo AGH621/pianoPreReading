@@ -229,6 +229,8 @@ import songList from '../components/app_drawer';
 import teacherText from '../data/home_page/home_teacher.txt';
 import studentText from '../data/home_page/home_student.txt';
 
+import { fourNoteTitles } from "../js/sort_ped_type";
+
 
 const drawerWidth = 240;
 
@@ -242,6 +244,8 @@ export default function FourNote() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  
+  const song_data = fourNoteTitles();
   
   return (
       <Grid position="relative">
@@ -288,10 +292,10 @@ export default function FourNote() {
        </Toolbar>
        <Divider />  
         <List>
-          {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton to={`/song_page`} key={text}>
-                <ListItemText primary={text} />
+          {song_data.map((song) => (
+            <ListItem key={song} disablePadding>
+              <ListItemButton to={`/${song}`} key={song}>
+                <ListItemText primary={song} />
               </ListItemButton>
             </ListItem>
           ))}

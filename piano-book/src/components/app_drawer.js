@@ -91,9 +91,11 @@ export default function appDrawer(props: Props) {
     </Box>
 );
 }*/
+
+
+
         
-        
-export default function songList() {
+export default function songList(song_data) {
     return (
       <div>
         <Typography variant="body1" style={{padding: "1rem" }}>
@@ -105,10 +107,10 @@ export default function songList() {
         </Typography>
         <Divider />
         <List>
-          {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton to={`/`} key={text}>
-                <ListItemText primary={text} />
+          {song_data.map((song) => (
+            <ListItem key={song} disablePadding>
+              <ListItemButton to={`/${song}`} key={song}>
+                <ListItemText primary={song} />
               </ListItemButton>
             </ListItem>
           ))}
