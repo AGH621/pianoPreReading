@@ -27,13 +27,7 @@ export default function Takadimi() {
           </Grid>
           </Grid>
             
-          <Link to={<object
-      type="application/pdf"
-  data={lesson1Page1}
-      width="600"
-      height="700"
-    >
-    </object>}>Test</Link>
+          
             
             {returnTopFab()}
           <Footer />      

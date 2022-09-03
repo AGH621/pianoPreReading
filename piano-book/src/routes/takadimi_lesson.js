@@ -29,8 +29,7 @@ import Footer from '../components/footer';
 export default function LessonPage() {
     return (
         <Grid>
-      
-          
+            
             
             
             <Outlet />

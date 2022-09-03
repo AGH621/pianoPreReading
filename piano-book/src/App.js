@@ -38,7 +38,6 @@ import Takadimi from "./routes/ta_ka_di_mi";
 import SongPage from "./routes/song_page";
 import LessonPage from "./routes/takadimi_lesson";
 
-import lesson1Page1 from '../data/lesson1_page1.pdf';
 
 //These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {
@@ -112,7 +111,7 @@ export default function TabsRouter() {
           <Route path="/song_list" element={<SongList />} />
           <Route path="/about" element={<About />} />
           <Route path="/ta_ka_di_mi" element={<Takadimi />} />
-              <Route path={lesson1Page1} element={<LessonPage />} />
+              <Route path="/takadimi_lesson" element={<LessonPage />} />
           <Route path="*"
             element={
               <main style={{ padding: "10rem" }}>
