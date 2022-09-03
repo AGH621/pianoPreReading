@@ -4,10 +4,12 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import paperGridRow from '../components/app_papergrid';
 import returnTopFab from '../components/app_returntop';
+
+import lesson1Page1 from '../data/lesson1_page1.pdf';
 
 export default function Takadimi() {
     return (
@@ -24,9 +26,27 @@ export default function Takadimi() {
             ))}
           </Grid>
           </Grid>
+            
+          <Link to={<object
+      type="application/pdf"
+  data={lesson1Page1}
+      width="600"
+      height="700"
+    >
+    </object>}>Test</Link>
+            
             {returnTopFab()}
           <Footer />      
           <Outlet />
           </Box>      
     );
-}    
+}
+
+/*
+<object
+      type="application/pdf"
+  data={lesson1Page1}
+      width="600"
+      height="700"
+    >
+    </object>*/

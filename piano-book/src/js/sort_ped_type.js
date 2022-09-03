@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 
-import scoreDefs from "./score_defs.json"
+import scoreDefs from "../data/score_defs.json"
 
 
 
