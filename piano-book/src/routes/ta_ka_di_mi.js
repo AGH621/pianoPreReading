@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 import paperGridRow from '../components/app_papergrid';
 import returnTopFab from '../components/app_returntop';
 
-import lesson1Page1 from '../data/lesson1_page1.pdf';
+/*import lesson1Page1 from '../data/lesson1_page1.pdf';*/
 
 export default function Takadimi() {
     return (

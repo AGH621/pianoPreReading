@@ -11,6 +11,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
+import { styled } from '@mui/material/styles';
+import Masonry from '@mui/lab/Masonry';
+
 import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import returnTopFab from '../components/app_returntop';
@@ -20,20 +23,22 @@ import { allTitles } from "../js/sort_ped_type";
 
 const Alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
+
 function alphaSongs(letter) {
     let song_data = allTitles();
-    
+
     return (
-      <List>
-        {song_data.map((song) => (
-            song.startsWith(letter) ? 
-          <ListItem key={song} disablePadding>
-            <ListItemButton to={`/${song}`} key={song}>
-              <ListItemText primary={song} />
-            </ListItemButton>
-            </ListItem>: null))}
-      </List>
-    )
+        <Box>
+          <Masonry columns={4} spacing={2}>
+            {song_data.map((song, index) => (
+                song.startsWith(letter) ?
+                <Button> <Link to={`/${song}`} key={song}>
+                <Typography variant="body2">{song}</Typography>
+                </Link></Button>:null
+            ))}
+        </Masonry>
+    </Box>
+    );
 }
 
 export default function SongList() {

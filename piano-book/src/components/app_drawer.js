@@ -1,126 +1,90 @@
 import * as React from 'react';
-import { Box,
-         Divider,
-         Drawer, 
-         List,
-         ListItem,
-         ListItemButton,
-         ListItemText,
-         Typography
-        } from '@mui/material';
+import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import CssBaseline from "@mui/material/CssBaseline";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from "@mui/material/ListItemText";
 
-/*
+
 const drawerWidth = 240;
-
-interface Props {
-  *
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   *
-  window?: () => Window;
-}
-
-export default function appDrawer(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-    <div>
-      <Typography variant="h3" style={{padding: "1rem" }}>
-          Song List
-      </Typography>
-      <Divider />
-      <List>
-        {['Song 1', 'Song 2', 'Song 3', 'Song 4'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton to={`/`} key={text}>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
-  return (
-      <Box
+export function songDrawer(song_data) {
+    const [open, setOpen] = React.useState(true);
+  
+    const handleDrawerOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleDrawerClose = () => {
+      setOpen(false);
+    };
+    
+    return(
+    <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-      >
-        <Drawer
-        PaperProps={{
-            sx: {
-                marginTop: "3em"
-            }
-          }}
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer
-          PaperProps={{
-              sx: {
-                  marginTop: "3em",
-              }
-            }}
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-    </Box>
-);
-}*/
+    >
+        <Toolbar style={{marginTop: "3rem" }}>
 
+        <IconButton color="inherit" onClick={handleDrawerOpen} edge="start">
+            <MenuIcon />
+        </IconButton>
 
-
-        
-export default function songList(song_data) {
-    return (
-      <div>
-        <Typography variant="body1" style={{padding: "1rem" }}>
-            Using Responsive Drawer
-        </Typography>
-        <Divider />
-        <Typography variant="h4" style={{padding: "1rem" }}>
+        <Typography variant="h6" noWrap>
             Song List
         </Typography>
+
+        </Toolbar>
+        
         <Divider />
-        <List>
-          {song_data.map((song) => (
-            <ListItem key={song} disablePadding>
-              <ListItemButton to={`/${song}`} key={song}>
-                <ListItemText primary={song} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </div>
+
+        <Drawer 
+            PaperProps={{
+                 sx: {
+                     marginTop: "3em",
+                     width: "240px",
+                     height: "750px"
+                     }
+            }} 
+            variant="persistent" anchor="left" open={open}
+            sx={{
+                display: { xs: 'block', sm: 'block' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+        >
+            <Toolbar>
+                <Typography variant="h6" noWrap>
+                    Song List
+                </Typography>
+                <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
+                    <CloseIcon />
+                </IconButton>
+            </Toolbar>
+        
+            <Divider />
+          
+            <List>
+            {song_data.map((song) => (
+                <ListItem key={song} disablePadding>
+                    <ListItemButton to={`/${song}`} key={song}>
+                        <ListItemText primary={song} />
+                    </ListItemButton>
+                </ListItem>
+            ))}
+            </List>
+        </Drawer>
+    </Box>    
     );
-}       
-        
-        
-        
+}
         
         
           

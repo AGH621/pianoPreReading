@@ -80,6 +80,7 @@ function TopNav() {
     <header>
     <AppBar position="fixed">
     <Tabs value={currentTab}>
+      <Box>
       <Tab label="Home" value="/home" to="/home" component={Link} />
       <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} />
       <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} />
@@ -88,6 +89,7 @@ function TopNav() {
       <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} />
       <Tab label="Minor" value="/minor" to="/minor" component={Link} />
       <Tab label="Song List" value="/song_list" to="/song_list" component={Link} />
+      </Box>
     </Tabs>
     </AppBar>
     </header>
