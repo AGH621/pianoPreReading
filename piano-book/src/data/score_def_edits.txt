@@ -1,0 +1,63 @@
+Remove the following songs from score_defs.json: (How can this be done automatically?)
+    Blues in D
+    Categories
+    Charlie Over the Ocean
+    Here I Come
+
+
+Songs with render errors:
+    Echoes (no notes)
+    Hort ihr die Drescher (dicritical missing in title/lyrics)
+    Ni Hao Ma? (no page at all => likely due to punctuation in title?)
+    Ambos A Dos (all the verses rendering?)
+    Snail Snail (missing notes) ==> due to classified as being in a minor key
+
+
+Songs with only 2 notes in 4 Note section:
+    Bee Bee Bumble Bee
+    Engine Engine
+    No Robbers Out Today
+    Star Light Star Bright
+    Ya Esta Lloviendo
+
+
+Songs with only 3 notes in Pentatonic section:
+    A la Ronda Ronda
+    Apple Tree
+    Bell Horses
+    Bounce High Bounce Low
+    Caracol
+    Chini Mini
+    Doggie, Doggie
+    El Burrito del Teniente
+    Here Sits a Mousie
+    Hi Lo Chickalo
+    Lucy Locket
+    Mariquita Linda
+    Masa
+    My Pony Macaroni
+    Oliver Twist
+    Rain, Rain
+    Teddy Bear
+    Witch Witch 
+
+
+Check notation
+    Allee Galloo Galloo
+
+
+Same Song - Different Language
+    An die Freude/Ode to Joy
+    Xiao Yin Chuan/Silver Moon Boat
+    Ah! Vous Diraisje, Maman/Twinkle Twinkle Little Star
+    Grasshopper/Kirisuchon
+
+
+Songs with only 3 notes in Diatonic section:
+    Grasshopper
+    Onnu Kudam Thanni
+
+* There are many songs classified as being in the minor mode, but which really are not *
+
+
+    
