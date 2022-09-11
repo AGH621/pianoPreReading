@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {readText} from '../js/read_text';
 
 
+
 export default function appAccordian(tchText, stuText) {
     return (
         <div style={{padding: "5rem" }}>
@@ -22,7 +23,7 @@ export default function appAccordian(tchText, stuText) {
                 
                 <AccordionDetails>
                 <Typography variant="body1">
-                    {readText(tchText)}
+                    {tchText}
                 </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -38,7 +39,7 @@ export default function appAccordian(tchText, stuText) {
                     
                 <AccordionDetails>
                     <Typography>
-                    {readText(stuText)}
+                    {stuText}
                     </Typography>
                 </AccordionDetails>
             </Accordion>

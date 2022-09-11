@@ -33,15 +33,21 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import {songDrawer} from '../components/app_drawer';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
+
+import SingleF from "../images/notes_key_diagram/single_f.png";
+import SingleG from "../images/notes_key_diagram/single_g.png";
+import SingleA from "../images/notes_key_diagram/single_a.png";
+import Arrow from "../images/notes_key_diagram/short_arrow.png";
 
 import { threeNoteTitles } from "../js/sort_ped_type";
+import { teacherTextThree, studentTextThree } from '../js/three_note_text';
 
 const drawerWidth = 240;
 export default function ThreeNote() {  
     const song_data = threeNoteTitles();
     const drawer = songDrawer(song_data);
+    const teacher_text = teacherTextThree();
+    const student_text = studentTextThree();
 
     return (
         <Grid position="relative">
@@ -57,36 +63,44 @@ export default function ThreeNote() {
                 >
                     <Toolbar />
                     
+                    <Typography variant="h1"> 3 Note Songs</Typography>
+                    
                     <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
+                    These are the simplest songs in this book.  They contain the fewest musical elements.  
+                    If you, your student or your child has no experience with music or piano, this is the place to start.
+                    </Typography>
+                    
+                    <Typography variant="h3">
+                    Reading the Songs
                     </Typography>
                     
                     <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
+                    The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
+                    diagram.  Different keys are different colors.  These keys are featured in this unit&#39;s songs
                     </Typography>
                     
-                    {appAccordian(teacherText, studentText)}
+                    <Grid container>
+                    <Box sx={{margin: "1em"}}>
+                    <img className="pitch do" width="140px" src={SingleF} />
+                    </Box>
+                     <Box sx={{margin: "1em"}}>
+                    <img className="pitch re" width="140px" src={SingleG} />
+                    </Box>
+                    <Box sx={{margin: "1em"}}>
+                    <img className="pitch mi" width="140px" src={SingleA} />
+                    </Box>
+                    </Grid>
+                    
+                    <Typography paragraph>
+                    When you encounter an arrow picture, hold the key you are playing down longer.  
+                    <Box sx={{margin: "1em"}}>
+                    <img class="lengthen" width="140px" src={Arrow} />
+                    </Box>
+                    Multiple arrows in a row mean to hold down the key even longer.  The sound may fade away, but that&#39;s okay.
+                    </Typography>
+                    
+                    {appAccordian(teacher_text, student_text)}
+                    
                 </Box>               
             </Box>
             <Footer />

@@ -17,11 +17,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-
+// Internal imports
 import { Outlet, Link, useParams } from "react-router-dom";
 import Footer from '../components/footer';
 import { getTitle } from "../js/sort_ped_type";
+import { TransposeRadioButtons } from "../js/view_transpose";
 
+// Import pictures
 import SingleA from "../images/notes_key_diagram/single_a.png";
 import SingleG from "../images/notes_key_diagram/single_g.png";
 import SingleF from "../images/notes_key_diagram/single_f.png";
@@ -30,7 +32,6 @@ import SingleD from "../images/notes_key_diagram/single_d.png";
 import SingleE from "../images/notes_key_diagram/single_e.png";
 import SingleBflat from "../images/notes_key_diagram/single_a_sharp.png";
 import Rest from "../images/notes_key_diagram/rest.png";
-
 import Arrow from "../images/notes_key_diagram/short_arrow.png";
 
 
@@ -356,7 +357,7 @@ export default function SongPage() {
                         </IconButton>
                                        
                         <Typography variant="h6" noWrap>
-                         Views
+                         Song Views
                         </Typography>
                     </Toolbar>
                                        
@@ -376,7 +377,7 @@ export default function SongPage() {
                     >
                         <Toolbar>
                             <Typography variant="h6" noWrap>
-                                Views
+                                Song Views
                             </Typography>
                     
                             <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
@@ -390,11 +391,12 @@ export default function SongPage() {
                             <RadioGroup aria-labelledby="demo-radio-buttons-group-label"
                                         name="radio-buttons-group"
                             >
-                                {['View 1', 'View 2', 'View 3', 'View 4'].map((text, index) => (
-                                    <FormControlLabel value={text} control={<Radio />} label={text} />
-                                ))}
+                                <TransposeRadioButtons />
                             </RadioGroup>
                         </FormControl>
+                        
+                        <Divider />
+                                
                     </Drawer>
                 </Box>
             

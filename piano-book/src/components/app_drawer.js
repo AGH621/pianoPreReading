@@ -40,7 +40,7 @@ export function songDrawer(song_data) {
         </IconButton>
 
         <Typography variant="h6" noWrap>
-            Song List
+            Songs in this Unit
         </Typography>
 
         </Toolbar>
@@ -63,7 +63,7 @@ export function songDrawer(song_data) {
         >
             <Toolbar>
                 <Typography variant="h6" noWrap>
-                    Song List
+                    Songs in this Unit
                 </Typography>
                 <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
                     <CloseIcon />
