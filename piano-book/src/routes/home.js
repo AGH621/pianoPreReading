@@ -19,6 +19,7 @@ import { Typography,
 
 //Internal imports
 import introText from '../data/home_page/home_intro.txt';
+import { readText } from '../js/read_text';
 import { teacherTextHome, studentTextHome } from '../js/home_text';
 import appAccordian from '../components/app_accordian';
 import Footer from '../components/footer';

@@ -108,10 +108,12 @@ export default function ThreeNote() {
                     </Typography>
                     
                     <Typography paragraph>
-                        First three notes of the major scale.
-                        Duple meter using symbolic equivalents of eighth, quarter and half notes.
-                        Triple meter using symbolic equivalents of eighth, dotted quarter and dotted half notes.
-                        Simplified tonic and dominant chords using two notes
+                        <ul>
+                        <li>First three notes of the major scale.</li>
+                        <li>Duple meter using symbolic equivalents of eighth, quarter and half notes.</li>
+                        <li>Triple meter using symbolic equivalents of eighth, dotted quarter and dotted half notes.</li>
+                        <li>Simplified tonic and dominant chords using two notes</li>
+                        </ul>
                     </Typography>
                     
                     {appAccordian(teacherTextThree(), studentTextThree())}

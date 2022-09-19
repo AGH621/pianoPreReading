@@ -20,8 +20,7 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
+import { teacherTextDia, studentTextDia} from '../js/diatonic_text';
 
 import { diatonicTitles } from "../js/sort_ped_type";
 
@@ -42,38 +41,33 @@ export default function Diatonic() {
                 sx= {{flexGrow: 1, p: 3,
                     width: { sm: `calc(100% - ${drawerWidth}px)` }}}
                 >
-                    <Toolbar />
+                    <Typography variant="h1">Diatonic</Typography>
                     
                     <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
+                        We continue to build on the foundation provided by earlier units.  Don%#39;t forget to go back to earlier units and apply new skills
+                        to older songs.
                     </Typography>
                     
+                    <Typography variant="h3">What&#39;s New?</Typography>
+                    
+                    <Typography variant="h4">Notes</Typography>
                     <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
+                        All of the first six notes of the major scale appear together for the first time.  This means that right hand finger 5 and left hand finger
+                        1 are now responsible for two different notes.
                     </Typography>
                     
-                    {appAccordian(teacherText, studentText)}
+                    <Typography variant="h4">Transposition</Typography>
+                    <Typography paragraph>
+                        Students should play the songs in D and A positions in addition to the ones introduced in previous units.  Transposition needs to be done
+                        "by ear", songs will continue to be notated in F and F# positions only.
+                    </Typography>
+                    
+                    <Typography variant="h4">Chords</Typography>
+                    <Typography paragraph>
+                        Eliminate all chord repetition.  Strike the current chord once and hold it without restriking, until a new chord is reached.
+                    </Typography>
+                    
+                    {appAccordian(teacherTextDia, studentTextDia)}
                 </Box>               
             </Box>
             <Footer />

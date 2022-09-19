@@ -18,8 +18,6 @@ import { Typography,
 //Internal imports
 import introText from '../data/home_page/home_intro.txt';
 import changeText from '../data/home_page/home_changes.txt';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
 import {readText} from '../js/read_text';
 import appAccordian from '../components/app_accordian';
 import Footer from '../components/footer';

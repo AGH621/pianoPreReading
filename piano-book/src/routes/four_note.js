@@ -46,18 +46,23 @@ export default function FourNote() {
                     <Typography variant="h1"> 4 Note Songs</Typography>
                     
                     <Typography paragraph>
-                        These are slightly more complex that the 3 Note songs (see below for details), but still use symbolic notation
+                        These are slightly more complex that the 3-Note songs (see below for details). All the 3-Note song elements are used, but new material is added.
                     </Typography>
                     
-                    <Typography variant="h3">
-                        New Concepts
-                    </Typography>
+                    <Typography variant="h3">What&#39;s New?</Typography>
                     
+                    <Typography variant="h4">Notes</Typography>
                     <Typography paragraph>
-                        In addition to all the concepts taught in the 3 Note songs, this unit adds the following:
-                        Fifth note of the major scale.
-                        Symbolic equivalent of quarter rests in duple meter.
-                        Symbolic equivalent of dotted quarter rests in triple meter.
+                            Fifth note of the major scale (C).
+                    </Typography>
+                    
+                    <Typography variant="h4">Rests</Typography>
+                    <Typography paragraph>
+                        1 beat rests in duple and triple meter.
+                    </Typography>
+                    
+                    <Typography variant="h4">Chords</Typography>
+                    <Typography paragraph>
                         Full tonic and dominant chords using three notes
                     </Typography>
                     

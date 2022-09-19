@@ -20,15 +20,18 @@ export function teacherTextHome() {
 export function studentTextHome() {
     return (
         <Box>
-        <Typography variant="h4">If you are the parent of a young student</Typography>
         <Typography paragraph>
-            <ul>
-            <li>If you have a teacher, ask them how to best assist your child with their practice.</li>
-            <li>If you are teaching your child, look at the "For Teachers" advice above to find out 
-            about the teaching sequence for this unit.</li>
-            </ul></Typography>
-        <Typography variant="h4">If you want to learn piano yourself or are teaching an older child</Typography>
-            <Typography paragraph> I would recommend starting with the 5 Finger unit and use the rhythmic notation</Typography>
+            There is no substitute for a piano teacher who can listen and watch your child play, and tailor instruction to them.  For 
+            this reason I recommend using this book in junction with live lessons. Support your child by listening to them practice, 
+            while following along with the symbolic notation of the songs. You might want to play the songs along with your child or have 
+            them teach you how to play!
+        </Typography>
+        <Typography paragraph>
+            It is possible to use this book without a teacher. Be sure to read each unit page carefully, making sure you understand what 
+            is to be learned before working with your child.  Also read the "For Teachers" sections to pick up any hints and tricks for 
+            teaching the material.  Play through the songs you intend your child to learn, making sure you can play them yourself before 
+            assigning them.
+        </Typography>
         </Box>
     );
 }

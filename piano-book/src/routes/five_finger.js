@@ -33,10 +33,8 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import {songDrawer} from '../components/app_drawer';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
-
 import { fiveFingerTitles } from "../js/sort_ped_type";
+import { teacherTextFive, studentTextFive } from '../js/five_finger_text';
 
 const drawerWidth = 240;
 export default function FiveFinger() {  
@@ -57,36 +55,30 @@ export default function FiveFinger() {
                 >
                     <Toolbar />
                     
-                    <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
-                    </Typography>
+                    <Typography variant="h1">5 Finger Songs</Typography>
                     
                     <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
+                        We continue to build on the foundation provided by the 3 and 4 note songs.
                     </Typography>
                     
-                    {appAccordian(teacherText, studentText)}
+                    <Typography variant="h3">What&#39;s New?</Typography>
+                    
+                    <Typography variant="h4">Notes</Typography>
+                    <Typography paragraph>
+                            Fourth note of the major scale (Bb).
+                    </Typography>
+                    
+                    <Typography variant="h4">Transposing</Typography>
+                    <Typography paragraph>
+                        Songs should now be played in C and G positions in addition to the notated black and white keys
+                    </Typography>
+                    
+                    <Typography variant="h4">Chords</Typography>
+                    <Typography paragraph>
+                        The subdominant (IV) chord
+                    </Typography>
+                    
+                    {appAccordian(teacherTextFive(), studentTextFive())}
                 </Box>               
             </Box>
             <Footer />

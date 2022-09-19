@@ -20,10 +20,8 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
-
 import { pentatonicTitles } from "../js/sort_ped_type";
+import { teacherTextPent, studentTextPent } from '../js/pentatonic_text';
 
 const drawerWidth = 240;
 export default function Pentatonic() {  
@@ -44,36 +42,33 @@ export default function Pentatonic() {
                 >
                     <Toolbar />
                     
-                    <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
-                    </Typography>
+                    <Typography variant="h1">Pentatonic</Typography>
                     
                     <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
+                        We continue to build on the foundation provided by earlier units.  Don%#39;t forget to go back to earlier units and apply new skills
+                        to older songs.
                     </Typography>
                     
-                    {appAccordian(teacherText, studentText)}
+                    <Typography variant="h3">What&#39;s New?</Typography>
+                    
+                    <Typography variant="h4">Notes</Typography>
+                    <Typography paragraph>
+                        Stretching out to reach the sixth note of the major scale.  These songs do not use the fourth note of the major scale, so 
+                        Finger 4 plays the fifth note, and Finger 5 plays the 6th note
+                    </Typography>
+                    
+                    <Typography variant="h4">Notation</Typography>
+                    <Typography paragraph>
+                        The symbolic keyboard notation is now being replaced with colored rhythmic notation.  The color of the notes is the same as it
+                        was in the keyboard notation.  A small keyboard diagram indicating which note is which color is included with each piece.
+                    </Typography>
+                    
+                    <Typography variant="h4">Chords</Typography>
+                    <Typography paragraph>
+                        Repeated chord symbols have been eliminated. Keep repeating the previous chord, until a new one is reached.
+                    </Typography>
+                    
+                    {appAccordian(teacherTextPent(), studentTextPent())}
                 </Box>               
             </Box>
             <Footer />
