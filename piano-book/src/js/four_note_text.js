@@ -3,7 +3,7 @@ import { Box,
          Typography
         } from "@mui/material";
 
-export function teacherTextThree() {
+export function teacherTextFour() {
     return (
         <Box>
         <Typography variant="h4">
@@ -11,8 +11,7 @@ export function teacherTextThree() {
         </Typography>
         
         <Typography paragraph>
-            This unit is for your youngest students who cannot read music and maybe learning to read.
-            Use this unit if your student is working on the primer level of any mainstream method book.
+            This unit is for students who have mastered at least six pieces from the 3 Note unit.  
         </Typography>
         
         <Typography variant="h4">
@@ -21,22 +20,21 @@ export function teacherTextThree() {
         
         <Typography paragraph>
             <ol>
-            <li>Show your student how the keyboard diagrams work</li>
-            <li>Have them play the melody with each hand separately</li>
+            <li>Introduce the new note and finger numbers (if desired)</li>
+            <li>Have students play the melody with each hand separately</li>
             <li>Play the melody with both hands together</li>
-            <li>Introduce how to play the tonic (I) and dominant (V7) chords with two fingers. 
-            This may take awhile, so it can be introduced while different melodies are learned.</li>
-            <li>Play the chords with each hand separately</li>
+            <li>Play the melody in G and C positions with both hands</li>
+            <li>Introduce how to play the full tonic (I) and dominant (V7) chords. </li>
             <li>Play only the chords with both hands together</li>
-            <li>Try playing the chords with one hand and the melody with the other.
-            Again, this may take some time to achieve. Go one note at a time.</li>
+            <li>Play the chords with one hand and the melody with the other. 
+                Make sure both hands get a chance to play the melody.</li>
             </ol>
         </Typography>
         </Box>
     );
 }
 
-export function studentTextThree() {
+export function studentTextFour() {
     return (
         <Box>
         <Typography variant="h4">If you are the parent of a young student</Typography>

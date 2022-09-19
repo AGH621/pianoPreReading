@@ -1,7 +1,6 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Vitae auctor eu augue ut. Convallis convallis tellus id interdum velit. Sed felis eget velit aliquet. Et odio pellentesque 
-diam volutpat commodo sed egestas egestas fringilla. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Lectus sit amet 
-est placerat in. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Tincidunt augue interdum velit euismod in 
-pellentesque. Enim diam vulputate ut pharetra sit amet aliquam. Vivamus at augue eget arcu dictum varius duis at. Eget aliquet 
-nibh praesent tristique magna sit amet.
+Welcome to my digital piano book!
+
+This book is specifically for those who want to play songs, but have not yet begun to read standard notation. It is intended for young children, ages 5-7, who are working on the primer level of any standard piano curriculum.  In addition to playing melodies, children can easily harmonize these songs with the primary chords (tonic, dominant, and subdominant), allowing for an early experience playing from a lead sheet!
+
+
 

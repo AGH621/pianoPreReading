@@ -16,8 +16,7 @@ export default function appAccordian(tchText, stuText) {
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
-                    id="panel1a-header"
-                >
+                    id="panel1a-header">
                 <Typography variant="h2">For Teachers</Typography>
                 </AccordionSummary>
                 
@@ -32,15 +31,15 @@ export default function appAccordian(tchText, stuText) {
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
-                    id="panel2a-header"
-                >
-                    <Typography variant="h2">For Students and Parents</Typography>
+                    id="panel2a-header">
+                    
+                    <Typography variant="h2">For Parents</Typography>
                 </AccordionSummary>
                     
                 <AccordionDetails>
-                    <Typography>
+                    
                     {stuText}
-                    </Typography>
+                   
                 </AccordionDetails>
             </Accordion>
         </div>

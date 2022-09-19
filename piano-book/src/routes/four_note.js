@@ -20,8 +20,7 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
-import teacherText from '../data/home_page/home_teacher.txt';
-import studentText from '../data/home_page/home_student.txt';
+import { teacherTextFour, studentTextFour } from '../js/four_note_text';
 
 import { fourNoteTitles } from "../js/sort_ped_type";
 
@@ -44,36 +43,25 @@ export default function FourNote() {
                 >
                     <Toolbar />
                     
+                    <Typography variant="h1"> 4 Note Songs</Typography>
+                    
                     <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                    enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                    imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                    Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                    Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                    nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                    leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                    feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                    consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                    sapien faucibus et molestie ac.
+                        These are slightly more complex that the 3 Note songs (see below for details), but still use symbolic notation
+                    </Typography>
+                    
+                    <Typography variant="h3">
+                        New Concepts
                     </Typography>
                     
                     <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                    eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                    neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                    tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                    sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                    tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                    gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                    et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                    tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                    eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                    posuere sollicitudin aliquam ultrices sagittis orci a.
+                        In addition to all the concepts taught in the 3 Note songs, this unit adds the following:
+                        Fifth note of the major scale.
+                        Symbolic equivalent of quarter rests in duple meter.
+                        Symbolic equivalent of dotted quarter rests in triple meter.
+                        Full tonic and dominant chords using three notes
                     </Typography>
                     
-                    {appAccordian(teacherText, studentText)}
+                    {appAccordian(teacherTextFour, studentTextFour)}
                 </Box>               
             </Box>
             <Footer />

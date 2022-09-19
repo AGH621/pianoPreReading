@@ -104,6 +104,8 @@ export function allTitles() {
     for (const next_song in scoreDefs) {
         title_list.push(scoreDefs[next_song].score_data.title)
     }
+    
+    console.log(title_list)
     return title_list
 }
 

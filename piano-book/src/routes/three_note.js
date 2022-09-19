@@ -66,40 +66,55 @@ export default function ThreeNote() {
                     <Typography variant="h1"> 3 Note Songs</Typography>
                     
                     <Typography paragraph>
-                    These are the simplest songs in this book.  They contain the fewest musical elements.  
-                    If you, your student or your child has no experience with music or piano, this is the place to start.
+                        These are the simplest songs in this book.  They contain the fewest musical elements.  
+                        If your student or your child has no experience with music or piano, this is the place to start.
                     </Typography>
                     
                     <Typography variant="h3">
-                    Reading the Songs
+                        Reading the Songs
                     </Typography>
                     
                     <Typography paragraph>
-                    The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
-                    diagram.  Different keys are different colors.  These keys are featured in this unit&#39;s songs
+                        The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
+                        diagram.  Different keys are different colors.  These keys are featured in this unit&#39;s songs
                     </Typography>
                     
                     <Grid container>
-                    <Box sx={{margin: "1em"}}>
-                    <img className="pitch do" width="140px" src={SingleF} />
-                    </Box>
-                     <Box sx={{margin: "1em"}}>
-                    <img className="pitch re" width="140px" src={SingleG} />
-                    </Box>
-                    <Box sx={{margin: "1em"}}>
-                    <img className="pitch mi" width="140px" src={SingleA} />
-                    </Box>
+                        <Box sx={{margin: "1em"}}>
+                            <img className="pitch do" width="140px" src={SingleF} />
+                        </Box>
+                    
+                        <Box sx={{margin: "1em"}}>
+                            <img className="pitch re" width="140px" src={SingleG} />
+                        </Box>
+                    
+                        <Box sx={{margin: "1em"}}>
+                            <img className="pitch mi" width="140px" src={SingleA} />
+                        </Box>
                     </Grid>
                     
                     <Typography paragraph>
-                    When you encounter an arrow picture, hold the key you are playing down longer.  
-                    <Box sx={{margin: "1em"}}>
-                    <img class="lengthen" width="140px" src={Arrow} />
-                    </Box>
-                    Multiple arrows in a row mean to hold down the key even longer.  The sound may fade away, but that&#39;s okay.
+                        When you encounter an arrow picture, hold the key you are playing down longer.  
+                    
+                        <Box sx={{margin: "1em"}}>
+                            <img class="lengthen" width="140px" src={Arrow} />
+                        </Box>
+                    
+                        Multiple arrows in a row mean to hold down the key even longer.  The sound may fade away, but that&#39;s okay.
                     </Typography>
                     
-                    {appAccordian(teacher_text, student_text)}
+                    <Typography variant="h3">
+                        Concepts Taught
+                    </Typography>
+                    
+                    <Typography paragraph>
+                        First three notes of the major scale.
+                        Duple meter using symbolic equivalents of eighth, quarter and half notes.
+                        Triple meter using symbolic equivalents of eighth, dotted quarter and dotted half notes.
+                        Simplified tonic and dominant chords using two notes
+                    </Typography>
+                    
+                    {appAccordian(teacherTextThree(), studentTextThree())}
                     
                 </Box>               
             </Box>

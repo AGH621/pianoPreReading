@@ -1,3 +1,18 @@
+Corner cases
+    remove punctuation marks in titles (dicriticals okay)
+    remove scores with ties?  + URL for JK to Music21 docs on ties
+
+
+Should be in JSON but are not: [check for time signatures!]
+    Frog in the Meadow - got thrown out because of chord symbols
+    Johnny Had One Friend - unknown reason
+    Fais Do Do - unknown reason
+    Little Tom Tinker - unknown reason (has slurs and repeat sign)
+    Tsuki - unknown reason (has slurs)
+    Button You Must Wander - unknown reason
+    Shortin' Bread - unknown reason
+
+
 Remove the following songs from score_defs.json: (How can this be done automatically?)
     Blues in D
     Categories
@@ -6,11 +21,12 @@ Remove the following songs from score_defs.json: (How can this be done automatic
 
 
 Songs with render errors:
-    Echoes (no notes)
-    Hort ihr die Drescher (dicritical missing in title/lyrics)
-    Ni Hao Ma? (no page at all => likely due to punctuation in title?)
-    Ambos A Dos (all the verses rendering?)
+    Echo Song (no notes) => the rhythm was not converted into the relational strings ("tiny", "short", "long", etc) 
+    Hort ihr die Drescher (dicritical missing in lyrics/title)
+    Ni Hao Ma? no page at all => due to punctuation in title
+    Ambos A Dos (all the verses rendering?) => just really long, need to cut
     Snail Snail (missing notes) ==> due to classified as being in a minor key
+    Ickle Ockle (no lyrics, rests instead of notes, classified as being in the minor mode) => MESSED UP SCORE! deleted 9/15
 
 
 Songs with only 2 notes in 4 Note section:
