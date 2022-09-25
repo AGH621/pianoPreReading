@@ -45,7 +45,7 @@ export default function Pentatonic() {
                     <Typography variant="h1">Pentatonic</Typography>
                     
                     <Typography paragraph>
-                        We continue to build on the foundation provided by earlier units.  Don%#39;t forget to go back to earlier units and apply new skills
+                        We continue to build on the foundation provided by earlier units.  Don&#39;t forget to go back to earlier units and apply new skills
                         to older songs.
                     </Typography>
                     

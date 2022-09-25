@@ -37,15 +37,33 @@ export function teacherTextFour() {
 export function studentTextFour() {
     return (
         <Box>
-        <Typography variant="h4">If you are the parent of a young student</Typography>
+        <Typography variant="h4">If your child is taking lessons</Typography>
         <Typography paragraph>
-            <ul>
-            <li>If you have a teacher, ask them how to best assist your child with their practice.</li>
-            <li>If you are teaching your child, look at the "For Teachers" advice above to find out 
-            about the teaching sequence for this unit.</li>
-            </ul></Typography>
-        <Typography variant="h4">If you want to learn piano yourself or are teaching an older child</Typography>
-            <Typography paragraph> I would recommend starting with the 5 Finger unit and use the rhythmic notation</Typography>
+            If you have not set up a regular practice time with your child, do so today! Behind every successful
+            piano student is a parent who provides the structures and support necessary to succeed.  If you already 
+            have an established practice time, think about extending it 5 minutes.
+        </Typography> 
+        <Typography paragraph>
+            Even if your teacher has not assigned them, ask your child to play the 3-Note songs. Not only as written
+            but ask your child to think of new ways to play them.  Backwards, upside down, with hands crossed, anywhere
+            on the keyboard.  The possibilities are limitless!  Some of the ways your child will think of will sound terrible,
+            but stay positive and encourage their efforts.  This is the first step towards improvisation and composition.
+        </Typography>
+        
+        <Typography variant="h4">If you are teaching your child</Typography>
+        <Typography paragraph>
+        Review all the information on this page and make sure you understand it yourself. Play through all the songs with:
+            <ol>
+            <li>both hands playing the melody on the black keys and white keys</li>
+            <li>both hands playing the melody in C and G positions</li>
+            <li>one hand playing the melody, and the other playing the chords (don&#39;t forget to switch hands!)
+            in all the places listed above.
+            </li>
+            </ol>
+        </Typography>
+        <Typography paragraph>
+            Follow the teaching sequence in the "For Teachers" section above.
+        </Typography>
         </Box>
     );
 }

@@ -1,6 +1,8 @@
 Corner cases
     remove punctuation marks in titles (dicriticals okay)
     remove scores with ties?  + URL for JK to Music21 docs on ties
+    repeats not allowed
+    ** problem with duple songs containing dotted quarter notes **
 
 
 Should be in JSON but are not: [check for time signatures!]
@@ -11,6 +13,8 @@ Should be in JSON but are not: [check for time signatures!]
     Tsuki - unknown reason (has slurs)
     Button You Must Wander - unknown reason
     Shortin' Bread - unknown reason
+    One Elephant - unknown reason
+    Juba - unknown reason
 
 
 Remove the following songs from score_defs.json: (How can this be done automatically?)
@@ -21,12 +25,12 @@ Remove the following songs from score_defs.json: (How can this be done automatic
 
 
 Songs with render errors:
-    Echo Song (no notes) => the rhythm was not converted into the relational strings ("tiny", "short", "long", etc) 
+    DONE Echo Song (no notes) => the rhythm was not converted into the relational strings ("tiny", "short", "long", etc) 
     Hort ihr die Drescher (dicritical missing in lyrics/title)
     Ni Hao Ma? no page at all => due to punctuation in title
     Ambos A Dos (all the verses rendering?) => just really long, need to cut
     Snail Snail (missing notes) ==> due to classified as being in a minor key
-    Ickle Ockle (no lyrics, rests instead of notes, classified as being in the minor mode) => MESSED UP SCORE! deleted 9/15
+    DONE Ickle Ockle (no lyrics, rests instead of notes, classified as being in the minor mode) => MESSED UP SCORE! deleted 9/15
 
 
 Songs with only 2 notes in 4 Note section:
@@ -74,6 +78,6 @@ Songs with only 3 notes in Diatonic section:
     Onnu Kudam Thanni
 
 * There are many songs classified as being in the minor mode, but which really are not *
-
+* Check to see how rests are being calculated -- there may be rests that are too long in the 4-Note category *
 
     

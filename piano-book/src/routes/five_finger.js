@@ -36,6 +36,10 @@ import {songDrawer} from '../components/app_drawer';
 import { fiveFingerTitles } from "../js/sort_ped_type";
 import { teacherTextFive, studentTextFive } from '../js/five_finger_text';
 
+import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
+import FullWhtIV from "../images/chords_key_diagram/full_wht_subdom.png";
+import FullBlkIV from "../images/chords_key_diagram/full_blk_subdom.png";
+
 const drawerWidth = 240;
 export default function FiveFinger() {  
     const song_data = fiveFingerTitles();
@@ -65,17 +69,36 @@ export default function FiveFinger() {
                     
                     <Typography variant="h4">Notes</Typography>
                     <Typography paragraph>
-                            Fourth note of the major scale (Bb).
+                        Fourth note of the major scale (Bb).
+                        <Box sx={{margin: "1em"}}>
+                            <img className="pitch do" width="140px" src={SingleAsharp} />
+                        </Box>
                     </Typography>
                     
                     <Typography variant="h4">Transposing</Typography>
                     <Typography paragraph>
-                        Songs should now be played in C and G positions in addition to the notated black and white keys
+                        Songs should now be played in C and G positions by ear in addition to the notated black and white keys
                     </Typography>
                     
                     <Typography variant="h4">Chords</Typography>
                     <Typography paragraph>
                         The subdominant (IV) chord
+                        <ul> 
+                            <li>White Keys
+                                <Box sx={{margin: "1em"}}>
+                                    <span className="tonic">IV</span>
+                                    <br />
+                                    <img className="pitch do" width="140px" src={FullWhtIV} />
+                                </Box>
+                            </li>
+                            <li>Black Keys
+                                <Box sx={{margin: "1em"}}>
+                                <span className="tonic">IV</span>
+                                <br />
+                                <img className="pitch do" width="140px" src={FullBlkIV} />
+                                </Box>
+                            </li>
+                        </ul>
                     </Typography>
                     
                     {appAccordian(teacherTextFive(), studentTextFive())}
