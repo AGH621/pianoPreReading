@@ -22,6 +22,8 @@ import { Outlet, Link, useParams } from "react-router-dom";
 import Footer from '../components/footer';
 import { getTitle } from "../js/sort_ped_type";
 import { TransposeRadioButtons } from "../js/view_transpose";
+import { ThreeNoteRadioButtons } from "../js/three_note_views";
+import { FourNoteRadioButtons } from "../js/four_note_views";
 
 // Import pictures
 import SingleA from "../images/notes_key_diagram/single_a.png";
@@ -342,6 +344,18 @@ export default function SongPage() {
       setOpen(false);
     };
     
+    function radioButtons(a_song) {
+        if (a_song.score_data.pedagogical_score_type === '3-Note') {
+            return (<ThreeNoteRadioButtons />)
+        }
+        else if (a_song.score_data.pedagogical_score_type === '4-Note') {
+            return (<FourNoteRadioButtons />)
+        }
+        else {
+            return (<TransposeRadioButtons />)
+        }
+    }
+    
     /*let [melValue, melSetButton] = useState("melody-button-active");*/
     
     return (
@@ -391,7 +405,7 @@ export default function SongPage() {
                             <RadioGroup aria-labelledby="demo-radio-buttons-group-label"
                                         name="radio-buttons-group"
                             >
-                                <TransposeRadioButtons />
+                                {radioButtons(the_song)}
                             </RadioGroup>
                         </FormControl>
                         
