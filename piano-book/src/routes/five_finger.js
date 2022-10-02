@@ -1,111 +1,122 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.2
+Version: 0.3
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
-The drawer component uses react-router links to the 3-Note songs found in the ScoreDefs JSON file 
+The drawer component uses react-router links to the 5-Finger songs found in the ScoreDefs JSON file 
 imported from the backend.
-
-TODO: 
-    1) Make the drawer and text into a React components.
-    2) Override MUI styles on all components.   
 */
 
-
+//External imports
 import React from "react";
-import Drawer from "@mui/material/Drawer";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from "@mui/material/ListItemText";
-
+import { Box,
+         Grid,
+         Paper,
+         ThemeProvider,
+         Toolbar,
+         Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
+
+//Internal component imports
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
-import {songDrawer} from '../components/app_drawer';
+import { songDrawer } from '../components/app_drawer';
 import { fiveFingerTitles } from "../js/sort_ped_type";
 import { teacherTextFive, studentTextFive } from '../js/five_finger_text';
+import { theme } from '../siteTheme.js';
 
+//Internal image imports
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
 import FullWhtIV from "../images/chords_key_diagram/full_wht_subdom.png";
 import FullBlkIV from "../images/chords_key_diagram/full_blk_subdom.png";
 
-const drawerWidth = 240;
+const drawerWidth = 275;
 export default function FiveFinger() {  
+    const title = 'five_finger'
     const song_data = fiveFingerTitles();
-    const drawer = songDrawer(song_data);
 
     return (
-        <Grid position="relative">
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
+        <ThemeProvider theme={theme}>
+            <Paper sx={{backgroundColor: "backgrounds.nav"}}>
+                <Box sx={{ display: 'flex' }}>
 
-                {drawer}       
+                    {songDrawer(song_data, title)}       
 
-                <Box
-                component="main"
-                sx= {{flexGrow: 1, p: 3,
-                    width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-                >
-                    <Toolbar />
+                    <Box sx= {{flexGrow: 1, 
+                               paddingTop: 3,
+                               paddingLeft: 8,
+                               paddingRight: 6.5,
+                               width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
+                        <Toolbar />
                     
-                    <Typography variant="h1">5 Finger Songs</Typography>
+                        <Typography variant="h1" sx={{textAlign: 'center',
+                                                      paddingBottom: '0.25em'}}>
+                            5 Finger Songs
+                        </Typography>
                     
-                    <Typography paragraph>
-                        We continue to build on the foundation provided by the 3 and 4 note songs.
-                    </Typography>
+                        <Typography paragraph>
+                            We continue to build on the foundation provided by the 3 and 4 note songs.
+                        </Typography>
                     
-                    <Typography variant="h3">What&#39;s New?</Typography>
+                        <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
+                            What&#39;s New?
+                        </Typography>
                     
-                    <Typography variant="h4">Notes</Typography>
-                    <Typography paragraph>
-                        Fourth note of the major scale (Bb).
-                        <Box sx={{margin: "1em"}}>
-                            <img className="pitch do" width="140px" src={SingleAsharp} />
-                        </Box>
-                    </Typography>
+                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                                                                        paddingTop: '0.5em'}}>
+                            Pitch
+                        </Typography>
                     
-                    <Typography variant="h4">Transposing</Typography>
-                    <Typography paragraph>
-                        Songs should now be played in C and G positions by ear in addition to the notated black and white keys
-                    </Typography>
+                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                            Fourth note of the major scale (Bb).
+                            <Box sx={{margin: "1em"}}>
+                                <img className="pitch do" width="140px" src={SingleAsharp} />
+                            </Box>
+                        </Typography>
                     
-                    <Typography variant="h4">Chords</Typography>
-                    <Typography paragraph>
-                        The subdominant (IV) chord
-                        <ul> 
-                            <li>White Keys
-                                <Box sx={{margin: "1em"}}>
+                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                                                                        paddingTop: '0.5em'}}>
+                            Transposing
+                        </Typography>
+                    
+                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                            Songs should now be played in C and G positions by ear in addition to the notated black and white keys
+                        </Typography>
+                    
+                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                                                                        paddingTop: '0.5em'}}>
+                            Chords
+                        </Typography>
+                    
+                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                            The subdominant (IV) chord
+                            <ul> 
+                                <li>White Keys
+                                    <Box sx={{margin: "1em"}}>
+                                        <span className="tonic">IV</span>
+                                        <br />
+                                        <img className="pitch do" width="140px" src={FullWhtIV} />
+                                    </Box>
+                                </li>
+                            
+                                <li>Black Keys
+                                    <Box sx={{margin: "1em"}}>
                                     <span className="tonic">IV</span>
                                     <br />
-                                    <img className="pitch do" width="140px" src={FullWhtIV} />
-                                </Box>
-                            </li>
-                            <li>Black Keys
-                                <Box sx={{margin: "1em"}}>
-                                <span className="tonic">IV</span>
-                                <br />
-                                <img className="pitch do" width="140px" src={FullBlkIV} />
-                                </Box>
-                            </li>
-                        </ul>
-                    </Typography>
+                                    <img className="pitch do" width="140px" src={FullBlkIV} />
+                                    </Box>
+                                </li>
+                            </ul>
+                        </Typography>
                     
-                    {appAccordian(teacherTextFive(), studentTextFive())}
-                </Box>               
-            </Box>
-            <Footer />
-            <Outlet />                        
-        </Grid>            
+                        {appAccordian(teacherTextFive(), studentTextFive(), title)}
+                    </Box>               
+                </Box>
+            
+                <Footer />
+            
+                <Outlet />
+            </Paper>
+        </ThemeProvider>            
     );
 }

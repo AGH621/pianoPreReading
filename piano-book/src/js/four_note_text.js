@@ -2,23 +2,25 @@ import React from "react";
 import { Box,
          Typography
         } from "@mui/material";
+import { theme } from '../siteTheme.js';
 
 export function teacherTextFour() {
     return (
         <Box>
-        <Typography variant="h4">
+        <Typography variant="accordHead">
             Who is this unit for?
         </Typography>
         
-        <Typography paragraph>
+        <Typography paragraph sx={{marginBottom: '2em'}}>
             This unit is for students who have mastered at least six pieces from the 3 Note unit.  
         </Typography>
         
-        <Typography variant="h4">
+        <Typography variant="accordHead">
             How do I teach this unit?
         </Typography>
         
-        <Typography paragraph>
+        <Typography paragraph sx={{marginTop: '-1em',
+                                   marginLeft: '-0.75em'}}>
             <ol>
             <li>Introduce the new note and finger numbers (if desired)</li>
             <li>Have students play the melody with each hand separately</li>
@@ -37,20 +39,20 @@ export function teacherTextFour() {
 export function studentTextFour() {
     return (
         <Box>
-        <Typography variant="h4">If your child is taking lessons</Typography>
+        <Typography variant="accordHead">If your child is taking lessons</Typography>
         <Typography paragraph>
             If you have not set up a regular practice time with your child, do so today! Behind every successful
             piano student is a parent who provides the structures and support necessary to succeed.  If you already 
             have an established practice time, think about extending it 5 minutes.
         </Typography> 
-        <Typography paragraph>
+        <Typography paragraph sx={{marginBottom: '2em'}}>
             Even if your teacher has not assigned them, ask your child to play the 3-Note songs. Not only as written
             but ask your child to think of new ways to play them.  Backwards, upside down, with hands crossed, anywhere
             on the keyboard.  The possibilities are limitless!  Some of the ways your child will think of will sound terrible,
             but stay positive and encourage their efforts.  This is the first step towards improvisation and composition.
         </Typography>
         
-        <Typography variant="h4">If you are teaching your child</Typography>
+        <Typography variant="accordHead">If you are teaching your child</Typography>
         <Typography paragraph>
         Review all the information on this page and make sure you understand it yourself. Play through all the songs with:
             <ol>

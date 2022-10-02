@@ -17,8 +17,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
+
 // Internal imports
-import { Outlet, Link, useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import Footer from '../components/footer';
 import { getTitle } from "../js/sort_ped_type";
 import { TransposeRadioButtons } from "../js/view_transpose";

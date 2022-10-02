@@ -11,11 +11,15 @@ TODO:
 
 //External imports
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Typography,
-         Grid} from '@mui/material';
+         Grid,
+         Link,
+         Box,
+         Paper,
+         ThemeProvider } from '@mui/material';
 
-
+import { theme } from '../siteTheme.js'
 
 //Internal imports
 import introText from '../data/home_page/home_intro.txt';
@@ -28,24 +32,27 @@ import Footer from '../components/footer';
 
 //Our home page.
 export default function Home() {
-    
+    const title = 'home'
     return (
-        <Grid>
-            <Typography variant="h1" gutterBottom style={{padding: "5rem" }}>
-                Piano PreReading Book
-            </Typography>
+        <ThemeProvider theme={theme}>
+            <Paper sx={{backgroundColor: "backgrounds.nav"}}>
+                <Box sx={{padding: "5em"}}>
+                    <Typography variant="h1">
+                        Piano PreReading Book
+                    </Typography>
         
-            <Typography variant="body1" gutterBottom style={{padding: "5rem" }}>
-                {readText(introText)}
-            </Typography>
+                    <Typography variant="body1" sx={{margin: "2em"}}>
+                        {readText(introText)}
+                    </Typography>
 
-            {appAccordian(teacherTextHome(), studentTextHome())}
-
-            <Footer />
-            <Outlet />
-        </Grid>
-        
-            
+                    {appAccordian(teacherTextHome(), studentTextHome(), title)}
+                </Box>
+                    
+                <Footer />
+                    
+                <Outlet />
+            </Paper>
+        </ThemeProvider>    
     );
 }
     

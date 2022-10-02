@@ -1,23 +1,36 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 0.3
+Description: An MUI Drawer component which will be populated by the titles of the songs
+in each pedagogical type.
+
+TODO: 1) Make more dynamic
+            a) drawer height = length of song list
+*/
+
+//External imports
 import * as React from 'react';
-import Drawer from "@mui/material/Drawer";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
+import { Box,
+         Divider,
+         Drawer,
+         Grid,
+         IconButton,
+         List,
+         ListItem,
+         ListItemButton,
+         ListItemText,
+         ThemeProvider,
+         Toolbar,
+         Typography } from "@mui/material";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from "@mui/material/ListItemText";
+import { theme } from '../siteTheme.js';
 
 
-const drawerWidth = 240;
-export function songDrawer(song_data) {
+const drawerWidth = 275;
+export function songDrawer(song_data, the_page) {
     const [open, setOpen] = React.useState(true);
   
     const handleDrawerOpen = () => {
@@ -28,61 +41,138 @@ export function songDrawer(song_data) {
       setOpen(false);
     };
     
+    function backGround(a_page) {
+        switch(a_page) {
+            case 'three_note':
+                return {backgroundColor: "backgrounds.threeNote", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+
+            case 'four_note':
+                return {backgroundColor: "backgrounds.fourNote", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+            case 'five_finger':
+                return {backgroundColor: "backgrounds.fiveFinger", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+            case 'pentatonic':
+                return {backgroundColor: "backgrounds.pentatonic", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+            case 'diatonic':
+                return {backgroundColor: "backgrounds.diatonic", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+            case 'minor':
+                return {backgroundColor: "backgrounds.minor", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+            default:
+                return {backgroundColor: "backgrounds.nav", 
+                        marginTop: "3em",
+                        marginBottom: "5em",
+                        width: "240px",
+                        height: "850px"}
+                break;
+        }
+    }
+    
+    function drawerTitle(a_title) {
+        switch(a_title) {
+        case 'three_note':
+            return "3 Note Titles" 
+            break;
+        case 'four_note':
+            return "4 Note Titles"
+            break;
+        case 'five_finger':
+            return "5 Finger Titles"
+            break;
+        case 'pentatonic':
+            return "Pentatonic"
+            break;
+        case 'diatonic':
+            return "Diatonic"
+            break;
+        case 'minor':
+            return "Minor"
+            break;
+        default:
+            return "Song Titles"
+            break;
+        }
+    }
+    
     return(
-    <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-    >
+    <ThemeProvider theme={theme}>
+    <Box component="nav"
+         sx={{ width: { sm: drawerWidth }, 
+                        flexShrink: { sm: 0 } 
+            }}>
         <Toolbar style={{marginTop: "3rem" }}>
 
         <IconButton color="inherit" onClick={handleDrawerOpen} edge="start">
             <MenuIcon />
         </IconButton>
-
-        <Typography variant="h6" noWrap>
-            Songs in this Unit
+            
+        <Typography variant="h4">
+            {drawerTitle(the_page)}
         </Typography>
-
+            
         </Toolbar>
         
         <Divider />
 
-        <Drawer 
-            PaperProps={{
-                 sx: {
-                     marginTop: "3em",
-                     width: "240px",
-                     height: "750px"
-                     }
-            }} 
-            variant="persistent" anchor="left" open={open}
-            sx={{
-                display: { xs: 'block', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-            }}
-        >
+        <Drawer PaperProps={{ sx: backGround(the_page) }} 
+                variant="persistent" anchor="left" open={open}
+                
+                sx={{ display: { xs: 'block', sm: 'block' },
+                      '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth } }}>
+                    
             <Toolbar>
-                <Typography variant="h6" noWrap>
-                    Songs in this Unit
+                <Typography variant="h4">
+                    {drawerTitle(the_page)}
                 </Typography>
+                
                 <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
                     <CloseIcon />
                 </IconButton>
+                    
             </Toolbar>
-        
+
             <Divider />
           
             <List>
-            {song_data.map((song) => (
-                <ListItem key={song} disablePadding>
-                    <ListItemButton to={`/${song}`} key={song}>
-                        <ListItemText primary={song} />
-                    </ListItemButton>
-                </ListItem>
-            ))}
+                {song_data.map((song) => (
+                    <ListItem key={song} disablePadding>
+                        <ListItemButton to={`/${song}`} key={song}>
+                            <ListItemText primary={song} sx={{color: "primary.dark"}}/>
+                        </ListItemButton>
+                    </ListItem>
+                ))}
             </List>
         </Drawer>
-    </Box>    
+    </Box>
+    </ThemeProvider>   
     );
 }
         

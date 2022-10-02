@@ -9,14 +9,12 @@ TODO: Override MUI styles on all components.
 
 //Imports from React, MUI, react-router
 import * as React from "react";
-import { Box,
-         Tabs,
-         Tab, 
-         AppBar,
-         Typography,
-         Grid,
-         createTheme,
-         ThemeProvider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import AppBar from "@mui/material/AppBar";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 import { MemoryRouter,
          Route,
          Routes,
@@ -39,8 +37,6 @@ import About from "./routes/about";
 import Takadimi from "./routes/ta_ka_di_mi";
 import SongPage from "./routes/song_page";
 import LessonPage from "./routes/takadimi_lesson";
-
-import { theme } from './siteTheme.js'
 
 
 //These two functions provide functionality for the top navigation tabs.
@@ -79,28 +75,24 @@ function TopNav() {
   // Then the order should be ['users/add', 'users/edit', 'users'].
   const routeMatch = useRouteMatch(["/home", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
   const currentTab = routeMatch?.pattern?.path;
-  
-  
 
   return (
-    <ThemeProvider theme={theme}>
     <header>
     <AppBar position="fixed">
     <Tabs value={currentTab}>
       <Box>
-      <Tab label="Home" value="/home" to="/home" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+      <Tab label="Home" value="/home" to="/home" component={Link} />
+      <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} />
+      <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} />
+      <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} />
+      <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} />
+      <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} />
+      <Tab label="Minor" value="/minor" to="/minor" component={Link} />
+      <Tab label="Song List" value="/song_list" to="/song_list" component={Link} />
       </Box>
     </Tabs>
     </AppBar>
     </header>
-    </ThemeProvider>
   );
 }
 

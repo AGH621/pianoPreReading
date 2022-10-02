@@ -1,24 +1,25 @@
 import React from "react";
 import { Box,
-         Typography
-        } from "@mui/material";
+         Typography } from "@mui/material";
+import { theme } from '../siteTheme.js';
 
 export function teacherTextThree() {
     return (
         <Box>
-        <Typography variant="h4">
+        <Typography variant="accordHead">
             Who is this unit for?
         </Typography>
         
-        <Typography paragraph>
+        <Typography paragraph sx={{marginBottom: '2em'}}>
             This unit is for your youngest students who are taking their first piano lessons.
         </Typography>
         
-        <Typography variant="h4">
+        <Typography variant="accordHead">
             How do I teach this unit?
         </Typography>
         
-        <Typography paragraph>
+        <Typography paragraph sx={{marginTop: '-1em',
+                                   marginLeft: '-0.75em'}}>
             <ol>
             <li>Show your student how the keyboard diagrams work</li>
             <li>Have them play the melody with each hand separately</li>
@@ -38,20 +39,23 @@ export function teacherTextThree() {
 export function studentTextThree() {
     return (
         <Box>
-        <Typography variant="h4">If your child is taking lessons</Typography>
+        <Typography variant="accordHead">If your child is taking lessons</Typography>
         <Typography paragraph>
             Over the years, I have found that my most successful students are the ones with parents who 
             are active in the practice process. They set up a specific practice time for their children
             and make sure practice happens at that time.
         </Typography> 
-        <Typography paragraph>
+        
+        <Typography paragraph sx={{marginBottom: '2em'}}>
             For these songs, sit with your child and follow along with the song. Watch to see that your
             child his striking the correct keys and holding them down when there are arrows.  If your teacher
             has set specific goals or targets for your child, check to be sure your child is trying his/her 
             best to achieve them. Do not be afraid to ask your child&#39;s teacher for more suggestions on how 
             you can help.
         </Typography>
-        <Typography variant="h4">If you are teaching your child</Typography>
+        
+        <Typography variant="accordHead">If you are teaching your child</Typography>
+        
         <Typography paragraph>
             Review all the information on this page and make sure you understand it yourself. Play through all the 
         songs with:
@@ -61,6 +65,7 @@ export function studentTextThree() {
             <li>one hand playing the melody, and the other playing the chords (don&#39;t forget to switch hands!)</li>
             </ol>
         </Typography>
+        
         <Typography paragraph>
             Follow the teaching sequence in the "For Teachers" section above.
         </Typography>
