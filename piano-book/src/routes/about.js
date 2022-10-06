@@ -86,7 +86,23 @@ export default function About() {
                             <li>
                                 <Typography variant="h3" color="secondary" sx={{marginLeft: '0.5em',
                                                                                 marginTop: '0.5em'}}>
-                                    Phase 2: Interactivity
+                                Phase 2: Back End
+                                </Typography>
+                                <ul>
+                                    <li>Show the website and describe the concept to a friend, who offers to collaborate with me</li>
+                                    <li>He creates a backend which greatly expands the number of songs available in the book.
+                                        <ul>
+                                            <li>Uses Python 3.10 and the Music 21 library</li>
+                                            <li>Filters my score corpus of 1200 titles</li>
+                                            <li>Outputs a JSON object with data on all the scores suitable for this book</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <Typography variant="h3" color="secondary" sx={{marginLeft: '0.5em',
+                                                                                marginTop: '0.5em'}}>
+                                    Phase 3: Interactivity
                                 </Typography>
                         
                                 <ul>
@@ -98,7 +114,7 @@ export default function About() {
                             <li>
                                 <Typography variant="h3" color="secondary" sx={{marginLeft: '0.5em',
                                                                                 marginTop: '0.5em'}}>
-                                    Phase 3: React
+                                    Phase 4: React
                                 </Typography>
                                 
                                 <ul>
@@ -110,7 +126,7 @@ export default function About() {
                             </li>
                             <li><Typography variant="h3" color="secondary" sx={{marginLeft: '0.5em',
                                                                                 marginTop: '0.5em'}}>
-                                    Phase 4: Material UI
+                                    Phase 5: Material UI
                                 </Typography>
                         
                                 <ul>

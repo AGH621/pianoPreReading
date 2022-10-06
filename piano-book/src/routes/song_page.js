@@ -1,22 +1,36 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 0.3
+Description: The page component where each song is rendered.
+
+TODO: 
+1) Make Song View drawer disapper completely and song the full-page width
+
+*/
+
+//External Imports
 import React, { useState } from "react";
-import Drawer from "@mui/material/Drawer";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
+import { AppBar,
+         Box,
+         CssBaseline,
+         Divider,
+         Drawer,
+         FormControlLabel,
+         FormControl, 
+         FormLabel,
+         Grid,
+         IconButton,
+         List,
+         Paper,
+         Radio,
+         RadioGroup,
+         ThemeProvider,
+         Toolbar,
+         Typography, } from "@mui/material/";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-
 
 // Internal imports
 import { Outlet, useParams } from "react-router-dom";
@@ -25,6 +39,7 @@ import { getTitle } from "../js/sort_ped_type";
 import { TransposeRadioButtons } from "../js/view_transpose";
 import { ThreeNoteRadioButtons } from "../js/three_note_views";
 import { FourNoteRadioButtons } from "../js/four_note_views";
+import { theme } from '../siteTheme.js'
 
 // Import pictures
 import SingleA from "../images/notes_key_diagram/single_a.png";
@@ -37,7 +52,7 @@ import SingleBflat from "../images/notes_key_diagram/single_a_sharp.png";
 import Rest from "../images/notes_key_diagram/rest.png";
 import Arrow from "../images/notes_key_diagram/short_arrow.png";
 
-
+// Assemble the html pieces to render a single note in symbolic notation
 function oneNote(a_note) {
     let the_pix = [];
 
@@ -93,7 +108,8 @@ function oneNote(a_note) {
     return the_pix
 }
 
-
+// Assemble the notes in order of appearance and add arrows to indicate the length of each note.  
+// Thus giving us the entire song as an array.
 function writeSong(a_song) {
     let component_list = [];
 
@@ -119,7 +135,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -139,7 +155,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -148,7 +164,7 @@ function writeSong(a_song) {
                     </Box>
                     )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -168,7 +184,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -177,7 +193,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -186,7 +202,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -206,7 +222,7 @@ function writeSong(a_song) {
                     </Box>
                     )
                     component_list.push(
-                        <Box sx={{paddingTop: "2em"}}>
+                        <Box sx={{paddingBottom: "1em"}}>
                             <p class="arrow">
                                 <br />
                                 <img class="lengthen" width="140px" src={Arrow} />
@@ -215,7 +231,7 @@ function writeSong(a_song) {
                         </Box>
                     )
                     component_list.push(
-                        <Box sx={{paddingTop: "2em"}}>
+                        <Box sx={{paddingBottom: "1em"}}>
                             <p class="arrow">
                                 <br />
                                 <img class="lengthen" width="140px" src={Arrow} />
@@ -224,7 +240,7 @@ function writeSong(a_song) {
                         </Box>
                     )
                     component_list.push(
-                        <Box sx={{paddingTop: "2em"}}>
+                        <Box sx={{paddingBottom: "1em"}}>
                             <p class="arrow">
                                 <br />
                                 <img class="lengthen" width="140px" src={Arrow} />
@@ -233,7 +249,7 @@ function writeSong(a_song) {
                         </Box>
                     )
                     component_list.push(
-                        <Box sx={{paddingTop: "2em"}}>
+                        <Box sx={{paddingBottom: "1em"}}>
                             <p class="arrow">
                                 <br />
                                 <img class="lengthen" width="140px" src={Arrow} />
@@ -242,7 +258,7 @@ function writeSong(a_song) {
                         </Box>
                     )
                     component_list.push(
-                        <Box sx={{paddingTop: "2em"}}>
+                        <Box sx={{paddingBottom: "1em"}}>
                             <p class="arrow">
                                 <br />
                                 <img class="lengthen" width="140px" src={Arrow} />
@@ -262,7 +278,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -271,7 +287,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -280,7 +296,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -289,7 +305,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -298,7 +314,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -307,7 +323,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -316,7 +332,7 @@ function writeSong(a_song) {
                     </Box>
                 )
                 component_list.push(
-                    <Box sx={{paddingTop: "2em"}}>
+                    <Box sx={{paddingBottom: "1em"}}>
                         <p class="arrow">
                             <br />
                             <img class="lengthen" width="140px" src={Arrow} />
@@ -335,7 +351,7 @@ export default function SongPage() {
     let params = useParams();
     let the_song = getTitle(params.songTitle);
     
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
   
     const handleDrawerOpen = () => {
       setOpen(true);
@@ -357,103 +373,134 @@ export default function SongPage() {
         }
     }
     
-    /*let [melValue, melSetButton] = useState("melody-button-active");*/
+    function songBackground(a_type) {
+        console.log(a_type)
+        switch(a_type) {
+            case '3-Note':
+                return {backgroundColor: "backgrounds.threeNote"}
+                break;
+
+            case '4-Note':
+                return {backgroundColor: "backgrounds.fourNote"}
+                break;
+            case '5-Finger':
+                return {backgroundColor: "backgrounds.fiveFinger"}
+                break;
+            case 'Pentatonic':
+                return {backgroundColor: "backgrounds.pentatonic"}
+                break;
+            case 'Diatonic':
+                return {backgroundColor: "backgrounds.diatonic"}
+                break;
+            case 'minor':
+                return {backgroundColor: "backgrounds.minor"}
+                break;
+            default:
+                return {backgroundColor: "backgrounds.nav"}
+                break;
+        }
+    }
+    
+    /*
+    Notes on Grid for keyboard diagrams:
+        0) Each box (one note) takes up 2 columns
+        1) Triple Meter:  xs={4} lg={2}
+        2) Need custom alignment for arrow pix
+        3) breakpoints can be fractional!
+        4) 
+    */
     
     return (
-        <Grid position="relative">
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <Box component="nav" sx={{ width: { sm: drawerWidth }, 
-                                           flexShrink: { sm: 0 } }}
-                >
-                    <Toolbar style={{marginTop: "3rem" }}>
-                        <IconButton color="inherit" onClick={handleDrawerOpen} edge="start">
-                            <MenuIcon />
-                        </IconButton>
-                                       
-                        <Typography variant="h6" noWrap>
-                         Song Views
-                        </Typography>
-                    </Toolbar>
-                                       
-                    <Divider />
-
-                    <Drawer PaperProps={{ sx: {marginTop: "3em",
-                                               width: "240px",
-                                               height: "750px"
-                                               }
-                                       }} 
-                            variant="persistent" anchor="left" open={open}
-                            sx={{display: { xs: 'block', 
-                                            sm: 'block' },
-                                '& .MuiDrawer-paper': { boxSizing: 'border-box', 
-                                                        width: drawerWidth },
-                                }}
-                    >
-                        <Toolbar>
-                            <Typography variant="h6" noWrap>
-                                Song Views
-                            </Typography>
+        <ThemeProvider theme={theme}>
+            <Paper sx={songBackground(the_song.score_data.pedagogical_score_type)}>
+                <Box sx={{ display: 'flex'}}>
+                    <CssBaseline />
                     
-                            <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
-                                <CloseIcon />
-                            </IconButton>
-                        </Toolbar>
-                
-                        <Divider />  
-
-                        <FormControl sx={{marginLeft: "3em"}}>
-                            <RadioGroup aria-labelledby="demo-radio-buttons-group-label"
-                                        name="radio-buttons-group"
-                            >
-                                {radioButtons(the_song)}
-                            </RadioGroup>
-                        </FormControl>
+                    <Paper sx={{backgroundColor: "backgrounds.nav"}}>
+                        <Box sx={{ width: { sm: drawerWidth }, 
+                                                flexShrink: { sm: 0 } }}>
                         
-                        <Divider />
-                                
-                    </Drawer>
-                </Box>
-            
-                <Box component="main" sx= {{flexGrow: 1, p: 3,
-                                            width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-                >
-                    <Toolbar />
-                                        
-                    <Typography variant="h1">
-                        {params.songTitle}
-                    </Typography>
-                
-                    <Grid container>
-                        <Box sx={{marginRight: "5em"}}>
-                            <Typography variant="body1">
-                                {the_song.score_data.pedagogical_score_type}
-                            </Typography>
+                            <Toolbar sx={{marginTop: "3rem" }}>
+                                <IconButton color="inherit" onClick={handleDrawerOpen} edge="start" sx={{marginTop: "1em"}}>
+                                    <MenuIcon />
+                                </IconButton>
+                                           
+                                <Typography variant="h4" sx={{marginLeft: "0.5em", marginTop: "1em"}}>
+                                 Song Views
+                                </Typography>
+                            </Toolbar>
+    
+                            <Divider sx={{margin: "0.5em"}}/>
+    
+                            <Drawer PaperProps={{ sx: {marginTop: "3em",
+                                                       marginBottom: "5em",
+                                                       backgroundColor: "backgrounds.nav"}
+                                               }} 
+                                    variant="persistent" anchor="left" open={open}
+                                    sx={{display: { xs: 'block', 
+                                                    sm: 'block' },
+                                        '& .MuiDrawer-paper': { boxSizing: 'border-box', 
+                                                                width: drawerWidth },
+                                        }}>
+                                <Toolbar sx={{marginTop: "0.5em"}}>
+                                    <Typography variant="h4">
+                                        Song Views
+                                    </Typography>
+                        
+                                    <IconButton color="inherit" onClick={handleDrawerClose} edge="end" sx={{marginLeft: "0.5em"}}>
+                                        <CloseIcon />
+                                    </IconButton>
+                                </Toolbar>
+                    
+                                <Divider sx={{margin: "0.5em"}}/>  
+    
+                                <FormControl sx={{marginLeft: "1em"}}>
+                                    <RadioGroup aria-labelledby="demo-radio-buttons-group-label"
+                                                name="radio-buttons-group">
+                                        {radioButtons(the_song)}
+                                    </RadioGroup>
+                                </FormControl>
+                            
+                                <Divider sx={{margin: "0.5em"}}/>
+                            </Drawer>
                         </Box>
-                        <Box sx={{marginRight: "5em"}}>
-                        <Typography variant="body1">
+                    </Paper>
+
+                    <Box sx= {{flexGrow: 1, p: 3,
+                               width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
+                 
+                        <Toolbar />
+                                   
+                        <Typography variant="h1" sx={{textAlign: "center"}}>
+                            {params.songTitle}
+                        </Typography>
+
+                        <Typography variant="h2" sx={{textAlign: "center"}}>
+                            {the_song.score_data.pedagogical_score_type}
+                            &nbsp;
                             {the_song.score_data.meter}
                         </Typography>
-                        </Box>    
-                    </Grid>
-                    
-                    <Grid sx={{ flexGrow: 1,
-                                marginTop: "1em"}}  spacing={2}
-                    >
-                        <Grid container>
+
+                        <Grid container direction="row" 
+                                        justify="center" 
+                                        alignItems="center" 
+                                        columns={16}
+                                        spacing={2}>
                             {writeSong(the_song).map((value) => (
-                                <Box sx={{margin: "1em"}}>
+                                <Grid item xs={8} md={4} lg={2}>
                                     {value}
-                                </Box>
-                            ))}
+                                </Grid>        
+
+                            ))}   
                         </Grid>
-                    </Grid>
+
+                    </Box>
                 </Box>
-            </Box>
-
-            <Footer />
-
-            <Outlet />
-        </Grid>
+                    
+                <Footer />
+    
+                <Outlet /> 
+            </Paper>
+        </ThemeProvider>
     );
 }

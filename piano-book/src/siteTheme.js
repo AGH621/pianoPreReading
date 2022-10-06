@@ -20,12 +20,12 @@ export const theme = createTheme({
       },
       backgrounds: {
           nav: '#F2F4F3',
-          threeNote: '#F0FFFC',
-          fourNote: '#F8FFF0',
-          fiveFinger: '#FFFBF0',
-          pentatonic: '#FFF6F0',
-          diatonic: '#FFF0F6',
-          minor: '#F2F4FF'
+          threeNote: '#E5EDFB',
+          fourNote: '#FFF2E6',
+          fiveFinger: '#FFFDE6',
+          pentatonic: '#F8FEE5',
+          diatonic: '#E2FBF5',
+          minor: '#EBFDE4'
       }
     },
     
@@ -50,6 +50,11 @@ export const theme = createTheme({
         h4: {
             fontFamily: 'Rokkitt',
             fontSize: '1.75rem',
+            fontWeight: 600
+        },
+        h5: {
+            fontFamily: 'Rokkitt',
+            fontSize: '1.5rem',
             fontWeight: 600
         },
         body1: {

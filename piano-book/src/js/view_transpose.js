@@ -6,10 +6,17 @@ Description: Change the symbolic notation images from white key melody to black 
 TODO: Improve the two functions by figuring how to make the if/else if conditionals into switch statements.
 */
 
+//External imports
 import React, { useState } from "react";
 
-import Divider from "@mui/material/Divider";
-import Typography from "@mui/material/Typography";
+import { Divider,
+         Paper,
+         Radio,
+         ThemeProvider,
+         Typography } from "@mui/material";
+
+//Internal imports
+import { theme } from '../siteTheme.js';
 
 // import black key notes
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
@@ -53,201 +60,69 @@ Return a group of two radio buttons to change the melody from black keys to whit
 handleChange() controls each button's state and appearance.
 onClick() changes the notes appearing on the screen.
 */
-    //Set the buttons states.
-    let [keys, setKeys] = useState("");
-    
-    //Function for handling changes in state and button appearance.
-    let handleChange=(e)=>{
-        
-        //Change the button's state when its pressed
-        setKeys(e.target.value)
-        
-        //When the black key button is pressed, deactivate the white key button make the black one active
-        if (e.target.value === 'black') {
-            
-            let inactive_button1 = document.getElementById('white')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white-2note')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('black-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-3note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-3note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('black')
-            active_button.className="melody-button-active"
-        }
-        
-        //Do the opposite when the white key button is pressed
-        else if (e.target.value === 'white') {
+      //Set the buttons states.
+      const [selectedValue, setSelectedValue] = React.useState('a');
 
-            let inactive_button1 = document.getElementById('black')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white-2note')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('black-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-3note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-3note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('white')
-            active_button.className="melody-button-active"
-        }
-        
-        else if (e.target.value === 'white-2note') {
-
-            let inactive_button1 = document.getElementById('black')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('black-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-3note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-3note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('white-2note')
-            active_button.className="melody-button-active"
-        }
-        
-        else if (e.target.value === 'black-2note') {
-
-            let inactive_button1 = document.getElementById('black')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('white-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-3note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-3note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('black-2note')
-            active_button.className="melody-button-active"
-        }
-        
-        else if (e.target.value === 'black-3note') {
-
-            let inactive_button1 = document.getElementById('black')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('white-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-3note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-2note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('black-3note')
-            active_button.className="melody-button-active"
-        }
-        
-        else if (e.target.value === 'white-3note') {
-
-            let inactive_button1 = document.getElementById('black')
-            inactive_button1.className="button-inactive"
-            
-            let inactive_button2 = document.getElementById('white')
-            inactive_button2.className="button-inactive"
-            
-            let inactive_button3 = document.getElementById('white-2note')
-            inactive_button3.className="button-inactive"
-            
-            let inactive_button4 = document.getElementById('white-2note')
-            inactive_button4.className="button-inactive"
-            
-            let inactive_button5 = document.getElementById('black-2note')
-            inactive_button5.className="button-inactive"
-            
-            let active_button = document.getElementById('white-3note')
-            active_button.className="melody-button-active"
-        }
-    }
+      const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSelectedValue(event.target.value);
+      };
     
     //React component to go export to the song page.
-    return (
-        <section>
-            <Typography variant="h6">Melody</Typography>
-            <div className="container">
-                <label className="melody-button-active" id="white" for="white">
-                    <input type="radio" value="white" defaultChecked onChange={handleChange} onClick={white_transpose} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">White Key Melody</span>
+    return(
+        <ThemeProvider theme={theme}>
+            <Typography variant="h5" color="secondary.dark">
+                Melody
+            </Typography>
+            <div>
+                <Radio checked={selectedValue === 'a'} value="a" defaultChecked onChange={handleChange} onClick={white_transpose} />
+                <span> White Key </span>
             </div>
         
-            <div className="container">
-                <label className="button-inactive" id="black" for="black">
-                    <input type="radio" value="black" onChange={handleChange} onClick={black_transpose} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">Black Key Melody</span>
+            <div>
+                <Radio checked={selectedValue === 'b'} value="b" onChange={handleChange} onClick={black_transpose} />
+                <span> Black Key</span>
             </div>
         
-            <Divider />
+            <Divider sx={{marginLeft: "-0.5em",
+                          marginRight: "0.5em",
+                          marginTop: "0.5em",
+                          marginBottom: "0.5em"}}/>
         
-            <Typography variant="h6">2-Note Chords</Typography>
+            <Typography variant="h5" color="secondary.dark">
+                2-Note Chords
+            </Typography>
         
-            <div className="container">
-                <label className="button-inactive" id="white-2note" for="white-2note">
-                    <input type="radio" value="white-2note" onChange={handleChange} onClick={white_2note_chords} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">White 2-Note Chords</span>
+            <div>
+                <Radio checked={selectedValue === 'c'} value="c" defaultChecked onChange={handleChange} onClick={white_2note_chords} />
+                <span> White Key </span>
             </div>
         
-            <div className="container">
-                <label className="button-inactive" id="black-2note" for="black-2note">
-                    <input type="radio" value="black-2note" onChange={handleChange} onClick={black_2note_chords} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">Black 2-Note Chords</span>
+            <div>
+                <Radio checked={selectedValue === 'd'} value="d" defaultChecked onChange={handleChange} onClick={black_2note_chords} />
+                <span> Black Key </span>
+            </div>
+            
+            <Divider sx={{marginLeft: "-0.5em",
+                          marginRight: "0.5em",
+                          marginTop: "0.5em",
+                          marginBottom: "0.5em"}}/>
+        
+            <Typography variant="h5" color="secondary.dark">
+                3-Note Chords
+            </Typography>
+        
+            <div>
+                <Radio checked={selectedValue === 'e'} value="e" defaultChecked onChange={handleChange} onClick={white_3note_chords} />
+                <span> White Key </span>
             </div>
         
-            <Divider />
-        
-            <Typography variant="h6">3-Note Chords</Typography>
-        
-            <div className="container">
-                <label className="button-inactive" id="white-3note" for="white-3note">
-                    <input type="radio" value="white-3note" onChange={handleChange} onClick={white_3note_chords} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">White 3-Note Chords</span>
+            <div>
+                <Radio checked={selectedValue === 'f'} value="f" defaultChecked onChange={handleChange} onClick={black_3note_chords} />
+                <span> Black Key </span>
             </div>
-        
-            <div className="container">
-                <label className="button-inactive" id="black-3note" for="black-3note">
-                    <input type="radio" value="black-3note" onChange={handleChange} onClick={black_3note_chords} name="keys" />
-                </label>
-                <span className="melody-button-inactive" id="overlay">Black 3-Note Chords</span>
-            </div>
-        </section>
+        </ThemeProvider>
     )
-}
-
+}   
 
 function black_transpose() {
     let the_fs = document.getElementsByClassName('pitch do')
@@ -449,4 +324,3 @@ function black_3note_chords() {
         }
     
 }
-

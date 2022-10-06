@@ -120,7 +120,7 @@ export function songDrawer(song_data, the_page) {
             return "Song Titles"
             break;
         }
-    }
+    };
     
     return(
     <ThemeProvider theme={theme}>
