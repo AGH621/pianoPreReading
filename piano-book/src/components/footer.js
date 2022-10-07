@@ -55,7 +55,7 @@ export default function Footer() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/about", "/ta_ka_di_mi"]);
+  const routeMatch = useRouteMatch(["/about", "/takadimi"]);
   const currentTab = routeMatch?.pattern?.path;
 
     return (
@@ -70,7 +70,7 @@ export default function Footer() {
                         <Box>
                             <Typography variant="button" gutterBottom style={{padding: "1rem" }}> Copyright 2022 Anne G. Hamill </Typography>
                             <Tab label="About" value="/about" to="/about" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-                            <Tab label="Ta-Ka-Di-Mi" value="/ta_ka_di_mi" to="/ta_ka_di_mi" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            <Tab label="TaKaDiMi" value="/takadimi" to="/takadimi" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                         </Box>
                     </Tabs>
                 </AppBar>
