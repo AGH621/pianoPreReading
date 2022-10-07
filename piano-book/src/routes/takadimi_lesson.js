@@ -12,27 +12,45 @@ TODO:
 //External imports
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
-import { Typography,
-         Grid} from '@mui/material';
+import { Box,
+         Grid,
+         Paper,
+         ThemeProvider,
+         Typography,} from '@mui/material';
 
 //Internal imports
 import introText from '../data/home_page/home_intro.txt';
 import changeText from '../data/home_page/home_changes.txt';
 import {readText} from '../js/read_text';
-import appAccordian from '../components/app_accordian';
+import returnTopFab from '../components/app_returntop';
 import Footer from '../components/footer';
 
 
 //Our home page.
 export default function LessonPage() {
+    const title = 'takadimi'
     return (
-        <Grid>
-            
-            
-            
-            <Outlet />
-        </Grid>
+        <ThemeProvider theme={theme}>
+            <Paper sx={{backgroundColor: "backgrounds.nav"}}>
+                <Box sx={{padding: "5em",
+                          height: "750px",}}>
+                    <Typography variant="h1" sx={{margin: "1em"}}>
+                        Takadimi Counting Lessons
+                    </Typography>
         
+                <Grid>
+            
+            
+            
+                    
+                </Grid>
+            </Box>
+            
+            <Footer />
+                    
+            <Outlet />
+        </Paper>
+    </ThemeProvider>
             
     );
 }

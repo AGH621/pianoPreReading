@@ -40,7 +40,7 @@ export const theme = createTheme({
         h2: {
             fontFamily: 'Rokkitt',
             fontSize: '2.5rem',
-            fontWeight: 400,
+            fontWeight: 500,
         },
         h3: {
             fontFamily: 'Rokkitt',
@@ -64,7 +64,15 @@ export const theme = createTheme({
             fontSize: '1.5rem',
             fontWeight: 600,
             textDecoration: 'underline'
-        }
+        },
+        lyric: {
+            fontSize: '1.5rem',
+        },
+        chord: {
+            fontFamily: 'Rokkitt',
+            fontSize: '2.25rem',
+        },
+        
         
     },
   });         

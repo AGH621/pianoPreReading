@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 0.4
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the 4-Note songs found in the ScoreDefs JSON file 
 imported from the backend.
@@ -27,6 +27,7 @@ import { theme } from '../siteTheme.js'
 
 //Internal image imports
 import SingleC from "../images/notes_key_diagram/single_c.png";
+import SingleCsharp from "../images/notes_key_diagram/single_c_sharp.png";
 import Rest from "../images/notes_key_diagram/rest.png";
 import Arrow from "../images/notes_key_diagram/short_arrow.png";
 import FullWhtI from "../images/chords_key_diagram/full_wht_tonic.png";
@@ -66,26 +67,34 @@ export default function FourNote() {
                         </Typography>
                     
                         <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
-                            What&#39;s New?
+                            What&#39;s New in this Unit?
                         </Typography>
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                       paddingTop: '0.5em'}}>
-                            Pitch
+                            New Pitches
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
-                            Fifth note of the major scale (C). 
-                         
-                            <Box sx={{padding: "1em"}}> 
-                                <img className="pitch do" width="140px" src={SingleC} />
-                            </Box>
-
+                            Fifth note of the major scale.
                         </Typography>
+                          
+                        <Grid container sx={{marginLeft: '3em',
+                                             marginBottom: '2em',}}> 
+                            <Box sx={{paddingRight: "4em"}}>
+                                <Typography paragraph>C in white key notation</Typography>
+                                <img width="140px" src={SingleC} />
+                            </Box>
+                            <Box sx={{paddingRight: "4em"}}>
+                                <Typography paragraph>C# in black key notation</Typography>
+                                <img width="140px" src={SingleCsharp} />
+                            </Box>
+                        </Grid>
+                        
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                       paddingTop: '0.5em'}}>
-                            Rhythm
+                            New Rhythms
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em',
@@ -127,25 +136,25 @@ export default function FourNote() {
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                       paddingTop: '0.5em'}}>
-                            Chords
+                            New Chords
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
-                            Full tonic and dominant chords using three notes
+                            Full tonic and dominant chords using three notes.
                             <ul> 
                                 <li><Typography paragraph sx={{textDecoration: 'underline'}}>White Keys</Typography>
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">I</span>
+                                        <Box sx={{margin: "2em"}}>
+                                        <Typography variant="chord">I</Typography>
                                         <br />
-                                        <img className="pitch do" width="140px" src={FullWhtI} />
+                                        <img width="140px" src={FullWhtI} />
                                         </Box>
                         
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="dominant">V7</span>
+                                        <Box sx={{margin: "2em"}}>
+                                        <Typography variant="chord">V7</Typography>
                                         <br />
-                                        <img className="pitch re" width="130px" src={FullWhtV7} />
+                                        <img width="130px" src={FullWhtV7} />
                                         </Box>
                                     </Grid>
                                 </li>
@@ -153,13 +162,13 @@ export default function FourNote() {
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
                                         <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">I</span>
+                                        <Typography variant="chord">I</Typography>
                                         <br />
                                         <img className="pitch do" width="140px" src={FullBlkI} />
                                         </Box>
                         
                                         <Box sx={{margin: "1em"}}>
-                                        <span className="dominant">V7</span>
+                                        <Typography variant="chord">V7</Typography>
                                         <br />
                                         <img className="pitch re" width="140px" src={FullBlkV7} />
                                         </Box>

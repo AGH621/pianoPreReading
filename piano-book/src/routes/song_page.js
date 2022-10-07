@@ -58,50 +58,50 @@ function oneNote(a_note) {
 
     if (a_note === 'mi') {
         /*the_pix.push(<img className="fingerings" src={LfTwo} />)*/
-        the_pix.push(<span className="tonic">I</span>)
+        the_pix.push(<Typography variant="chord">I</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch mi" width="140px" src={SingleA} />)
     }
     else if (a_note === 're') {
         /*the_pix.push(<img className="fingerings" src={LfThree} />)*/
-        the_pix.push(<span className="dominant">V7</span>)
+        the_pix.push(<Typography variant="chord">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch re" width="140px" src={SingleG} />)
     }
     else if (a_note === 'do') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="tonic">I</span>)
+        the_pix.push(<Typography variant="chord">I</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch do" width="140px" src={SingleF} />)
     }
     else if (a_note === 'sol') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="dominant">V7</span>)
+        the_pix.push(<Typography variant="chord">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch sol" width="140px" src={SingleC} />)
     }
     else if (a_note === 'la') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="subdominant">IV</span>)
+        the_pix.push(<Typography variant="chord">IV</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch la" width="140px" src={SingleD} />)
     }
     else if (a_note === 'fa') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="subdominant">IV</span>)
+        the_pix.push(<Typography variant="chord">IV</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch fa" width="140px" src={SingleBflat} />)
     }
     else if (a_note === 'ti') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="dominant">V7</span>)
+        the_pix.push(<Typography variant="chord">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch ti" width="140px" src={SingleE} />)
     }
     
     else if (a_note === 'rest') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<span className="dominant">(Rest)</span>)
+        the_pix.push(<Typography variant="chord">(Rest)</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch rest" width="140px" src={Rest} />)
     }
@@ -117,28 +117,32 @@ function writeSong(a_song) {
         if (a_song.notes[n].duration === 'Tiny') {
             component_list.push(
                 <Box>
-                    <p class="chord">
+                    <p>
                     {oneNote(a_song.notes[n].pitch)}
                     <br />
-                    {a_song.notes[n].lyric[0]}
+                    <Typography variant="lyric">
+                        {a_song.notes[n].lyric[0]}
+                    </Typography>
                     </p>
                 </Box>
             )}
             else if (a_song.notes[n].duration === 'Short') {
                 component_list.push(
                     <Box>
-                        <p class="chord">
+                        <p>
                         {oneNote(a_song.notes[n].pitch)}
                         <br />
-                        {a_song.notes[n].lyric[0]}
+                        <Typography variant="lyric">
+                            {a_song.notes[n].lyric[0]}
+                        </Typography>
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
@@ -147,27 +151,29 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Kinda_Short') {
                 component_list.push(
                     <Box>
-                        <p class="chord">
+                        <p>
                         {oneNote(a_song.notes[n].pitch)}
                         <br />
-                        {a_song.notes[n].lyric[0]}
+                        <Typography variant="lyric">
+                            {a_song.notes[n].lyric[0]}
+                        </Typography>
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
                     )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
@@ -176,36 +182,38 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Medium') {
                 component_list.push(
                     <Box>
-                        <p class="chord">
+                        <p>
                         {oneNote(a_song.notes[n].pitch)}
                         <br />
-                        {a_song.notes[n].lyric[0]}
+                        <Typography variant="lyric">
+                            {a_song.notes[n].lyric[0]}
+                        </Typography>
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
-                            <br />
-                        </p>
-                    </Box>
-                )
-                component_list.push(
-                    <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
-                            <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
+                            <br />
+                        </p>
+                    </Box>
+                )
+                component_list.push(
+                    <Box sx={{paddingBottom: "1em"}}>
+                        <p>
+                            <br />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
@@ -214,54 +222,56 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Kinda_Long') {
                 component_list.push(
                     <Box>
-                        <p class="chord">
+                        <p>
                         {oneNote(a_song.notes[n].pitch)}
                         <br />
-                        {a_song.notes[n].lyric[0]}
+                        <Typography variant="lyric">
+                            {a_song.notes[n].lyric[0]}
+                        </Typography>
                         </p>
                     </Box>
                     )
                     component_list.push(
                         <Box sx={{paddingBottom: "1em"}}>
-                            <p class="arrow">
+                            <p>
                                 <br />
-                                <img class="lengthen" width="140px" src={Arrow} />
-                                <br />
-                            </p>
-                        </Box>
-                    )
-                    component_list.push(
-                        <Box sx={{paddingBottom: "1em"}}>
-                            <p class="arrow">
-                                <br />
-                                <img class="lengthen" width="140px" src={Arrow} />
+                                <img width="140px" src={Arrow} />
                                 <br />
                             </p>
                         </Box>
                     )
                     component_list.push(
                         <Box sx={{paddingBottom: "1em"}}>
-                            <p class="arrow">
+                            <p>
                                 <br />
-                                <img class="lengthen" width="140px" src={Arrow} />
-                                <br />
-                            </p>
-                        </Box>
-                    )
-                    component_list.push(
-                        <Box sx={{paddingBottom: "1em"}}>
-                            <p class="arrow">
-                                <br />
-                                <img class="lengthen" width="140px" src={Arrow} />
+                                <img width="140px" src={Arrow} />
                                 <br />
                             </p>
                         </Box>
                     )
                     component_list.push(
                         <Box sx={{paddingBottom: "1em"}}>
-                            <p class="arrow">
+                            <p>
                                 <br />
-                                <img class="lengthen" width="140px" src={Arrow} />
+                                <img width="140px" src={Arrow} />
+                                <br />
+                            </p>
+                        </Box>
+                    )
+                    component_list.push(
+                        <Box sx={{paddingBottom: "1em"}}>
+                            <p>
+                                <br />
+                                <img width="140px" src={Arrow} />
+                                <br />
+                            </p>
+                        </Box>
+                    )
+                    component_list.push(
+                        <Box sx={{paddingBottom: "1em"}}>
+                            <p>
+                                <br />
+                                <img width="140px" src={Arrow} />
                                 <br />
                             </p>
                         </Box>
@@ -270,72 +280,74 @@ function writeSong(a_song) {
             else if (a_song.notes[n].duration === 'Long') {
                 component_list.push(
                     <Box>
-                        <p class="chord">
+                        <p>
                         {oneNote(a_song.notes[n].pitch)}
                         <br />
-                        {a_song.notes[n].lyric[0]}
+                        <Typography variant="lyric">
+                            {a_song.notes[n].lyric[0]}
+                        </Typography>
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
-                            <br />
-                        </p>
-                    </Box>
-                )
-                component_list.push(
-                    <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
-                            <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
-                            <br />
-                        </p>
-                    </Box>
-                )
-                component_list.push(
-                    <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
-                            <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
-                            <br />
-                        </p>
-                    </Box>
-                )
-                component_list.push(
-                    <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
-                            <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
                 )
                 component_list.push(
                     <Box sx={{paddingBottom: "1em"}}>
-                        <p class="arrow">
+                        <p>
                             <br />
-                            <img class="lengthen" width="140px" src={Arrow} />
+                            <img width="140px" src={Arrow} />
+                            <br />
+                        </p>
+                    </Box>
+                )
+                component_list.push(
+                    <Box sx={{paddingBottom: "1em"}}>
+                        <p>
+                            <br />
+                            <img width="140px" src={Arrow} />
+                            <br />
+                        </p>
+                    </Box>
+                )
+                component_list.push(
+                    <Box sx={{paddingBottom: "1em"}}>
+                        <p>
+                            <br />
+                            <img width="140px" src={Arrow} />
+                            <br />
+                        </p>
+                    </Box>
+                )
+                component_list.push(
+                    <Box sx={{paddingBottom: "1em"}}>
+                        <p>
+                            <br />
+                            <img width="140px" src={Arrow} />
                             <br />
                         </p>
                     </Box>
@@ -374,12 +386,10 @@ export default function SongPage() {
     }
     
     function songBackground(a_type) {
-        console.log(a_type)
         switch(a_type) {
             case '3-Note':
                 return {backgroundColor: "backgrounds.threeNote"}
                 break;
-
             case '4-Note':
                 return {backgroundColor: "backgrounds.fourNote"}
                 break;
@@ -401,34 +411,51 @@ export default function SongPage() {
         }
     }
     
-    /*
-    Notes on Grid for keyboard diagrams:
-        0) Each box (one note) takes up 2 columns
-        1) Triple Meter:  xs={4} lg={2}
-        2) Need custom alignment for arrow pix
-        3) breakpoints can be fractional!
-        4) 
-    */
+    function songGrid(a_meter){
+        console.log(a_meter)
+        if (a_meter === 'Duple') {
+            return (
+                <Grid container direction="row" 
+                                justify="center" 
+                                alignItems="center" 
+                                columns={16}
+                                spacing={2}>
+                    {writeSong(the_song).map((value) => (
+                        <Grid item xs={8} md={4} lg={2}>
+                            {value}
+                        </Grid>        
+
+                    ))}   
+                </Grid>
+            )
+        }
+        else {
+            return (
+                <Grid container direction="row" 
+                                justify="center" 
+                                alignItems="center" 
+                                columns={12}
+                                spacing={2}>
+                    {writeSong(the_song).map((value) => (
+                        <Grid item md={4} lg={2}>
+                            {value}
+                        </Grid>        
+
+                    ))}   
+                </Grid>
+            )
+        }
+    }
     
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={songBackground(the_song.score_data.pedagogical_score_type)}>
-                <Box sx={{ display: 'flex'}}>
+                <Box sx={{ display: 'flex',}}>
                     <CssBaseline />
                     
                     <Paper sx={{backgroundColor: "backgrounds.nav"}}>
                         <Box sx={{ width: { sm: drawerWidth }, 
-                                                flexShrink: { sm: 0 } }}>
-                        
-                            <Toolbar sx={{marginTop: "3rem" }}>
-                                <IconButton color="inherit" onClick={handleDrawerOpen} edge="start" sx={{marginTop: "1em"}}>
-                                    <MenuIcon />
-                                </IconButton>
-                                           
-                                <Typography variant="h4" sx={{marginLeft: "0.5em", marginTop: "1em"}}>
-                                 Song Views
-                                </Typography>
-                            </Toolbar>
+                                   flexShrink: { sm: 0 }}}>
     
                             <Divider sx={{margin: "0.5em"}}/>
     
@@ -436,7 +463,7 @@ export default function SongPage() {
                                                        marginBottom: "5em",
                                                        backgroundColor: "backgrounds.nav"}
                                                }} 
-                                    variant="persistent" anchor="left" open={open}
+                                    variant="permanent" anchor="left" open={open}
                                     sx={{display: { xs: 'block', 
                                                     sm: 'block' },
                                         '& .MuiDrawer-paper': { boxSizing: 'border-box', 
@@ -446,10 +473,6 @@ export default function SongPage() {
                                     <Typography variant="h4">
                                         Song Views
                                     </Typography>
-                        
-                                    <IconButton color="inherit" onClick={handleDrawerClose} edge="end" sx={{marginLeft: "0.5em"}}>
-                                        <CloseIcon />
-                                    </IconButton>
                                 </Toolbar>
                     
                                 <Divider sx={{margin: "0.5em"}}/>  
@@ -476,23 +499,12 @@ export default function SongPage() {
                         </Typography>
 
                         <Typography variant="h2" sx={{textAlign: "center"}}>
-                            {the_song.score_data.pedagogical_score_type}
+                            ({the_song.score_data.pedagogical_score_type}
                             &nbsp;
-                            {the_song.score_data.meter}
+                            {the_song.score_data.meter})
                         </Typography>
 
-                        <Grid container direction="row" 
-                                        justify="center" 
-                                        alignItems="center" 
-                                        columns={16}
-                                        spacing={2}>
-                            {writeSong(the_song).map((value) => (
-                                <Grid item xs={8} md={4} lg={2}>
-                                    {value}
-                                </Grid>        
-
-                            ))}   
-                        </Grid>
+                        {songGrid(the_song.score_data.meter)}
 
                     </Box>
                 </Box>

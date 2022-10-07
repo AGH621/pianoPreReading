@@ -36,7 +36,7 @@ import Diatonic from "./routes/diatonic";
 import Minor from "./routes/minor";
 import SongList from "./routes/song_list";
 import About from "./routes/about";
-import Takadimi from "./routes/ta_ka_di_mi";
+import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
 import LessonPage from "./routes/takadimi_lesson";
 
@@ -120,7 +120,7 @@ export default function TabsRouter() {
           <Route path="/minor" element={<Minor />} />
           <Route path="/song_list" element={<SongList />} />
           <Route path="/about" element={<About />} />
-          <Route path="/ta_ka_di_mi" element={<Takadimi />} />
+          <Route path="/takadimi" element={<Takadimi />} />
               <Route path="/takadimi_lesson" element={<LessonPage />} />
           <Route path="*"
             element={

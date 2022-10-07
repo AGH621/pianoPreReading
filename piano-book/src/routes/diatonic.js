@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 0.4
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the pentatonic songs found in the ScoreDefs JSON file 
 imported from the backend.  
@@ -25,7 +25,7 @@ import { teacherTextDia, studentTextDia } from '../js/diatonic_text';
 import { diatonicTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js';
 
-const drawerWidth = 275;
+const drawerWidth = 240;
 export default function Diatonic() {
     const title = 'diatonic'  
     const song_data = diatonicTitles();
@@ -55,12 +55,12 @@ export default function Diatonic() {
                         </Typography>
                     
                         <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
-                            What&#39;s New?
+                            What&#39;s New in this Unit?
                         </Typography>
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Pitch
+                            New Pitches
                         </Typography>
                         
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
@@ -70,21 +70,21 @@ export default function Diatonic() {
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Transposition
+                            New Transpositions
                         </Typography>
                         
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
                             Students should play the songs in D and A positions in addition to the ones introduced in previous units.  Transposition needs to be done
                             "by ear", songs will continue to be notated in F and F# positions only.
                         </Typography>
-                    
+                        
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Chords
+                            Removing Extraneous Chord Symbols
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
-                            Eliminate all chord repetition.  Strike the current chord once and hold it without restriking, until a new chord is reached.
+                        <Typography paragraph paragraph sx={{marginLeft: '2.5em'}}>
+                            Repeated chord symbols have been eliminated. Keep repeating the previous chord, until a new one is reached.
                         </Typography>
                     
                         {appAccordian(teacherTextDia(), studentTextDia(), title)}

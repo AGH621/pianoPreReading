@@ -18,7 +18,7 @@ import { StaticRouter } from "react-router-dom/server";
 
 
 import About from "../routes/about";
-import Takadimi from "../routes/ta_ka_di_mi";
+import Takadimi from "../routes/takadimi";
 
 import { theme } from '../siteTheme.js'
 

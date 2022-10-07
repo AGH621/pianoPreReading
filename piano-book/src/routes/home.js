@@ -1,12 +1,9 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.2
+Version: 0.3
 Description: Home page React component.  Build from MUI Accordian component and text files. 
-
-TODO: 
-    1) Make the text into a React component.
-    2) Override MUI styles on all components.   
+  
 */
 
 //External imports
@@ -36,7 +33,8 @@ export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>
-                <Box sx={{padding: "5em"}}>
+                <Box sx={{padding: "5em",
+                          height: "750px",}}>
                     <Typography variant="h1">
                         Piano PreReading Book
                     </Typography>

@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 0.4
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the 5-Finger songs found in the ScoreDefs JSON file 
 imported from the backend.
@@ -27,6 +27,7 @@ import { theme } from '../siteTheme.js';
 
 //Internal image imports
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
+import SingleB from "../images/notes_key_diagram/single_b.png";
 import FullWhtIV from "../images/chords_key_diagram/full_wht_subdom.png";
 import FullBlkIV from "../images/chords_key_diagram/full_blk_subdom.png";
 
@@ -59,24 +60,33 @@ export default function FiveFinger() {
                         </Typography>
                     
                         <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
-                            What&#39;s New?
+                            What&#39;s New in this Unit?
                         </Typography>
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Pitch
+                            New Pitches
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
-                            Fourth note of the major scale (Bb).
-                            <Box sx={{margin: "1em"}}>
-                                <img className="pitch do" width="140px" src={SingleAsharp} />
-                            </Box>
+                            Fourth note of the major scale.
                         </Typography>
+                          
+                        <Grid container sx={{marginLeft: '3em',
+                                             marginBottom: '2em',}}> 
+                            <Box sx={{paddingRight: "4em"}}>
+                                <Typography paragraph>B-flat in F major notation</Typography>
+                                <img width="140px" src={SingleAsharp} />
+                            </Box>
+                            <Box sx={{paddingRight: "4em"}}>
+                                <Typography paragraph>B in F-sharp major notation</Typography>
+                                <img width="140px" src={SingleB} />
+                            </Box>
+                        </Grid>
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Transposing
+                            New Skill: Transposing
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
@@ -85,25 +95,25 @@ export default function FiveFinger() {
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Chords
+                            New Chords
                         </Typography>
                     
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
                             The subdominant (IV) chord
                             <ul> 
                                 <li>White Keys
-                                    <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">IV</span>
+                                    <Box sx={{marginBottom: "2em"}}>
+                                        <Typography variant="chord">IV</Typography>
                                         <br />
-                                        <img className="pitch do" width="140px" src={FullWhtIV} />
+                                        <img width="140px" src={FullWhtIV} />
                                     </Box>
                                 </li>
                             
                                 <li>Black Keys
-                                    <Box sx={{margin: "1em"}}>
-                                    <span className="tonic">IV</span>
+                                    <Box sx={{marginBottom: "2em"}}>
+                                    <Typography variant="chord">IV</Typography>
                                     <br />
-                                    <img className="pitch do" width="140px" src={FullBlkIV} />
+                                    <img width="140px" src={FullBlkIV} />
                                     </Box>
                                 </li>
                             </ul>

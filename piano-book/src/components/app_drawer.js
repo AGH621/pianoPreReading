@@ -48,7 +48,7 @@ export function songDrawer(song_data, the_page) {
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
 
             case 'four_note':
@@ -56,42 +56,42 @@ export function songDrawer(song_data, the_page) {
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
             case 'five_finger':
                 return {backgroundColor: "backgrounds.fiveFinger", 
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
             case 'pentatonic':
                 return {backgroundColor: "backgrounds.pentatonic", 
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
             case 'diatonic':
                 return {backgroundColor: "backgrounds.diatonic", 
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
             case 'minor':
                 return {backgroundColor: "backgrounds.minor", 
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
             default:
                 return {backgroundColor: "backgrounds.nav", 
                         marginTop: "3em",
                         marginBottom: "5em",
                         width: "240px",
-                        height: "850px"}
+                        height: "1000px"}
                 break;
         }
     }
@@ -122,57 +122,38 @@ export function songDrawer(song_data, the_page) {
         }
     };
     
-    return(
-    <ThemeProvider theme={theme}>
-    <Box component="nav"
-         sx={{ width: { sm: drawerWidth }, 
-                        flexShrink: { sm: 0 } 
-            }}>
-        <Toolbar style={{marginTop: "3rem" }}>
+    return (
+        <ThemeProvider theme={theme}>
+            <Box component="nav"
+                 sx={{ width: { sm: drawerWidth }, 
+                                flexShrink: { sm: 0 }}}>
+                <Divider />
 
-        <IconButton color="inherit" onClick={handleDrawerOpen} edge="start">
-            <MenuIcon />
-        </IconButton>
-            
-        <Typography variant="h4">
-            {drawerTitle(the_page)}
-        </Typography>
-            
-        </Toolbar>
-        
-        <Divider />
-
-        <Drawer PaperProps={{ sx: backGround(the_page) }} 
-                variant="persistent" anchor="left" open={open}
-                
-                sx={{ display: { xs: 'block', sm: 'block' },
-                      '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth } }}>
+                <Drawer PaperProps={{ sx: backGround(the_page) }} 
+                        variant="permanent" anchor="left" open={open}
+                        sx={{ display: { xs: 'block', sm: 'block' },
+                              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth } }}>
                     
-            <Toolbar>
-                <Typography variant="h4">
-                    {drawerTitle(the_page)}
-                </Typography>
-                
-                <IconButton color="inherit" onClick={handleDrawerClose} edge="end">
-                    <CloseIcon />
-                </IconButton>
-                    
-            </Toolbar>
+                    <Toolbar>
+                        <Typography variant="h4">
+                            {drawerTitle(the_page)}
+                        </Typography>
+                    </Toolbar>
 
-            <Divider />
+                    <Divider />
           
-            <List>
-                {song_data.map((song) => (
-                    <ListItem key={song} disablePadding>
-                        <ListItemButton to={`/${song}`} key={song}>
-                            <ListItemText primary={song} sx={{color: "primary.dark"}}/>
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Drawer>
-    </Box>
-    </ThemeProvider>   
+                    <List>
+                        {song_data.map((song) => (
+                            <ListItem key={song} disablePadding>
+                                <ListItemButton to={`/${song}`} key={song}>
+                                    <ListItemText primary={song} sx={{color: "primary.dark"}}/>
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Drawer>
+            </Box>
+        </ThemeProvider>   
     );
 }
         

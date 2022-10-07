@@ -54,12 +54,12 @@ export default function Minor() {
                         </Typography>
                     
                         <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
-                            What&#39;s New?
+                            What&#39;s New in this Unit?
                         </Typography>
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Mode
+                           The Minor Mode
                         </Typography>
                         
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
@@ -68,7 +68,7 @@ export default function Minor() {
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Transposition
+                            New Transpositions
                         </Typography>
                         
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
@@ -78,7 +78,7 @@ export default function Minor() {
                     
                         <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
-                            Chords
+                            New Chords
                         </Typography>
                         
                         <Typography paragraph sx={{marginLeft: '2.5em'}}>
