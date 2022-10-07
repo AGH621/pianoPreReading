@@ -38,7 +38,7 @@ import SongList from "./routes/song_list";
 import About from "./routes/about";
 import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
-import LessonPage from "./routes/takadimi_lesson";
+
 
 import { theme } from './siteTheme.js'
 
@@ -121,7 +121,7 @@ export default function TabsRouter() {
           <Route path="/song_list" element={<SongList />} />
           <Route path="/about" element={<About />} />
           <Route path="/takadimi" element={<Takadimi />} />
-              <Route path="/takadimi_lesson" element={<LessonPage />} />
+
           <Route path="*"
             element={
               <main style={{ padding: "10rem" }}>
