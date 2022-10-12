@@ -31,7 +31,7 @@ import SingleB from "../images/notes_key_diagram/single_b.png";
 import FullWhtIV from "../images/chords_key_diagram/full_wht_subdom.png";
 import FullBlkIV from "../images/chords_key_diagram/full_blk_subdom.png";
 
-const drawerWidth = 275;
+const drawerWidth = 300;
 export default function FiveFinger() {  
     const title = 'five_finger'
     const song_data = fiveFingerTitles();
@@ -50,9 +50,9 @@ export default function FiveFinger() {
                                width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
                     
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}>
-                            5 Finger Songs
+                            Five Finger Songs
                         </Typography>
                     
                         <Typography paragraph>
@@ -63,7 +63,7 @@ export default function FiveFinger() {
                             What&#39;s New in this Unit?
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Pitches
                         </Typography>
@@ -84,7 +84,7 @@ export default function FiveFinger() {
                             </Box>
                         </Grid>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Skill: Transposing
                         </Typography>
@@ -93,7 +93,7 @@ export default function FiveFinger() {
                             Songs should now be played in C and G positions by ear in addition to the notated black and white keys
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Chords
                         </Typography>

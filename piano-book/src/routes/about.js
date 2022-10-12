@@ -130,7 +130,7 @@ export default function About() {
                                 </Typography>
                         
                                 <ul>
-                                    <li>Become frustrated with the persnicking nature of programming React components</li>
+                                    <li>Become frustrated with the persnicky nature of programming React components</li>
                                     <li>Stumble upon the Material UI library and experiment with it</li>
                                     <li>Implement MUI throughout the entire site</li>
                                 </ul>

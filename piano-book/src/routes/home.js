@@ -23,7 +23,7 @@ import { readText } from '../js/read_text';
 import { teacherTextHome, studentTextHome } from '../js/home_text';
 import appAccordian from '../components/app_accordian';
 import Footer from '../components/footer';
-
+import bannerPiano from '../images/piano_image.png';
 
 
 //Our home page.
@@ -32,9 +32,8 @@ export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>
-                <Box sx={{padding: "5em",
-                          height: "750px",}}>
-                    <Typography variant="h1">
+                <Box sx={{padding: "5em",}} style={{ backgroundImage:`url(${bannerPiano})`, backgroundRepeat:"no-repeat", backgroundSize:"contain"}}>
+                    <Typography variant="h1" sx={{marginTop: "3.5em",}}>
                         Piano PreReading Book
                     </Typography>
         

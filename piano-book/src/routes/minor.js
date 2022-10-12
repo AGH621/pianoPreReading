@@ -25,7 +25,7 @@ import { teacherTextMinor, studentTextMinor } from '../js/minor_text';
 import { minorTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js';
 
-const drawerWidth = 275;
+const drawerWidth = 300;
 export default function Minor() {
     const title = 'minor'  
     const song_data = minorTitles();
@@ -44,7 +44,7 @@ export default function Minor() {
                                                 width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
                     
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}>
                             Minor
                         </Typography>
@@ -57,7 +57,7 @@ export default function Minor() {
                             What&#39;s New in this Unit?
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                            The Minor Mode
                         </Typography>
@@ -66,7 +66,7 @@ export default function Minor() {
                             These songs are all in the minor mode, meaning a new placement for both left and right hand finger 3.
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Transpositions
                         </Typography>
@@ -76,7 +76,7 @@ export default function Minor() {
                             "by ear", songs will continue to be notated in F and F# positions only.
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Chords
                         </Typography>

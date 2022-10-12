@@ -32,7 +32,7 @@ import { theme } from '../siteTheme.js';
 import SingleD from "../images/notes_key_diagram/single_d.png";
 import SingleDsharp from "../images/notes_key_diagram/single_d_sharp.png";
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 export default function Pentatonic() {
     const title = 'pentatonic'  
     const song_data = pentatonicTitles();
@@ -51,7 +51,7 @@ export default function Pentatonic() {
                                                 width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
                     
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}>
                             Pentatonic
                         </Typography>
@@ -65,7 +65,7 @@ export default function Pentatonic() {
                             What&#39;s New in this Unit?
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Pitches
                         </Typography>
@@ -87,7 +87,7 @@ export default function Pentatonic() {
                             </Box>
                         </Grid>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Notation
                         </Typography>

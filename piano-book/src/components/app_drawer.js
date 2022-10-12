@@ -29,7 +29,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { theme } from '../siteTheme.js';
 
 
-const drawerWidth = 275;
+const drawerWidth = 310;
 export function songDrawer(song_data, the_page) {
     const [open, setOpen] = React.useState(true);
   
@@ -99,13 +99,13 @@ export function songDrawer(song_data, the_page) {
     function drawerTitle(a_title) {
         switch(a_title) {
         case 'three_note':
-            return "3 Note Titles" 
+            return "Three Note Titles" 
             break;
         case 'four_note':
-            return "4 Note Titles"
+            return "Four Note Titles"
             break;
         case 'five_finger':
-            return "5 Finger Titles"
+            return "Five Finger Titles"
             break;
         case 'pentatonic':
             return "Pentatonic"
@@ -126,15 +126,18 @@ export function songDrawer(song_data, the_page) {
         <ThemeProvider theme={theme}>
             <Box component="nav"
                  sx={{ width: { sm: drawerWidth }, 
-                                flexShrink: { sm: 0 }}}>
+                       flexShrink: { sm: 0 },
+                    }}>
                 <Divider />
 
                 <Drawer PaperProps={{ sx: backGround(the_page) }} 
                         variant="permanent" anchor="left" open={open}
                         sx={{ display: { xs: 'block', sm: 'block' },
-                              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth } }}>
+                              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                           }}>
                     
-                    <Toolbar>
+                    <Toolbar sx={{marginTop: "1em",
+                       marginBottom: "0.75em"}}>
                         <Typography variant="h4">
                             {drawerTitle(the_page)}
                         </Typography>

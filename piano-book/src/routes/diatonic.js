@@ -25,7 +25,7 @@ import { teacherTextDia, studentTextDia } from '../js/diatonic_text';
 import { diatonicTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 export default function Diatonic() {
     const title = 'diatonic'  
     const song_data = diatonicTitles();
@@ -44,7 +44,7 @@ export default function Diatonic() {
                                                 width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
                         
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}>
                             Diatonic
                         </Typography>
@@ -58,7 +58,7 @@ export default function Diatonic() {
                             What&#39;s New in this Unit?
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Pitches
                         </Typography>
@@ -68,7 +68,7 @@ export default function Diatonic() {
                             1 are now responsible for two different notes.
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             New Transpositions
                         </Typography>
@@ -78,7 +78,7 @@ export default function Diatonic() {
                             "by ear", songs will continue to be notated in F and F# positions only.
                         </Typography>
                         
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             Removing Extraneous Chord Symbols
                         </Typography>

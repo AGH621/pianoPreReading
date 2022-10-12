@@ -36,7 +36,7 @@ import FullBlkI from "../images/chords_key_diagram/full_blk_tonic.png";
 import FullBlkV7 from "../images/chords_key_diagram/full_blk_dom.png";
 
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 export default function FourNote() {
     const title = 'four_note'  
     const song_data = fourNoteTitles();
@@ -57,9 +57,9 @@ export default function FourNote() {
                                width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
                     
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}> 
-                            4 Note Songs
+                            Four Note Songs
                         </Typography>
                     
                         <Typography paragraph>
@@ -70,7 +70,7 @@ export default function FourNote() {
                             What&#39;s New in this Unit?
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
                                                       paddingTop: '0.5em'}}>
                             New Pitches
                         </Typography>
@@ -92,7 +92,7 @@ export default function FourNote() {
                         </Grid>
                         
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
                                                       paddingTop: '0.5em'}}>
                             New Rhythms
                         </Typography>
@@ -134,7 +134,7 @@ export default function FourNote() {
                             </ul>
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
                                                       paddingTop: '0.5em'}}>
                             New Chords
                         </Typography>

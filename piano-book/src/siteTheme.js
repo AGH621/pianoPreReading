@@ -3,7 +3,12 @@ import { createTheme,
          ThemeProvider } from "@mui/material";
  
    
-const font = "'Nunito', sans-serif";  
+const body_fonts = "'Nunito', sans-serif";
+const head_fonts = `'Apple Chancery', 'Tangerine', 'cursive'`
+        
+
+
+        
          
 export const theme = createTheme({
     palette: {
@@ -30,35 +35,36 @@ export const theme = createTheme({
     },
     
     typography: {
-        fontFamily: font,
         h1: {
-            fontFamily: 'Rokkitt',
-            fontSize: '4.75rem',
+            fontFamily: head_fonts,
+            fontSize: '5rem',
             fontWeight: 600,
             textAlign: 'center'
         },
         h2: {
-            fontFamily: 'Rokkitt',
-            fontSize: '2.5rem',
-            fontWeight: 500,
+            fontFamily: head_fonts,
+            fontSize: '3rem',
+            fontWeight: 800,
         },
         h3: {
-            fontFamily: 'Rokkitt',
-            fontSize: '2rem',
-            fontWeight: 500,
+            fontFamily: head_fonts,
+            fontSize: '2em',
+            fontWeight: 600,
         },
         h4: {
-            fontFamily: 'Rokkitt',
-            fontSize: '1.75rem',
-            fontWeight: 600
+            fontFamily: head_fonts,
+            fontSize: '2rem',
+            fontWeight: 700
         },
         h5: {
-            fontFamily: 'Rokkitt',
+            fontFamily: head_fonts,
             fontSize: '1.5rem',
             fontWeight: 600
         },
         body1: {
+            fontFamily: 'Quicksand',
             fontSize: '1.25rem',
+            fontWeight: 300,
         },
         accordHead: {
             fontSize: '1.5rem',
@@ -71,6 +77,7 @@ export const theme = createTheme({
         chord: {
             fontFamily: 'Rokkitt',
             fontSize: '2.25rem',
+            fontWeight: 300,
         },
         
         

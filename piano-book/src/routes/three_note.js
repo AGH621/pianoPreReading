@@ -37,7 +37,7 @@ import SimpleBlkV7 from "../images/chords_key_diagram/simple_blk_dom.png";
 
 
 
-const drawerWidth = 275;
+const drawerWidth = 300;
 export default function ThreeNote() {
     const title = 'three_note'  
     const song_data = threeNoteTitles();
@@ -56,9 +56,9 @@ export default function ThreeNote() {
                                width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                         <Toolbar />
 
-                        <Typography variant="h1" sx={{textAlign: 'center',
+                        <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}> 
-                            3 Note Songs
+                            Three Note Songs
                         </Typography>
 
                         <Typography paragraph>
@@ -70,7 +70,7 @@ export default function ThreeNote() {
                             Reading the Symbolic Notation
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             Pitch
                         </Typography>
@@ -98,7 +98,7 @@ export default function ThreeNote() {
                             with the three black keys, press the "Black Key Melody" button on the song page to switch to those notes.
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                                         paddingTop: '0.5em'}}>
                             Rhythm
                         </Typography>
@@ -202,7 +202,7 @@ export default function ThreeNote() {
                             </ul>
                         </Typography>
                     
-                        <Typography variant="h3" color="secondary" sx={{marginLeft: '1.5em',
+                        <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
                                                       paddingTop: '0.5em'}}>
                             Chords
                         </Typography>

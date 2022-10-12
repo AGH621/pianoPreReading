@@ -1,0 +1,153 @@
+Converting Scores Automatically
+
+DONE) Should this score be converted?
+    Analyze the score with Music21 to answer the question.  Use these criteria:
+    	a. number of parts = 1
+
+        b. range
+            i. min = minor 3rd
+            ii. max = Major 6th
+            NOTE: two-note songs (mi-sol) should not be converted
+                
+        c. time signature: top number must be divisible by 2 or 3
+        
+        d. rhythm
+            i. if c = 2 but not 3: one or the other below must be true
+                1) piece contains ONLY: eighth, quarter, half notes
+                2) piece contains ONLY: quarter, half, whole notes
+                3) piece contains ONLY: sixteenth, eighth, quarter notes
+            ii. if c = 3: piece contains ONLY: eighth, quarter, dotted quarter, dotted half notes
+
+
+1) If a score is convertable, we need information about it:
+    Store this information in a JSON file in shared directory which both front and back end can read.
+        DONE. Pedagogical type of score
+            We need to know this in order to use the correct HTML template in React & to update the site navigation
+            i. 3-Note
+                1. do/re/mi      
+                2. mi/sol/la
+
+            ii. 4-Note
+                1. do/re/mi/sol
+
+            iii. Pentatonic
+                1. do/re/mi/sol/la
+
+            iv. Diatonic
+                1. do/re/mi/fa/sol
+
+            v. Extended Diatonic
+                1. do/re/mi/fa/sol/la
+                2. ti/do/re/mi/fa/sol
+
+        b. Necessary score data
+            Is required to render the song page. 
+            DONE. title - should be obvious
+
+            DONE. meter - a different HTML template needs to be employed for different meters
+                1. duple = top number of time signature divisible by 2 but not 3
+                2. triple = top number of time signature divisible by 3
+
+            iii. characteristics of each note - to map the note to the correct keyboard image, chord symbol, and (save for 3-note songs) finger number image
+                DONE. pitch - in solfege to avoid key signatures
+                2. duration
+                DONE. lyric syllable - to add the lyric to the symbolic notation
+
+
+2) Mapping score data to HTML
+    a. Page-level (template) mapping
+        i. duple song = duple_template_fingerings.html
+        ii. triple song = triple_template_fingerings.html
+
+        Note: pentatonic, diatonic, and extended diatonic templates have not been designed yet
+
+    b. Note-level mapping for 3-note and 4-note songs (pentatonic, diatonic, and extended diatonic notation system has not been designed yet)
+        i. Pitch
+            1. do
+                chord symbol     = I
+                keyboard diagram = images/single_f.png
+
+            2. re
+                chord symbol     = V7
+                keyboard diagram = images/single_g.png
+
+            3. mi
+                chord symbol     = I
+                keyboard diagram = images/single_a.png
+
+            4. sol
+                chord symblol    = V7
+                keyboard diagram = images/single_c.png
+
+        ii. Duration
+            1. duple meter - this mapping is relative based on the shortest note duration
+                shortest duration = keyboard diagram (1 image total)
+                middle duration = keyboard diagram + 1 copy of images/short_arrow.png (2 images total)
+                longest duration = keyboard diagram + 3 copies of images/short_arrow.png (4 images total)
+
+            2. triple meter
+                eighth note = keyboard diagram (1 image total)
+                quarter note = keyboard diagram + 1 copy of images/short_arrow.png (2 images total)
+                dotted quarter note = keyboard diagram + 2 copies of images/short_arrow.png (3 images total)
+                dotted half note = keyboard diagram + 5 copies of images/short_arrow.png (6 images total)
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
+Proposed structure of the Python Dictionary (after conversion to JSON Object) acting as interface 
+between the Python backend and JavaScript frontend reflecting the specification above
+
+--------------------------------------------------------------------------------------------------------
+
+score_meta = {score_base_data: {
+                                 title_: None,
+                                 pedagogical_score_type: None,
+                                 meter : None,
+                                 html_page_map: None
+                               },
+ 
+              notes: { [{duration:{}}]
+                     }[note_id, duration, lyrics, chord, note_map_id],
+             }
+
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
+Duration Mapping
+
+Map #1:  Absolute note duration names to numeric lengths
+--------------------------------------------------------------------------------------------------------
+Duration Name		Quarter Length x 1000
+
+Sixteenth		250
+Eighth			500
+Dotted Eighth		750
+Quarter			1000
+Dotted Quarter		1500
+Half			2000
+Dotted Half		3000
+Whole			4000
+Dotted Whole		6000
+Double Whole		8000
+
+Map #2:  Relative note duration names to numeric lengths in 3 different use cases
+--------------------------------------------------------------------------------------------------------
+Relative Name		Quarter Length x 1000 
+			Use Case 1		Use Case 2		Use Case 3
+Tiny			250			500			1000
+Short			500			1000			2000
+Kinda Short		750			1500			3000
+Medium			1000			2000			4000
+Kinda Long		1500			3000			6000
+Long			2000			4000			8000
+
+** If the smallest number is >1000, raise an exception because there is no way to figure out the relative names **
+(We should discuss this)
+
+
+
+
+
