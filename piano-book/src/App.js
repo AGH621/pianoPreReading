@@ -90,7 +90,7 @@ function TopNav() {
       <Box>
       <Tab label="Home" value="/home" to="/home" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
       </Box>
-      <Box sx={{marginLeft:"25em"}}>
+      <Box sx={{marginLeft:"7em"}}>
       <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
       <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
       <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>

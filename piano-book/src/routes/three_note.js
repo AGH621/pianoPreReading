@@ -61,21 +61,21 @@ export default function ThreeNote() {
                             Three Note Songs
                         </Typography>
 
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             These are the simplest songs in this book.  They contain the fewest musical elements.  
                             If your student or your child has no experience with music or piano, this is the place to start.
                         </Typography>
 
-                        <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
+                        <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '1em'}}>
                             Reading the Symbolic Notation
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             Pitch
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
                             diagram.  Different keys are different colors.  The notes F, G and A are featured in this unit&#39;s songs.   
                     
@@ -99,21 +99,21 @@ export default function ThreeNote() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             Rhythm
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             How long to hold down each note is indicated by one or more arrows following a keyboard diagram.
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em',
-                                                   textDecoration: 'underline'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em',
+                                                         textDecoration: 'underline'}}>
                             In duple meter:
                         </Typography>
                             
-                        <Typography paragraph sx={{marginLeft: '2.5em',
-                                                   marginTop: '-1em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em',
+                                                         marginTop: '-1em'}}>
                             <ul>
                                 <li>A diagram by itself = half a beat (an eighth note)
                                     <Box sx={{margin: "1em"}}>
@@ -151,13 +151,13 @@ export default function ThreeNote() {
                             </ul>
                         </Typography>
                             
-                        <Typography paragraph sx={{marginLeft: '2.5em',
-                                                   textDecoration: 'underline'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em',
+                                                         textDecoration: 'underline'}}>
                             In triple meter:
                         </Typography>
                             
-                        <Typography paragraph sx={{marginLeft: '2.5em',
-                                                   marginTop: '-1em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em',
+                                                         marginTop: '-1em'}}>
                             <ul>
                                 <li>A diagram by itself = a third of a beat (an eighth note)
                                     <Box sx={{margin: "1em"}}>
@@ -203,51 +203,51 @@ export default function ThreeNote() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                      paddingTop: '0.5em'}}>
+                                                      paddingTop: '1em'}}>
                             Chords
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             There are two ways chords are depicted on the song pages.  
                             <ol>
                                 <li>Each note has a Roman numeral chord symbol above it.
-                                    <Grid container>
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">I</span>
+                                    <Grid container sx={{marginBottom: '2em'}}>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">I</Typography>
                                         <br />
                                         <img className="pitch do" width="140px" src={SingleF} />
                                         </Box>
                         
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="dominant">V7</span>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">V7</Typography>
                                         <br />
                                         <img className="pitch re" width="140px" src={SingleG} />
                                         </Box>
                                     </Grid>
                                 </li>
-                                <li>By pressing either the "White 2-Note Chords" or "Black 2-Note Chords" will display the keyboard
-                                    diagrams showing the keys pressed down to form the dominant and tonic chords
-                                    <Grid container>
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">I</span>
+                                <li><Typography variant="body2">By pressing either the "White 2-Note Chords" or "Black 2-Note Chords" will display the keyboard
+                                    diagrams showing the keys pressed down to form the dominant and tonic chords</Typography>
+                                    <Grid container sx={{marginBottom: '1em'}}>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">I</Typography>
                                         <br />
                                         <img className="pitch do" width="140px" src={SimpleWhtI} />
                                         </Box>
                         
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="dominant">V7</span>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">V7</Typography>
                                         <br />
                                         <img className="pitch re" width="140px" src={SimpleWhtV7} />
                                         </Box>
                                 
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="tonic">I</span>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">I</Typography>
                                         <br />
                                         <img className="pitch do" width="140px" src={SimpleBlkI} />
                                         </Box>
                         
-                                        <Box sx={{margin: "1em"}}>
-                                        <span className="dominant">V7</span>
+                                        <Box sx={{marginRight: "2em"}}>
+                                        <Typography variant="chord">V7</Typography>
                                         <br />
                                         <img className="pitch re" width="140px" src={SimpleBlkV7} />
                                         </Box>

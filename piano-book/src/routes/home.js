@@ -3,7 +3,6 @@ Created by: Anne Hamill
 Created on: 25 August 2022
 Version: 0.3
 Description: Home page React component.  Build from MUI Accordian component and text files. 
-  
 */
 
 //External imports
@@ -14,8 +13,7 @@ import { Typography,
          Box,
          Paper,
          ThemeProvider } from '@mui/material';
-
-import { theme } from '../siteTheme.js'
+import { Image } from 'mui-image'
 
 //Internal imports
 import introText from '../data/home_page/home_intro.txt';
@@ -24,7 +22,7 @@ import { teacherTextHome, studentTextHome } from '../js/home_text';
 import appAccordian from '../components/app_accordian';
 import Footer from '../components/footer';
 import bannerPiano from '../images/piano_image.png';
-
+import { theme } from '../siteTheme.js'
 
 //Our home page.
 export default function Home() {
@@ -32,8 +30,9 @@ export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>
-                <Box sx={{padding: "5em",}} style={{ backgroundImage:`url(${bannerPiano})`, backgroundRepeat:"no-repeat", backgroundSize:"contain"}}>
-                    <Typography variant="h1" sx={{marginTop: "3.5em",}}>
+                <Box sx={{marginTop: "3em",}}>
+                    <Image src={bannerPiano} fit="contain" duration={10}/>
+                    <Typography variant="h1" sx={{paddingTop: "0.75em",}}>
                         Piano PreReading Book
                     </Typography>
         

@@ -67,13 +67,13 @@ export default function Footer() {
                       marginTop: "7.5em"
                       }}>
                     <Tabs value={currentTab}>
-                        <Box sx={{paddingTop:"0.75em"}}>
-                            <Typography variant="button" gutterBottom style={{padding: "1rem" }}> Copyright 2022 Anne G. Hamill </Typography>
+                        <Box sx={{marginTop: "0.75em"}}>
+                            <Typography variant="button" gutterBottom style={{padding: "1rem"}}> Copyright &copy; 2022 Anne G. Hamill </Typography>
                         </Box>
-                        <Box sx={{marginLeft: "30em"}}>
+                        <Box sx={{marginLeft: "10em"}}>
                             <Tab label="About" value="/about" to="/about" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="TaKaDiMi" value="/takadimi" to="/takadimi" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"},
-                                                                                                         paddingLeft: "2em"}}/>
+                                                                                                         marginLeft: "2em"}}/>
                         </Box>
                     </Tabs>
                 </AppBar>

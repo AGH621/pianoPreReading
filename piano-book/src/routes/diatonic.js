@@ -49,7 +49,7 @@ export default function Diatonic() {
                             Diatonic
                         </Typography>
                     
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             We continue to build on the foundation provided by earlier units.  Don&#39;t forget to go back to earlier units and apply new skills
                             to older songs.
                         </Typography>
@@ -59,31 +59,31 @@ export default function Diatonic() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             New Pitches
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             All of the first six notes of the major scale appear together for the first time.  This means that right hand finger 5 and left hand finger
                             1 are now responsible for two different notes.
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             New Transpositions
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             Students should play the songs in D and A positions in addition to the ones introduced in previous units.  Transposition needs to be done
                             "by ear", songs will continue to be notated in F and F# positions only.
                         </Typography>
                         
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             Removing Extraneous Chord Symbols
                         </Typography>
                         
-                        <Typography paragraph paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             Repeated chord symbols have been eliminated. Keep repeating the previous chord, until a new one is reached.
                         </Typography>
                     

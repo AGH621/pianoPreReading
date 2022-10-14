@@ -36,7 +36,7 @@ import FullBlkI from "../images/chords_key_diagram/full_blk_tonic.png";
 import FullBlkV7 from "../images/chords_key_diagram/full_blk_dom.png";
 
 
-const drawerWidth = 300;
+const drawerWidth = 310;
 export default function FourNote() {
     const title = 'four_note'  
     const song_data = fourNoteTitles();
@@ -62,7 +62,7 @@ export default function FourNote() {
                             Four Note Songs
                         </Typography>
                     
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             These are slightly more complex that the 3-Note songs (see below for details). All the 3-Note song elements are used, but new material is added.
                         </Typography>
                     
@@ -75,18 +75,18 @@ export default function FourNote() {
                             New Pitches
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em', marginBottom: '0.5em'}}>
                             Fifth note of the major scale.
                         </Typography>
                           
                         <Grid container sx={{marginLeft: '3em',
                                              marginBottom: '2em',}}> 
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>C in white key notation</Typography>
+                                <Typography variant="body2">C in white key notation</Typography>
                                 <img width="140px" src={SingleC} />
                             </Box>
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>C# in black key notation</Typography>
+                                <Typography variant="body2">C# in black key notation</Typography>
                                 <img width="140px" src={SingleCsharp} />
                             </Box>
                         </Grid>
@@ -97,11 +97,11 @@ export default function FourNote() {
                             New Rhythms
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em',
+                        <Typography variant="body2" sx={{marginLeft: '2.5em',
                                                    marginTop: '0.25em'}}>
                             1 beat rests 
                             <ul>
-                                <li> <Typography paragraph sx={{textDecoration: 'underline',
+                                <li> <Typography variant="body2" sx={{textDecoration: 'underline',
                                                                 marginTop: '-0.5em'}}>In duple meter</Typography>
                                     <Grid container>
                                         <Box sx={{marginBottom: "2em",
@@ -116,7 +116,7 @@ export default function FourNote() {
                                     </Grid>
                                 </li>
                             
-                                <li> <Typography paragraph sx={{textDecoration: 'underline'}}>In triple meter</Typography>
+                                <li> <Typography variant="body2" sx={{textDecoration: 'underline'}}>In triple meter</Typography>
                                     <Grid container>
                                         <Box sx={{marginLeft: "1em", paddingRight: "2em"}}>
                                             <img className="pitch rest" width="140px" src={Rest} />
@@ -139,26 +139,26 @@ export default function FourNote() {
                             New Chords
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2.5em'}}>
                             Full tonic and dominant chords using three notes.
                             <ul> 
-                                <li><Typography paragraph sx={{textDecoration: 'underline'}}>White Keys</Typography>
+                                <li><Typography variant="body2" sx={{textDecoration: 'underline'}}>White Keys</Typography>
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
-                                        <Box sx={{margin: "2em"}}>
+                                        <Box sx={{margin: "1em"}}>
                                         <Typography variant="chord">I</Typography>
                                         <br />
                                         <img width="140px" src={FullWhtI} />
                                         </Box>
                         
-                                        <Box sx={{margin: "2em"}}>
+                                        <Box sx={{margin: "1em"}}>
                                         <Typography variant="chord">V7</Typography>
                                         <br />
                                         <img width="130px" src={FullWhtV7} />
                                         </Box>
                                     </Grid>
                                 </li>
-                                <li><Typography paragraph sx={{textDecoration: 'underline'}}>Black Keys</Typography>
+                                <li><Typography variant="body2" sx={{textDecoration: 'underline'}}>Black Keys</Typography>
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
                                         <Box sx={{margin: "1em"}}>

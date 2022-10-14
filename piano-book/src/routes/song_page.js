@@ -58,43 +58,43 @@ function oneNote(a_note) {
 
     if (a_note === 'mi') {
         /*the_pix.push(<img className="fingerings" src={LfTwo} />)*/
-        the_pix.push(<Typography variant="chord">I</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">I</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch mi" width="140px" src={SingleA} />)
     }
     else if (a_note === 're') {
         /*the_pix.push(<img className="fingerings" src={LfThree} />)*/
-        the_pix.push(<Typography variant="chord">V7</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch re" width="140px" src={SingleG} />)
     }
     else if (a_note === 'do') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<Typography variant="chord">I</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">I</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch do" width="140px" src={SingleF} />)
     }
     else if (a_note === 'sol') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<Typography variant="chord">V7</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch sol" width="140px" src={SingleC} />)
     }
     else if (a_note === 'la') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<Typography variant="chord">IV</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">IV</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch la" width="140px" src={SingleD} />)
     }
     else if (a_note === 'fa') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<Typography variant="chord">IV</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">IV</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch fa" width="140px" src={SingleBflat} />)
     }
     else if (a_note === 'ti') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
-        the_pix.push(<Typography variant="chord">V7</Typography>)
+        the_pix.push(<Typography variant="chord" color="black">V7</Typography>)
         the_pix.push(<br />)
         the_pix.push(<img className="pitch ti" width="140px" src={SingleE} />)
     }

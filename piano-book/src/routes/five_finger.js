@@ -55,50 +55,51 @@ export default function FiveFinger() {
                             Five Finger Songs
                         </Typography>
                     
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             We continue to build on the foundation provided by the 3 and 4 note songs.
                         </Typography>
                     
-                        <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
+                        <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '1em'}}>
                             What&#39;s New in this Unit?
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '1em'}}>
                             New Pitches
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             Fourth note of the major scale.
                         </Typography>
                           
                         <Grid container sx={{marginLeft: '3em',
-                                             marginBottom: '2em',}}> 
+                                             marginBottom: '2em',
+                                             marginTop: '1em'}}> 
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>B-flat in F major notation</Typography>
+                                <Typography variant="body2">B-flat in F major notation</Typography>
                                 <img width="140px" src={SingleAsharp} />
                             </Box>
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>B in F-sharp major notation</Typography>
+                                <Typography variant="body2">B in F-sharp major notation</Typography>
                                 <img width="140px" src={SingleB} />
                             </Box>
                         </Grid>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '2em'}}>
                             New Skill: Transposing
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             Songs should now be played in C and G positions by ear in addition to the notated black and white keys
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                                        paddingTop: '0.5em'}}>
+                                                                             paddingTop: '2em'}}>
                             New Chords
                         </Typography>
                     
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             The subdominant (IV) chord
                             <ul> 
                                 <li>White Keys

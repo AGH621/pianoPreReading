@@ -2,14 +2,8 @@ import React from 'react';
 import { createTheme,
          ThemeProvider } from "@mui/material";
  
-   
-const body_fonts = "'Nunito', sans-serif";
 const head_fonts = `'Apple Chancery', 'Tangerine', 'cursive'`
-        
-
-
-        
-         
+                
 export const theme = createTheme({
     palette: {
       primary: {
@@ -64,9 +58,15 @@ export const theme = createTheme({
         body1: {
             fontFamily: 'Quicksand',
             fontSize: '1.25rem',
-            fontWeight: 300,
+            fontWeight: 400,
+        },
+        body2: {
+            fontFamily: 'Quicksand',
+            fontSize: '1.5rem',
+            fontWeight: 400,
         },
         accordHead: {
+            fontFamily: 'Quicksand',
             fontSize: '1.5rem',
             fontWeight: 600,
             textDecoration: 'underline'
@@ -79,7 +79,5 @@ export const theme = createTheme({
             fontSize: '2.25rem',
             fontWeight: 300,
         },
-        
-        
     },
   });         

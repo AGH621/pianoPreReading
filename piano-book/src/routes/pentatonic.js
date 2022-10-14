@@ -56,7 +56,7 @@ export default function Pentatonic() {
                             Pentatonic
                         </Typography>
                     
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             We continue to build on the foundation provided by earlier units.  Don&#39;t forget to go back to earlier units and apply new skills
                             to older songs.
                         </Typography>
@@ -70,19 +70,20 @@ export default function Pentatonic() {
                             New Pitches
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             Stretching out to reach the sixth note of the major scale.  These songs do not use the fourth note of the major scale, so 
                             Finger 4 plays the fifth note, and Finger 5 plays the 6th note
                         </Typography>
                         
                         <Grid container sx={{marginLeft: '3em',
-                                             marginBottom: '2em',}}> 
+                                             marginBottom: '2em',
+                                             marginTop: '2em'}}> 
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>D in F pentatonic notation</Typography>
+                                <Typography variant="body2">D in F pentatonic notation</Typography>
                                 <img width="140px" src={SingleD} />
                             </Box>
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography paragraph>D# in F# pentatonic notation</Typography>
+                                <Typography variant="body2">D# in F# pentatonic notation</Typography>
                                 <img width="140px" src={SingleDsharp} />
                             </Box>
                         </Grid>
@@ -92,7 +93,7 @@ export default function Pentatonic() {
                             New Notation
                         </Typography>
                         
-                        <Typography paragraph paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             The symbolic keyboard notation is now being replaced with colored rhythmic notation.  The color of the notes is the same as it
                             was in the keyboard notation.  A small keyboard diagram indicating which note is which color is included with each piece.
                         </Typography>

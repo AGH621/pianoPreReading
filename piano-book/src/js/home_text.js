@@ -9,8 +9,8 @@ export function teacherTextHome() {
         <Typography paragraph>
             Traditionally there is a gap in piano pedagogy between when a young child starts to learn piano and when he/she knows enough 
             music notation to play real songs.  It can be a frustrating time for the student (and their parents) because he/she wants to 
-            play real music, but has not acquired the skills to do so.  The purpose of this book is to fill this gap.  By using pictoral 
-            notation (showing which notes to press with colored keys) and songs with an extremely limited ranged, even students in their 
+            play real music, but has not acquired the skills to do so.  The purpose of this book is to fill this gap.  By using symbolic 
+            notation (showing which notes to press with colored keys) and songs with an extremely limited range, even students in their 
             first week of lessons can play authentic melodies successfully.
         </Typography>
         </Box>

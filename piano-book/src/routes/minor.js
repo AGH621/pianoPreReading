@@ -49,7 +49,7 @@ export default function Minor() {
                             Minor
                         </Typography>
                     
-                        <Typography paragraph>
+                        <Typography variant="body2">
                             We continue to build on the foundation provided by earlier units. Try transposing the major songs in the previous units into the minor mode.
                         </Typography>
                     
@@ -62,7 +62,7 @@ export default function Minor() {
                            The Minor Mode
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em', marginBottom: '1em'}}>
                             These songs are all in the minor mode, meaning a new placement for both left and right hand finger 3.
                         </Typography>
                     
@@ -71,7 +71,7 @@ export default function Minor() {
                             New Transpositions
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em', marginBottom: '1em'}}>
                             Students should play the songs in D and A positions in addition to the ones introduced in previous units.  Transposition needs to be done
                             "by ear", songs will continue to be notated in F and F# positions only.
                         </Typography>
@@ -81,7 +81,7 @@ export default function Minor() {
                             New Chords
                         </Typography>
                         
-                        <Typography paragraph sx={{marginLeft: '2.5em'}}>
+                        <Typography variant="body2" sx={{marginLeft: '2em', marginBottom: '1em'}}>
                             The minor versions of the tonic (i) and subdominant (iv). We will continue to use the dominant seventh as is.
                         </Typography>
                     

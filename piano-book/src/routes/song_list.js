@@ -33,7 +33,9 @@ function alphaSongs(letter) {
                 {song_data.map((song) => (song.startsWith(letter) ?
                     <ListItem key={song} disablePadding>
                         <ListItemButton to={`/${song}`} key={song}>
-                            <ListItemText primary={song} />
+                            
+                            <ListItemText primary={song}/>
+                            
                         </ListItemButton>
                     </ListItem>
                     :null
@@ -82,7 +84,7 @@ export default function SongList() {
                             <Typography variant="h2" id={`${alphabet}`} sx={{marginLeft: '0.35em'}}>
                                 {alphabet}
                             </Typography>
-                            <Typography variant="h4" id={`${alphabet}`} color="primary.dark">
+                            <Typography id={`${alphabet}`} color="primary.dark" sx={{fontSize: 72}}>
                                 {alphaSongs(alphabet)}
                             </Typography>
                                 <Divider sx={{margin: "0.5em"}}/> 
