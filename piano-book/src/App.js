@@ -41,7 +41,9 @@ import SongPage from "./routes/song_page";
 
 
 import { theme } from './siteTheme.js'
+import removeSong from './js/remove_songs';
 
+removeSong()
 
 //These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {

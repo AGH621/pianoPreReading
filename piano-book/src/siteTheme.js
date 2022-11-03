@@ -18,13 +18,35 @@ export const theme = createTheme({
         dark: '#2B3BA0'
       },
       backgrounds: {
-          nav: '#F2F4F3',
+          /*nav: '#F2F4F3',*/
+          /*nav: '#FBF3EB',*/
+          nav: '#FBF3EB',
           threeNote: '#E5EDFB',
           fourNote: '#FFF2E6',
           fiveFinger: '#FFFDE6',
           pentatonic: '#F8FEE5',
           diatonic: '#E2FBF5',
-          minor: '#EBFDE4'
+          minor: '#EBFDE4',
+          
+          /*
+              complimentary colors
+              nav: '#FBF3EB',
+              #E5FBE8
+              #FBE5F8
+              #E5EDFB
+              #F3E5FB
+              #E5FBF3
+              #A4B4AE
+          
+              #3b8d7d  ==>  possible font color
+              
+              nav: '#e5ded7',
+              #D7E5D7
+              #E5D7DE
+              #ded7e5
+              #d7dee5
+              #e5d7e5
+          */
       }
     },
     
@@ -57,7 +79,7 @@ export const theme = createTheme({
         },
         body1: {
             fontFamily: 'Quicksand',
-            fontSize: '1.25rem',
+            fontSize: '1.5rem',
             fontWeight: 400,
         },
         body2: {

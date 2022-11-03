@@ -24,9 +24,12 @@ import Footer from '../components/footer';
 import bannerPiano from '../images/piano_image.png';
 import { theme } from '../siteTheme.js'
 
+
+
 //Our home page.
 export default function Home() {
     const title = 'home'
+    
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>

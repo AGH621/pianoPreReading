@@ -51,7 +51,87 @@ export default function About() {
                         <p>Lately I have become interested in computer programming and website development.  
                         This site is my first foray into combining my first love, music, with my new love, programming.</p>
                     </Typography>
+                    
+                    <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.75em'}}>
+                        Project Specifics
+                    </Typography>
                 
+                    <Typography variant="h3" color="secondary.dark" sx={{paddingTop: '0.5em'}}>
+                        Why did we undertake this project?
+                    </Typography>
+                    <Typography variant="body1">
+                        <p>
+                        I thought up the concept for this book back in about 2012, having grown frustrated with the method book series I use to teach
+                        young kids.  All students, especially the young ones, want to play songs, and can tell the difference between 
+                        real ones, and those written as exercises in piano method books.  Problem is, these young students cannot read standard music 
+                        notation yet.  So, I transcribed some 3-note folksongs commonly sung in elementary music classes into graphic notation and printed
+                        them on 11x17 papers.  They were so well liked, I made sets of 4-note, pentatonic and diatonic songs.
+                        </p>
+                        <p>
+                        Fast forward about 10 years when I was trying to balance these 11x17 papers on the rickety music rack of a student&#145;s piano 
+                        keyboard. It would be so much better if the entire collection was digital!  No more juggling papers which quickly get rumpled. 
+                        Even better, the songs would be updatable and easily distributed to a much wider audience. I could even code it myself.
+                        </p>
+                    </Typography>
+                    <Typography variant="h3" color="secondary.dark" sx={{paddingTop:'1em'}}>
+                        What are our goals?
+                    </Typography>
+                    <Typography variant="body1">
+                        <p>
+                        I have several goals for this project, both pedagogically and technically.  
+                        </p>
+                        <p>
+                        Pedagogically, the first goal is to recreate the paper piano song book I wrote 10+ years ago, containing 4 units each growing 
+                        steadily more complex melodically, harmonically, and notationally. Secondly I would like to expand the book to include two additional 
+                        units, allowing students to seque smoothly to reading leadsheets upon completion. 
+                        </p>
+                        <p>
+                        Technically, my goal is to learn frontend web development to expand my skillset beyond Python.
+                        </p>
+                    </Typography>
+                    <Typography variant="h3" color="secondary.dark" sx={{paddingTop:'1em'}}>
+                        How did we create this site?
+                    </Typography>
+                    <Typography variant="body1">
+                        <ol>
+                        <li>
+                            <b>Backend</b>
+                            <p>The backend was written by a friend who offered to collaborate with me. It starts out with my score library, which consists 
+                            of about 1200 <a href="https://www.musicxml.com/">MusicXML</a> scores.  So a filtering mechanism was written based the pedagogical requirements (range, key, meter,
+                            and note values) of each section. The program (written in  <a href="https://www.python.org/">
+                            Python 3.10</a>) uses the <a href="http://web.mit.edu/music21/doc/about/about.html">Music21</a> library as a foundation for searching each score for the presence 
+                            of each requirement. Songs that match all of a section&#145;s requirements are added to a <a href="https://docs.fileformat.com/web/json/">JSON</a> object 
+                            which is passed to the frontend.
+                            </p>
+                            
+                        </li>
+                        <br />
+                        <li>
+                            <b>Frontend</b>
+                            <p>I take the <a href="https://docs.fileformat.com/web/json/">JSON</a> file with all the scores for the book (currently about 200) and use frontend web development tools to make it easily
+                            readable for both teachers and students.  These tools allow us to go beyond the printed page. Basic <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                             CSS</a> form the foundation of functionality. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a> gives the ability 
+                             to see each song in a different way, so teachers can assign songs on black keys or white keys, and student know exactly what to play. Song 
+                             pages are created dynamically, using a dynamic <a href="https://reactjs.org/">React</a> template which gives the melodies a unified appearance, 
+                             but are displayed in a way that makes sense musically. The polished navigation and layout, which are expected of modern websites, is provided 
+                             through the <a href="https://mui.com/">Material UI</a> library.
+                             </p>
+                        </li>
+                        </ol>
+                    </Typography>
+                    
+                </Box>
+                        
+                <Footer />
+                        
+                <Outlet />
+            </Paper>
+        </ThemeProvider>        
+    );
+}
+
+
+/*
                     <Typography variant="h2" color="secondary.dark" sx={{paddingTop: '0.75em'}}>
                         Project History
                     </Typography>
@@ -137,12 +217,7 @@ export default function About() {
                             </li>
                         </ul>
                     </Typography>
-                </Box>
-                        
-                <Footer />
-                        
-                <Outlet />
-            </Paper>
-        </ThemeProvider>        
-    );
-}
+*/
+
+
+
