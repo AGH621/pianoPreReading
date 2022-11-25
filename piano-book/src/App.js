@@ -136,7 +136,7 @@ export default function TabsRouter() {
             </BrowserRouter>
         );
     }
-    
+
     else {
         console.log('Change currentVersion in App.js immediately!')
         return (
@@ -154,7 +154,4 @@ export default function TabsRouter() {
             </BrowserRouter>
         );
     }
-    
-  
-  
 }
