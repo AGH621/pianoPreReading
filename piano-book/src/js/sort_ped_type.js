@@ -105,6 +105,13 @@ export function allTitles() {
         title_list.push(scoreDefs[next_song].score_data.title)
     }
     
+    // Use this code block to disable rendering minor songs.
+    // for (const next_song in scoreDefs) {
+    //         if (scoreDefs[next_song].score_data.pedagogical_score_type !== 'minor') {
+    //             title_list.push(scoreDefs[next_song].score_data.title)
+    //         }
+    //     }
+    
     //console.log(title_list)
     return title_list
 }
