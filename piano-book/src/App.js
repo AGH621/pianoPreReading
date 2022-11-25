@@ -2,12 +2,10 @@
 Created by: Anne Hamill
 Created on: 24 August 2022
 Version: 0.2
-Description: Application component. Foundation for the front end. 
-
-TODO: Override MUI styles on all components.   
+Description: Application component. Foundation for the front end.   
 */
 
-//Imports from React, MUI, react-router
+//External imports
 import * as React from "react";
 import { Box,
          Tabs,
@@ -40,10 +38,10 @@ import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
 
 
-import { theme } from './siteTheme.js'
-import removeSong from './js/remove_songs';
+import { theme } from './siteTheme.js';
+import scoreDefs from "./data/score_defs.json"
 
-//removeSong()
+const currentVersion = 2.0;
 
 //These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {
@@ -110,31 +108,53 @@ function TopNav() {
 
 //Routing for all the app links
 export default function TabsRouter() {
-  return (
-    <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/three_note" element={<ThreeNote />} />
-              <Route path=":songTitle" element={<SongPage />} />
-          <Route path="/four_note" element={<FourNote />} />
-          <Route path="/five_finger" element={<FiveFinger />} />
-          <Route path="/pentatonic" element={<Pentatonic />} />
-          <Route path="/diatonic" element={<Diatonic />} />
-          <Route path="/minor" element={<Minor />} />
-          <Route path="/song_list" element={<SongList />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/takadimi" element={<Takadimi />} />
+    if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
+        return (
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/three_note" element={<ThreeNote />} />
+                    <Route path=":songTitle" element={<SongPage />} />
+                    <Route path="/four_note" element={<FourNote />} />
+                    <Route path="/five_finger" element={<FiveFinger />} />
+                    <Route path="/pentatonic" element={<Pentatonic />} />
+                    <Route path="/diatonic" element={<Diatonic />} />
+                    <Route path="/minor" element={<Minor />} />
+                    <Route path="/song_list" element={<SongList />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/takadimi" element={<Takadimi />} />
 
-          <Route path="*"
-            element={
-              <main style={{ padding: "10rem" }}>
-                <p>404: This ain&#39;t gonna work. Sorry &#39;bout that.</p>
-              </main>
-            }
-          />
-        </Routes>
-        <TopNav />
-    </BrowserRouter>
-  );
+                    <Route path="*"
+                           element={
+                                <main style={{ padding: "10rem" }}>
+                                  <p>404: This ain&#39;t gonna work. Sorry &#39;bout that.</p>
+                                </main>
+                           }/>
+                </Routes>
+                <TopNav />
+            </BrowserRouter>
+        );
+    }
+    
+    else {
+        console.log('Change currentVersion in App.js immediately!')
+        return (
+            <BrowserRouter>
+                <Routes>
+                    <Route path="*"
+                           element={
+                                <main style={{ padding: "3rem" }}>
+                                    <p>503: Service Unavailable</p>
+                                    <p>Piano PreReading Book is being updated. Please check back later.</p>
+                                    <p>Thank you!</p>
+                                </main>
+                           }/>
+                </Routes>
+            </BrowserRouter>
+        );
+    }
+    
+  
+  
 }
