@@ -91,7 +91,7 @@ export function minorTitles() {
     
     let title_list = []
     for (const next_song in scoreDefs) {
-        if (scoreDefs[next_song].score_data.pedagogical_score_type === 'minor') {
+        if (scoreDefs[next_song].score_data.pedagogical_score_type === 'Natural Minor') {
             title_list.push(scoreDefs[next_song].score_data.title)
         }
     }
@@ -99,20 +99,19 @@ export function minorTitles() {
 }
 
 export function allTitles() {
-    
     let title_list = []
-    for (const next_song in scoreDefs) {
-        title_list.push(scoreDefs[next_song].score_data.title)
-    }
     
-    // Use this code block to disable rendering minor songs.
+    //Use this code block for all songs including minor ones.
     // for (const next_song in scoreDefs) {
-    //         if (scoreDefs[next_song].score_data.pedagogical_score_type !== 'minor') {
-    //             title_list.push(scoreDefs[next_song].score_data.title)
-    //         }
-    //     }
+    //     title_list.push(scoreDefs[next_song].score_data.title)
+    // }
     
-    //console.log(title_list)
+    //Use this code block to disable rendering minor songs.
+    for (const next_song in scoreDefs) {
+            if (scoreDefs[next_song].score_data.pedagogical_score_type !== 'Natural Minor') {
+                title_list.push(scoreDefs[next_song].score_data.title)
+            }
+        }
     return title_list
 }
 

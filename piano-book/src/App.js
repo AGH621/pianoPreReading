@@ -41,7 +41,7 @@ import SongPage from "./routes/song_page";
 import { theme } from './siteTheme.js';
 import scoreDefs from "./data/score_defs.json"
 
-const currentVersion = 2.0;
+const currentVersion = 3.0;
 
 //These two functions provide functionality for the top navigation tabs.
 function Router(props: { children?: React.ReactNode }) {
