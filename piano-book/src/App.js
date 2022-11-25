@@ -38,7 +38,7 @@ import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
 
 import { theme } from './siteTheme.js';
-import scoreDefs from "./data/score_defs.json"
+import scoreDefs from "./data/score_defs.json";
 
 //Current version to maintain compatability with the backend.
 const currentVersion = 3.0;
@@ -108,6 +108,7 @@ export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (
             <BrowserRouter>
+                <TopNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
@@ -129,7 +130,6 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-                <TopNav />
             </BrowserRouter>
         );
     }
