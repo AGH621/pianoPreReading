@@ -37,10 +37,10 @@ import About from "./routes/about";
 import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
 
-
 import { theme } from './siteTheme.js';
 import scoreDefs from "./data/score_defs.json"
 
+//Current version to maintain compatability with the backend.
 const currentVersion = 3.0;
 
 //These two functions provide functionality for the top navigation tabs.
@@ -73,40 +73,37 @@ function useRouteMatch(patterns: readonly []) {
 
 //This is the actual navbar with tabs.
 function TopNav() {
-  // You need to provide the routes in descendant order.
-  // This means that if you have nested routes like:
-  // users, users/new, users/edit.
-  // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/home", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
-  const currentTab = routeMatch?.pattern?.path;
-  
-  
+    // You need to provide the routes in descendant order.
+    // This means that if you have nested routes like: users, users/new, users/edit.
+    // Then the order should be ['users/add', 'users/edit', 'users'].
+    const routeMatch = useRouteMatch(["/home", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
+    const currentTab = routeMatch?.pattern?.path;
 
-  return (
-    <ThemeProvider theme={theme}>
-    <header>
-    <AppBar position="fixed" >
-    <Tabs value={currentTab}>
-      <Box>
-      <Tab label="Home" value="/home" to="/home" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      </Box>
-      <Box sx={{marginLeft:"7em"}}>
-      <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      {/*<Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>*/}
-      <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-      </Box>
-    </Tabs>
-    </AppBar>
-    </header>
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <header>
+                <AppBar position="fixed" >
+                    <Tabs value={currentTab}>
+                        <Box>
+                            <Tab label="Home" value="/home" to="/home" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                        </Box>
+                        <Box sx={{marginLeft:"7em"}}>
+                            <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            {/*<Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>*/}
+                            <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                        </Box>
+                    </Tabs>
+                </AppBar>
+            </header>
+        </ThemeProvider>
+    );
 }
 
-//Routing for all the app links
+//Routing for all the app links with simple version control.
 export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (

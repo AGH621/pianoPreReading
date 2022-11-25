@@ -1,4 +1,4 @@
-chan/*
+/*
 Created by: Anne Hamill
 Created on: 25 August 2022
 Version: 0.3
