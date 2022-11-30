@@ -22,11 +22,11 @@ export const theme = createTheme({
           /*nav: '#FBF3EB',*/
           nav: '#FFFBF1',
           threeNote: '#E5FBE8',
-          fourNote: '#FBE5F8',
+          fourNote: '#FFF3E9',
           fiveFinger: '#E5EDFB',
           pentatonic: '#FAFDE7',
           diatonic: '#E5FBF3',
-          minor: '#FFF3E9',
+          minor: '#FBE5F8',
           
           /*
               complimentary colors
@@ -72,7 +72,7 @@ export const theme = createTheme({
         },
         body1: {
             fontFamily: 'Quicksand',
-            fontSize: '1.5rem',
+            fontSize: '1.25rem',
             fontWeight: 400,
         },
         body2: {

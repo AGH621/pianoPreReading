@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 3.0
 Description: Home page React component.  Build from MUI Accordian component and text files. 
 */
 
@@ -28,6 +28,8 @@ import { theme } from '../siteTheme.js'
 
 //Our home page.
 export default function Home() {
+    
+    //Needed for the accordian component below.
     const title = 'home'
     
     return (

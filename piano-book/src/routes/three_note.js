@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.4
+Version: 3.0
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the 3-Note songs found in the ScoreDefs JSON file 
 imported from the backend.
@@ -17,7 +17,7 @@ import { Box,
          Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
-//Internal component imports
+//Internal imports
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
@@ -35,19 +35,22 @@ import SimpleWhtV7 from "../images/chords_key_diagram/simple_wht_dom.png";
 import SimpleBlkI from "../images/chords_key_diagram/simple_blk_tonic.png";
 import SimpleBlkV7 from "../images/chords_key_diagram/simple_blk_dom.png";
 
-
-
+//Define the width of the left-hand naviagation.
 const drawerWidth = 300;
+
 export default function ThreeNote() {
-    const title = 'three_note'  
+    
+    //Page title for accordian component.
+    const title = 'three_note'
+    
+    //Retrieve all the 3-Note titles.  
     const song_data = threeNoteTitles();
 
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>
                 <Box sx={{ display: 'flex'}}>
-                    
-                        {songDrawer(song_data, title)}
+                    {songDrawer(song_data, title)}
 
                     <Box sx= {{flexGrow: 1, 
                                paddingTop: 3,
@@ -58,7 +61,7 @@ export default function ThreeNote() {
 
                         <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}> 
-                            Three Note Songs
+                            Three Note
                         </Typography>
 
                         <Typography variant="body2">
@@ -203,7 +206,7 @@ export default function ThreeNote() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
-                                                      paddingTop: '1em'}}>
+                                                                             paddingTop: '1em'}}>
                             Chords
                         </Typography>
                     
@@ -258,7 +261,6 @@ export default function ThreeNote() {
                     
                         {appAccordian(teacherTextThree(), studentTextThree(), title)}
                     </Box> 
-                                     
                 </Box>
                 <Footer />      
                 

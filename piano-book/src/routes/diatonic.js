@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.4
+Version: 3.0
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the pentatonic songs found in the ScoreDefs JSON file 
 imported from the backend.  
@@ -17,7 +17,7 @@ import { Box,
          Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
-//Internal component imports
+//Internal imports
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
@@ -25,9 +25,15 @@ import { teacherTextDia, studentTextDia } from '../js/diatonic_text';
 import { diatonicTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js';
 
+//Define the width of the left-hand naviagation.
 const drawerWidth = 300;
+
 export default function Diatonic() {
-    const title = 'diatonic'  
+    
+    //Page title for accordian component.
+    const title = 'diatonic'
+    
+    //Retrieve all the 4-Note titles.  
     const song_data = diatonicTitles();
 
     return (

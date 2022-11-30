@@ -79,6 +79,7 @@ function TopNav() {
     const routeMatch = useRouteMatch(["/home", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
     const currentTab = routeMatch?.pattern?.path;
 
+    //The minor page has been disabled because Music21 cannot accurately translate minor pieces into solfege syllables.
     return (
         <ThemeProvider theme={theme}>
             <header>

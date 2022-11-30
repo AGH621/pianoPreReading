@@ -67,10 +67,10 @@ export default function Footer() {
                       marginTop: "7.5em"
                       }}>
                     <Tabs value={currentTab}>
-                        <Box sx={{marginTop: "0.75em"}}>
-                            <Typography variant="button" gutterBottom style={{padding: "1rem"}}> Copyright &copy; 2022 Anne G. Hamill </Typography>
+                        <Box sx={{paddingTop: "0.75rem"}}>
+                            <Typography variant="button" sx={{paddingLeft: "1em"}}> Copyright &copy; 2022 Anne G. Hamill </Typography>
                         </Box>
-                        <Box sx={{marginLeft: "10em"}}>
+                        <Box sx={{marginLeft: "10em", paddingTop: "0.25em"}}>
                             <Tab label="About" value="/about" to="/about" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="TaKaDiMi" value="/takadimi" to="/takadimi" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"},
                                                                                                          marginLeft: "2em"}}/>

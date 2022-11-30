@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.4
+Version: 3.0
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the 5-Finger songs found in the ScoreDefs JSON file 
 imported from the backend.
@@ -17,7 +17,7 @@ import { Box,
          Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
-//Internal component imports
+//Internal imports
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
@@ -25,15 +25,21 @@ import { fiveFingerTitles } from "../js/sort_ped_type";
 import { teacherTextFive, studentTextFive } from '../js/five_finger_text';
 import { theme } from '../siteTheme.js';
 
-//Internal image imports
+//Image imports
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
 import SingleB from "../images/notes_key_diagram/single_b.png";
 import FullWhtIV from "../images/chords_key_diagram/full_wht_subdom.png";
 import FullBlkIV from "../images/chords_key_diagram/full_blk_subdom.png";
 
+//Define the width of the left-hand naviagation.
 const drawerWidth = 300;
-export default function FiveFinger() {  
+
+export default function FiveFinger() {
+
+    //Page title for accordian component.  
     const title = 'five_finger'
+
+    //Retrieve all the 4-Note titles.
     const song_data = fiveFingerTitles();
 
     return (
@@ -43,7 +49,7 @@ export default function FiveFinger() {
 
                     {songDrawer(song_data, title)}       
 
-                    <Box sx= {{flexGrow: 1, 
+                    <Box sx= {{flexGrow: 3, 
                                paddingTop: 3,
                                paddingLeft: 8,
                                paddingRight: 6.5,
@@ -52,7 +58,7 @@ export default function FiveFinger() {
                     
                         <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}>
-                            Five Finger Songs
+                            Five Finger
                         </Typography>
                     
                         <Typography variant="body2">

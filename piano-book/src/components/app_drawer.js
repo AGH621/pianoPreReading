@@ -108,13 +108,13 @@ export function songDrawer(song_data, the_page) {
             return "Five Finger Titles"
             break;
         case 'pentatonic':
-            return "Pentatonic"
+            return "Pentatonic Titles"
             break;
         case 'diatonic':
-            return "Diatonic"
+            return "Diatonic Titles"
             break;
         case 'minor':
-            return "Minor"
+            return "Minor Titles"
             break;
         default:
             return "Song Titles"
@@ -136,8 +136,8 @@ export function songDrawer(song_data, the_page) {
                               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                            }}>
                     
-                    <Toolbar sx={{marginTop: "1em",
-                       marginBottom: "0.75em"}}>
+                    <Toolbar sx={{marginTop: "0.5em",
+                       marginBottom: "0.25em"}}>
                         <Typography variant="h4">
                             {drawerTitle(the_page)}
                         </Typography>
@@ -145,7 +145,7 @@ export function songDrawer(song_data, the_page) {
 
                     <Divider />
           
-                    <List>
+                    <List sx={{marginBottom: "5em"}}>
                         {song_data.map((song) => (
                             <ListItem key={song} disablePadding>
                                 <ListItemButton to={`/${song}`} key={song}>

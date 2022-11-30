@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.4
+Version: 3.0
 Description: Pedagogical-type page React component.  Built with MUI Accordian and Drawer components. 
 The drawer component uses react-router links to the 4-Note songs found in the ScoreDefs JSON file 
 imported from the backend.
@@ -17,7 +17,7 @@ import { Box,
          Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
-//Internal component imports
+//Internal imports
 import Footer from '../components/footer';
 import appAccordian from '../components/app_accordian';
 import { songDrawer } from '../components/app_drawer';
@@ -25,7 +25,7 @@ import { teacherTextFour, studentTextFour } from '../js/four_note_text';
 import { fourNoteTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js'
 
-//Internal image imports
+//Image imports
 import SingleC from "../images/notes_key_diagram/single_c.png";
 import SingleCsharp from "../images/notes_key_diagram/single_c_sharp.png";
 import Rest from "../images/notes_key_diagram/rest.png";
@@ -35,10 +35,15 @@ import FullWhtV7 from "../images/chords_key_diagram/full_wht_dom.png";
 import FullBlkI from "../images/chords_key_diagram/full_blk_tonic.png";
 import FullBlkV7 from "../images/chords_key_diagram/full_blk_dom.png";
 
+//Define the width of the left-hand naviagation.
+const drawerWidth = 300;
 
-const drawerWidth = 310;
 export default function FourNote() {
+    
+    //Page title for accordian component.
     const title = 'four_note'  
+    
+    //Retrieve all the 4-Note titles.
     const song_data = fourNoteTitles();
 
     return (
@@ -59,7 +64,7 @@ export default function FourNote() {
                     
                         <Typography variant="h1" sx={{textAlign: 'left',
                                                       paddingBottom: '0.25em'}}> 
-                            Four Note Songs
+                            Four Note
                         </Typography>
                     
                         <Typography variant="body2">
@@ -71,7 +76,7 @@ export default function FourNote() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
-                                                      paddingTop: '0.5em'}}>
+                                                                             paddingTop: '0.5em'}}>
                             New Pitches
                         </Typography>
                     
@@ -85,15 +90,15 @@ export default function FourNote() {
                                 <Typography variant="body2">C in white key notation</Typography>
                                 <img width="140px" src={SingleC} />
                             </Box>
+                        
                             <Box sx={{paddingRight: "4em"}}>
                                 <Typography variant="body2">C# in black key notation</Typography>
                                 <img width="140px" src={SingleCsharp} />
                             </Box>
                         </Grid>
                         
-                    
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
-                                                      paddingTop: '0.5em'}}>
+                                                                             paddingTop: '0.5em'}}>
                             New Rhythms
                         </Typography>
                     
@@ -101,8 +106,12 @@ export default function FourNote() {
                                                    marginTop: '0.25em'}}>
                             1 beat rests 
                             <ul>
-                                <li> <Typography variant="body2" sx={{textDecoration: 'underline',
-                                                                marginTop: '-0.5em'}}>In duple meter</Typography>
+                                <li> 
+                                    <Typography variant="body2" sx={{textDecoration: 'underline',
+                                                                      marginTop: '-0.5em'}}>
+                                          In duple meter
+                                    </Typography>
+                        
                                     <Grid container>
                                         <Box sx={{marginBottom: "2em",
                                                   marginLeft: "1em",
@@ -116,7 +125,11 @@ export default function FourNote() {
                                     </Grid>
                                 </li>
                             
-                                <li> <Typography variant="body2" sx={{textDecoration: 'underline'}}>In triple meter</Typography>
+                                <li>
+                                    <Typography variant="body2" sx={{textDecoration: 'underline'}}>
+                                        In triple meter
+                                    </Typography>
+                        
                                     <Grid container>
                                         <Box sx={{marginLeft: "1em", paddingRight: "2em"}}>
                                             <img className="pitch rest" width="140px" src={Rest} />
@@ -135,14 +148,17 @@ export default function FourNote() {
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1em',
-                                                      paddingTop: '0.5em'}}>
+                                                                             paddingTop: '0.5em'}}>
                             New Chords
                         </Typography>
                     
                         <Typography variant="body2" sx={{marginLeft: '2.5em'}}>
                             Full tonic and dominant chords using three notes.
                             <ul> 
-                                <li><Typography variant="body2" sx={{textDecoration: 'underline'}}>White Keys</Typography>
+                                <li>
+                                    <Typography variant="body2" sx={{textDecoration: 'underline'}}>
+                                        White Keys
+                                    </Typography>
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
                                         <Box sx={{margin: "1em"}}>
@@ -158,7 +174,11 @@ export default function FourNote() {
                                         </Box>
                                     </Grid>
                                 </li>
-                                <li><Typography variant="body2" sx={{textDecoration: 'underline'}}>Black Keys</Typography>
+                                <li>
+                                    <Typography variant="body2" sx={{textDecoration: 'underline'}}>
+                                        Black Keys
+                                    </Typography>
+                        
                                     <Grid container sx={{ marginTop: "-1.25em",
                                                           marginBottom: "1em"}}>
                                         <Box sx={{margin: "1em"}}>
@@ -180,7 +200,6 @@ export default function FourNote() {
                         {appAccordian(teacherTextFour(), studentTextFour(), title)}
                     </Box>               
                 </Box>
-                    
                 <Footer />
                     
                 <Outlet />                        

@@ -31,9 +31,9 @@ import { AppBar,
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
+import { Outlet, useParams } from "react-router-dom";
 
 // Internal imports
-import { Outlet, useParams } from "react-router-dom";
 import Footer from '../components/footer';
 import { getTitle } from "../js/sort_ped_type";
 import { TransposeRadioButtons } from "../js/view_transpose";
@@ -377,9 +377,9 @@ export default function SongPage() {
         if (a_song.score_data.pedagogical_score_type === '3-Note') {
             return (<ThreeNoteRadioButtons />)
         }
-        else if (a_song.score_data.pedagogical_score_type === '4-Note') {
-            return (<FourNoteRadioButtons />)
-        }
+        // else if (a_song.score_data.pedagogical_score_type === '4-Note') {
+        //     return (<FourNoteRadioButtons />)
+        // }
         else {
             return (<TransposeRadioButtons />)
         }
@@ -419,7 +419,7 @@ export default function SongPage() {
                                 justify="center" 
                                 alignItems="center" 
                                 columns={16}
-                                spacing={2}>
+                                spacing={1}>
                     {writeSong(the_song).map((value) => (
                         <Grid item xs={8} md={4} lg={2}>
                             {value}
@@ -435,7 +435,7 @@ export default function SongPage() {
                                 justify="center" 
                                 alignItems="center" 
                                 columns={12}
-                                spacing={2}>
+                                spacing={1}>
                     {writeSong(the_song).map((value) => (
                         <Grid item md={4} lg={2}>
                             {value}
@@ -471,7 +471,7 @@ export default function SongPage() {
                                         }}>
                                 <Toolbar sx={{marginTop: "0.5em"}}>
                                     <Typography variant="h4">
-                                        Song Views
+                                        Variations
                                     </Typography>
                                 </Toolbar>
                     
@@ -489,12 +489,13 @@ export default function SongPage() {
                         </Box>
                     </Paper>
 
-                    <Box sx= {{flexGrow: 1, p: 3,
+                    <Box sx= {{flexGrow: 1, paddingLeft: 6, paddingRight: 4, paddingTop: 1,
                                width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
                  
                         <Toolbar />
                                    
-                        <Typography variant="h1" sx={{textAlign: "center"}}>
+                        <Typography variant="h1" sx={{textAlign: "center",  
+                                                      marginBottom: ".05em"}}>
                             {params.songTitle}
                         </Typography>
 
