@@ -40,7 +40,7 @@ export default function Pentatonic() {
     //Page title for accordian component.
     const title = 'pentatonic'
     
-    //Retrieve all the 4-Note titles.  
+    //Retrieve all the Pentatonic titles.  
     const song_data = pentatonicTitles();
 
     return (

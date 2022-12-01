@@ -33,7 +33,7 @@ export default function Diatonic() {
     //Page title for accordian component.
     const title = 'diatonic'
     
-    //Retrieve all the 4-Note titles.  
+    //Retrieve all the Diatonic titles.  
     const song_data = diatonicTitles();
 
     return (

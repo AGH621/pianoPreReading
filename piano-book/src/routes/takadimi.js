@@ -1,4 +1,11 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: About page React component. 
+*/
 
+//External imports.
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import { Typography,
@@ -7,10 +14,11 @@ import { Typography,
          Paper,
          ThemeProvider } from '@mui/material';
 
+//Internal imports.
 import { theme } from '../siteTheme.js'
-
 import Footer from '../components/footer';
 
+//Data imports.
 import lesson1 from '../data/takadimi_files/Lesson_1.pdf';
 import lesson2 from '../data/takadimi_files/Lesson_2.pdf';
 import lesson3 from '../data/takadimi_files/Lesson_3.pdf';
@@ -20,8 +28,6 @@ import lesson6 from '../data/takadimi_files/Lesson_6.pdf';
 
 
 export default function Takadimi() {
- 
-    
     return (
             <ThemeProvider theme={theme}>
                 <Paper sx={{backgroundColor: "backgrounds.nav"}}>
@@ -30,8 +36,8 @@ export default function Takadimi() {
                         <Typography variant="h1" sx={{textAlign: "left"}}>Takadimi Counting Lessons</Typography>
         
                         <Typography paragraph sx={{marginTop: "1em"}}>
-                            These are a set of lessons I created several years ago in order to teach my private
-                            count rhythms using the <a href="http://www.takadimi.net/basics.html">takadimi</a> counting system.
+                            These are a set of lessons I created several years ago in order to teach my private students to
+                            count rhythms using the <a href="http://www.takadimi.net/basics.html">takadimi</a> system.
                             I am including them here because they were somewhat popular back when I sold them (and the Piano 
                             PreReading Book) on Teachers Pay Teachers.  Someday, I may add more lessons.
                             <br />

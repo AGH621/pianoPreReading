@@ -39,7 +39,7 @@ export default function FiveFinger() {
     //Page title for accordian component.  
     const title = 'five_finger'
 
-    //Retrieve all the 4-Note titles.
+    //Retrieve all the 5-Finger titles.
     const song_data = fiveFingerTitles();
 
     return (

@@ -1,7 +1,7 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.4
+Version: 3.0
 Description: About page React component. 
 */
 
@@ -63,9 +63,9 @@ export default function About() {
                         <p>
                         I thought up the concept for this book back in about 2012, having grown frustrated with the method book series I use to teach
                         young kids.  All students, especially the young ones, want to play songs, and can tell the difference between 
-                        real ones, and those written as exercises in piano method books.  Problem is, these young students cannot read standard music 
+                        real ones and those written as exercises in piano method books.  Problem is, these young students cannot read standard music 
                         notation yet.  So, I transcribed some 3-note folksongs commonly sung in elementary music classes into graphic notation and printed
-                        them on 11x17 papers.  They were so well liked, I made sets of 4-note, pentatonic and diatonic songs.
+                        them on 11x17 paper.  They were so well liked, I made sets of 4-note, pentatonic and diatonic songs.
                         </p>
                         <p>
                         Fast forward about 10 years when I was trying to balance these 11x17 papers on the rickety music rack of a student&#145;s piano 
@@ -97,10 +97,10 @@ export default function About() {
                         <li>
                             <b>Backend</b>
                             <p>The backend was written by a friend who offered to collaborate with me. It starts out with my score library, which consists 
-                            of about 1200 <a href="https://www.musicxml.com/">MusicXML</a> scores.  So a filtering mechanism was written based the pedagogical requirements (range, key, meter,
+                            of about 1200 <a href="https://www.musicxml.com/">MusicXML</a> scores.  A filtering mechanism was written based the pedagogical requirements (range, key, meter,
                             and note values) of each section. The program (written in  <a href="https://www.python.org/">
                             Python 3.10</a>) uses the <a href="http://web.mit.edu/music21/doc/about/about.html">Music21</a> library as a foundation for searching each score for the presence 
-                            of each requirement. Songs that match all of a section&#145;s requirements are added to a <a href="https://docs.fileformat.com/web/json/">JSON</a> object 
+                            of each requirement. Songs that match all of a section&#39;s requirements are added to a <a href="https://docs.fileformat.com/web/json/">JSON</a> object 
                             which is passed to the frontend.
                             </p>
                             
@@ -108,14 +108,15 @@ export default function About() {
                         <br />
                         <li>
                             <b>Frontend</b>
-                            <p>I take the <a href="https://docs.fileformat.com/web/json/">JSON</a> file with all the scores for the book (currently about 200) and use frontend web development tools to make it easily
+                            <p>I take the <a href="https://docs.fileformat.com/web/json/">JSON</a> file with all the scores for the book (currently about 100) and use frontend web development tools to make them easily
                             readable for both teachers and students.  These tools allow us to go beyond the printed page. Basic <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
                              CSS</a> form the foundation of functionality. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a> gives the ability 
                              to see each song in a different way, so teachers can assign songs on black keys or white keys, and student know exactly what to play. Song 
-                             pages are created dynamically, using a dynamic <a href="https://reactjs.org/">React</a> template which gives the melodies a unified appearance, 
+                             pages are created dynamically, using a <a href="https://reactjs.org/">React</a> template which gives the melodies a unified appearance, 
                              but are displayed in a way that makes sense musically. The polished navigation and layout, which are expected of modern websites, is provided 
                              through the <a href="https://mui.com/">Material UI</a> library.
                              </p>
+                             <p>The frontend code is available in a public repository on <a href="https://github.com/AGH621/pianoPreReading">Github</a>.</p>
                         </li>
                         </ol>
                     </Typography>

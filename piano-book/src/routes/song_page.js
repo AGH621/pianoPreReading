@@ -1,12 +1,8 @@
 /*
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 3.0
 Description: The page component where each song is rendered.
-
-TODO: 
-1) Make Song View drawer disapper completely and song the full-page width
-
 */
 
 //External Imports
@@ -52,10 +48,19 @@ import SingleBflat from "../images/notes_key_diagram/single_a_sharp.png";
 import Rest from "../images/notes_key_diagram/rest.png";
 import Arrow from "../images/notes_key_diagram/short_arrow.png";
 
-// Assemble the html pieces to render a single note in symbolic notation
+ 
 function oneNote(a_note) {
+/*
+    Input: The solfege syllable from one note of one song in the ScoreDefs JSON file.
+    Process: Assemble the html pieces to render a single pitch (without rhythm) in symbolic notation.
+    Output: An array of the pitch html elements.  
+*/    
+
+    //Define an array to hold each pitch element.
     let the_pix = [];
 
+    //Use this conditional to add the correct image and chord symbol for each note.
+    //I have tried to make this a switch statement, but it has never worked right.
     if (a_note === 'mi') {
         /*the_pix.push(<img className="fingerings" src={LfTwo} />)*/
         the_pix.push(<Typography variant="chord" color="black">I</Typography>)
@@ -98,7 +103,6 @@ function oneNote(a_note) {
         the_pix.push(<br />)
         the_pix.push(<img className="pitch ti" width="140px" src={SingleE} />)
     }
-    
     else if (a_note === 'rest') {
         /*the_pix.push(<img className="fingerings" src={LfFour} />)*/
         the_pix.push(<Typography variant="chord">(Rest)</Typography>)
@@ -108,12 +112,21 @@ function oneNote(a_note) {
     return the_pix
 }
 
-// Assemble the notes in order of appearance and add arrows to indicate the length of each note.  
-// Thus giving us the entire song as an array.
+
 function writeSong(a_song) {
+/*
+    Input: An entry in the ScoreDefs JSON object.
+    Process: Assemble the notes in order of appearance and add arrows to indicate the length of each note.  
+    Output: An array with both pitch and rhythm parts of each note.
+*/    
+    //Define an array to hold each note element. 
     let component_list = [];
 
+    //Iterate through each note in the song. Duration information is in the JSON object.
     for (let n=0; n<a_song.notes.length; n++) {
+        
+        //Again, tried this conditional as a switch statement, but never got it to function 
+        //The shortest note just has pitch elements.  
         if (a_song.notes[n].duration === 'Tiny') {
             component_list.push(
                 <Box>
@@ -126,6 +139,8 @@ function writeSong(a_song) {
                     </p>
                 </Box>
             )}
+            
+            //Add arrows to indicate longer notes. More arrows = longer notes.
             else if (a_song.notes[n].duration === 'Short') {
                 component_list.push(
                     <Box>
@@ -360,19 +375,23 @@ function writeSong(a_song) {
 const drawerWidth = 240;
 
 export default function SongPage() {
+    //Retreive the title of each song.
     let params = useParams();
     let the_song = getTitle(params.songTitle);
     
-    const [open, setOpen] = React.useState(true);
-  
-    const handleDrawerOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleDrawerClose = () => {
-      setOpen(false);
-    };
+    //These are for having a dynamic side navigation, which was never implemented.
+    // const [open, setOpen] = React.useState(true);
+    //
+    // const handleDrawerOpen = () => {
+    //   setOpen(true);
+    // };
+    //
+    // const handleDrawerClose = () => {
+    //   setOpen(false);
+    // };
     
+    //Call the component to render the radio buttons to view different variations of a song. Buttons are based
+    //on the pedagogical type of the song. Limited choices are currently available, but more are planned.
     function radioButtons(a_song) {
         if (a_song.score_data.pedagogical_score_type === '3-Note') {
             return (<ThreeNoteRadioButtons />)
@@ -385,6 +404,7 @@ export default function SongPage() {
         }
     }
     
+    //Load the correct background color for the page based on the score's pedagogical type.
     function songBackground(a_type) {
         switch(a_type) {
             case '3-Note':
@@ -411,8 +431,8 @@ export default function SongPage() {
         }
     }
     
+    //Define and control the layout grid for the page based on the meter of the song.
     function songGrid(a_meter){
-        console.log(a_meter)
         if (a_meter === 'Duple') {
             return (
                 <Grid container direction="row" 
@@ -424,7 +444,6 @@ export default function SongPage() {
                         <Grid item xs={8} md={4} lg={2}>
                             {value}
                         </Grid>        
-
                     ))}   
                 </Grid>
             )
@@ -446,7 +465,8 @@ export default function SongPage() {
             )
         }
     }
-    
+
+    //Take all the pieces defined about and render a song page.
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={songBackground(the_song.score_data.pedagogical_score_type)}>
