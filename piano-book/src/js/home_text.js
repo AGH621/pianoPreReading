@@ -1,9 +1,20 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: Text for the diatonic page. 
+*/
+
+//External imports
 import React from "react";
 import { Box,
          Typography
         } from "@mui/material";
 
 export function teacherTextHome() {
+/*
+    Teacher accordian text.
+*/
     return (
         <Box>
         <Typography paragraph>
@@ -18,6 +29,9 @@ export function teacherTextHome() {
 }
 
 export function studentTextHome() {
+/*
+    Student accordian text.
+*/
     return (
         <Box>
         <Typography paragraph>

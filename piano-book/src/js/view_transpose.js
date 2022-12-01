@@ -2,8 +2,9 @@
 Transpose
 Created By: Anne Hamill
 Date: 29 May 2022
-Description: Change the symbolic notation images from white key melody to black key and vice versa.
-TODO: Improve the two functions by figuring how to make the if/else if conditionals into switch statements.
+Version: 3.0
+Description: Change the symbolic notation images.
+TODO: Redesign to adhere to DRY principles, both within this module and between the other view modules.
 */
 
 //External imports
@@ -18,15 +19,14 @@ import { Divider,
 //Internal imports
 import { theme } from '../siteTheme.js';
 
-// import black key notes
+//Import black key diagrams
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
 import SingleGsharp from "../images/notes_key_diagram/single_g_sharp.png";
 import SingleFsharp from "../images/notes_key_diagram/single_f_sharp.png";
 import SingleCsharp from "../images/notes_key_diagram/single_c_sharp.png";
 import SingleDsharp from "../images/notes_key_diagram/single_d_sharp.png";
 
-
-//import white key notes
+//Import white key diagrams
 import SingleA from "../images/notes_key_diagram/single_a.png";
 import SingleG from "../images/notes_key_diagram/single_g.png";
 import SingleF from "../images/notes_key_diagram/single_f.png";
@@ -35,7 +35,6 @@ import SingleD from "../images/notes_key_diagram/single_d.png";
 import SingleB from "../images/notes_key_diagram/single_b.png";
 import SingleE from "../images/notes_key_diagram/single_e.png";
 
-
 //Import 2-Note chords
 import SimpleWhtI from "../images/chords_key_diagram/simple_wht_tonic.png";
 import SimpleWhtV7 from "../images/chords_key_diagram/simple_wht_dom.png";
@@ -43,7 +42,6 @@ import SimpleWhtIV from "../images/chords_key_diagram/simple_wht_subdom.png";
 import SimpleBlkI from "../images/chords_key_diagram/simple_blk_tonic.png";
 import SimpleBlkV7 from "../images/chords_key_diagram/simple_blk_dom.png";
 import SimpleBlkIV from "../images/chords_key_diagram/simple_blk_subdom.png";
-
 
 //Import 3-Note chords
 import FullWhtI from "../images/chords_key_diagram/full_wht_tonic.png";
@@ -60,12 +58,34 @@ Return a group of two radio buttons to change the melody from black keys to whit
 handleChange() controls each button's state and appearance.
 onClick() changes the notes appearing on the screen.
 */
-      //Set the buttons states.
-      const [selectedValue, setSelectedValue] = React.useState('a');
+    //Set the buttons states.
+    const [selectedValue, setSelectedValue] = React.useState('a');
 
-      const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedValue(event.target.value);
-      };
+    //Change the notes based on which radio button is clicked.
+    function handleChange(event: React.ChangeEvent<HTMLInputElement>){
+      setSelectedValue(event.target.value);
+
+      switch(event.target.value) {
+          case 'a':
+              white_transpose()
+              break;
+          case 'b':
+              black_transpose()
+              break;
+          case 'c':
+              white_2note_chords()
+              break;
+          case 'd':
+              black_2note_chords()
+              break;
+          case 'e':
+              white_3note_chords()
+              break;
+          case 'f':
+              black_3note_chords()
+              break;
+      }
+    };
     
     //React component to go export to the song page.
     return(
@@ -74,12 +94,12 @@ onClick() changes the notes appearing on the screen.
                 Melody
             </Typography>
             <div>
-                <Radio checked={selectedValue === 'a'} value="a" defaultChecked onChange={handleChange} onClick={white_transpose} />
+                <Radio checked={selectedValue === 'a'} value="a" defaultChecked onChange={handleChange} />
                 <span> White Key </span>
             </div>
         
             <div>
-                <Radio checked={selectedValue === 'b'} value="b" onChange={handleChange} onClick={black_transpose} />
+                <Radio checked={selectedValue === 'b'} value="b" onChange={handleChange} />
                 <span> Black Key</span>
             </div>
         
@@ -93,12 +113,12 @@ onClick() changes the notes appearing on the screen.
             </Typography>
         
             <div>
-                <Radio checked={selectedValue === 'c'} value="c" defaultChecked onChange={handleChange} onClick={white_2note_chords} />
+                <Radio checked={selectedValue === 'c'} value="c" defaultChecked onChange={handleChange} />
                 <span> White Key </span>
             </div>
         
             <div>
-                <Radio checked={selectedValue === 'd'} value="d" defaultChecked onChange={handleChange} onClick={black_2note_chords} />
+                <Radio checked={selectedValue === 'd'} value="d" defaultChecked onChange={handleChange} />
                 <span> Black Key </span>
             </div>
             
@@ -112,12 +132,12 @@ onClick() changes the notes appearing on the screen.
             </Typography>
         
             <div>
-                <Radio checked={selectedValue === 'e'} value="e" defaultChecked onChange={handleChange} onClick={white_3note_chords} />
+                <Radio checked={selectedValue === 'e'} value="e" defaultChecked onChange={handleChange} />
                 <span> White Key </span>
             </div>
         
             <div>
-                <Radio checked={selectedValue === 'f'} value="f" defaultChecked onChange={handleChange} onClick={black_3note_chords} />
+                <Radio checked={selectedValue === 'f'} value="f" defaultChecked onChange={handleChange} />
                 <span> Black Key </span>
             </div>
         </ThemeProvider>
@@ -125,6 +145,10 @@ onClick() changes the notes appearing on the screen.
 }   
 
 function black_transpose() {
+/*
+    Transponse the song to the black keys by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -133,6 +157,7 @@ function black_transpose() {
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = SingleFsharp
         }
@@ -158,6 +183,10 @@ function black_transpose() {
 
 
 function white_transpose() {
+/*
+    Transponse the song to the white keys by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fsharps = document.getElementsByClassName('pitch do')
     let the_gsharps = document.getElementsByClassName('pitch re')
     let the_asharps = document.getElementsByClassName('pitch mi')
@@ -166,6 +195,7 @@ function white_transpose() {
     let the_dsharps = document.getElementsByClassName('pitch la')
     let the_fs      = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fsharps.length; x++){
         the_fsharps[x].src = SingleF
         }
@@ -191,6 +221,10 @@ function white_transpose() {
 
 
 function white_2note_chords() {
+/*
+    Transponse the song to the white 2 note chords by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -199,6 +233,7 @@ function white_2note_chords() {
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = SimpleWhtI
         }
@@ -220,11 +255,14 @@ function white_2note_chords() {
     for (let x=0; x<the_es.length; x++){
         the_es[x].src = SimpleWhtV7
         }
-    
 }
 
 
 function black_2note_chords() {
+/*
+    Transponse the song to the black 2 note chords by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -233,6 +271,7 @@ function black_2note_chords() {
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = SimpleBlkI
         }
@@ -254,11 +293,14 @@ function black_2note_chords() {
     for (let x=0; x<the_es.length; x++){
         the_es[x].src = SimpleBlkV7
         }
-    
 }
 
 
 function white_3note_chords() {
+/*
+    Transponse the song to the white 3 note chords by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -267,6 +309,7 @@ function white_3note_chords() {
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = FullWhtI
         }
@@ -288,11 +331,13 @@ function white_3note_chords() {
     for (let x=0; x<the_es.length; x++){
         the_es[x].src = FullWhtV7
         }
-    
 }
 
-
 function black_3note_chords() {
+/*
+    Transponse the song to the black 3 note chords by remapping the solfege syllables to different diagrams.
+*/
+    //Find all the notes on the page by type.
     let the_fs = document.getElementsByClassName('pitch do')
     let the_gs = document.getElementsByClassName('pitch re')
     let the_as = document.getElementsByClassName('pitch mi')
@@ -301,6 +346,7 @@ function black_3note_chords() {
     let the_ds = document.getElementsByClassName('pitch la')
     let the_es = document.getElementsByClassName('pitch ti')
     
+    //Change the diagram for each instance of each type.
     for (let x=0; x<the_fs.length; x++){
         the_fs[x].src = FullBlkI
         }
@@ -322,5 +368,4 @@ function black_3note_chords() {
     for (let x=0; x<the_es.length; x++){
         the_es[x].src = FullBlkV7
         }
-    
 }

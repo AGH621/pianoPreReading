@@ -1,10 +1,23 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: Text for the diatonic page. 
+*/
+
+//External imports
 import React from "react";
 import { Box,
          Typography
         } from "@mui/material";
+        
+//Internal imports
 import { theme } from '../siteTheme.js';
 
 export function teacherTextFour() {
+/*
+    Teacher accordian text.
+*/
     return (
         <Box>
         <Typography variant="accordHead">
@@ -37,6 +50,9 @@ export function teacherTextFour() {
 }
 
 export function studentTextFour() {
+/*
+    Student accordian text.
+*/
     return (
         <Box>
         <Typography variant="accordHead">If your child is taking lessons</Typography>

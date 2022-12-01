@@ -1,3 +1,7 @@
+/*
+    Read a text file.
+*/
+
 import * as React from 'react';
 
 

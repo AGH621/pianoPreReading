@@ -1,10 +1,23 @@
+/*
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: Text for the diatonic page. 
+*/
+
+//External imports
 import React from "react";
 import { Box,
          Typography
         } from "@mui/material";
+
+//Internal imports
 import { theme } from '../siteTheme.js';
 
 export function teacherTextPent() {
+/*
+    Teacher accordian text.
+*/
     return (
         <Box>
         <Typography variant="accordHead">
@@ -37,6 +50,9 @@ export function teacherTextPent() {
 }
 
 export function studentTextPent() {
+/*
+    Student accordian text.
+*/
     return (
         <Box>
         <Typography variant="accordHead">If you are the parent of a young student</Typography>

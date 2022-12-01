@@ -1,25 +1,25 @@
 /*
 Transpose
 Created By: Anne Hamill
+Version: 0.1
 Date: 29 May 2022
 Description: Change the symbolic notation images from white key melody to black key and vice versa.
-TODO: Improve the two functions by figuring how to make the if/else if conditionals into switch statements.
+TODO: Archive this module? It looks to have been superceded by view_transpose.
 */
 
+//External imports
 import React, { useState } from "react";
-
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
-// import black key notes
+//Black key diagram imports
 import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
 import SingleGsharp from "../images/notes_key_diagram/single_g_sharp.png";
 import SingleFsharp from "../images/notes_key_diagram/single_f_sharp.png";
 import SingleCsharp from "../images/notes_key_diagram/single_c_sharp.png";
 import SingleDsharp from "../images/notes_key_diagram/single_d_sharp.png";
 
-
-//import white key notes
+//White key diagram imports
 import SingleA from "../images/notes_key_diagram/single_a.png";
 import SingleG from "../images/notes_key_diagram/single_g.png";
 import SingleF from "../images/notes_key_diagram/single_f.png";
@@ -32,9 +32,9 @@ import SingleE from "../images/notes_key_diagram/single_e.png";
 // Modify this function to transpose the melody to other positions (G, C, etc)
 export function MelodyRadioButtons() {
 /*
-Return a group of radio buttons to switch the melody to different positions.
-handleChange() controls each button's state and appearance.
-onClick() changes the notes appearing on the screen.
+    Return a group of radio buttons to switch the melody to different positions.
+    handleChange() controls each button's state and appearance.
+    onClick() changes the notes appearing on the screen.
 */
     //Set the buttons states.
     let [keys, setKeys] = useState("");
