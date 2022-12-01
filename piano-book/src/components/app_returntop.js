@@ -1,3 +1,13 @@
+/*
+Floating Button
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: A button that floats at the bottom of the page and returns the
+user to the top of the page when clicked.
+*/
+
+//Export imports
 import * as React from 'react';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';

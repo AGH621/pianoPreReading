@@ -1,3 +1,12 @@
+/*
+Footer
+Created by: Anne Hamill
+Created on: 25 August 2022
+Version: 3.0
+Description: The footer for each app page
+*/
+
+//External imports
 import * as React from "react";
 import { Box,
          Tabs,
@@ -16,13 +25,12 @@ import { MemoryRouter,
          Outlet } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
-
+//Internal imports
 import About from "../routes/about";
 import Takadimi from "../routes/takadimi";
-
 import { theme } from '../siteTheme.js'
 
-
+//These two functional control the routing of the footer hyperlinks.
 function Router(props: { children?: React.ReactNode }) {
   const { children } = props;
   if (typeof window === "undefined") {
@@ -57,7 +65,8 @@ export default function Footer() {
   // Then the order should be ['users/add', 'users/edit', 'users'].
   const routeMatch = useRouteMatch(["/about", "/takadimi"]);
   const currentTab = routeMatch?.pattern?.path;
-
+    
+    //The component itself.
     return (
         <ThemeProvider theme={theme}>
             <footer>

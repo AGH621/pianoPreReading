@@ -1,7 +1,8 @@
 /*
+Accordian Component
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 3.0
 Description: An MUI Accordian component which will be populated by text for teachers and parents.
 */
 
@@ -22,7 +23,14 @@ import { theme } from '../siteTheme.js';
 
 
 export default function appAccordian(tchText, stuText, the_page) {
+/*
+    Accordian component used on the home and unit pages.
+*/
     function backGround(a_page) {
+        /*
+            Make the accordian background color the same as the page's.
+            TODO: Repeated in other places, make it spin-off and import.
+        */
         switch(a_page) {
             case 'three_note':
                 return {backgroundColor: "backgrounds.threeNote", border: 1}

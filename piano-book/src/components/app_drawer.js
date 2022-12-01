@@ -1,12 +1,10 @@
 /*
+Drawer
 Created by: Anne Hamill
 Created on: 25 August 2022
-Version: 0.3
+Version: 3.0
 Description: An MUI Drawer component which will be populated by the titles of the songs
 in each pedagogical type.
-
-TODO: 1) Make more dynamic
-            a) drawer height = length of song list
 */
 
 //External imports
@@ -23,25 +21,37 @@ import { Box,
          ThemeProvider,
          Toolbar,
          Typography } from "@mui/material";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
+
+//Internal imports
 import { theme } from '../siteTheme.js';
 
-
+//Default drawer width
 const drawerWidth = 310;
+
+
 export function songDrawer(song_data, the_page) {
-    const [open, setOpen] = React.useState(true);
-  
-    const handleDrawerOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleDrawerClose = () => {
-      setOpen(false);
-    };
+/*
+    Drawer component for side navagation.  Either song titles within a unit, or variant views
+    of a song.
+*/
+    //Used for opening/closing the drawer. Never implemented.
+    // const [open, setOpen] = React.useState(true);
+    //
+    // const handleDrawerOpen = () => {
+    //   setOpen(true);
+    // };
+    //
+    // const handleDrawerClose = () => {
+    //   setOpen(false);
+    // };
     
     function backGround(a_page) {
+        /*
+            Make the drawer background color the same as the page's.
+            TODO: Repeated in other places, make it spin-off and import.
+        */
         switch(a_page) {
             case 'three_note':
                 return {backgroundColor: "backgrounds.threeNote", 
@@ -50,7 +60,6 @@ export function songDrawer(song_data, the_page) {
                         width: "240px",
                         height: "1000px"}
                 break;
-
             case 'four_note':
                 return {backgroundColor: "backgrounds.fourNote", 
                         marginTop: "3em",
@@ -97,6 +106,9 @@ export function songDrawer(song_data, the_page) {
     }
     
     function drawerTitle(a_title) {
+        /*
+            Give the song page drawer's a title matching the page.
+        */
         switch(a_title) {
         case 'three_note':
             return "Three Note Titles" 
@@ -122,6 +134,7 @@ export function songDrawer(song_data, the_page) {
         }
     };
     
+    //Render the drawer.
     return (
         <ThemeProvider theme={theme}>
             <Box component="nav"

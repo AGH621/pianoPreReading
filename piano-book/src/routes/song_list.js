@@ -24,7 +24,6 @@ import { Outlet, Link } from "react-router-dom";
 //Internal imports
 import Footer from '../components/footer';
 import returnTopFab from '../components/app_returntop';
-import FreeSolo from '../components/app_filter_search';
 import { allTitles } from "../js/sort_ped_type";
 import { theme } from '../siteTheme.js'
 
