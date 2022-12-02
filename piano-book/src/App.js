@@ -21,8 +21,7 @@ import { MemoryRouter,
          Link,
          matchPath,
          useLocation,
-         BrowserRouter,
-         HashRouter,} from "react-router-dom";
+         BrowserRouter,} from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
 //Our imports
@@ -109,7 +108,7 @@ function TopNav() {
 export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <TopNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -132,14 +131,14 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 
     else {
         console.log('Change currentVersion in App.js immediately!')
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <Routes>
                     <Route path="*"
                            element={
@@ -150,7 +149,7 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }
