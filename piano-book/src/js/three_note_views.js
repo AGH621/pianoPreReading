@@ -22,33 +22,6 @@ import { black_transpose,
          white_2note_chords,
          black_2note_chords, } from './transpose_funct.js';
 
-//Import black key notes
-import SingleAsharp from "../images/notes_key_diagram/single_a_sharp.png";
-import SingleGsharp from "../images/notes_key_diagram/single_g_sharp.png";
-import SingleFsharp from "../images/notes_key_diagram/single_f_sharp.png";
-import SingleCsharp from "../images/notes_key_diagram/single_c_sharp.png";
-import SingleDsharp from "../images/notes_key_diagram/single_d_sharp.png";
-
-
-//Import white key notes
-import SingleA from "../images/notes_key_diagram/single_a.png";
-import SingleG from "../images/notes_key_diagram/single_g.png";
-import SingleF from "../images/notes_key_diagram/single_f.png";
-import SingleC from "../images/notes_key_diagram/single_c.png";
-import SingleD from "../images/notes_key_diagram/single_d.png";
-import SingleB from "../images/notes_key_diagram/single_b.png";
-import SingleE from "../images/notes_key_diagram/single_e.png";
-
-
-//Import 2-Note chords
-import SimpleWhtI from "../images/chords_key_diagram/simple_wht_tonic.png";
-import SimpleWhtV7 from "../images/chords_key_diagram/simple_wht_dom.png";
-import SimpleWhtIV from "../images/chords_key_diagram/simple_wht_subdom.png";
-import SimpleBlkI from "../images/chords_key_diagram/simple_blk_tonic.png";
-import SimpleBlkV7 from "../images/chords_key_diagram/simple_blk_dom.png";
-import SimpleBlkIV from "../images/chords_key_diagram/simple_blk_subdom.png";
-
-
 export function ThreeNoteRadioButtons() {
 /*
     Return a group of two radio buttons to change the melody from black keys to white keys and the melody to chords.
@@ -62,10 +35,10 @@ export function ThreeNoteRadioButtons() {
 
         switch(event.target.value) {
             case 'a':
-                {white_transpose()}
+                white_transpose()
                 break;
             case 'b':
-                {black_transpose()}
+                black_transpose()
                 break;
             case 'c':
                 white_2note_chords()
@@ -83,7 +56,7 @@ export function ThreeNoteRadioButtons() {
                 Melody
             </Typography>
             <div>
-                <Radio checked={selectedValue === 'a'} value="a" defaultChecked onChange={handleChange} />
+                <Radio checked={selectedValue === 'a'} value="a" onChange={handleChange} />
                 <span> White Key </span>
             </div>
         
@@ -113,5 +86,4 @@ export function ThreeNoteRadioButtons() {
         </ThemeProvider>
     )
 } 
-
 
