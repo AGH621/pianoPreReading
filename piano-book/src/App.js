@@ -21,7 +21,7 @@ import { MemoryRouter,
          Link,
          matchPath,
          useLocation,
-         BrowserRouter } from "react-router-dom";
+         BrowserRouter,} from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
 //Our imports
@@ -94,7 +94,7 @@ function TopNav() {
                             <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-                            {/*<Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>*/}
+                            <Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                         </Box>
                     </Tabs>
