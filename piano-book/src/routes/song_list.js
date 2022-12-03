@@ -47,7 +47,7 @@ function alphaSongs(letter) {
             <Masonry columns={4} spacing={0.75}>
                 {song_data.map((song) => (song.startsWith(letter) ?
                     <ListItem key={song} disablePadding>
-                        <ListItemButton to={`#/${song}`} key={song}>
+                        <ListItemButton to={`/${song}`} key={song}>
                             
                             <ListItemText primary={song}/>
                             
@@ -78,7 +78,7 @@ export default function SongList() {
                         <Grid container spacing={{ xs: 2, md: 2 }}>
                             {Alphabet.map((Alphabet) => (
                                 <Grid item key={Alphabet}>
-                                    <Button variant="outlined" size="large" href={`#/song_list/${Alphabet}`} sx={{borderColor:"primary.dark",
+                                    <Button variant="outlined" size="large" href={`#${Alphabet}`} sx={{borderColor:"primary.dark",
                                                                                                       '&:hover': {backgroundColor: "primary.light", 
                                                                                                                   borderColor:"primary.dark"}}}>
                                         <Typography variant="h6" color="primary.dark">{Alphabet}</Typography>
@@ -94,10 +94,10 @@ export default function SongList() {
                         render them by calling the alphaSongs function */}
                         {Alphabet.map((alphabet) => (
                         <Box>  
-                            <Typography variant="h2" id={`#/song_list/${alphabet}`} sx={{marginLeft: '0.35em'}}>
+                            <Typography variant="h2" id={`${alphabet}`} sx={{marginLeft: '0.35em'}}>
                                 {alphabet}
                             </Typography>
-                            <Typography id={`#/song_list/${alphabet}`} color="primary.dark" sx={{fontSize: 72}}>
+                            <Typography id={`${alphabet}`} color="primary.dark" sx={{fontSize: 72}}>
                                 {alphaSongs(alphabet)}
                             </Typography>
                                 <Divider sx={{margin: "0.5em"}}/> 
