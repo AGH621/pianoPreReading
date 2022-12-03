@@ -109,7 +109,7 @@ function TopNav() {
 export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <TopNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -132,14 +132,14 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 
     else {
         console.log('Change currentVersion in App.js immediately!')
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route path="*"
                            element={
@@ -150,7 +150,7 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
