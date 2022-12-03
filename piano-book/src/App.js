@@ -21,7 +21,8 @@ import { MemoryRouter,
          Link,
          matchPath,
          useLocation,
-         BrowserRouter,} from "react-router-dom";
+         BrowserRouter,
+         HashRouter,} from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
 //Our imports
