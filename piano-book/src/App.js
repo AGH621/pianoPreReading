@@ -95,7 +95,7 @@ function TopNav() {
                             <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-                            <Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            {/*<Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>*/}
                             <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                         </Box>
                     </Tabs>
@@ -109,13 +109,17 @@ function TopNav() {
 export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (
+<<<<<<< HEAD
             <>
+=======
+            <BrowserRouter>
+>>>>>>> development
                 <TopNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/three_note" element={<ThreeNote />} />
-                    <Route path=":songTitle" element={<SongPage />} />
+                        <Route path="/:songTitle" element={<SongPage />} />
                     <Route path="/four_note" element={<FourNote />} />
                     <Route path="/five_finger" element={<FiveFinger />} />
                     <Route path="/pentatonic" element={<Pentatonic />} />
@@ -132,14 +136,22 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
+<<<<<<< HEAD
             </>
+=======
+            </BrowserRouter>
+>>>>>>> development
         );
     }
 
     else {
         console.log('Change currentVersion in App.js immediately!')
         return (
+<<<<<<< HEAD
             
+=======
+            <BrowserRouter>
+>>>>>>> development
                 <Routes>
                     <Route path="*"
                            element={
@@ -150,7 +162,11 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
+<<<<<<< HEAD
             
+=======
+            </BrowserRouter>
+>>>>>>> development
         );
     }
 }
