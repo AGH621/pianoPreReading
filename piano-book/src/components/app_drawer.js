@@ -161,7 +161,7 @@ export function songDrawer(song_data, the_page) {
                     <List sx={{marginBottom: "5em"}}>
                         {song_data.map((song) => (
                             <ListItem key={song} disablePadding>
-                                <ListItemButton to={`/${song}`} key={song}>
+                                <ListItemButton to={`/song_list/${song}`} key={song}>
                                     <ListItemText primary={song} sx={{color: "primary.dark"}}/>
                                 </ListItemButton>
                             </ListItem>

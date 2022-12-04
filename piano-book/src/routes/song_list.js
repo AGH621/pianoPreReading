@@ -47,7 +47,7 @@ function alphaSongs(letter) {
             <Masonry columns={4} spacing={0.75}>
                 {song_data.map((song) => (song.startsWith(letter) ?
                     <ListItem key={song} disablePadding>
-                        <ListItemButton to={`/${song}`} key={song}>
+                        <ListItemButton to={`/song_list/${song}`} key={song}>
                             
                             <ListItemText primary={song}/>
                             
