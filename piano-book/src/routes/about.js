@@ -96,7 +96,7 @@ export default function About() {
                         <ol>
                         <li>
                             <b>Backend</b>
-                            <p>The backend was written by a friend who offered to collaborate with me. It starts out with my score library, which consists 
+                        <p>The backend was written by Jim Kaubisch (a friend) who offered to collaborate with me. It starts out with my score library, which consists 
                             of about 1200 <a href="https://www.musicxml.com/">MusicXML</a> scores.  A filtering mechanism was written based the pedagogical requirements (range, key, meter,
                             and note values) of each section. The program (written in  <a href="https://www.python.org/">
                             Python 3.10</a>) uses the <a href="http://web.mit.edu/music21/doc/about/about.html">Music21</a> library as a foundation for searching each score for the presence 

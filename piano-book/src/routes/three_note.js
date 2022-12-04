@@ -80,7 +80,8 @@ export default function ThreeNote() {
                     
                         <Typography variant="body2" sx={{marginLeft: '2em'}}>
                             The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
-                            diagram.  Different keys are different colors.  The notes F, G and A are featured in this unit&#39;s songs.   
+                            diagram.  Different keys are different colors.  The notes F, G and A are featured in this unit&#39;s songs.  (It is assumed that 
+                            these notes are adjacent to each other within the same octave on the keyboard.) 
                     
                             <Grid container sx={{marginLeft: '1em'}}>
                                 <Box sx={{padding: "1em"}}>
@@ -96,9 +97,9 @@ export default function ThreeNote() {
                                 </Box>
                             </Grid>
                     
-                            These notes are easy to locate, just to the left of the three black keys.  I choose to 
-                            start with white notes, because they are wider and easier for little fingers to play. If you would rather start
-                            with the three black keys, press the "Black Key Melody" button on the song page to switch to those notes.
+                            These notes are easy to locate, just to the left of the three black keys. I choose to start with white notes, because they are wider and easier for little fingers 
+                            to play. If you would rather start with the three black keys, press the "Black Key Melody" button on the song page to switch 
+                            to those notes.
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',

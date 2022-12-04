@@ -145,7 +145,7 @@ export function songDrawer(song_data, the_page) {
 
                 <Drawer PaperProps={{ sx: backGround(the_page) }} 
                         variant="permanent" anchor="left" open={open}
-                        sx={{ display: { xs: 'block', sm: 'block' },
+                        sx={{ display: 'block',
                               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                            }}>
                     
