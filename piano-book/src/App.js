@@ -115,13 +115,19 @@ export default function TabsRouter() {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/three_note" element={<ThreeNote />} />
-                        <Route path="/:songTitle" element={<SongPage />} />
+                        <Route path="/three_note/:songTitle" element={<SongPage />} />
                     <Route path="/four_note" element={<FourNote />} />
+                        <Route path="/four_note/:songTitle" element={<SongPage />} />
                     <Route path="/five_finger" element={<FiveFinger />} />
+                        <Route path="/five_finger/:songTitle" element={<SongPage />} />
                     <Route path="/pentatonic" element={<Pentatonic />} />
+                        <Route path="/pentatonic/:songTitle" element={<SongPage />} />
                     <Route path="/diatonic" element={<Diatonic />} />
+                        <Route path="/diatonic/:songTitle" element={<SongPage />} />
                     <Route path="/minor" element={<Minor />} />
+                        <Route path="/minor/:songTitle" element={<SongPage />} />
                     <Route path="/song_list" element={<SongList />} />
+                        <Route path="/song_list/:songTitle" element={<SongPage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/takadimi" element={<Takadimi />} />
 
