@@ -95,7 +95,7 @@ function TopNav() {
                             <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Pentatonic" value="/pentatonic" to="/pentatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="Diatonic" value="/diatonic" to="/diatonic" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
-                            <Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
+                            {/*<Tab label="Minor" value="/minor" to="/minor" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>*/}
                             <Tab label="Song List" value="/song_list" to="/song_list" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                         </Box>
                     </Tabs>
@@ -115,7 +115,7 @@ export default function TabsRouter() {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/three_note" element={<ThreeNote />} />
-                    <Route path=":songTitle" element={<SongPage />} />
+                        <Route path="/:songTitle" element={<SongPage />} />
                     <Route path="/four_note" element={<FourNote />} />
                     <Route path="/five_finger" element={<FiveFinger />} />
                     <Route path="/pentatonic" element={<Pentatonic />} />
