@@ -116,6 +116,7 @@ export default function TabsRouter() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/how_to" element={<HowTo />} />
                     <Route path="/three_note" element={<ThreeNote />} />
                         <Route path=":songTitle" element={<SongPage />} />
                     <Route path="/four_note" element={<FourNote />} />
