@@ -58,8 +58,8 @@ export default function appAccordian(tchText, stuText, the_page) {
 
     return (
         <ThemeProvider theme={theme}>
-            <Box sx={{paddingLeft: "2.5em",
-                      paddingRight: "2em",
+            <Box sx={{paddingLeft: "6em",
+                      paddingRight: "6em",
                       paddingTop: "2em" }}>
                 <Accordion sx={backGround(the_page)}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}
@@ -76,8 +76,8 @@ export default function appAccordian(tchText, stuText, the_page) {
                 </Accordion>
             </Box>
                         
-            <Box sx={{paddingLeft: "2.5em",
-                      paddingRight: "2em",
+            <Box sx={{paddingLeft: "6em",
+                      paddingRight: "6em",
                       paddingTop: "2em" }}>
                 <Accordion sx={backGround(the_page)}>
                     <AccordionSummary

@@ -41,7 +41,9 @@ export default function Home() {
                         Piano PreReading Book
                     </Typography>
         
-                    <Typography variant="body1" sx={{margin: "2em"}}>
+                    <Typography variant="body1" sx={{marginTop: "2em",
+                                                     marginLeft: "5em",
+                                                     marginRight: "5em"}}>
                         {readText(introText)}
                     </Typography>
 

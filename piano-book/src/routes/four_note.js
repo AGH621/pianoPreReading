@@ -87,12 +87,12 @@ export default function FourNote() {
                         <Grid container sx={{marginLeft: '3em',
                                              marginBottom: '2em',}}> 
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography variant="body2">C in white key notation</Typography>
+                                <Typography variant="body2" sx={{marginBottom: "0.5em"}}>C in white key notation</Typography>
                                 <img width="140px" src={SingleC} />
                             </Box>
                         
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography variant="body2">C# in black key notation</Typography>
+                                <Typography variant="body2" sx={{marginBottom: "0.5em"}}>C# in white key notation</Typography>
                                 <img width="140px" src={SingleCsharp} />
                             </Box>
                         </Grid>
@@ -102,20 +102,21 @@ export default function FourNote() {
                             New Rhythms
                         </Typography>
                     
-                        <Typography variant="body2" sx={{marginLeft: '2.5em',
-                                                   marginTop: '0.25em'}}>
-                            1 beat rests 
+                    <Typography variant="body2" sx={{marginLeft: '2em',
+                                                     textDecoration: 'underline'}}>
+                        Duple meter
+                    </Typography>
+                        
+                    <Typography variant="body2" sx={{marginLeft: '2em',
+                                                     marginTop: '-1em'}}>
                             <ul>
                                 <li> 
-                                    <Typography variant="body2" sx={{textDecoration: 'underline',
-                                                                      marginTop: '-0.5em'}}>
-                                          In duple meter
+                                    <Typography variant="body2" sx={{paddingTop: "0.5em"}}>
+                                    Quarter rest
                                     </Typography>
                         
                                     <Grid container>
-                                        <Box sx={{marginBottom: "2em",
-                                                  marginLeft: "1em",
-                                                  paddingRight: "2em"}}>
+                                        <Box sx={{paddingRight: "2em", marginTop: "0.5em"}}>
                                             <img className="pitch rest" width="140px" src={Rest} />
                                         </Box>
                     
@@ -124,14 +125,24 @@ export default function FourNote() {
                                         </Box>
                                     </Grid>
                                 </li>
-                            
+                            </ul>
+                        </Typography>
+                        
+                    <Typography variant="body2" sx={{marginLeft: '2em',
+                                                     textDecoration: 'underline'}}>
+                        Triple meter
+                    </Typography>
+                        
+                    <Typography variant="body2" sx={{marginLeft: '2em',
+                                                     marginTop: '-1em'}}>
+                            <ul>
                                 <li>
-                                    <Typography variant="body2" sx={{textDecoration: 'underline'}}>
-                                        In triple meter
+                                    <Typography variant="body2" sx={{paddingTop: "0.5em"}}>
+                                        Dotted quarter rest
                                     </Typography>
                         
                                     <Grid container>
-                                        <Box sx={{marginLeft: "1em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingRight: "2em", marginTop: "0.5em"}}>
                                             <img className="pitch rest" width="140px" src={Rest} />
                                         </Box>
                                     

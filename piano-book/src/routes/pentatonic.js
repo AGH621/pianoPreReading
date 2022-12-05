@@ -86,11 +86,11 @@ export default function Pentatonic() {
                                              marginBottom: '2em',
                                              marginTop: '2em'}}> 
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography variant="body2">D in F pentatonic notation</Typography>
+                                <Typography variant="body2" sx={{marginBottom: "0.5em"}}>D in F pentatonic notation</Typography>
                                 <img width="140px" src={SingleD} />
                             </Box>
                             <Box sx={{paddingRight: "4em"}}>
-                                <Typography variant="body2">D# in F# pentatonic notation</Typography>
+                                <Typography variant="body2" sx={{marginBottom: "0.5em"}}>D# in F# pentatonic notation</Typography>
                                 <img width="140px" src={SingleDsharp} />
                             </Box>
                         </Grid>
