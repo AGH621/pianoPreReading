@@ -1,4 +1,0 @@
-Style changes:
-    1) Navigation = at least 2 points bigger. 
-    2) Text color = lighter that the app bar background. 
-    3) Replace "Home" with a Logo
