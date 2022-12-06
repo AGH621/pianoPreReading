@@ -70,7 +70,7 @@ export default function HowTo() {
                     <Typography variant="body1" sx={{marginBottom: "2em",
                                                      marginLeft: "5em"}}>
         
-                                And these notes are adjacent to each other:
+                                And these <b>notes</b> are adjacent to each other:
                                 
                                 <Grid container>
                                     <Box sx={{paddingTop: "1em",
@@ -109,22 +109,34 @@ export default function HowTo() {
                     <Typography variant="body1" sx={{marginBottom: "2em",
                                                      marginLeft: "2.5em"}}>
                     Each keyboard diagram can be thought of as an eighth note.  It is the shortest note value found this book.
-                    To indicate longer note values, arrows are added after a diagram.  Each arrow represents an additional eighth
-                    note&#39;s length. For example:
+                    To indicate longer note values, arrows are added after a diagram to show how long the key should remain pressed. 
+                    Each arrow represents an additional eighth note&#39;s length. For example:
                     </Typography>
                     
                     <Typography variant="body1" sx={{marginBottom: "2em",
                                                      marginLeft: "5em"}}>
-                                This is a quarter note
-                                <Grid container>
-                                    <Box sx={{paddingTop: "1em",
-                                              paddingRight: "1em",}}>
-                                        <img className="pitch re" width="140px" src={SingleA} />
-                                    </Box>
-                                    <Box sx={{paddingTop: "2.5em"}}>
-                                        <img class="lengthen" width="140px" src={Arrow} />
-                                    </Box>
-                                </Grid>
+                        This is an eigth note
+                        <Grid container>
+                            <Box sx={{paddingTop: "1em",
+                                      paddingRight: "1em",}}>
+                                <img className="pitch re" width="140px" src={SingleA} />
+                            </Box>
+                        </Grid>
+                    </Typography>
+                    
+                    <Typography variant="body1" sx={{marginBottom: "2em",
+                                                     marginLeft: "5em"}}>
+                        This is a quarter note
+                        <Grid container>
+                            <Box sx={{paddingTop: "1em",
+                                      paddingRight: "1em",}}>
+                                <img className="pitch re" width="140px" src={SingleA} />
+                            </Box>
+                            <Box sx={{paddingTop: "0.75em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
+                                <img class="lengthen" width="140px" src={Arrow} />
+                            </Box>
+                        </Grid>
                     </Typography>
                     
                     <Typography variant="body1" sx={{marginBottom: "2em",
@@ -135,10 +147,12 @@ export default function HowTo() {
                                       paddingRight: "1em",}}>
                                 <img className="pitch re" width="140px" src={SingleA} />
                             </Box>
-                            <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                            <Box sx={{paddingTop: "0.75em", paddingRight: "2em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
                                 <img class="lengthen" width="140px" src={Arrow} />
                             </Box>
-                            <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                            <Box sx={{paddingTop: "0.75em", paddingRight: "2em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
                                 <img class="lengthen" width="140px" src={Arrow} />
                             </Box>
                         </Grid>
@@ -151,13 +165,16 @@ export default function HowTo() {
                                       paddingRight: "1em",}}>
                                 <img className="pitch re" width="140px" src={SingleA} />
                             </Box>
-                            <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                            <Box sx={{paddingTop: "0.75em", paddingRight: "2em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
                                 <img class="lengthen" width="140px" src={Arrow} />
                             </Box>
-                            <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                            <Box sx={{paddingTop: "0.75em", paddingRight: "2em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
                                 <img class="lengthen" width="140px" src={Arrow} />
                             </Box>
-                            <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                            <Box sx={{paddingTop: "0.75em", paddingRight: "2em"}}>
+                                <Typography variant="body1">(hold down)</Typography>
                                 <img class="lengthen" width="140px" src={Arrow} />
                             </Box>
                         </Grid>
