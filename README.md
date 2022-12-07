@@ -8,6 +8,10 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
+August 2022 - Implemented MUI throughout the front end.
+
+July 2022 - Started using React to render site pages. Discovered Material UI (MUI) and decided to adopt it.
+
 June 2022 - Designed and implemented some basic interactivity via JavaScript.
 1. Switch the notation between black and white keys
 2. Display chord notation instead of melody
