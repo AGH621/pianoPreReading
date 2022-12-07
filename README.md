@@ -8,9 +8,9 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
-August 2022 - Redesigned and rebuilt the site to utilize MUI library.
+August 2022 - Discovered Material UI (MUI) and decided to adopt it. Redesigned and rebuilt the site to utilize MUI library.
 
-July 2022 - Started using React to render site pages. Discovered Material UI (MUI) and decided to adopt it.
+July 2022 - Started using React to render site pages. Figured out how to create radio buttons for the song variations.  Attempted to add finger numbers for each song and the ability to change them based on the song variation being displayed. Put the feature on hiatus due to its complexity. 
 
 June 2022 - Designed and implemented some basic interactivity via JavaScript.
 1. Switch the notation between black and white keys
