@@ -8,7 +8,7 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
-December 2022 - Launched on GitHub Pages.
+December 2022 - Launched on Version 3.0 GitHub Pages.
 
 November 2022 - Proofreading and minor appearance changes.
 
