@@ -8,7 +8,7 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
-August 2022 - Implemented MUI throughout the front end.
+August 2022 - Redesigned and rebuilt the site to utilize MUI library.
 
 July 2022 - Started using React to render site pages. Discovered Material UI (MUI) and decided to adopt it.
 
