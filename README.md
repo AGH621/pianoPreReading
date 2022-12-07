@@ -8,6 +8,14 @@ This project serves two purposes.
 2. It is a digital version of a piano book that I wrote many year ago, and still use in my music studio today.
 
 ## Progress
+December 2022 - Launched on GitHub Pages.
+
+November 2022 - Proofreading and minor appearance changes.
+
+October 2022 - Consulted with Madeline Tzifas (a visual arts student) on the color palette and adopted her suggestions.  Finalized the site theme.
+
+September 2022 - Continued working on MUI components. Wrote text of home, about, takadimi, and unit pages. Changed the color palette of the keyboard diagrams.
+
 August 2022 - Discovered Material UI (MUI) and decided to adopt it. Redesigned and rebuilt the site to utilize MUI library.
 
 July 2022 - Started using React to render site pages. Figured out how to create radio buttons for the song variations.  Attempted to add finger numbers for each song and the ability to change them based on the song variation being displayed. Put the feature on hiatus due to its complexity. 
