@@ -78,7 +78,7 @@ Started work on generating new pages automatically from an XML or musicXML file.
 
 Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
-_Footnote_ - ScoreDef is a (Python) class defining all the relevant characteristics of a score used by the Book. These include primarily its Title, meter, key, tonality and pedagogical_score_type. The last is a categorization of its characteristics from a teaching perspective based on:
+*Footnote* - ScoreDef is a (Python) class defining all the relevant characteristics of a score used by the Book. These include primarily its Title, meter, key, tonality and pedagogical_score_type. The last is a categorization of its characteristics from a teaching perspective based on:
 	 - tonality, 
 	 - pitch set (and number of unique  pitches) and 
 	 - rhythm- 
