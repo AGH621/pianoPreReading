@@ -10,63 +10,54 @@ This project serves two purposes.
 ## Progress
 **December 2022**
 
-Front End
-  Launched on Version 3.0 GitHub Pages.
+Front End - Launched on Version 3.0 GitHub Pages.
 
-Back End
-  Crossing t’s, dotting i’s
+Back End - Crossing t’s, dotting i’s
 
 **November 2022**
 
-Front End
-  Proofreading and minor appearance changes.
+Front End - Proofreading and minor appearance changes.
 
 Back End
-  1. Added rest lyrics, 
-	2. Score ignore and manual keysignature override functionality, 
-	3. Minor Key Pedagogical Category Research, 
-	4. Minimum Unique Pitch
+  1. Added rest lyrics
+  2. Score ignore and manual keysignature override functionality
+  3. Minor Key Pedagogical Category Research
+  4. Minimum Unique Pitch
 
 **October 2022**
 
-Front End
-  Consulted with Madeline Tzifas (a visual arts student) on the color palette and adopted her suggestions.  Finalized the site theme.
+Front End - Consulted with Madeline Tzifas (a visual arts student) on the color palette and adopted her suggestions.  Finalized the site theme.
 
 Back End
-  1. Added score file timestamps, 
-	2. Updated ScoreDef (see _Footnote_)
+  1. Added score file timestamps
+  2. Updated ScoreDef (see _Footnote_)
 
 **September 2022**
 
-Front End
-  Continued working on MUI components. Wrote text of home, about, takadimi, and unit pages. Changed the color palette of the keyboard diagrams.
+Front End - Continued working on MUI components. Wrote text of home, about, takadimi, and unit pages. Changed the color palette of the keyboard diagrams.
 
-Back End
-  Refined score_pedagogical Categories determination
+Back End - Refined score_pedagogical Categories determination
 
 **August 2022**
 
-Front End
-  Discovered Material UI (MUI) and decided to adopt it. Redesigned and rebuilt the site to utilize MUI library.
+Front End - Discovered Material UI (MUI) and decided to adopt it. Redesigned and rebuilt the site to utilize MUI library.
 
 Back End
-  1. Added slur lyrics, 
-	2. Rests,  
-	3. Score analysis refinements
+  1. Added slur lyrics
+  2. Rests  
+  3. Score analysis refinements
 
 **July 2022**
 
-Front End
-  Started using React to render site pages. Figured out how to create radio buttons for the song variations.  Attempted to add finger numbers for each song   and the ability to change them based on the song variation being displayed. Put the feature on hiatus due to its complexity. 
+Front End - Started using React to render site pages. Figured out how to create radio buttons for the song variations.  Attempted to add finger numbers for each song and the ability to change them based on the song variation being displayed. Put the feature on hiatus due to its complexity. 
 
 Back End
-  1. Started exporting data to frontend, 
-	2. Update ScoreDef
+  1. Started exporting data to frontend 
+  2. Update ScoreDef
 
 **June 2022** 
 
-Front End
-  Designed and implemented some basic interactivity via JavaScript.
+Front End - Designed and implemented some basic interactivity via JavaScript.
     1. Switch the notation between black and white keys
     2. Display chord notation instead of melody
     3. Start learning React, which will be used to do the page rendering.
@@ -87,9 +78,7 @@ Started work on generating new pages automatically from an XML or musicXML file.
 
 Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
-_Footnote_
-
-ScoreDef is a (Python) class defining all the relevant characteristics of a score used by the Book. These include primarily its Title, meter, key, tonality and pedagogical_score_type. The last is a categorization of its characteristics from a teaching perspective based on:
+_Footnote_ - ScoreDef is a (Python) class defining all the relevant characteristics of a score used by the Book. These include primarily its Title, meter, key, tonality and pedagogical_score_type. The last is a categorization of its characteristics from a teaching perspective based on:
 	 - tonality, 
 	 - pitch set (and number of unique  pitches) and 
 	 - rhythm- 
