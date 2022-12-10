@@ -189,7 +189,7 @@ export default function ThreeNote() {
                                         </Box>
                                     </Grid>
                                 </li>
-                                <li>Dtted half note
+                                <li>Dotted half note
                                     <Grid container>
                                         <Box sx={{margin: "1em"}}>
                                             <img className="pitch re" width="140px" src={SingleA} />
