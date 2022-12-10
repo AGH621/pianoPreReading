@@ -33,12 +33,12 @@ Back End
   3. ScoreDef*
   4. solfège translation
 
-### _May 2022_ 
+#### _May 2022_ 
 Streamlined and improved the CSS.  Improved this README with basic Markdown.
 
 Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  
 
-### _April 2022_
+#### _April 2022_
 Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
 ## License
