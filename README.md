@@ -20,13 +20,22 @@ August 2022 - Discovered Material UI (MUI) and decided to adopt it. Redesigned a
 
 July 2022 - Started using React to render site pages. Figured out how to create radio buttons for the song variations.  Attempted to add finger numbers for each song and the ability to change them based on the song variation being displayed. Put the feature on hiatus due to its complexity. 
 
-June 2022 - Designed and implemented some basic interactivity via JavaScript.
-1. Switch the notation between black and white keys
-2. Display chord notation instead of melody
+June 2022 
+Front End
+  Designed and implemented some basic interactivity via JavaScript.
+    1. Switch the notation between black and white keys
+    2. Display chord notation instead of melody
+    3. Start learning React, which will be used to do the page rendering.
 
-Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  I am learning React, which will be used to do the page rendering.
+Back End
+  1. Verson 1 of score filters
+  2. key signature
+  3. ScoreDef*
+  4. solfège translation
 
 May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
+
+Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  
 
 April 2022 - Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
