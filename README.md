@@ -63,16 +63,15 @@ Front End - Designed and implemented some basic interactivity via JavaScript.
     3. Start learning React, which will be used to do the page rendering.
 
 Back End
-  1. Verson 1 of score filters
-  2. key signature
-  3. ScoreDef
-  4. solfège translation
+  1. key signature
+  2. ScoreDef
+  3. solfège translation
 
 **May 2022**
 
 Streamlined and improved the CSS.  Improved this README with basic Markdown.
 
-Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  
+Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  Began with a Verson 1 of score filters
 
 **April 2022**
 
