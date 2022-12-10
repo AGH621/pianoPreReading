@@ -21,7 +21,8 @@ import { MemoryRouter,
          Link,
          matchPath,
          useLocation,
-         BrowserRouter } from "react-router-dom";
+         BrowserRouter,
+         HashRouter,} from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 
 //Our imports
@@ -36,6 +37,7 @@ import SongList from "./routes/song_list";
 import About from "./routes/about";
 import Takadimi from "./routes/takadimi";
 import SongPage from "./routes/song_page";
+import HowTo from "./routes/how_to";
 
 import { theme } from './siteTheme.js';
 import scoreDefs from "./data/score_defs.json";
@@ -76,7 +78,7 @@ function TopNav() {
     // You need to provide the routes in descendant order.
     // This means that if you have nested routes like: users, users/new, users/edit.
     // Then the order should be ['users/add', 'users/edit', 'users'].
-    const routeMatch = useRouteMatch(["/home", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
+    const routeMatch = useRouteMatch(["/home", "how_to", "/three_note", "/four_note", "/five_finger", "/pentatonic", "/diatonic", "/minor", "/song_list"]);
     const currentTab = routeMatch?.pattern?.path;
 
     //The minor page has been disabled because Music21 cannot accurately translate minor pieces into solfege syllables.
@@ -89,6 +91,7 @@ function TopNav() {
                             <Tab label="Home" value="/home" to="/home" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                         </Box>
                         <Box sx={{marginLeft:"7em"}}>
+                            <Tab label="How To Use" value="/how_to" to="/how_to" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="3 Note" value="/three_note" to="/three_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="4 Note" value="/four_note" to="/four_note" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
                             <Tab label="5 Finger" value="/five_finger" to="/five_finger" component={Link} sx={{'&:hover': {backgroundColor: "primary.maxdark", color: "primary.light"}}}/>
@@ -108,13 +111,14 @@ function TopNav() {
 export default function TabsRouter() {
     if (currentVersion === scoreDefs[Object.keys(scoreDefs)[0]].score_data.score_def_version) {
         return (
-            <BrowserRouter>
+            <>
                 <TopNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/how_to" element={<HowTo />} />
                     <Route path="/three_note" element={<ThreeNote />} />
-                    <Route path=":songTitle" element={<SongPage />} />
+                        <Route path=":songTitle" element={<SongPage />} />
                     <Route path="/four_note" element={<FourNote />} />
                     <Route path="/five_finger" element={<FiveFinger />} />
                     <Route path="/pentatonic" element={<Pentatonic />} />
@@ -131,14 +135,13 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </BrowserRouter>
+            </>
         );
     }
 
     else {
         console.log('Change currentVersion in App.js immediately!')
         return (
-            <BrowserRouter>
                 <Routes>
                     <Route path="*"
                            element={
@@ -149,7 +152,6 @@ export default function TabsRouter() {
                                 </main>
                            }/>
                 </Routes>
-            </BrowserRouter>
         );
     }
 }

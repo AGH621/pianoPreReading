@@ -39,7 +39,8 @@ export default function Diatonic() {
     return (
         <ThemeProvider theme={theme}>
             <Paper sx={{backgroundColor: "backgrounds.nav"}}>
-                <Box sx={{ display: 'flex' }}>
+                <Box sx={{ display: 'flex',
+                           height: "1600px"}}>
 
                     {songDrawer(song_data, title)}       
 

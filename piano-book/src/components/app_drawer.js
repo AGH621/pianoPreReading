@@ -57,50 +57,43 @@ export function songDrawer(song_data, the_page) {
                 return {backgroundColor: "backgrounds.threeNote", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px"}
                 break;
             case 'four_note':
                 return {backgroundColor: "backgrounds.fourNote", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px"}
                 break;
             case 'five_finger':
                 return {backgroundColor: "backgrounds.fiveFinger", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px",}
                 break;
             case 'pentatonic':
                 return {backgroundColor: "backgrounds.pentatonic", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px",}
                 break;
             case 'diatonic':
                 return {backgroundColor: "backgrounds.diatonic", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px",}
                 break;
             case 'minor':
                 return {backgroundColor: "backgrounds.minor", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px"}
                 break;
             default:
                 return {backgroundColor: "backgrounds.nav", 
                         marginTop: "3em",
                         marginBottom: "5em",
-                        width: "240px",
-                        height: "1000px"}
+                        width: "240px",}
                 break;
         }
     }
@@ -161,7 +154,7 @@ export function songDrawer(song_data, the_page) {
                     <List sx={{marginBottom: "5em"}}>
                         {song_data.map((song) => (
                             <ListItem key={song} disablePadding>
-                                <ListItemButton to={`/${song}`} key={song}>
+                                <ListItemButton to={`${song}`} key={song}>
                                     <ListItemText primary={song} sx={{color: "primary.dark"}}/>
                                 </ListItemButton>
                             </ListItem>

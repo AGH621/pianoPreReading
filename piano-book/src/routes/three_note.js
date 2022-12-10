@@ -79,8 +79,7 @@ export default function ThreeNote() {
                         </Typography>
                     
                         <Typography variant="body2" sx={{marginLeft: '2em'}}>
-                            The songs in this unit are written in symbolic notation.  Each note is represented by a colored key on a mini-keyboard
-                            diagram.  Different keys are different colors.  The notes F, G and A are featured in this unit&#39;s songs.   
+                            The notes F, G and A are featured in this unit&#39;s songs. 
                     
                             <Grid container sx={{marginLeft: '1em'}}>
                                 <Box sx={{padding: "1em"}}>
@@ -96,9 +95,9 @@ export default function ThreeNote() {
                                 </Box>
                             </Grid>
                     
-                            These notes are easy to locate, just to the left of the three black keys.  I choose to 
-                            start with white notes, because they are wider and easier for little fingers to play. If you would rather start
-                            with the three black keys, press the "Black Key Melody" button on the song page to switch to those notes.
+                            These notes are easy to locate, just to the left of the three black keys. I choose to start with white notes, because they are wider and easier for little fingers 
+                            to play. If you would rather start with the three black keys, press the "Black Key Melody" button on the song page to switch 
+                            to those notes.
                         </Typography>
                     
                         <Typography variant="h3" color="secondary.dark" sx={{marginLeft: '1.5em',
@@ -107,46 +106,46 @@ export default function ThreeNote() {
                         </Typography>
                     
                         <Typography variant="body2" sx={{marginLeft: '2em'}}>
-                            How long to hold down each note is indicated by one or more arrows following a keyboard diagram.
+                            The following note values are introduced in this unit
                         </Typography>
                         
                         <Typography variant="body2" sx={{marginLeft: '2em',
                                                          textDecoration: 'underline'}}>
-                            In duple meter:
+                            Duple meter:
                         </Typography>
                             
                         <Typography variant="body2" sx={{marginLeft: '2em',
                                                          marginTop: '-1em'}}>
                             <ul>
-                                <li>A diagram by itself = half a beat (an eighth note)
+                                <li>Eighth note
                                     <Box sx={{margin: "1em"}}>
                                         <img className="pitch do" width="140px" src={SingleF} />
                                     </Box>
                                 </li>
                         
-                                <li>A diagram + one arrow = 1 beat (a quarter note)
+                                <li>Quarter note
                                     <Grid container>
                                         <Box sx={{margin: "1em"}}>
                                             <img className="pitch re" width="140px" src={SingleG} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em"}}>
+                                        <Box sx={{paddingTop: "2.5em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
                                     </Grid>
                                 </li>
                         
-                                <li>A diagram + three arrows = 2 beats (a half note)
+                                <li>Half note
                                     <Grid container>
                                         <Box sx={{margin: "1em"}}>
                                             <img className="pitch re" width="140px" src={SingleA} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
                                     </Grid>
@@ -156,48 +155,58 @@ export default function ThreeNote() {
                             
                         <Typography variant="body2" sx={{marginLeft: '2em',
                                                          textDecoration: 'underline'}}>
-                            In triple meter:
+                            Triple meter:
                         </Typography>
                             
                         <Typography variant="body2" sx={{marginLeft: '2em',
                                                          marginTop: '-1em'}}>
                             <ul>
-                                <li>A diagram by itself = a third of a beat (an eighth note)
+                                <li>Eighth note
                                     <Box sx={{margin: "1em"}}>
                                         <img className="pitch do" width="140px" src={SingleF} />
                                     </Box>
                                 </li>
-                                <li>A diagram + two arrows = 1 beat (a dotted quarter note)
+                                <li>Quarter note
                                     <Grid container>
                                         <Box sx={{margin: "1em"}}>
                                             <img className="pitch re" width="140px" src={SingleG} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
-                                            <img class="lengthen" width="140px" src={Arrow} />
-                                        </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
                                     </Grid>
                                 </li>
-                                <li>A diagram + five arrows = 2 beats (a dotted half note)
+                                <li>Dotted quarter note
+                                    <Grid container>
+                                        <Box sx={{margin: "1em"}}>
+                                            <img className="pitch re" width="140px" src={SingleG} />
+                                        </Box>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                                            <img class="lengthen" width="140px" src={Arrow} />
+                                        </Box>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
+                                            <img class="lengthen" width="140px" src={Arrow} />
+                                        </Box>
+                                    </Grid>
+                                </li>
+                                <li>Dotted half note
                                     <Grid container>
                                         <Box sx={{margin: "1em"}}>
                                             <img className="pitch re" width="140px" src={SingleA} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
-                                        <Box sx={{paddingTop: "3em", paddingRight: "2em"}}>
+                                        <Box sx={{paddingTop: "2.5em", paddingRight: "2em"}}>
                                             <img class="lengthen" width="140px" src={Arrow} />
                                         </Box>
                                     </Grid>
