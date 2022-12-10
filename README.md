@@ -43,7 +43,7 @@ Back End - Refined score_pedagogical Categories determination
 Front End - Discovered Material UI (MUI) and decided to adopt it. Redesigned and rebuilt the site to utilize MUI library.
 
 Back End
-  1. Added slur lyrics
+  1. Added lyrics for notes under slurs
   2. Rests  
   3. Score analysis refinements
 
