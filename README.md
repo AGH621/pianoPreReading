@@ -33,11 +33,13 @@ Back End
   3. ScoreDef*
   4. solfège translation
 
-May 2022 - Streamlined and improved the CSS.  Improved this README with basic Markdown.
+### _May 2022_ 
+Streamlined and improved the CSS.  Improved this README with basic Markdown.
 
 Started work on generating new pages automatically from an XML or musicXML file.  This feature is using Python and its Music21 library to determine whether a song should be included here and to extract music information from them.  My collaborator, Jim K, is doing the coding for these parts.  
 
-April 2022 - Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
+### _April 2022_
+Launched Version 2.0 replacing the old, paper-based version dating from 2013. It is basic, hand-written, hand-designed HTML/CSS.
 
 ## License
 The content of this project itself is licensed under the  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, and the underlying source code used to format and display that content is licensed under the <a href="https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md">MIT license</a>.
